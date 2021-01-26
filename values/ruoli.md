@@ -16,9 +16,11 @@
 - Andrea Grandieri:
   - `capo`
   - `programmatore`
+  - `analista`
 - Mirko Barsotti:
   - `vicecapo`
   - `programmatore`
+  - `analista`
   - `grafico`
 - Manuel Mazzola:
   - `moderatore`
