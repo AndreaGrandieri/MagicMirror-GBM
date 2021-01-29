@@ -2,7 +2,7 @@
 name: Modify Feature request
 about: Richiedi modifiche alle features
 title: "[MODIFY-FEATURE]"
-labels: help wanted
+labels: modify-feature
 assignees: ''
 
 ---
