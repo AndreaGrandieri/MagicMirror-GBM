@@ -2,7 +2,7 @@
 name: New Feature request
 about: Richiedi aggiunte alle features
 title: "[NEW-FEATURE]"
-labels: enhancement
+labels: new-feature
 assignees: ''
 
 ---
