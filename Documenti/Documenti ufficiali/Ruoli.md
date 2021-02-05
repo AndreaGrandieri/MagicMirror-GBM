@@ -25,3 +25,4 @@
 - Manuel Mazzola:
   - `moderatore`
   - `programmatore`
+  - `analista`
