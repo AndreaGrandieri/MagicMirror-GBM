@@ -33,3 +33,15 @@ Le figure che influenzano lo sviluppo del sistema software sono:
 - Developers (analisti, progettisti)
 
 ---
+
+## 2 Servizi del sistema
+
+### 2.1 Requisiti funzionali
+
+- 2.1.1  Il sistema dovr`a consentire la modifica delle impostazioni del sistema software stesso
+
+  - 2.1.1.1 Il sistema dovrà consentire la gestione delle impostazioni di connettività
+  - 2.1.1.2 Il sistema dovrà consentire la gestione del microfono e della fotocamera
+  - 2.1.1.3 Il sistema dovrà permettere il reset del sistema stesso
+  - 2.1.1.4 Il sistema dovrà permettere una fase di configurazione iniziale
+  -  
