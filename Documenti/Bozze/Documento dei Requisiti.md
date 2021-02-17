@@ -1,6 +1,6 @@
 # MagicMirror-GBM
 
-Documento dei requisiti 
+Documento dei requisiti
 
 *ver. 1.0* 
 
@@ -38,7 +38,7 @@ Le figure che influenzano lo sviluppo del sistema software sono:
 
 ### 2.1 Requisiti funzionali
 
-- 2.1.1  Il sistema dovr`a consentire la modifica delle impostazioni del sistema software stesso
+- 2.1.1  Il sistema dovrà consentire la modifica delle impostazioni del sistema software stesso
 
   - 2.1.1.1 Il sistema dovrà consentire la gestione delle impostazioni di connettività
   - 2.1.1.2 Il sistema dovrà consentire la gestione del microfono e della fotocamera
@@ -51,6 +51,7 @@ Le figure che influenzano lo sviluppo del sistema software sono:
   - 2.1.1.10 Il sistema dovrà consentire la modifica dello sfondo
 
 - 2.1.2 Il sistema dovrà integrare un modulo per il meteo
+  
   - 2.1.2.1 Il sistema dovrà consentire la visualizzazione del meteo
   - 2.1.2.2 Il sistema dovrà consentire la modifica della zona interessata
   - 2.1.2.3 Il sistema dovrà consentire la modifica della scala termometrica
@@ -60,7 +61,7 @@ Le figure che influenzano lo sviluppo del sistema software sono:
 - 2.1.5 Il sistema dovrà integrare un modulo per un calendario interattivo
 - 2.1.6 Il sistema dovrà integrare un modulo per data e ora
 - 2.1.7 Il sistema dovrà integrare un modulo per un timer
-- 2.1.8 Il sistema dovrà integrare un modulo per la navigazione web 
+- 2.1.8 Il sistema dovrà integrare un modulo per la navigazione web
 - 2.1.9 <mark>Il sistema dovrà integrare un modulo per la messaggistica</mark>
 - 2.1.10 Il sistema dovrà integrare un modulo per la riproduzione di contenuti multimediali
 - 2.1.11 Il sistema dovrà integrare un modulo per le mappe
@@ -97,7 +98,7 @@ L'interfaccia proposta dal sistema è stata appositamente studiata per garantire
 
   - 3.1.3.1 Visualizzazione del timer
 
-- 3.1.4  <mark>Interfaccia messaggistica</mark>
+- 3.1.4 <mark>Interfaccia messaggistica</mark>
 
 - 3.1.5 Interfaccia riproduzione di contenuti multimediali
 
@@ -107,13 +108,13 @@ L'interfaccia proposta dal sistema è stata appositamente studiata per garantire
 
 ### 3.2 Requisiti tecnologici
   
-  - 3.2.1 Raspberry Pi (modello?)
-  - 3.2.2 Microfono
-  - 3.2.3 Fotocamera
-  - 3.2.4 Casse audio
-  - 3.2.5 Schermo (tipo?)
-  - 3.2.6 Telaio specchio 
-  - 3.2.7 Two-way mirror
+- 3.2.1 Raspberry Pi (modello?)
+- 3.2.2 Microfono
+- 3.2.3 Fotocamera
+- 3.2.4 Casse audio
+- 3.2.5 Schermo (tipo?)
+- 3.2.6 Telaio specchio
+- 3.2.7 Two-way mirror
 
 ### 3.3 Requisiti di prestazione
   
@@ -126,6 +127,7 @@ Non si registrano particolari esigenze in questo ambito.
 ### 3.5 Requisiti operativi
 
 L'intero progetto è stato realizzato utilizzando i seguenti linguaggi:
+
 - JavaScript
 - CSS
 - HTML
