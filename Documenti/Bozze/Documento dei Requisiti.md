@@ -64,8 +64,56 @@ Le figure che influenzano lo sviluppo del sistema software sono:
 - 2.1.8 Il sistema dovrà integrare un modulo per la navigazione web 
 - 2.1.9 <mark>Il sistema dovrà integrare un modulo per la messaggistica</mark>
 - 2.1.10 Il sistema dovrà integrare un modulo per la riproduzione di contenuti multimediali
+- 2.1.11 Il sistema dovrà integrare un modulo per le mappe
+- 2.1.12 Il sistema dovrà integrare un modulo per le e-mail
+- 2.1.13 Il sistema dovrà integrare un modulo per le note
+- 2.1.14 Il sistema dovrà integrare un modulo per l'utilizzo della fotocamera
 
 ### 2.2 Requisiti informativi
 
 Questa sezione è vuota (per ora).
 
+---
+
+## 3 Vincoli di sistema
+
+### 3.1 Requisiti di interfaccia
+
+L'interfaccia proposta dal sistema è stata appositamente studiata per garantire una fruizione di contenuti intuitiva ed immediata.
+
+- 3.1.1 Interfaccia principale
+  
+  - 3.1.1.1 Visualizzazione della data e dell'ora corrente
+  - 3.1.1.2 Visualizzazione del meteo
+  - 3.1.1.3 Visualizzazione delle news
+  - 3.1.1.4 Visualizzazione di un calendario interattivo
+  - 3.1.1.5 Visualizzazione delle note
+  - 3.1.1.6 Visualizzazione delle e-mail
+
+- 3.1.2 Interfaccia browser
+  
+  - 3.1.2.1 Visualizzazione risultati navigazione web
+
+- 3.1.3 Interfaccia timer
+
+  - 3.1.3.1 Visualizzazione del timer
+
+- 3.1.4  <mark>Interfaccia messaggistica</mark>
+
+- 3.1.5 Interfaccia riproduzione di contenuti multimediali
+
+- 3.1.6 Interfaccia mappe
+  
+  - 3.1.6.1 Visualizzazione delle mappe
+
+### 3.2 Requisiti tecnologici
+### 3.3 Requisiti di prestazione
+### 3.4 Requisiti di sicurezza
+### 3.5 Requisiti operativi
+### 3.6 Requisiti politici e legali
+### 3.7 Altri vincoli
+
+---
+
+## 4 Appendici
+### 4.1 Glossario
