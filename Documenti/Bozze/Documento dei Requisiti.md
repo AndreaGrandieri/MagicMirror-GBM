@@ -144,3 +144,9 @@ Questa sezione è vuota.
 
 ## 4 Appendici
 ### 4.1 Glossario
+
+- **Browser**: programma per navigare in Internet che inoltra la richiesta di un documento alla rete e ne consente la visualizzazione una volta arrivato.
+
+- **Human-centered design**: approccio di problem solving che coinvolge la prospettiva del cliente in tutti gli step della risoluzione stessa.
+  
+- **Two-way mirror**: particolare tipo di specchio che da un lato riflette la luce mentre dall'altro ne permette il passaggio.
