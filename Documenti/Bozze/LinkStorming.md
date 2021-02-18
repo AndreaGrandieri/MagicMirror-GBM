@@ -18,3 +18,5 @@
 
 [https://docs.magicmirror.builders/modules/calendar.html#using-the-module](https://docs.magicmirror.builders/modules/calendar.html#using-the-module)
 
+[https://github.com/Klettner/MMM-StopwatchTimer](https://github.com/Klettner/MMM-StopwatchTimer)
+
