@@ -16,3 +16,5 @@
 
 [https://docs.magicmirror.builders/modules/weather.html#example](https://docs.magicmirror.builders/modules/weather.html#example)
 
+[https://docs.magicmirror.builders/modules/calendar.html#using-the-module](https://docs.magicmirror.builders/modules/calendar.html#using-the-module)
+
