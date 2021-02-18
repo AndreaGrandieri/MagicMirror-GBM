@@ -61,7 +61,6 @@ Le figure che influenzano lo sviluppo del sistema software sono:
 - 2.1.5 Il sistema dovrà integrare un modulo per un calendario interattivo
 - 2.1.6 Il sistema dovrà integrare un modulo per data e ora
 - 2.1.7 Il sistema dovrà integrare un modulo per un timer
-- 2.1.8 Il sistema dovrà integrare un modulo per la navigazione web
 - 2.1.9 <mark>Il sistema dovrà integrare un modulo per la messaggistica</mark>
 - 2.1.10 Il sistema dovrà integrare un modulo per la riproduzione di contenuti multimediali
 - 2.1.11 Il sistema dovrà integrare un modulo per le mappe
