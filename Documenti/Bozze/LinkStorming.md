@@ -20,3 +20,4 @@
 
 [https://github.com/Klettner/MMM-StopwatchTimer](https://github.com/Klettner/MMM-StopwatchTimer)
 
+[https://github.com/schnibel/MMM-Memo](https://github.com/schnibel/MMM-Memo)
