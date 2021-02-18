@@ -1,2 +1,2 @@
-Lista di moduli interessanti di funzionalità da inserire potenzialmente nello specchio
+Lista di moduli di funzionalità interessanti da inserire potenzialmente nello specchio
 
