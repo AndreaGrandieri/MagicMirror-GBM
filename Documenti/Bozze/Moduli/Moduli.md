@@ -19,5 +19,4 @@ _Lista di Moduli (aka: funzionalità) da inserire potenzialmente nello specchio_
 | MMM-StopwatchTimer                   | Mostra un timer/cronometro                                 | [MMM-StopwatchTimer](https://github.com/Klettner/MMM-StopwatchTimer)     |
 | MMM-Memo                             | Gestisce le annotazioni                                    | [MMM-Memo](https://github.com/schnibel/MMM-Memo)                         |
 | Camera                               | Gestisce l'utilizzo di una fotocamera                      | [Camera](https://github.com/alexyak/camera)                              |
-| MMM-Hello-Mirror <mark>(beta)</mark> | Gestisce il riconoscimento vocale                          | [Camera](https://github.com/alexyak/camera)                              |
-| Camera                               | Gestisce l'utilizzo di una fotocamera                      | [Camera](https://github.com/alexyak/camera)                              |
+| MMM-Hello-Mirror <mark>(beta)</mark> | Gestisce il riconoscimento vocale                          | [MMM-Hello-Mirror](https://github.com/Matzefication/MMM-Hello-Mirror)    |
