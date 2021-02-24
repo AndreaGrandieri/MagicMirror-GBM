@@ -2,7 +2,7 @@
 
 _Under construction..._
 
-Badge _(possibili parziali)_:
+Badge _(TUTTI i necessari inclusi. Necessario riordine!)_:
 
 ![Dependecies from david-dm.org](https://status.david-dm.org/gh/AndreaGrandieri/MagicMirror-GBM.svg)
 
