@@ -1,11 +1,10 @@
 function getLatestRelease(apiURL) {
-    $.getJSON(apiURL, function (obj) {
-        var zipball_url = obj.zipball_url;
-        if (zipball_url != null && zipball_url != undefined) {
+    $.getJSON(apiURL)
+        .done(function (obj) {
             window.open(obj.zipball_url);
-        } else {
+        })
+        .fail(function () {
             // Temporaneo
             window.alert("Nessuna release!");
-        }
-    });
+        });
 }
