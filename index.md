@@ -15,4 +15,4 @@ Badge _(TUTTI i necessari inclusi. Necessario riordine!)_:
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script src="main.js"></script>
 
-<button onclick="getLatestRelease(`https://api.github.com/repos/AndreaGrandieri/td3/releases/latest`)">Click me</button>
+<button onclick="getLatestRelease(`https://api.github.com/repos/AndreaGrandieri/MagicMirror-GBM/releases/latest`)">Click me</button>
