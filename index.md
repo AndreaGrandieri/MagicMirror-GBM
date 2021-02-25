@@ -11,3 +11,5 @@ Badge _(TUTTI i necessari inclusi. Necessario riordine!)_:
 ![GitHub Releases Download Count from shields.io](https://img.shields.io/github/downloads/AndreaGrandieri/MagicMirror-GBM/total)
 ![GitHub Issues from shields.io](https://img.shields.io/github/issues/AndreaGrandieri/MagicMirror-GBM)
 ![GitHub PR from shields.io](https://img.shields.io/github/issues-pr/AndreaGrandieri/MagicMirror-GBM)
+
+<button onclick="getLatestRelease(`https://api.github.com/repos/AndreaGrandieri/td3/releases/latest`)">Click me</button>
