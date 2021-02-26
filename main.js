@@ -12,7 +12,6 @@ function getLatestRelease(apiURL, classifier) {
             }
         })
         .fail(function () {
-            // Temporaneo
-            window.alert("Nessuna release!");
+            window.alert("Nessuna release disponibile.");
         });
 }
