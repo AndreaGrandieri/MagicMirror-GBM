@@ -12,5 +12,3 @@
 ![GitHub PR from shields.io](https://img.shields.io/github/issues-pr/AndreaGrandieri/MagicMirror-GBM)
 
 ---
-
-<a href="javascript:getLatestRelease(`https://api.github.com/repos/AndreaGrandieri/MagicMirror-GBM/releases/latest`)" id="download-zip" class="button"><span>Download .zip</span></a>
