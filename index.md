@@ -13,4 +13,4 @@
 
 ---
 
-<a href="" onlick="getLatestRelease(`https://api.github.com/repos/AndreaGrandieri/MagicMirror-GBM/releases/latest`)" id="download-zip" class="button"><span>Download .zip</span></a>
+<a href="javascript:getLatestRelease(`https://api.github.com/repos/AndreaGrandieri/MagicMirror-GBM/releases/latest`)" id="download-zip" class="button"><span>Download .zip</span></a>
