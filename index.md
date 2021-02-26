@@ -13,4 +13,4 @@
 
 ---
 
-<input type="button" class="button" id="download-zip" onclick="getLatestRelease(`https://api.github.com/repos/AndreaGrandieri/MagicMirror-GBM/releases/latest`)" value="TEST"/>
+<a href="" onlick="getLatestRelease(`https://api.github.com/repos/AndreaGrandieri/MagicMirror-GBM/releases/latest`)" id="download-zip" class="button"><span>Download .zip</span></a>
