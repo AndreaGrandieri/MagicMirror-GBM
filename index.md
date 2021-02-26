@@ -13,5 +13,4 @@
 
 ---
 
-<button class="button" id="download-zip" onclick="getLatestRelease(`https://api.github.com/repos/AndreaGrandieri/MagicMirror-GBM/releases/latest`)">Click me</button>
-
+<input type="button" class="button" id="download-zip" onclick="getLatestRelease(`https://api.github.com/repos/AndreaGrandieri/MagicMirror-GBM/releases/latest`)" value="TEST"/>
