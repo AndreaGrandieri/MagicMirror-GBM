@@ -22,6 +22,7 @@ Lista di Moduli (aka: funzionalità) da inserire potenzialmente nello specchio.
 | MMM-Screencast <p style="background-color:green;">NO API KEY</p>                    | Permette di effettuare il cast di contenuti multimediali                                     | [MMM-Screencast](https://github.com/kevinatown/MMM-Screencast)           |
 | MMM-Mail <p style="background-color:yellow;">MAIL, PSSW, LOW-LEVEL-SECURITY-APP</p> | Permette la visualizzazione delle email in entrata (sola lettura. Nessuna opzione di invio.) | [MMM-Mail](https://github.com/MMPieps/MMM-Mail)                          |
 | annyang <p style="background-color:green;">NO API KEY</p>                           | Gestisce il riconoscimento vocale                                                            | [annyang](https://github.com/TalAter/annyang)                            |
+| openlayers <p style="background-color:green;">NO API KEY</p>                        | Mostra mappe interattive                                                                     | [openlayers](https://github.com/openlayers/openlayers)                   |
 
 ---
 
@@ -36,25 +37,12 @@ __Beta__.
 
 ---
 
-## Mappe
-
-| Nome                  | Descrizione               | Link                                                                      |
-| --------------------- | ------------------------- | ------------------------------------------------------------------------- |
-| MMM-GoogleMapsTraffic | Mostra mappe interattive. | [MMM-GoogleMapsTraffic](https://github.com/vicmora/MMM-GoogleMapsTraffic) |
-
----
-
 ## Problemi
 
 `Invio email`: sarebbe opportuno fornire un servizio di invio email, che fungerebbe da servizio di messaggistica direttamente dal Magic Mirror.
 Una soluzione potrebbe essere riscontrata qui: [https://iotdesignpro.com/projects/sending-smtp-email-using-raspberry-pi](https://iotdesignpro.com/projects/sending-smtp-email-using-raspberry-pi).
 __Per adesso è possibile solo la lettura di email__.
 __Per adesso non è stato ancora individuato un modulo _MMM___.
-
-`Mappe`: sarebbe opportuno fornire un servizio di consultazione mappe digitali direttamente dal Magic Mirror.
-Una soluzione potrebbe essere riscontrata dal seguente modulo: [https://github.com/vicmora/MMM-GoogleMapsTraffic](https://github.com/vicmora/MMM-GoogleMapsTraffic).
-Questo, però, __necessita di una API Key Google__, ottenibile da [https://developers.google.com/](https://developers.google.com/) con la richiesta di un
-__ACCOUNT GOOGLE PERSONALE__ con __METODO DI PAGAMENTO VALIDO ASSOCIATO!__. Questo può creare disagi!
 
 `Streaming Musicale da Spotify`: moduli già individuati e riportati nella tabella `Music Streaming` sopra riportata. Questi, però, fanno affidamento alle
 __Spotify API__, che richiedono un __ACCOUNT CON ABBONAMENTO PREMIUM__ per l'utilizzo. Questo può creare disagi!
