@@ -8,7 +8,9 @@
 
 <script src="main.js"></script>
 
+<!--
 {% include buttons.html %}
+-->
 
 ![GitHub Releases and Pre from shields.io](https://img.shields.io/github/v/release/AndreaGrandieri/MagicMirror-GBM?include_prereleases)
 ![Dependecies from david-dm.org](https://status.david-dm.org/gh/AndreaGrandieri/MagicMirror-GBM.svg)
