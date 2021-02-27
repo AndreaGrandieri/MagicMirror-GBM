@@ -21,5 +21,3 @@
 ![GitHub PR from shields.io](https://img.shields.io/github/issues-pr/AndreaGrandieri/MagicMirror-GBM)
 
 ---
-
-[Example Button](https://www.google.com)
