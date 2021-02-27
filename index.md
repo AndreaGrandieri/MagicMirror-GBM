@@ -1,7 +1,10 @@
 ## MagicMirror-GBM
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/buttons.html" type="text/javascript">
 <script src="main.js"></script>
+
+{% include buttons.html %}
 
 ![GitHub Releases and Pre from shields.io](https://img.shields.io/github/v/release/AndreaGrandieri/MagicMirror-GBM?include_prereleases)
 ![Dependecies from david-dm.org](https://status.david-dm.org/gh/AndreaGrandieri/MagicMirror-GBM.svg)
@@ -12,3 +15,5 @@
 ![GitHub PR from shields.io](https://img.shields.io/github/issues-pr/AndreaGrandieri/MagicMirror-GBM)
 
 ---
+
+[Example Button](https://www.google.com)
