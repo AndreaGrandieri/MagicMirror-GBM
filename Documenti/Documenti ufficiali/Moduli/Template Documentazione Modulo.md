@@ -14,7 +14,7 @@ _Qui una breve descrizione dello scopo del modulo._
 
 ---
 
-## Proprietà
+## Proprietà (config section)
 
 | Proprietà        | Valori                                                                             | Valore Default          | Inderogabilità           | Descrizione              |
 | ---------------- | ---------------------------------------------------------------------------------- | ----------------------- | ------------------------ | ------------------------ |
