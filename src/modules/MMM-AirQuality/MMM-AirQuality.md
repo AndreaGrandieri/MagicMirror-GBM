@@ -15,7 +15,6 @@ dell'aria nella zona desiderata specificata.
     // you may choose any location
     position: 'top_center',
     config: {
-        // the location to check the index for
         location: 'como',
         lang: 'eng',
         updateInterval: '30',
