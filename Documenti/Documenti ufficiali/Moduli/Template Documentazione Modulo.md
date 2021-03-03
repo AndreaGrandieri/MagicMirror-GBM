@@ -5,6 +5,7 @@
 _Qui una breve descrizione dello scopo del modulo._
 
 ---
+---
 
 ## config.js fragment
 
@@ -13,19 +14,42 @@ _Qui una breve descrizione dello scopo del modulo._
 ```
 
 ---
+---
 
 ## Proprietà (config section)
 
-| Proprietà        | Valori                                                                             | Valore Default          | Inderogabilità           | Descrizione              |
-| ---------------- | ---------------------------------------------------------------------------------- | ----------------------- | ------------------------ | ------------------------ |
-| `Nome-Proprietà` | `valore1`: _descrizione / vincoli_ <br> `valore2`: _descrizione / vincoli_ _[...]_ | `valore`: _descrizione_ | `REQUIRED` or `OPTIONAL` | _Qui breve descrizione._ |
+| Proprietà         | Valore Default          | Inderogabilità           | Descrizione              |
+| ----------------- | ----------------------- | ------------------------ | ------------------------ |
+| `Nome-Proprietà1` | `valore`: _descrizione_ | `REQUIRED` or `OPTIONAL` | _Qui breve descrizione._ |
+
+| Valori     | Tipo   | Descrizione / Vincoli   |
+| ---------- | ------ | ----------------------- |
+| `valore1`: | `tipo` | _descrizione / vincoli_ |
+| `valore2`: | `tipo` | _descrizione / vincoli_ |
 
 ---
 
-## Screenshots (se presenti)
+| Proprietà         | Valore Default          | Inderogabilità           | Descrizione              |
+| ----------------- | ----------------------- | ------------------------ | ------------------------ |
+| `Nome-Proprietà2` | `valore`: _descrizione_ | `REQUIRED` or `OPTIONAL` | _Qui breve descrizione._ |
+
+| Valori     | Tipo   | Descrizione / Vincoli   |
+| ---------- | ------ | ----------------------- |
+| `valore1`: | `tipo` | _descrizione / vincoli_ |
+| `valore2`: | `tipo` | _descrizione / vincoli_ |
+
+---
+
+_..._
+
+---
+---
+
+## Screenshots (se presenti, consigliati)
 
 _Qui._
 
+---
 ---
 
 ## \<Altro\>
