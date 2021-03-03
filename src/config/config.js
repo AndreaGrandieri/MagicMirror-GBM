@@ -103,9 +103,14 @@ var config = {
 		},
 		{
 			module: 'MMM-AirQuality',
-			position: 'top_center', // you may choose any location
+			// you may choose any location
+			position: 'top_center',
 			config: {
-				location: 'milan' // the location to check the index for
+				location: 'milan',
+				lang: 'eng',
+				updateInterval: 30,
+				showLocation: true,
+				showIndex: true
 			}
 		},
 	]
