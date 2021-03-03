@@ -22,9 +22,9 @@ _Qui una breve descrizione dello scopo del modulo._
 
 ---
 
-## Screenshots (se presenti)
+## Screenshots
 
-_Qui._
+_Qui (se presenti, consigliati)._
 
 ---
 
