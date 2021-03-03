@@ -106,7 +106,7 @@ var config = {
 			// you may choose any location
 			position: 'top_center',
 			config: {
-				location: 'como',
+				location: 'milan',
 				lang: 'eng',
 				updateInterval: 30,
 				showLocation: true,
