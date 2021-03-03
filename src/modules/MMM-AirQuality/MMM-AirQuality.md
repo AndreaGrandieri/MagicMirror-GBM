@@ -40,5 +40,12 @@ dell'aria nella zona desiderata specificata.
 
 ## Screenshots (se presenti)
 
-_Qui._
-__DA AGGIUNGERE__ [https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/84](https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/84).
+Questa è la visualizzazione del modulo in situazione di funzionamento corretto:
+
+![resources/MMM-AirQuality_correct_workflow.PNG](resources/MMM-AirQuality_correct_workflow.PNG)
+
+Se il modulo rimane sulla seguente schermata, probabilmente la zona da analizzare
+specificata __non__ è supportata o è presente un'altra forma di
+errore nelle proprietà specificate nel file `config.js`:
+
+![resources/loading_air_quality_index_hang.PNG](resources/loading_air_quality_index_hang.PNG)
