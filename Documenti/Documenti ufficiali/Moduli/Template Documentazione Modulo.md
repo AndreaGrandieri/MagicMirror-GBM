@@ -16,9 +16,9 @@ _Qui una breve descrizione dello scopo del modulo._
 
 ## Proprietà (config section)
 
-| Proprietà        | Valori                                                                             | Valore Default          | Inderogabilità           | Descrizione              |
-| ---------------- | ---------------------------------------------------------------------------------- | ----------------------- | ------------------------ | ------------------------ |
-| `Nome-Proprietà` | `valore1`: _descrizione / vincoli_ <br> `valore2`: _descrizione / vincoli_ _[...]_ | `valore`: _descrizione_ | `REQUIRED` or `OPTIONAL` | _Qui breve descrizione._ |
+| Proprietà        | Tipo              | Valori                                                                             | Valore Default          | Inderogabilità           | Descrizione              |
+| ---------------- | ----------------- | ---------------------------------------------------------------------------------- | ----------------------- | ------------------------ | ------------------------ |
+| `Nome-Proprietà` | `Tipo` _(guarda)_ | `valore1`: _descrizione / vincoli_ <br> `valore2`: _descrizione / vincoli_ _[...]_ | `valore`: _descrizione_ | `REQUIRED` or `OPTIONAL` | _Qui breve descrizione._ |
 
 ---
 
