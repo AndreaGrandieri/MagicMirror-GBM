@@ -41,7 +41,7 @@ di diversi dispositivi al MagicMirror.
 
 ## Screenshots
 
-_Qui (se presenti, consigliati)._
+_Qui (in attesa... [https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/89](https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/89))._
 
 ---
 

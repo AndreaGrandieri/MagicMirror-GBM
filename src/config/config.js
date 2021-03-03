@@ -113,6 +113,17 @@ var config = {
 				showIndex: true
 			}
 		},
+		{
+			module: 'MMM-Screencast',
+			// This position is for a hidden <div /> and not the screencast window
+			position: 'bottom_right',
+			config: {
+				position: 'center',
+				height: 300,
+				width: 500,
+				castName: "MagicMirror-GBM-cast"
+			}
+		},
 	]
 };
 
