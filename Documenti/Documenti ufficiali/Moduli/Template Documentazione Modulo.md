@@ -16,9 +16,9 @@ _Qui una breve descrizione dello scopo del modulo._
 
 ## Proprietà (config section)
 
-| Proprietà        | Tipo                                                                                                                                                                                                                                                                                                                               | Valori                                                                             | Valore Default          | Inderogabilità           | Descrizione              |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ----------------------- | ------------------------ | ------------------------ |
-| `Nome-Proprietà` | `Tipo` _guarda [https://github.com/AndreaGrandieri/MagicMirror-GBM/blob/afd1626fe643016a29ae9afebbd46b0d813939fe/Documenti/Documenti%20ufficiali/Moduli/DataTypesJS.PNG](https://github.com/AndreaGrandieri/MagicMirror-GBM/blob/afd1626fe643016a29ae9afebbd46b0d813939fe/Documenti/Documenti%20ufficiali/Moduli/DataTypesJS.PNG)_ | `valore1`: _descrizione / vincoli_ <br> `valore2`: _descrizione / vincoli_ _[...]_ | `valore`: _descrizione_ | `REQUIRED` or `OPTIONAL` | _Qui breve descrizione._ |
+| Proprietà        | Tipo                                               | Valori                                                                             | Valore Default          | Inderogabilità           | Descrizione              |
+| ---------------- | -------------------------------------------------- | ---------------------------------------------------------------------------------- | ----------------------- | ------------------------ | ------------------------ |
+| `Nome-Proprietà` | `Tipo` _guarda [DataTypesJS.PNG](DataTypesJS.PNG)_ | `valore1`: _descrizione / vincoli_ <br> `valore2`: _descrizione / vincoli_ _[...]_ | `valore`: _descrizione_ | `REQUIRED` or `OPTIONAL` | _Qui breve descrizione._ |
 
 ---
 
