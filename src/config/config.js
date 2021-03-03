@@ -104,13 +104,13 @@ var config = {
 		{
 			module: 'MMM-AirQuality',
 			// you may choose any location
-			position: 'top_right',
+			position: 'top_center',
 			config: {
 				location: 'como',
 				lang: 'eng',
-				updateInterval: '30',
-				showLocation: 'true',
-				showIndex: 'true'
+				updateInterval: 30,
+				showLocation: true,
+				showIndex: true
 			}
 		},
 	]

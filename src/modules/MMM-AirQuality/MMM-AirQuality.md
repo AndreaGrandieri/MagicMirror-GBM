@@ -17,9 +17,9 @@ dell'aria nella zona desiderata specificata.
     config: {
         location: 'como',
         lang: 'eng',
-        updateInterval: '30',
-        showLocation: 'true',
-        showIndex: 'true' 
+        updateInterval: 30,
+        showLocation: true,
+        showIndex: true 
     }
 }
 ```
