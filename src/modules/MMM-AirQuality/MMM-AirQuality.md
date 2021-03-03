@@ -38,7 +38,7 @@ dell'aria nella zona desiderata specificata.
 
 ---
 
-## Screenshots (se presenti)
+## Screenshots
 
 Questa è la visualizzazione del modulo in situazione di funzionamento corretto:
 
