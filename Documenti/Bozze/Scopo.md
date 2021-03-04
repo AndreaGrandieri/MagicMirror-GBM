@@ -2,8 +2,8 @@
 
 Due possibilità di applicazione:
 
-- Utilizzo esterno
-- Utilizzo interno
+- Utilizzo Interno
+- Utilizzo Esterno
 
 ## Utilizzo Interno
 
