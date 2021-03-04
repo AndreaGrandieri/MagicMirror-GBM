@@ -1,4 +1,4 @@
-# Moduli
+# Moduli Uso Esterno
 
 Lista di Moduli (aka: funzionalità) da inserire potenzialmente nello specchio.
 
