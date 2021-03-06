@@ -39,6 +39,8 @@ Il seguente modulomostra la data e l'ora correnti.
 
 ## Screenshots
 
-_Qui (se presenti, consigliati)._
+Questa è la visualizzazione del modulo in situazione di funzionamento corretto:
+
+![resources/clock.png](resources/clock.png)
 
 ---
