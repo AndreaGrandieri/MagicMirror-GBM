@@ -2,7 +2,7 @@
 
 ## tl;dr
 
-Il seguente modulomostra la data e l'ora correnti.
+Il seguente modulo mostra la data e l'ora correnti.
 
 ---
 
