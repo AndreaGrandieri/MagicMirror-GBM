@@ -24,6 +24,7 @@ Lista di Moduli (aka: funzionalità) da inserire potenzialmente nello specchio.
 | annyang <p style="background-color:green;">NO API KEY</p>                           | Gestisce il riconoscimento vocale                                                            | [annyang](https://github.com/TalAter/annyang)                            |
 | openlayers <p style="background-color:green;">NO API KEY</p>                        | Mostra mappe interattive                                                                     | [openlayers](https://github.com/openlayers/openlayers)                   |
 | raspotify <p style="background-color:green;">NO API KEY</p>                         | Abilità un dispositivo __Raspberry Pi__ al __Cast Spotify__.                                 | [raspotify](https://github.com/dtcooper/)                                |
+| MMM-Online-State <p style="background-color:green;">NO API KEY</p>                  | Visualizza stato connessione.                                                                | [MMM-Online-State](https://github.com/Legion2/MMM-Online-State)          |
 
 ---
 
