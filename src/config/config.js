@@ -119,8 +119,8 @@ var config = {
 			position: 'top_right',
 			config: {
 				displaySymbol: true,
-				symbolOnline: "globe",
-				symbolOffline: "globe",
+				symbolOnline: "fas fa-globe",
+				symbolOffline: "fas fa-globe",
 				colored: true,
 				colorOnline: "#FFFFFF",
 				colorOffline: "#FF0000"
