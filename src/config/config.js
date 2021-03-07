@@ -119,8 +119,8 @@ var config = {
 			position: 'bottom_right',
 			config: {
 				position: 'center',
-				height: 300,
-				width: 500,
+				height: 600,
+				width: 1000,
 				castName: "MagicMirror-GBM-cast"
 			}
 		},
