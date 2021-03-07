@@ -25,7 +25,7 @@ Module.register("MMM-Online-State", {
             }
             const symbol = this.symbolForState(state);
             const symbolElement = document.createElement("span");
-            symbolElement.className = "fa fa-fw fa- fas fa-" + symbol;
+            symbolElement.className = symbol;
             symbolWrapper.appendChild(symbolElement);
             wrapper.appendChild(symbolWrapper);
         }
