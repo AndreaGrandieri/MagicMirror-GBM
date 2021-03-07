@@ -119,8 +119,8 @@ var config = {
 			position: 'top_right',
 			config: {
 				displaySymbol: true,
-				symbolOnline: "fas fa-wifi",
-				symbolOffline: "fas fa-wifi-slash",
+				symbolOnline: "wifi",
+				symbolOffline: "wifi-slash",
 				colored: true,
 				colorOnline: "#FFFFFF",
 				colorOffline: "#FF0000"
