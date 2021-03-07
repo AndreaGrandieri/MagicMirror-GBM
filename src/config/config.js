@@ -120,7 +120,7 @@ var config = {
 			config: {
 				displaySymbol: true,
 				symbolOnline: "wifi",
-				symbolOffline: "address-book",
+				symbolOffline: "wifi",
 				colored: true,
 				colorOnline: "#FFFFFF",
 				colorOffline: "#FF0000"
