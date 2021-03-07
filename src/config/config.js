@@ -113,6 +113,19 @@ var config = {
 				showIndex: true
 			}
 		},
+		{
+			module: 'MMM-Online-State',
+			// you may choose any location
+			position: 'top_right',
+			config: {
+				displaySymbol: true,
+				symbolOnline: "fas fa-wifi",
+				symbolOffline: "fas fa-wifi-slash",
+				colored: true,
+				colorOnline: "#FFFFFF",
+				colorOffline: "#FF0000"
+			}
+		},
 	]
 };
 
