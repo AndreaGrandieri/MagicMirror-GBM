@@ -2,8 +2,11 @@
 
 ## tl;dr
 
-Permette di effettuare il cast di contenuti multimediali da
-di diversi dispositivi al MagicMirror.
+Permette di effettuare il cast di contenuti multimediali (video & audio) da
+diversi dispositivi smart al MagicMirror.
+
+__E' necessario connettere il dispositivo smart (e.g. Smartphone, Tablet...) dal quale
+si invia il cast e il MagicMirror alla stessa rete locale (LAN).__
 
 ---
 
@@ -16,8 +19,8 @@ di diversi dispositivi al MagicMirror.
     position: 'bottom_right', 
     config: {
         position: 'center',
-        height: 300,
-        width: 500,
+        height: 600,
+        width: 1000,
         castName: "MagicMirror-GBM-cast"
     }
 }
@@ -41,7 +44,13 @@ di diversi dispositivi al MagicMirror.
 
 ## Screenshots
 
-_Qui (in attesa... [https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/89](https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/89))._
+Schermata del dispositivo smart (e.g. Smartphone, Tablet...):
+
+![cast_smartdevice.png](resources/cast_smartdevice.png)
+
+Schermata del MagicMirror:
+
+![resources/cast_magicmirror.jpg](resources/cast_magicmirror.jpg)
 
 ---
 
