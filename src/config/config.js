@@ -119,8 +119,8 @@ var config = {
 			position: 'top_right',
 			config: {
 				displaySymbol: true,
-				symbolOnline: "wifi",
-				symbolOffline: "wifi",
+				symbolOnline: "globe",
+				symbolOffline: "globe",
 				colored: true,
 				colorOnline: "#FFFFFF",
 				colorOffline: "#FF0000"
