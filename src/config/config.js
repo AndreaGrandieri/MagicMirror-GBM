@@ -63,22 +63,26 @@ var config = {
 			}
 		},
 		{
-			module: "currentweather",
+			module: "weather",
 			position: "top_right",
 			config: {
-				location: "New York",
-				locationID: "5128581", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-				appid: "YOUR_OPENWEATHER_API_KEY"
-			}
-		},
-		{
-			module: "weatherforecast",
-			position: "top_right",
-			header: "Weather Forecast",
-			config: {
-				location: "New York",
-				locationID: "5128581", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-				appid: "YOUR_OPENWEATHER_API_KEY"
+				weatherProvider: "openweathermap",
+				type: "current",
+				units: config.units,
+				degreeLabel: true,
+				updateInterval: 600000,
+				lang: config.language,
+				initialLoadDelay: 1000,
+				onlyTemp: false,
+				showHumidity: true,
+				showIndoorTemperature: true,
+				showIndoorHumidity: true,
+				showSun: true,
+				colored: true,
+				showPrecipitationAmount: true,
+				maxNumberOfDays: 5,
+				locationID: "3173435",
+				apiKey: "f41537e389176cf93d8e0586d0d701ae"
 			}
 		},
 		{
