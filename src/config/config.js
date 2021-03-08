@@ -86,11 +86,11 @@ var config = {
 			}
 		},
 		{
-			module: "weather",
+			module: "weatherforecast",
 			position: "top_right",
 			config: {
 				weatherProvider: "openweathermap",
-				type: "daily",
+				type: "forecast",
 				units: "metric",
 				degreeLabel: true,
 				updateInterval: 600000,
