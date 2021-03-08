@@ -68,10 +68,10 @@ var config = {
 			config: {
 				weatherProvider: "openweathermap",
 				type: "current",
-				units: config.units,
+				units: "metric",
 				degreeLabel: true,
 				updateInterval: 600000,
-				lang: config.language,
+				lang: "en",
 				initialLoadDelay: 1000,
 				onlyTemp: false,
 				showHumidity: true,
