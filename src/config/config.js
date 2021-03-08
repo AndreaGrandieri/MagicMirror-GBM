@@ -89,23 +89,8 @@ var config = {
 			module: "weatherforecast",
 			position: "top_right",
 			config: {
-				weatherProvider: "openweathermap",
-				type: "forecast",
-				units: "metric",
-				degreeLabel: true,
-				updateInterval: 600000,
-				lang: "en",
-				initialLoadDelay: 1000,
-				onlyTemp: false,
-				showHumidity: true,
-				showIndoorTemperature: true,
-				showIndoorHumidity: true,
-				showSun: true,
-				colored: true,
-				showPrecipitationAmount: true,
-				maxNumberOfDays: 5,
 				locationID: "3173435",
-				apiKey: "f41537e389176cf93d8e0586d0d701ae"
+				appid: "f41537e389176cf93d8e0586d0d701ae"
 			}
 		},
 		{
