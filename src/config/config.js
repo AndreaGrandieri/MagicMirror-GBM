@@ -90,7 +90,7 @@ var config = {
 			position: "top_right",
 			config: {
 				weatherProvider: "openweathermap",
-				type: "forecast",
+				type: "daily",
 				units: "metric",
 				degreeLabel: true,
 				updateInterval: 600000,
