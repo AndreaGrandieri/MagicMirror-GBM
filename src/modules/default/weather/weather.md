@@ -15,7 +15,6 @@ con enfasi per il giorno corrente.
     position: "top_right",
     config: {
         weatherProvider: "openweathermap",
-        type: "current",
         units: "metric",
         degreeLabel: true,
         updateInterval: 600000,
@@ -42,7 +41,6 @@ con enfasi per il giorno corrente.
 | Proprietà                 | Tipo      | Valori                                                                                                                                                                                                           | Valore Default     | Inderogabilità | Descrizione                                                                                                  |
 | ------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | -------------- | ------------------------------------------------------------------------------------------------------------ |
 | `weatherProvider`         | `String`  | `"openweathermap"` <br> `"darksky"` <br> `"weathergov"` <br> `"ukmetoffice"` <br> `"weatherbit"`                                                                                                                 | `"openweathermap"` | `OPTIONAL`     | API.                                                                                                         |
-| `type`                    | `String`  |                                                                                                                                                                                                                  | `"current"`        | `OPTIONAL`     |                                                                                                              |
 | `units`                   | `String`  | `config.units`: Acquisizione del valore specificato nel file _config.js_. <br> `"default"`: Kelvin. <br> `"metric"`: Celsius. <br> `"imperial"`: Fahrenheit.                                                     | `config.units`     | `OPTIONAL`     | Unità di misura per i gradi.                                                                                 |
 | `degreeLabel`             | `Boolean` | `true`: Attiva la visualizzazione dell'unità di misura _(etichetta)_ per i gradi in uso. <br> `false`: Disattiva la visualizzazione dell'unità di misura _(etichetta)_ per i gradi in uso.                       | `false`            | `OPTIONAL`     | Attiva la visualizzazione dell'unità di misura _(etichetta)_ per i gradi in uso.                             |
 | `updateInterval`          | `Number`  | `1000 <= milliseconds <= 86400000`                                                                                                                                                                               | `600000`           | `OPTIONAL`     | Frequenza di aggiornamento / richiesta contenuti aggiornati.                                                 |

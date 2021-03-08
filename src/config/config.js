@@ -67,7 +67,6 @@ var config = {
 			position: "top_right",
 			config: {
 				weatherProvider: "openweathermap",
-				type: "current",
 				units: "metric",
 				degreeLabel: true,
 				updateInterval: 600000,
@@ -85,14 +84,14 @@ var config = {
 				apiKey: "f41537e389176cf93d8e0586d0d701ae"
 			}
 		},
-		{
+		/*{
 			module: "weatherforecast",
 			position: "top_right",
 			config: {
 				locationID: "3173435",
 				appid: "f41537e389176cf93d8e0586d0d701ae"
 			}
-		},
+		},*/
 		{
 			module: "newsfeed",
 			position: "bottom_bar",
