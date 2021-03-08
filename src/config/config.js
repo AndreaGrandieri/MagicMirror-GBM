@@ -92,7 +92,7 @@ var config = {
 				weatherProvider: "openweathermap",
 				type: "forecast",
 				units: "metric",
-				scale: true,
+				degreeLabel: true,
 				updateInterval: 600000,
 				lang: "en",
 				initialLoadDelay: 1000,
