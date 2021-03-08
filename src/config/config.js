@@ -62,7 +62,7 @@ var config = {
 				]
 			}
 		},
-		{
+		/*{
 			module: "weather",
 			position: "top_right",
 			config: {
@@ -84,7 +84,7 @@ var config = {
 				locationID: "3173435",
 				apiKey: "f41537e389176cf93d8e0586d0d701ae"
 			}
-		},
+		},*/
 		{
 			module: "weather",
 			position: "top_right",
