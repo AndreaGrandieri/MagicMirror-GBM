@@ -21,7 +21,7 @@ for ($i = 0; $i < count($jsonParsedModuli); $i++) {
     $nomeModulo = $jsonParsedModuli[$i]["module"];
     $dynTable .= "
             <tr>
-            <td>$nomeModulo</td>
+            <td><a href='moduloSettings.php?nomeModulo=$nomeModulo&index=$i'>$nomeModulo</a></td>
             <td>'CHECKBOX'</td>
         </tr>
     ";

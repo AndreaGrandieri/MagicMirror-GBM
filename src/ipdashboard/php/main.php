@@ -27,7 +27,7 @@
             <th>Descrizione</th>
         </tr>
         <tr>
-            <td><a href="moduliSelector.php">Moduli</a></td>
+            <td><a href="moduliSelector.php">Moduli Selector</a></td>
             <td>Modifica i moduli in attività per il MagicMirror.</td>
         </tr>
     </table>
