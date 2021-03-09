@@ -46,6 +46,19 @@ var config = {
 			position: "top_bar"
 		},
 		{
+			module: 'MMM-Online-State',
+			// you may choose any location
+			position: 'top_right',
+			config: {
+				displaySymbol: true,
+				symbolOnline: "fas fa-globe",
+				symbolOffline: "fas fa-globe",
+				colored: true,
+				colorOnline: "#FFFFFF",
+				colorOffline: "#FF0000"
+			}
+		},
+		{
 			module: "clock",
 			position: "top_left"
 		},
@@ -63,22 +76,41 @@ var config = {
 			}
 		},
 		{
-			module: "currentweather",
+			module: "weather",
 			position: "top_right",
 			config: {
-				location: "New York",
-				locationID: "5128581", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-				appid: "YOUR_OPENWEATHER_API_KEY"
+				weatherProvider: "openweathermap",
+				units: "metric",
+				degreeLabel: true,
+				updateInterval: 600000,
+				lang: "en",
+				initialLoadDelay: 1000,
+				onlyTemp: false,
+				showHumidity: true,
+				showIndoorTemperature: true,
+				showIndoorHumidity: true,
+				showSun: true,
+				colored: true,
+				showPrecipitationAmount: true,
+				maxNumberOfDays: 5,
+				locationID: "3173435",
+				apiKey: "f41537e389176cf93d8e0586d0d701ae"
 			}
 		},
 		{
 			module: "weatherforecast",
 			position: "top_right",
-			header: "Weather Forecast",
 			config: {
-				location: "New York",
-				locationID: "5128581", //ID from http://bulk.openweathermap.org/sample/city.list.json.gz; unzip the gz file and find your city
-				appid: "YOUR_OPENWEATHER_API_KEY"
+				units: "metric",
+				updateInterval: 600000,
+				lang: "en",
+				initialLoadDelay: 1000,
+				colored: true,
+				showRainAmount: true,
+				maxNumberOfDays: 5,
+				roundTemp: true,
+				locationID: "3173435",
+				appid: "f41537e389176cf93d8e0586d0d701ae"
 			}
 		},
 		{
@@ -107,19 +139,6 @@ var config = {
 				updateInterval: 30,
 				showLocation: true,
 				showIndex: true
-			}
-		},
-		{
-			module: 'MMM-Online-State',
-			// you may choose any location
-			position: 'top_right',
-			config: {
-				displaySymbol: true,
-				symbolOnline: "fas fa-globe",
-				symbolOffline: "fas fa-globe",
-				colored: true,
-				colorOnline: "#FFFFFF",
-				colorOffline: "#FF0000"
 			}
 		},
 	]
