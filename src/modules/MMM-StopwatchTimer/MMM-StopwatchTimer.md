@@ -12,7 +12,7 @@ Con questo modulo MagicMirror puoi visualizzare un timer o un cronometro in stil
 {
     module: 'MMM-StopwatchTimer',
     config: {
-      animation: true,
+      animation: true
     }
 }
 ```
