@@ -2,7 +2,7 @@
 
 ## tl;dr
 
-Con questo modulo MagicMirror puoi visualizzare un timer o un cronometro in stile avviso sullo specchio. Il timer e il cronometro possono essere controllati tramite notifiche o utilizzando la [MM-Remote android app](https://github.com/Klettner/MM-Remote)
+Con questo modulo MagicMirror puoi visualizzare un timer o un cronometro in stile avviso sullo specchio. Il timer e il cronometro possono essere controllati tramite notifiche o utilizzando la [MM-Remote android app](https://github.com/Klettner/MM-Remote).
 
 ---
 
