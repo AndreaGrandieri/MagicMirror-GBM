@@ -141,6 +141,30 @@ var config = {
 				showIndex: true
 			}
 		},
+		{
+			module: 'MMM-Screencast',
+			// This position is for a hidden <div /> and not the screencast window
+			position: 'bottom_right',
+			config: {
+				position: 'center',
+				height: 600,
+				width: 1000,
+				castName: "MagicMirror-GBM-cast"
+    }
+    },
+    {
+			module: 'MMM-Online-State',
+			// you may choose any location
+			position: 'top_right',
+			config: {
+				displaySymbol: true,
+				symbolOnline: "fas fa-globe",
+				symbolOffline: "fas fa-globe",
+				colored: true,
+				colorOnline: "#FFFFFF",
+				colorOffline: "#FF0000"
+			}
+		},
 	]
 };
 
