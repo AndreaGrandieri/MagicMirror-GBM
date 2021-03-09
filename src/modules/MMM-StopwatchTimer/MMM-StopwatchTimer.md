@@ -35,6 +35,7 @@ Con questo modulo MagicMirror puoi visualizzare un timer o un cronometro in stil
 ---
 
 ## \<Altro\>
+Provvisorio (guarda [https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/90](https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/90))
 
 Le seguenti notifiche possono essere utilizzate per controllare questo modulo
 
