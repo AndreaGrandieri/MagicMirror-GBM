@@ -165,6 +165,12 @@ var config = {
 				colorOffline: "#FF0000"
 			}
 		},
+	{
+			module: 'MMM-StopwatchTimer',
+			config: {
+			  animation: true,
+			}
+		}
 	]
 };
 
