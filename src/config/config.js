@@ -83,7 +83,7 @@ var config = {
 				units: "metric",
 				degreeLabel: true,
 				updateInterval: 600000,
-				lang: "it",
+				lang: "en",
 				initialLoadDelay: 1000,
 				onlyTemp: false,
 				showHumidity: true,
