@@ -1,4 +1,4 @@
-# \<MMM-StopwatchTimer\>
+# MMM-StopwatchTimer
 
 ## tl;dr
 
