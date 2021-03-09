@@ -31,7 +31,7 @@ jobs:
     - run: |
         Xvfb :99 -screen 0 1024x768x16 &
         export DISPLAY=:99
-        npm-recursive-install
+        npm install
         npm run test:prettier
         npm run test:js
         npm run test:css
