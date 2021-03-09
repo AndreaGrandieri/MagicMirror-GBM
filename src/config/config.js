@@ -46,6 +46,19 @@ var config = {
 			position: "top_bar"
 		},
 		{
+			module: 'MMM-Online-State',
+			// you may choose any location
+			position: 'top_right',
+			config: {
+				displaySymbol: true,
+				symbolOnline: "fas fa-globe",
+				symbolOffline: "fas fa-globe",
+				colored: true,
+				colorOnline: "#FFFFFF",
+				colorOffline: "#FF0000"
+			}
+		},
+		{
 			module: "clock",
 			position: "top_left"
 		},
@@ -118,19 +131,6 @@ var config = {
 				updateInterval: 30,
 				showLocation: true,
 				showIndex: true
-			}
-		},
-		{
-			module: 'MMM-Online-State',
-			// you may choose any location
-			position: 'top_right',
-			config: {
-				displaySymbol: true,
-				symbolOnline: "fas fa-globe",
-				symbolOffline: "fas fa-globe",
-				colored: true,
-				colorOnline: "#FFFFFF",
-				colorOffline: "#FF0000"
 			}
 		},
 	]
