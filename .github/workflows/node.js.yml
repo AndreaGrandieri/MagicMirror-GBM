@@ -28,6 +28,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
+    - run: |
+        Xvfb :99 -screen 0 1024x768x16 &
+        export DISPLAY=:99
+        npm-recursive-install
+        npm run test:prettier
+        npm run test:js
+        npm run test:css
+        npm run test:e2e
+        npm run test:unit
