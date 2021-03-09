@@ -168,7 +168,7 @@ var config = {
 	{
 			module: 'MMM-StopwatchTimer',
 			config: {
-			  animation: true,
+			  animation: true
 			}
 		},
 	]
