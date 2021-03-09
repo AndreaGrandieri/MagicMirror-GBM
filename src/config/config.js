@@ -170,7 +170,7 @@ var config = {
 			config: {
 			  animation: true,
 			}
-		}
+		},
 	]
 };
 
