@@ -152,6 +152,12 @@ var config = {
 				castName: "MagicMirror-GBM-cast"
 			}
 		},
+	{
+			module: 'MMM-StopwatchTimer',
+			config: {
+			  animation: true
+			}
+		},
 	]
 };
 
