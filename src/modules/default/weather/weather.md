@@ -2,8 +2,7 @@
 
 ## tl;dr
 
-Visualizza il meteo per la settimana corrente,
-con enfasi per il giorno corrente.
+Visualizza il meteo per il giorno corrente.
 
 ---
 
@@ -61,10 +60,36 @@ con enfasi per il giorno corrente.
 
 ## Screenshots
 
-_Qui (se presenti, consigliati)._
+Schermata del modulo funzionante:
+
+![working_module](resources/working_module.PNG)
 
 ---
 
-## \<Altro\>
+## Requisiti Privati
 
-_Qui altre informazioni, se necessarie. Denominare il paragrafo a dovere._
+Ottieni la tua API KEY per le API di OPENWEATHERMAP: [https://openweathermap.org/](https://openweathermap.org/).
+
+E' necessaria una API KEY per l'utilizzo del modulo, in quanto quest'ultimo
+utilizza le API di OPENWEATHERMAP. L'utilizzo delle API effettuato in modo
+automatico da questo modulo è conforme agli standard di utilizzo delle suddette
+API, ed è totalmente gratuito (nei limiti di utilizzo privato effettuato
+in modo automatico da questo modulo).
+
+---
+
+## locationID
+
+La proprietà `locationID` identifica univocamente una località nell'intero mondo.
+Questo codice semplifica l'atto di specificazione della zona da analizzare,
+in quanto quest'ultima viene, appunto, identificata univocamente.
+
+Per ottenere il valore di `locationID`:
+
+- Visita prima di tutto: [https://openweathermap.org/](https://openweathermap.org/).
+- Utilizza <br> ![search_bar_getlocationID](resources/search_bar_getlocationID.PNG) <br>
+  per cercare la tua zona di interesse.
+- Una volta effettuata la ricerca <br> ![search_bar_used_getlocationID](resources/search_bar_used_getlocationID.PNG) <br>
+  potrai notare che l'__URL__ della pagina correntemente visualizzata contiene proprio
+  il valore di `locationID`: <br>
+  ![url_gotlocationID](resources/url_gotlocationID.PNG)
