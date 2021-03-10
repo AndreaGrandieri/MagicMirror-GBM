@@ -56,3 +56,8 @@ div.gc2
 {
   font-size: 20px;
 }
+
+.CodeMirror
+{
+  background-color: grey;
+}

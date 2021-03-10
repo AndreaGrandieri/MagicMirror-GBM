@@ -24,7 +24,9 @@
         }, {
             value: "{\n}",
             mode: "application/json",
-            lineNumbers: true
+            lineNumbers: true,
+            gutters: ['CodeMirror-lint-markers'],
+            lint: true
         });
         myCodeMirror.setSize(500, 300);
     </script>
