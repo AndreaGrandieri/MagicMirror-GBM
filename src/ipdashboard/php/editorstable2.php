@@ -1,3 +1,18 @@
+<?php
+// NECESSARI CONTROLLI!
+$nomeModulo = $_GET["nomeModulo"];
+$index = $_GET["index"];
+
+$filePath = "../../config/config.json";
+
+$file = fopen($filePath, "r") or die("Unable to parse 'config.json'");
+$jsonContent = fread($file, filesize($filePath));
+$jsonParsed = json_decode($jsonContent, true);
+$jsonParsedModulo = $jsonParsed["config"]["modules"][$index];
+
+$jsonContentModulo = json_encode($jsonParsedModulo, JSON_PRETTY_PRINT);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,17 +40,15 @@
 <script src="../codemirror-5.59.4/addon/lint/lint.js"></script>
 <script src="../codemirror-5.59.4/addon/lint/javascript-lint.js"></script>
 <script src="../codemirror-5.59.4/addon/lint/json-lint.js"></script>
+<!--
+<script src="../js/utils.js" type="module"></script>
+-->
 
 <body>
 
   <p>
-    <textarea id="code-json">
-{
-  
-}
-</textarea>
+    <textarea id="code-json"><?php echo "$jsonContentModulo" ?></textarea>
   </p>
-
 
   <script>
     var editor_json = CodeMirror.fromTextArea(document.getElementById("code-json"), {
