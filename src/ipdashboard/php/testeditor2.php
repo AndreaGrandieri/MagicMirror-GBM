@@ -13,19 +13,30 @@
 </head>
 
 <body>
-    <script src="../js/require.js"></script>
 
+
+    <!-- Loading codemirror -->
     <script src="../codemirror-5.59.4/lib/codemirror.js"></script>
     <link rel="stylesheet" href="../codemirror-5.59.4/lib/codemirror.css">
     <script src="../codemirror-5.59.4/mode/javascript/javascript.js"></script>
 
+    <!-- Loading JSON linter -->
+    <!--
     <link rel="stylesheet" href="../codemirror-5.59.4/addon/lint/lint.css">
     <script src="../codemirror-5.59.4/addon/lint/lint.js"></script>
     <script src="../codemirror-5.59.4/addon/lint/json-lint.js"></script>
-    <script>
-        window.jsonlint = require('jsonlinter');
-    </script>
+-->
 
+    <!-- Loading require -->
+    <script src="../js/require.js"></script>
+
+    <!-- Loading JSON linter dependencies -->
+    <script>
+        window.jsonlint = require("../jsonlint/lib/jsonlint.js");
+        require("../codemirror-5.59.4/addon/lint/lint.css");
+        require("../codemirror-5.59.4/addon/lint/lint.js");
+        require("../codemirror-5.59.4/addon/lint/json-lint.js");
+    </script>
 
     <textarea id="editorTextArea">
         </textarea>
