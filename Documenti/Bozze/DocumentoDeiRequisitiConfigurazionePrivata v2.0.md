@@ -1,10 +1,10 @@
 # MagicMirror-GBM
 
-Documento dei requisiti
+Documento dei requisiti MagicMirror-GBM configurazione ad uso privato
 
 *ver. 2.0* 
 
-09/03/2021
+10/03/2021
 
 ---
 
@@ -71,7 +71,7 @@ Le figure che influenzano lo sviluppo del sistema software sono:
 
 ### 2.2 Requisiti informativi
 
-Questa sezione è vuota (per ora).
+Il linguaggio utilizzato per lo scambio di informazioni tra le componenti interne ed esterne del sistema è il JSON. 
 
 ---
 
@@ -82,39 +82,40 @@ Questa sezione è vuota (per ora).
 L'interfaccia proposta dal sistema è stata appositamente studiata per garantire una fruizione di contenuti intuitiva ed immediata.
 
 - 3.1.1 Interfaccia principale
-  
-  - 3.1.1.1 Visualizzazione della data e dell'ora corrente
-  - 3.1.1.2 Visualizzazione del meteo
-  - 3.1.1.3 Visualizzazione delle news
-  - 3.1.1.4 Visualizzazione di un calendario interattivo
-  - 3.1.1.5 Visualizzazione delle note
-  - 3.1.1.6 Visualizzazione delle e-mail
+  - 3.1.1.1 Visualizzazione della qualità dell'aria per la zona specificata
+  - 3.1.1.2 Visualizzazione della temperatura e dell'umidità locali (usa sensore: DHT11)
+  - 3.1.1.3 Visualizzazione delle news più recenti
+  - 3.1.1.4 Visualizzazione degli aggiornamenti relativi alle quotazioni in borsa
+  - 3.1.1.5 Visualizzazione della data e dell'ora correnti
+  - 3.1.1.6 Visualizzazione delle previsioni meteo
+  - 3.1.1.7 Visualizzazione di un calendario interattivo
+  - 3.1.1.8 Visualizzazione delle annotazioni
+  - 3.1.1.9 Visualizzazione delle email in entrata
+  - 3.1.1.10 Visualizzazione dello stato della connessione
 
-- 3.1.2 Interfaccia browser
-  
-  - 3.1.2.1 Visualizzazione risultati navigazione web
+- 3.1.2 Interfaccia modulo MMM-StopwatchTimer 
+  - 3.1.2.1 Visualizzazione di un timer/cronometro
 
-- 3.1.3 Interfaccia timer
+- 3.1.3 Interfaccia modulo MMM-Screencast
+  - 3.1.3.1 Visualizzazione di contenuti multimediali
 
-  - 3.1.3.1 Visualizzazione del timer
+- 3.1.4 Interfaccia modulo openlayers
+  - 3.1.4.1 Visualizzazione di mappe interattive
 
-- 3.1.4 <mark>Interfaccia messaggistica</mark>
+- 3.1.5 Interfaccia modulo camera
+  - 3.1.5.1 Visualizzazione del feed video di una webcam
 
-- 3.1.5 Interfaccia riproduzione di contenuti multimediali
-
-- 3.1.6 Interfaccia mappe
-  
-  - 3.1.6.1 Visualizzazione delle mappe
 
 ### 3.2 Requisiti tecnologici
   
-- 3.2.1 Raspberry Pi (modello?)
+- 3.2.1 Raspberry Pi modello 2 o superiore 
 - 3.2.2 Microfono
 - 3.2.3 Fotocamera
 - 3.2.4 Casse audio
-- 3.2.5 Schermo (tipo?)
+- 3.2.5 Schermo con interfaccia HDMI
 - 3.2.6 Telaio specchio
 - 3.2.7 Two-way mirror
+- 3.2.8 Sensore DHT11
 
 ### 3.3 Requisiti di prestazione
   
@@ -131,23 +132,29 @@ L'intero progetto è stato realizzato utilizzando i seguenti linguaggi:
 - JavaScript
 - CSS
 - HTML
+- PHP
 
-Si relaziona con sistemi operativi Raspberry Pi OS e applicazione Android.
+L'intero progetto è basato sulle seguenti piattaforme:
+
+- npm + Node.js v10.x o superiore 
+- Electron
+
+Si relaziona con sistemi operativi Raspberry Pi OS (*full version*).
 
 ### 3.6 Requisiti politici e legali
 
-Non si registrano particolari esigenze in questo ambito.
+Il sistema software open source è rilasicato sotto la licenza [Apache-2.0 License](https://github.com/AndreaGrandieri/MagicMirror-GBM/blob/main/LICENSE)
 
-### 3.7 Altri vincoli
 
-Questa sezione è vuota.
+### 3.7 Vincoli API esterne
+
+L'utilizzo di API esterne è soggetto a limitazioni poste dai fornitori delle API stesse. Pertanto si invita ad una consultazione dei regolamenti di utilizzo delle singole API. 
 
 ---
 
 ## 4 Appendici
-### 4.1 Glossario
 
-- **Browser**: programma per navigare in Internet che inoltra la richiesta di un documento alla rete e ne consente la visualizzazione una volta arrivato.
+### 4.1 Glossario
 
 - **Human-centered design**: approccio di problem solving che coinvolge la prospettiva del cliente in tutti gli step della risoluzione stessa.
   
