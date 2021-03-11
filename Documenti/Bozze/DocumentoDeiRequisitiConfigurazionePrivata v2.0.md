@@ -108,14 +108,14 @@ L'interfaccia proposta dal sistema è stata appositamente studiata per garantire
 
 ### 3.2 Requisiti tecnologici
   
-- 3.2.1 Raspberry Pi modello 2 o superiore 
-- 3.2.2 Microfono
-- 3.2.3 Fotocamera
-- 3.2.4 Casse audio
-- 3.2.5 Schermo con interfaccia HDMI
-- 3.2.6 Telaio specchio
-- 3.2.7 Two-way mirror
-- 3.2.8 Sensore DHT11
+- Raspberry Pi modello 2 o superiore 
+- Microfono
+- Fotocamera
+- Casse audio
+- Schermo con interfaccia HDMI
+- Telaio specchio
+- Two-way mirror
+- Sensore DHT11
 
 ### 3.3 Requisiti di prestazione
   
