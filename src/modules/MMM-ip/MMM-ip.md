@@ -1,33 +1,61 @@
-# \<Nome-Modulo\>
+# MMM-ip
 
 ## tl;dr
 
-_Qui una breve descrizione dello scopo del modulo._
+Visualizza gli indirizzi IP __locali__ delle interfacce di rete attive nel __Raspberry Pi__.
 
 ---
 
 ## config.js fragment
 
 ```js
-// Qui frammento di configurazione da inserire nel file globale "config.js"
+{
+    module: 'MMM-ip',
+    position: 'bottom_right',
+    config: {
+        fontSize: 9,
+        families: [
+            "IPv4"
+        ],
+        types: [
+
+        ]
+    }
+}
 ```
 
 ---
 
 ## Proprietà (config section)
 
-| Proprietà        | Tipo                                               | Valori                                                                             | Valore Default          | Inderogabilità           | Descrizione              |
-| ---------------- | -------------------------------------------------- | ---------------------------------------------------------------------------------- | ----------------------- | ------------------------ | ------------------------ |
-| `Nome-Proprietà` | `Tipo` _guarda [DataTypesJS.PNG](DataTypesJS.PNG)_ | `valore1`: _descrizione / vincoli_ <br> `valore2`: _descrizione / vincoli_ _[...]_ | `valore`: _descrizione_ | `REQUIRED` or `OPTIONAL` | _Qui breve descrizione._ |
+| Proprietà  | Tipo                | Valori                                                                                          | Valore Default | Inderogabilità | Descrizione                                                                                 |
+| ---------- | ------------------- | ----------------------------------------------------------------------------------------------- | -------------- | -------------- | ------------------------------------------------------------------------------------------- |
+| `fontSize` | `Integer`           | Qualsiasi valore `> 0`. Unità di misura: `pixel`.                                               | `9`            | `OPTIONAL`     | Dimensione in pixel del font per la visualizzazione degli elementi renderizzati dal modulo. |
+| `families` | `Array` -> `String` | `"IPv4"`: Visualizza indirizzi IPv4. <br> `IPv6`: Visualizza indirizzi IPv6 .                   | `---`          | `REQUIRED`     | Tipologia / Tipologie di indirizzi IP da visualizzare.                                      |
+| `types`    | `Array` -> `String` | Nome interfaccia / interfacce di rete da monitorare. _Guarda sotto per ulteriori informazioni_. | `---`          | `REQUIRED`     | Interfaccia / Interfacce di rete da monitorare.                                             |
 
 ---
 
 ## Screenshots
 
-_Qui (se presenti, consigliati)._
+Schermata del modulo in esecuzione correttamente:
+
+![working_module.PNG](resources/working_module.PNG)
 
 ---
 
-## \<Altro\>
+## Interfaccia di Rete
 
-_Qui altre informazioni, se necessarie. Denominare il paragrafo a dovere._
+Solitamente le interfacce di rete di default per un __Raspberry Pi__ in
+_situazione normale_ (cioè senza modifiche alle impostazioni di default dell'OS)
+sono le seguenti:
+
+- Ethernet: `eth0`
+- WIFI: `wlan0`
+
+Questi sono i comandi per ottenere informazioni sulle interfacce di rete del
+proprio __Raspberry Pi__:
+
+```shell
+
+```
