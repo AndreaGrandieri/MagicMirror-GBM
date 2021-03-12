@@ -1,4 +1,9 @@
 <?php
+require "../utils/utils.php";
+
+// Gestione sessione
+startNewSessionCheck();
+
 // Compilazione dinamica tabella dei moduli
 // sulla base di "config.js"
 
@@ -29,8 +34,13 @@ for ($i = 0; $i < count($jsonParsedModuli); $i++) {
     ";
 }
 
-$dynTable .= "</table>"
+$dynTable .= "</table>";
 
+// Ottengo "statusPHP"
+$statusPHP = readSessionVariable("statusPHP");
+
+setSessionVariable("statusPHP", null);
+setSessionVariable("statusPHPRedirect", null);
 ?>
 
 <!DOCTYPE html>
@@ -56,6 +66,15 @@ $dynTable .= "</table>"
         echo $dynTable;
         ?>
     </div>
+
+    <?php
+    echo "
+    <br><br>
+    <div id='statusJS'></div>
+    <br>
+    <div id='status'>$statusPHP</div>
+    "
+    ?>
 
 </body>
 

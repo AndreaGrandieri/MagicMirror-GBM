@@ -1,12 +1,14 @@
 <?php
-// Controlla presenza / validità input per GET
-function test_input_valid_get($nameInput)
-{
-  return isset($_GET[$nameInput]);
-}
+require "../utils/utils.php";
 
-if (!test_input_valid_get("index")) {
-  die("Died of test_input_valid_get. \"index\" parameter not found.");
+// Gestione sessione
+startNewSessionCheck();
+
+if (!test_input_valid_get_isset("index")) {
+  setSessionVariable("statusPHP", "Died of test_input_valid_get_isset. \"index\" parameter not found.");
+  setSessionVariable("statusPHPRedirect", null);
+  header("location: redirect.php?target=index.php&ms=300");
+  die;
 }
 
 $filePath = "../../config/config.json";
@@ -20,11 +22,17 @@ $jsonParsed = json_decode($jsonContent, true);
 $index = $_GET["index"];
 
 if (!ctype_digit($index)) {
-  die("Died of ctype_digit. \"index\" is not positive integer.");
+  setSessionVariable("statusPHP", "Died of ctype_digit. \"index\" is not positive integer.");
+  setSessionVariable("statusPHPRedirect", null);
+  header("location: redirect.php?target=index.php&ms=300");
+  die;
 }
 
 if (!array_key_exists($index, $jsonParsed["config"]["modules"])) {
-  die("Died of index check. \"index\" is out of range.");
+  setSessionVariable("statusPHP", "Died of index check. \"index\" is out of range.");
+  setSessionVariable("statusPHPRedirect", null);
+  header("location: redirect.php?target=index.php&ms=300");
+  die;
 }
 
 $jsonParsedModulo = $jsonParsed["config"]["modules"][$index];
@@ -33,6 +41,12 @@ unset($jsonParsedModulo["module"]);
 
 $jsonContentModulo = json_encode($jsonParsedModulo, JSON_PRETTY_PRINT);
 $jsonParsedModuloHeader = json_encode($jsonContentModuloHeader, JSON_PRETTY_PRINT);
+
+// Ottengo "statusPHP"
+$statusPHP = readSessionVariable("statusPHP");
+
+setSessionVariable("statusPHP", null);
+setSessionVariable("statusPHPRedirect", null);
 ?>
 
 <!DOCTYPE html>
@@ -135,6 +149,15 @@ $jsonParsedModuloHeader = json_encode($jsonContentModuloHeader, JSON_PRETTY_PRIN
       utils.clearAndInject("submitButton", "<input type='submit' id='save' name='save' value='SALVA' disabled>");
     }
   </script>
+
+  <?php
+  echo "
+    <br><br>
+    <div id='statusJS'></div>
+    <br>
+    <div id='status'>$statusPHP</div>
+    "
+  ?>
 
 </body>
 

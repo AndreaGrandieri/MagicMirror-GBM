@@ -24,6 +24,18 @@ function test_input_valid_get($nameInput)
     return !empty($_GET[$nameInput]);
 }
 
+// Controlla presenza / validità input per POST
+function test_input_valid_post_isset($nameInput)
+{
+    return isset($_POST[$nameInput]);
+}
+
+// Controlla presenza / validità input per GET
+function test_input_valid_get_isset($nameInput)
+{
+    return isset($_GET[$nameInput]);
+}
+
 // Validatore campo "Name"
 function test_name_valid($name)
 {

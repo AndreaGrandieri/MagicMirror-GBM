@@ -1,20 +1,35 @@
 <?php
 require "../utils/utils.php";
 
+// Gestione sessione
+startNewSessionCheck();
+
 if (!test_input_valid_post("code-json-header")) {
-    die("ERROR");
+    setSessionVariable("statusPHP", "Rilevati valori non validi. Riprova.");
+    setSessionVariable("statusPHPRedirect", null);
+    header("location: redirect.php?target=moduliSelector.php&ms=300");
+    die;
 }
 
 if (!test_input_valid_post("code-json")) {
-    die("ERROR");
+    setSessionVariable("statusPHP", "Rilevati valori non validi. Riprova.");
+    setSessionVariable("statusPHPRedirect", null);
+    header("location: redirect.php?target=moduliSelector.php&ms=300");
+    die;
 }
 
-if (!test_input_valid_post("index")) {
-    die("ERROR");
+if (!test_input_valid_post_isset("index")) {
+    setSessionVariable("statusPHP", "Rilevati valori non validi. Riprova.");
+    setSessionVariable("statusPHPRedirect", null);
+    header("location: redirect.php?target=moduliSelector.php&ms=300");
+    die;
 }
 
 if (!test_input_valid_post("jsonContent")) {
-    die("ERROR");
+    setSessionVariable("statusPHP", "Rilevati valori non validi. Riprova.");
+    setSessionVariable("statusPHPRedirect", null);
+    header("location: redirect.php?target=moduliSelector.php&ms=300");
+    die;
 }
 
 $codeJson = ($_POST["code-json"]);
@@ -34,3 +49,11 @@ $jsonContent = json_encode($jsonParsed, JSON_PRETTY_PRINT);
 $file = fopen("../../config/config.json", "w") or die("Unable to use 'config.json'");
 fwrite($file, $jsonContent);
 fclose($file);
+
+setSessionVariable("statusPHP", "Salvataggio effettuato con successo.");
+setSessionVariable("statusPHPRedirect", null);
+header("location: redirect.php?target=moduloSettings.php?index=$index&ms=300");
+die;
+
+setSessionVariable("statusPHP", null);
+setSessionVariable("statusPHPRedirect", null);

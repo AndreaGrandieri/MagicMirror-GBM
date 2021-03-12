@@ -1,5 +1,14 @@
 <?php
+require "../utils/utils.php";
 
+// Gestione sessione
+startNewSessionCheck();
+
+// Ottengo "statusPHP"
+$statusPHP = readSessionVariable("statusPHP");
+
+setSessionVariable("statusPHP", null);
+setSessionVariable("statusPHPRedirect", null);
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +40,15 @@
             <td>Modifica i moduli in attività per il MagicMirror.</td>
         </tr>
     </table>
+
+    <?php
+    echo "
+    <br><br>
+    <div id='statusJS'></div>
+    <br>
+    <div id='status'>$statusPHP</div>
+    "
+    ?>
 </body>
 
 </html>
