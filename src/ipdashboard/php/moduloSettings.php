@@ -63,16 +63,36 @@ $jsonParsedModuloHeader = json_encode($jsonContentModuloHeader, JSON_PRETTY_PRIN
 <!--
 <script src="../js/utils.js" type="module"></script>
 -->
+<script src="../js/all.js"></script>
 
 <body>
 
-  <p>
-    <textarea id="code-json-header"><?php echo "$jsonParsedModuloHeader\n" ?></textarea>
-  </p>
+  <h1>Embedded Editor</h1>
 
-  <p>
-    <textarea id="code-json"><?php echo "$jsonContentModulo\n" ?></textarea>
-  </p>
+  <form action="saveEditorContent.php" method="POST">
+    <p>
+      <textarea id="code-json-header"><?php echo "$jsonParsedModuloHeader\n" ?></textarea>
+    </p>
+
+    <h4>JSON</h4>
+    <p>
+      <textarea id="code-json" name="code-json"><?php echo "$jsonContentModulo\n" ?></textarea>
+    </p>
+
+    <p>
+      <textarea id="index" name="index" hidden><?php echo "$index" ?></textarea>
+    </p>
+
+    <p>
+      <textarea id="jsonContent" name="jsonContent" hidden><?php echo "$jsonContent" ?></textarea>
+    </p>
+
+    <!-- Bottone per salvataggio modifiche -->
+    <input type="submit" id="save" name="save" value="SALVA">
+
+    <!-- Bottone per ripristino valori default -->
+    <!-- QUI -->
+  </form>
 
   <script>
     var editor_json = CodeMirror.fromTextArea(document.getElementById("code-json"), {
