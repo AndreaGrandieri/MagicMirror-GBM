@@ -6,6 +6,8 @@ $filePath = "../../config/config.json";
 
 $file = fopen($filePath, "r") or die("Unable to parse 'config.json'");
 $jsonContent = fread($file, filesize($filePath));
+fclose($file);
+
 $jsonParsed = json_decode($jsonContent, true);
 $jsonParsedModuli = $jsonParsed["config"]["modules"];
 

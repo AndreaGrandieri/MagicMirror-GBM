@@ -13,6 +13,8 @@ $filePath = "../../config/config.json";
 
 $file = fopen($filePath, "r") or die("Unable to parse 'config.json'");
 $jsonContent = fread($file, filesize($filePath));
+fclose($file);
+
 $jsonParsed = json_decode($jsonContent, true);
 
 $index = $_GET["index"];
@@ -71,7 +73,7 @@ $jsonParsedModuloHeader = json_encode($jsonContentModuloHeader, JSON_PRETTY_PRIN
 
   <form action="saveEditorContent.php" method="POST">
     <p>
-      <textarea id="code-json-header"><?php echo "$jsonParsedModuloHeader\n" ?></textarea>
+      <textarea id="code-json-header" name="code-json-header"><?php echo "$jsonParsedModuloHeader\n" ?></textarea>
     </p>
 
     <h4>JSON</h4>
