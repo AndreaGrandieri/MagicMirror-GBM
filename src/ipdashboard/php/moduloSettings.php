@@ -62,10 +62,7 @@ $jsonParsedModuloHeader = json_encode($jsonContentModuloHeader, JSON_PRETTY_PRIN
 <script src="../codemirror-5.59.4/addon/lint/lint.js"></script>
 <script src="../codemirror-5.59.4/addon/lint/javascript-lint.js"></script>
 <script src="../codemirror-5.59.4/addon/lint/json-lint.js"></script>
-<!--
-<script src="../js/utils.js" type="module"></script>
--->
-<script src="../js/all.js"></script>
+<script src="../utils/utils.js" type="module"></script>
 
 <body>
 
@@ -90,20 +87,28 @@ $jsonParsedModuloHeader = json_encode($jsonContentModuloHeader, JSON_PRETTY_PRIN
     </p>
 
     <!-- Bottone per salvataggio modifiche -->
-    <input type="submit" id="save" name="save" value="SALVA">
+    <div id="submitButton"></div>
 
     <!-- Bottone per ripristino valori default -->
     <!-- QUI -->
   </form>
 
-  <script>
+  <script type="module">
+    import * as utils from "../utils/utils.js";
+
     var editor_json = CodeMirror.fromTextArea(document.getElementById("code-json"), {
       lineNumbers: true,
       mode: "application/json",
       gutters: ["CodeMirror-lint-markers"],
-      lint: true
+      lint: {
+        "getAnnotations": jsonValidator,
+        "async": true
+      }
     });
     editor_json.setSize(700, 300);
+
+    // Semplice aggiunta event handler "change" (riferimento GOOD)
+    editor_json.on("change", safeLock);
 
     var editor_json_header = CodeMirror.fromTextArea(document.getElementById("code-json-header"), {
       lineNumbers: true,
@@ -113,6 +118,22 @@ $jsonParsedModuloHeader = json_encode($jsonContentModuloHeader, JSON_PRETTY_PRIN
       readOnly: true
     });
     editor_json_header.setSize(700, 100);
+
+    function jsonValidator(cm, updateLinting, options) {
+      var errors = CodeMirror.lint.json(cm, options);
+
+      updateLinting(errors);
+
+      if (errors.length > 0) {
+        utils.clearAndInject("submitButton", "<input type='submit' id='save' name='save' value='SALVA' disabled>");
+      } else {
+        utils.clearAndInject("submitButton", "<input type='submit' id='save' name='save' value='SALVA'>");
+      }
+    }
+
+    function safeLock(cm, changeObj) {
+      utils.clearAndInject("submitButton", "<input type='submit' id='save' name='save' value='SALVA' disabled>");
+    }
   </script>
 
 </body>
