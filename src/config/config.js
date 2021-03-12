@@ -152,10 +152,23 @@ var config = {
 				castName: "MagicMirror-GBM-cast"
 			}
 		},
-	{
+		{
 			module: 'MMM-StopwatchTimer',
 			config: {
-			  animation: true
+				animation: true
+			}
+		},
+		{
+			module: 'MMM-ip',
+			position: 'bottom_right',
+			config: {
+				fontSize: 18,
+				families: [
+					"IPv4"
+				],
+				types: [
+					"wlan0"
+				]
 			}
 		},
 	]
