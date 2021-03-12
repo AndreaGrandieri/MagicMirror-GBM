@@ -29,7 +29,7 @@ for ($i = 0; $i < count($jsonParsedModuli); $i++) {
     $dynTable .= "
             <tr>
             <td><a href='moduloSettings.php?index=$i'>$nomeModulo</a></td>
-            <td>'CHECKBOX'</td>
+            <td><input type='checkbox' id='$i' name='attivazione[]' value='$i'></td>
         </tr>
     ";
 }
@@ -63,9 +63,15 @@ setSessionVariable("statusPHPRedirect", null);
 
     <div>
         <?php
-        echo $dynTable;
+        echo "<form action='saveActiveState.php' method='POST'>
+        $dynTable <br>
+        <input type='submit' id='save' name='save' value='SALVA STATO ATTIVAZIONE'>
+        </form>";
         ?>
     </div>
+
+    <br>
+    <a href="index.php">Home Page</a>
 
     <?php
     echo "

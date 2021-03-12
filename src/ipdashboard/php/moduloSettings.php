@@ -150,6 +150,10 @@ setSessionVariable("statusPHPRedirect", null);
     }
   </script>
 
+  <br>
+  <a href="index.php">Home Page</a><br><br>
+  <a href="moduliSelector.php">Moduli Selector</a>
+
   <?php
   echo "
     <br><br>
