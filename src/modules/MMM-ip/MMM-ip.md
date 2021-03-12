@@ -76,3 +76,5 @@ wlan0     1500      228      0      0 0            81      0      0      0 BMRU
 
 > L'interfaccia `lo` sarà sempre presente. Essa rappresenta l'interfaccia di _loopback_.
 > Per quanto riguarda il seguente modulo, essa __NON__ deve essere presa in considerazione.
+
+Link per riferimenti utili: [https://www.cyberciti.biz/faq/linux-list-network-interfaces-names-command/](https://www.cyberciti.biz/faq/linux-list-network-interfaces-names-command/)
