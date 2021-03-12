@@ -25,6 +25,7 @@ Lista di Moduli (aka: funzionalità) da inserire potenzialmente nello specchio.
 | openlayers <p style="background-color:green;">NO API KEY</p>                        | Mostra mappe interattive                                                                     | [openlayers](https://github.com/openlayers/openlayers)                            |
 | raspotify <p style="background-color:green;">NO API KEY</p>                         | Abilità un dispositivo __Raspberry Pi__ al __Cast Spotify__.                                 | [raspotify](https://github.com/dtcooper/)                                         |
 | MMM-Online-State <p style="background-color:green;">NO API KEY</p>                  | Visualizza stato connessione.                                                                | [MMM-Online-State](https://github.com/Legion2/MMM-Online-State)                   |
+| MMM-ip <p style="background-color:green;">NO API KEY</p>                            | Visualizza gli indirizzi IP __locali__ delle interfacce di rete attive nel __Raspberry Pi__. | [MMM-ip](https://github.com/fewieden/MMM-ip)                                      |
 
 ---
 

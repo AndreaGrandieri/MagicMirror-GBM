@@ -1,0 +1,8 @@
+{
+  "LOADING": "Lade...",
+  "NETWORK_INTERFACES": "Netzwerkschnittstellen",
+  "NO_MATCHING_INTERFACE": "Keine passende Schnittstelle für diesen Typ gefunden.",
+  "COMMAND_LIST": "Liste aller Sprachbefehle",
+  "MODE": "Modus",
+  "VOICE_COMMANDS": "Sprachbefehle"
+}
