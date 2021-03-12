@@ -162,7 +162,7 @@ var config = {
 			module: 'MMM-ip',
 			position: 'bottom_right',
 			config: {
-				fontSize: 9,
+				fontSize: 18,
 				families: [
 					"IPv4"
 				],

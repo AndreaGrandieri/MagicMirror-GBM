@@ -13,12 +13,12 @@ Visualizza gli indirizzi IP __locali__ delle interfacce di rete attive nel __Ras
     module: 'MMM-ip',
     position: 'bottom_right',
     config: {
-        fontSize: 9,
+        fontSize: 18,
         families: [
             "IPv4"
         ],
         types: [
-
+            "wlan0"
         ]
     }
 }
@@ -40,6 +40,8 @@ Visualizza gli indirizzi IP __locali__ delle interfacce di rete attive nel __Ras
 
 Schermata del modulo in esecuzione correttamente:
 
+_In questo esempio `ens33` è il nome dell'interfaccia di rete._
+
 ![working_module.PNG](resources/working_module.PNG)
 
 ---
@@ -54,8 +56,23 @@ sono le seguenti:
 - WIFI: `wlan0`
 
 Questi sono i comandi per ottenere informazioni sulle interfacce di rete del
-proprio __Raspberry Pi__:
+proprio __Raspberry Pi__. Essi vanno eseguiti nell'applicazione `Terminal`:
 
 ```shell
-
+netstat -i
 ```
+
+Output:
+
+Il nostro interesse è sulla colonna `Iface`, che riporta i nomi delle interfacce.
+
+```shell
+Kernel Interface table
+Iface      MTU    RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR Flg
+eth0      1500        0      0      0 0             0      0      0      0 BMU
+lo       65536        0      0      0 0             0      0      0      0 LRU
+wlan0     1500      228      0      0 0            81      0      0      0 BMRU
+```
+
+> L'interfaccia `lo` sarà sempre presente. Essa rappresenta l'interfaccia di _loopback_.
+> Per quanto riguarda il seguente modulo, essa __NON__ deve essere presa in considerazione.
