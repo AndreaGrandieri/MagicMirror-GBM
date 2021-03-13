@@ -5,16 +5,14 @@ require "../utils/utils.php";
 startNewSessionCheck();
 
 // Compilazione dinamica tabella dei moduli
-// sulla base di "config.js"
+// sulla base di "settings.sqlite"
 
-$filePath = "../../config/config.json";
-
-$file = fopen($filePath, "r") or die("Unable to parse 'config.json'");
-$jsonContent = fread($file, filesize($filePath));
-fclose($file);
-
-$jsonParsed = json_decode($jsonContent, true);
-$jsonParsedModuli = $jsonParsed["config"]["modules"];
+// Connette al DB locale
+try {
+    $db = new SQLite3("../settings.sqlite", SQLITE3_OPEN_READWRITE);
+} catch (Exception $e) {
+    die("Unable to query database.");
+}
 
 $dynTable = "
 <table style='width:60%'>
@@ -24,14 +22,20 @@ $dynTable = "
 </tr>
 ";
 
-for ($i = 0; $i < count($jsonParsedModuli); $i++) {
-    $nomeModulo = $jsonParsedModuli[$i]["module"];
+// Interrogo tabella "modules"
+$results = $db->query('SELECT NomeModulo, Active FROM modules ORDER BY RenderIndex');
+while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
+    $nomeModulo = $row["NomeModulo"];
     $dynTable .= "
             <tr>
-            <td><a href='moduloSettings.php?index=$i'>$nomeModulo</a></td>
-            <td><input type='checkbox' id='$i' name='attivazione[]' value='$i'></td>
-        </tr>
+            <td><a href='moduloSettings.php?nomeModulo=$nomeModulo'>$nomeModulo</a></td>
     ";
+
+    if ($row["Active"]) {
+        $dynTable .= "<td><input type='checkbox' id='$nomeModulo' name='attivazione[]' value='$nomeModulo' checked></td></tr>";
+    } else {
+        $dynTable .= "<td><input type='checkbox' id='$nomeModulo' name='attivazione[]' value='$nomeModulo'></td></tr>";
+    }
 }
 
 $dynTable .= "</table>";
