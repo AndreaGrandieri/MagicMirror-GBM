@@ -40,7 +40,7 @@ for ($i = 0; $i < count($jsonParsedModuli); $i++) {
 */
 
 // Interrogo tabella "modules" (OK)
-$results = $db->query('SELECT * FROM modules');
+$results = $db->query("SELECT * FROM modules");
 while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
     var_dump($row);
 }

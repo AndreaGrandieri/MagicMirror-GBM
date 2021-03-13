@@ -11,7 +11,10 @@ startNewSessionCheck();
 try {
     $db = new SQLite3("../settings.sqlite", SQLITE3_OPEN_READWRITE);
 } catch (Exception $e) {
-    die("Unable to query database.");
+    setSessionVariable("statusPHP", "Unable to query database.");
+    setSessionVariable("statusPHPRedirect", null);
+    header("location: redirect.php?target=index.php&ms=300");
+    die;
 }
 
 $dynTable = "
@@ -23,7 +26,7 @@ $dynTable = "
 ";
 
 // Interrogo tabella "modules"
-$results = $db->query('SELECT NomeModulo, Active FROM modules ORDER BY RenderIndex');
+$results = $db->query("SELECT NomeModulo, Active FROM modules ORDER BY RenderIndex");
 while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
     $nomeModulo = $row["NomeModulo"];
     $dynTable .= "

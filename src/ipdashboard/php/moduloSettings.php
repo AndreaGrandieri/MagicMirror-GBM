@@ -4,43 +4,43 @@ require "../utils/utils.php";
 // Gestione sessione
 startNewSessionCheck();
 
-if (!test_input_valid_get_isset("index")) {
-  setSessionVariable("statusPHP", "Died of test_input_valid_get_isset. \"index\" parameter not found.");
+// Connette al DB locale
+try {
+  $db = new SQLite3("../settings.sqlite", SQLITE3_OPEN_READWRITE);
+} catch (Exception $e) {
+  setSessionVariable("statusPHP", "Unable to query database.");
   setSessionVariable("statusPHPRedirect", null);
   header("location: redirect.php?target=index.php&ms=300");
   die;
 }
 
-$filePath = "../../config/config.json";
-
-$file = fopen($filePath, "r") or die("Unable to parse 'config.json'");
-$jsonContent = fread($file, filesize($filePath));
-fclose($file);
-
-$jsonParsed = json_decode($jsonContent, true);
-
-$index = $_GET["index"];
-
-if (!ctype_digit($index)) {
-  setSessionVariable("statusPHP", "Died of ctype_digit. \"index\" is not positive integer.");
+if (!test_input_valid_get_isset("nomeModulo")) {
+  setSessionVariable("statusPHP", "Died of test_input_valid_get_isset. \"nomeModulo\" parameter not found.");
   setSessionVariable("statusPHPRedirect", null);
   header("location: redirect.php?target=index.php&ms=300");
   die;
 }
 
-if (!array_key_exists($index, $jsonParsed["config"]["modules"])) {
-  setSessionVariable("statusPHP", "Died of index check. \"index\" is out of range.");
-  setSessionVariable("statusPHPRedirect", null);
-  header("location: redirect.php?target=index.php&ms=300");
-  die;
-}
+$nomeModulo = test_input($_GET["nomeModulo"]);
 
+// Interrogo tabella "modules"
+$results = $db->query("SELECT JsonFragment FROM modules WHERE NomeModulo='$nomeModulo'");
+$row = $results->fetchArray(SQLITE3_ASSOC);
+$jsonParsedModulo = json_decode($row["JsonFragment"], true);
+$jsonParsedModuloHeader = array("module" => $jsonParsedModulo["module"]);
+unset($jsonParsedModulo["module"]);
+
+$jsonContentModulo = json_encode($jsonParsedModulo, JSON_PRETTY_PRINT);
+$jsonContentModuloHeader = json_encode($jsonParsedModuloHeader, JSON_PRETTY_PRINT);
+
+/*
 $jsonParsedModulo = $jsonParsed["config"]["modules"][$index];
 $jsonContentModuloHeader = array("module" => $jsonParsedModulo["module"]);
 unset($jsonParsedModulo["module"]);
 
 $jsonContentModulo = json_encode($jsonParsedModulo, JSON_PRETTY_PRINT);
 $jsonParsedModuloHeader = json_encode($jsonContentModuloHeader, JSON_PRETTY_PRINT);
+*/
 
 // Ottengo "statusPHP"
 $statusPHP = readSessionVariable("statusPHP");
@@ -84,16 +84,12 @@ setSessionVariable("statusPHPRedirect", null);
 
   <form action="saveEditorContent.php" method="POST">
     <p>
-      <textarea id="code-json-header" name="code-json-header"><?php echo "$jsonParsedModuloHeader\n" ?></textarea>
+      <textarea id="code-json-header" name="code-json-header"><?php echo "$jsonContentModuloHeader\n" ?></textarea>
     </p>
 
     <h4>JSON</h4>
     <p>
       <textarea id="code-json" name="code-json"><?php echo "$jsonContentModulo\n" ?></textarea>
-    </p>
-
-    <p>
-      <textarea id="index" name="index" hidden><?php echo "$index" ?></textarea>
     </p>
 
     <p>
