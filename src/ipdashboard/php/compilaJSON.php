@@ -71,4 +71,19 @@ $wrapper .= $jsonContentGlobals .= $jsonContentModules . "]" . "}";
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-echo $wrapper;
+echo "
+<form action='compilaJS.php' method='POST' id='wrapperForm' name='wrapperForm'>
+    <div id='wrapperFormInputSpace'></div>
+</form>
+
+<script type='module'>
+    import * as utils from '../utils/utils.js';
+
+    var wrapper = JSON.parse(\"$wrapper\");
+
+    utils.clearAndInject('wrapperFormInputSpace', \"<input type='text' id='wrapper' name='wrapper' value='CIAO'>\");
+</script>
+
+<script>
+    // document.forms['wrapperForm'].submit();
+</script>";
