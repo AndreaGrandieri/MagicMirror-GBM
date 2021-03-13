@@ -14,26 +14,22 @@ try {
   die;
 }
 
-if (!test_input_valid_get_isset("nomeModulo")) {
-  setSessionVariable("statusPHP", "Died of test_input_valid_get_isset. \"nomeModulo\" parameter not found.");
+if (!test_input_valid_get_isset("nomeGlobale")) {
+  setSessionVariable("statusPHP", "Died of test_input_valid_get_isset. \"nomeGlobale\" parameter not found.");
   setSessionVariable("statusPHPRedirect", null);
   header("location: redirect.php?target=index.php&ms=300");
   die;
 }
 
-$nomeModulo = test_input($_GET["nomeModulo"]);
+$nomeGlobale = test_input($_GET["nomeGlobale"]);
 
 // Interrogo tabella "modules"
-$results = $db->query("SELECT JsonFragment FROM modules WHERE NomeModulo='$nomeModulo'");
+$results = $db->query("SELECT JsonFragment FROM globals WHERE nomeGlobale='$nomeGlobale'");
 
 if (gettype($results) !== "boolean") {
   $row = $results->fetchArray(SQLITE3_ASSOC);
-  $jsonParsedModulo = json_decode($row["JsonFragment"], true);
-  $jsonParsedModuloHeader = array("module" => $jsonParsedModulo["module"]);
-  unset($jsonParsedModulo["module"]);
-
-  $jsonContentModulo = json_encode($jsonParsedModulo, JSON_PRETTY_PRINT);
-  $jsonContentModuloHeader = json_encode($jsonParsedModuloHeader, JSON_PRETTY_PRINT);
+  $jsonParsedGlobale = json_decode($row["JsonFragment"], true);
+  $jsonContentGlobale = json_encode($jsonParsedGlobale, JSON_PRETTY_PRINT);
 } else {
   setSessionVariable("statusPHP", "Error while querying the database.");
   setSessionVariable("statusPHPRedirect", null);
@@ -42,12 +38,12 @@ if (gettype($results) !== "boolean") {
 }
 
 /*
-$jsonParsedModulo = $jsonParsed["config"]["modules"][$index];
-$jsonContentModuloHeader = array("module" => $jsonParsedModulo["module"]);
-unset($jsonParsedModulo["module"]);
+$jsonParsedGlobale = $jsonParsed["config"]["modules"][$index];
+$jsonContentGlobaleHeader = array("module" => $jsonParsedGlobale["module"]);
+unset($jsonParsedGlobale["module"]);
 
-$jsonContentModulo = json_encode($jsonParsedModulo, JSON_PRETTY_PRINT);
-$jsonParsedModuloHeader = json_encode($jsonContentModuloHeader, JSON_PRETTY_PRINT);
+$jsonContentGlobale = json_encode($jsonParsedGlobale, JSON_PRETTY_PRINT);
+$jsonParsedGlobaleHeader = json_encode($jsonContentGlobaleHeader, JSON_PRETTY_PRINT);
 */
 
 // Ottengo "statusPHP"
@@ -90,18 +86,14 @@ setSessionVariable("statusPHPRedirect", null);
 
   <h1>Embedded Editor</h1>
 
-  <form action="saveEditorContentModulo.php" method="POST">
-    <p>
-      <textarea id="code-json-header" name="code-json-header"><?php echo "$jsonContentModuloHeader\n" ?></textarea>
-    </p>
-
+  <form action="saveEditorContentGlobal.php" method="POST">
     <h4>JSON</h4>
     <p>
-      <textarea id="code-json" name="code-json"><?php echo "$jsonContentModulo\n" ?></textarea>
+      <textarea id="code-json" name="code-json"><?php echo "$jsonContentGlobale\n" ?></textarea>
     </p>
 
     <p>
-      <textarea id="nomeModulo" name="nomeModulo" hidden><?php echo "$nomeModulo" ?></textarea>
+      <textarea id="nomeGlobale" name="nomeGlobale" hidden><?php echo "$nomeGlobale" ?></textarea>
     </p>
 
     <!--
@@ -134,15 +126,6 @@ setSessionVariable("statusPHPRedirect", null);
     // Semplice aggiunta event handler "change" (riferimento GOOD)
     editor_json.on("change", safeLock);
 
-    var editor_json_header = CodeMirror.fromTextArea(document.getElementById("code-json-header"), {
-      lineNumbers: true,
-      mode: "application/json",
-      gutters: ["CodeMirror-lint-markers"],
-      lint: true,
-      readOnly: true
-    });
-    editor_json_header.setSize(700, 100);
-
     function jsonValidator(cm, updateLinting, options) {
       var errors = CodeMirror.lint.json(cm, options);
 
@@ -162,7 +145,7 @@ setSessionVariable("statusPHPRedirect", null);
 
   <br>
   <a href="index.php">Home Page</a><br><br>
-  <a href="moduliSelector.php">Moduli Selector</a>
+  <a href="globalsSelector.php">Globals Selector</a>
 
   <?php
   echo "
