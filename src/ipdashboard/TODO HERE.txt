@@ -1,0 +1,3 @@
+Mancano i controlli nell'EDITOR per il valore passato con GET!
+
+Compila NON tiene conto dell'ordine e dello stato di attivazione dei moduli!
