@@ -45,6 +45,10 @@ setSessionVariable("statusPHPRedirect", null);
             <td><a href="moduliSelector.php">Moduli Selector</a></td>
             <td>Modifica i moduli in attività per il MagicMirror.</td>
         </tr>
+        <tr>
+            <td><a href="ripristinaDatabase.php">Ripristina Database</a></td>
+            <td>Ripristina il Database ad uno stato stabile di default.</td>
+        </tr>
     </table>
 
     <?php
