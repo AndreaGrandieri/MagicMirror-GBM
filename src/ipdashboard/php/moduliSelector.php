@@ -27,18 +27,25 @@ $dynTable = "
 
 // Interrogo tabella "modules"
 $results = $db->query("SELECT NomeModulo, Active FROM modules ORDER BY RenderIndex");
-while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
-    $nomeModulo = $row["NomeModulo"];
-    $dynTable .= "
+if (gettype($results) !== "boolean") {
+    while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
+        $nomeModulo = $row["NomeModulo"];
+        $dynTable .= "
             <tr>
             <td><a href='moduloSettings.php?nomeModulo=$nomeModulo'>$nomeModulo</a></td>
     ";
 
-    if ($row["Active"]) {
-        $dynTable .= "<td><input type='checkbox' id='$nomeModulo' name='attivazione[]' value='$nomeModulo' checked></td></tr>";
-    } else {
-        $dynTable .= "<td><input type='checkbox' id='$nomeModulo' name='attivazione[]' value='$nomeModulo'></td></tr>";
+        if ($row["Active"]) {
+            $dynTable .= "<td><input type='checkbox' id='$nomeModulo' name='attivazione[]' value='$nomeModulo' checked></td></tr>";
+        } else {
+            $dynTable .= "<td><input type='checkbox' id='$nomeModulo' name='attivazione[]' value='$nomeModulo'></td></tr>";
+        }
     }
+} else {
+    setSessionVariable("statusPHP", "Error while querying the database.");
+    setSessionVariable("statusPHPRedirect", null);
+    header("location: redirect.php?target=index.php&ms=300");
+    die;
 }
 
 $dynTable .= "</table>";
