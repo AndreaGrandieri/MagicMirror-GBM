@@ -79,6 +79,7 @@ setSessionVariable("statusPHPRedirect", null);
         <?php
         echo "<form action='saveActiveState.php' method='POST'>
         $dynTable <br>
+        <input type='checkbox' id='invalidationPreventer' name='attivazione[]' value='invalidationPreventer' checked hidden>
         <input type='submit' id='save' name='save' value='SALVA STATO ATTIVAZIONE'>
         </form>";
         ?>

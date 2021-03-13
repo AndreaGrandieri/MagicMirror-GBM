@@ -1,6 +1,12 @@
 <?php
 require "../utils/utils.php";
 
+/*
+Regole generali per interazione con DB SQLite3
+- $db->query() se la query produce dei risultati (e.g.: SELECT)
+- $db->exec() se la query NON produce dei risultati (e.g.: UPDATE)
+*/
+
 // Gestione sessione
 startNewSessionCheck();
 

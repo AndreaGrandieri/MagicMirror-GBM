@@ -44,11 +44,11 @@ $nomeModulo = ($_POST["nomeModulo"]);
 $jsonContent = json_encode(json_decode($codeJsonHeader, true) + json_decode($codeJson, true), JSON_PRETTY_PRINT);
 
 // Salva il contenuto di $jsonContent nel file database
-$results = $db->query("UPDATE modules
+$results = $db->exec("UPDATE modules
             SET JsonFragment = '$jsonContent'
             WHERE NomeModulo = '$nomeModulo'");
 
-if (gettype($results) !== "boolean") {
+if ($results) {
     setSessionVariable("statusPHP", "Salvataggio effettuato con successo.");
     setSessionVariable("statusPHPRedirect", null);
     header("location: redirect.php?target=moduloSettings.php?nomeModulo=$nomeModulo&ms=300");
