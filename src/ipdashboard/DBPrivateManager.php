@@ -65,50 +65,71 @@ for ($i = 0; $i < count($jsonParsedModuli); $i++) {
 }
 */
 
+// $db->exec("DELETE FROM globals");
+
 // Inserimento bulk delle globali default (OK)
 /*
-$content = '{
-    "address": "localhost",
-    "port": 8080,
-    "basePath": "/",
-    "ipWhitelist": [
+$content1 = array(
+    "address",
+    "port",
+    "basePath",
+    "ipWhitelist",
+    "useHttps",
+    "httpsPrivateKey",
+    "httpsCertificate",
+    "language",
+    "logLevel",
+    "timeFormat",
+    "units",
+    "serverOnly"
+);
+
+
+$content2 = array(
+    '"localhost"',
+    '8080',
+    '"/"',
+    '[
         "127.0.0.1",
         "::ffff:127.0.0.1",
         "::1"
-    ],
-    "useHttps": false,
-    "httpsPrivateKey": "",
-    "httpsCertificate": "",
-    "language": "en",
-    "logLevel": [
+    ]',
+    'false',
+    '""',
+    '""',
+    '"en"',
+    '[
         "INFO",
         "LOG",
         "WARN",
         "ERROR"
-    ],
-    "timeFormat": 24,
-    "units": "metric",
-    "serverOnly": false
-}';
+    ]',
+    '24',
+    '"metric"',
+    'false'
+);
 
-$db->query("INSERT INTO globals (
+for ($i = 0; $i < count($content1); $i++) {
+
+    $db->query("INSERT INTO globals (
     NomeGlobale, JsonFragment, JsonStableFragment) VALUES (
-        'config', '$content', '$content' 
+        '$content1[$i]', '$content2[$i]', '$content2[$i]' 
     );");
+}
 */
 
-/*
+// $db->query("UPDATE globals SET NomeGlobale = 'general' WHERE NomeGlobale = 'config'");
+
 // Interrogo tabella "modules" (OK)
+/*
 $results = $db->query("SELECT * FROM modules");
 while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
     var_dump($row);
 }
 */
 
-/*
 // Interrogo tabella "globals" (OK)
 $results = $db->query("SELECT * FROM globals");
 while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
     var_dump($row);
 }
-*/
