@@ -1,0 +1,7 @@
+pi@raspberrypi:~ $ netstat -i
+Kernel Interface table
+Iface      MTU    RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR Flg
+eth0      1500        0      0      0 0             0      0      0      0 BMU
+lo       65536        0      0      0 0             0      0      0      0 LRU
+wlan0     1500      228      0      0 0            81      0      0      0 BMRU
+pi@raspberrypi:~ $ 
