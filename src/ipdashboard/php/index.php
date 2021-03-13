@@ -49,6 +49,10 @@ setSessionVariable("statusPHPRedirect", null);
             <td><a href="ripristinaDatabase.php">Ripristina Database</a></td>
             <td>Ripristina il Database ad uno stato stabile di default.</td>
         </tr>
+        <tr>
+            <td><a href="compila.php">Compila</a></td>
+            <td>Compila lo stato del Database, <b>rendendo effettive le modifiche (che quindi saranno visibili nel MagicMirror).</b></td>
+        </tr>
     </table>
 
     <?php
