@@ -93,8 +93,14 @@ setSessionVariable("statusPHPRedirect", null);
     </p>
 
     <p>
+      <textarea id="nomeModulo" name="nomeModulo" hidden><?php echo "$nomeModulo" ?></textarea>
+    </p>
+
+    <!--
+    <p>
       <textarea id="jsonContent" name="jsonContent" hidden><?php echo "$jsonContent" ?></textarea>
     </p>
+    -->
 
     <!-- Bottone per salvataggio modifiche -->
     <div id="submitButton"></div>
