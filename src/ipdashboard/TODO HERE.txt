@@ -1,3 +1,5 @@
 Mancano i controlli nell'EDITOR per il valore passato con GET!
 
 Compila NON tiene conto dell'ordine e dello stato di attivazione dei moduli!
+
+L'output JSON della compilazione deve essere compilato (ricompilato) in JS (stai solamente effettuando un "echo")!
