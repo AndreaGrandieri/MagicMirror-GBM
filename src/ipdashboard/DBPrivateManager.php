@@ -129,7 +129,28 @@ while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
 */
 
 // Interrogo tabella "globals" (OK)
+/*
 $results = $db->query("SELECT * FROM globals");
 while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
     var_dump($row);
 }
+*/
+
+// Interrogo tabella "modules" con scopo di ottenere 0 corrispondenze (1)
+/*
+$results = $db->query("SELECT * FROM modules WHERE NomeModulo = 'AAA'");
+while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
+    // Con 0 corrispondenze, il blocco "while" NON viene MAI eseguito!
+    echo "HERE";
+    echo ($row);
+}
+*/
+
+// Interrogo tabella "modules" con scopo di ottenere 0 corrispondenze (2)
+/*
+$results = $db->query("SELECT * FROM modules WHERE NomeModulo = 'AAA'");
+$row = $results->fetchArray(SQLITE3_ASSOC);
+// Con 0 corrispondenze, il $row = bool(false)
+echo ($row);
+var_dump($row);
+*/

@@ -28,12 +28,20 @@ $results = $db->query("SELECT JsonFragment FROM modules WHERE NomeModulo='$nomeM
 
 if (gettype($results) !== "boolean") {
   $row = $results->fetchArray(SQLITE3_ASSOC);
-  $jsonParsedModulo = json_decode($row["JsonFragment"], true);
-  $jsonParsedModuloHeader = array("module" => $jsonParsedModulo["module"]);
-  unset($jsonParsedModulo["module"]);
 
-  $jsonContentModulo = json_encode($jsonParsedModulo, JSON_PRETTY_PRINT);
-  $jsonContentModuloHeader = json_encode($jsonParsedModuloHeader, JSON_PRETTY_PRINT);
+  if (gettype($row) !== "boolean") {
+    $jsonParsedModulo = json_decode($row["JsonFragment"], true);
+    $jsonParsedModuloHeader = array("module" => $jsonParsedModulo["module"]);
+    unset($jsonParsedModulo["module"]);
+
+    $jsonContentModulo = json_encode($jsonParsedModulo, JSON_PRETTY_PRINT);
+    $jsonContentModuloHeader = json_encode($jsonParsedModuloHeader, JSON_PRETTY_PRINT);
+  } else {
+    setSessionVariable("statusPHP", "Nessuna corrispondenza trovata per \"nomeModulo\" specificato.");
+    setSessionVariable("statusPHPRedirect", null);
+    header("location: redirect.php?target=index.php&ms=300");
+    die;
+  }
 } else {
   setSessionVariable("statusPHP", "Error while querying the database.");
   setSessionVariable("statusPHPRedirect", null);

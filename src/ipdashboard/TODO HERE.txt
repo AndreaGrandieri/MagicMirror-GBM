@@ -1,1 +1,0 @@
-Mancano i controlli nell'EDITOR per il valore passato con GET!

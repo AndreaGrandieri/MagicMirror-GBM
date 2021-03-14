@@ -28,8 +28,16 @@ $results = $db->query("SELECT JsonFragment FROM globals WHERE nomeGlobale='$nome
 
 if (gettype($results) !== "boolean") {
   $row = $results->fetchArray(SQLITE3_ASSOC);
-  $jsonParsedGlobale = json_decode($row["JsonFragment"], true);
-  $jsonContentGlobale = json_encode($jsonParsedGlobale, JSON_PRETTY_PRINT);
+
+  if (gettype($row) !== "boolean") {
+    $jsonParsedGlobale = json_decode($row["JsonFragment"], true);
+    $jsonContentGlobale = json_encode($jsonParsedGlobale, JSON_PRETTY_PRINT);
+  } else {
+    setSessionVariable("statusPHP", "Nessuna corrispondenza trovata per \"nomeGlobale\" specificato.");
+    setSessionVariable("statusPHPRedirect", null);
+    header("location: redirect.php?target=index.php&ms=300");
+    die;
+  }
 } else {
   setSessionVariable("statusPHP", "Error while querying the database.");
   setSessionVariable("statusPHPRedirect", null);
