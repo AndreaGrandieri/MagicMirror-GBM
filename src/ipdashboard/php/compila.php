@@ -66,24 +66,19 @@ if (gettype($results) !== "boolean") {
     die;
 }
 
+$jsonContentModules = substr($jsonContentModules, 0, strlen($jsonContentModules) - 1);
 $wrapper .= $jsonContentGlobals .= $jsonContentModules . "]" . "}";
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-echo "
-<form action='compilaJS.php' method='POST' id='wrapperForm' name='wrapperForm'>
-    <div id='wrapperFormInputSpace'></div>
-</form>
+// Apro file di destinazione config.js
+$file = fopen("../../config/config2.js", "w");
+$paylaod = "var config = JSON.parse(`$wrapper`); if (typeof module !== \"undefined\") { module.exports = config; }";
+fwrite($file, $paylaod);
+fclose($file);
 
-<script type='module'>
-    import * as utils from '../utils/utils.js';
-
-    var wrapper = JSON.parse(\"$wrapper\");
-
-    utils.clearAndInject('wrapperFormInputSpace', \"<input type='text' id='wrapper' name='wrapper' value='CIAO'>\");
-</script>
-
-<script>
-    // document.forms['wrapperForm'].submit();
-</script>";
+setSessionVariable("statusPHP", "Compilazione effettuata con successo. <b>Ora le modifiche sono effettive e visibili!</b>");
+setSessionVariable("statusPHPRedirect", null);
+header("location: redirect.php?target=index.php&ms=300");
+die;
