@@ -77,7 +77,7 @@ $wrapper .= $jsonContentGlobals .= $jsonContentModules . "]" . "}";
 ////////////////////////////////////////////////////////////////////////////////
 
 // Apro file di destinazione config.js
-$file = fopen("../../config/config2.js", "w");
+$file = fopen("../../config/config.js", "w");
 $paylaod = "var config = JSON.parse(`$wrapper`); if (typeof module !== \"undefined\") { module.exports = config; }";
 fwrite($file, $paylaod);
 fclose($file);
