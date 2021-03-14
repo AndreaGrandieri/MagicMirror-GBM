@@ -47,17 +47,18 @@ if (gettype($results) !== "boolean") {
 
 // Compilo $jsonContentModules
 // Interrogo tabella "modules"
-$results = $db->query("SELECT JsonFragment FROM modules ORDER BY RenderIndex");
+$results = $db->query("SELECT JsonFragment FROM modules WHERE Active = 1 ORDER BY RenderIndex");
 
 // Per definizione, i moduli sono contenuti in un array, identificato da "modules".
 // L'identificativo "modules", per definizione, è contenuto al più esterno livello di wrappering, 
 // cioè il wrapper stesso
 $jsonContentModules = "\"modules\": [";
+$modulesCounter = 0;
 
 if (gettype($results) !== "boolean") {
     while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
-
         $jsonContentModules .= $row["JsonFragment"] . ",";
+        $modulesCounter++;
     }
 } else {
     setSessionVariable("statusPHP", "Error while querying the database.");
@@ -66,7 +67,10 @@ if (gettype($results) !== "boolean") {
     die;
 }
 
-$jsonContentModules = substr($jsonContentModules, 0, strlen($jsonContentModules) - 1);
+if ($modulesCounter > 0) {
+    $jsonContentModules = substr($jsonContentModules, 0, strlen($jsonContentModules) - 1);
+}
+
 $wrapper .= $jsonContentGlobals .= $jsonContentModules . "]" . "}";
 
 ////////////////////////////////////////////////////////////////////////////////
