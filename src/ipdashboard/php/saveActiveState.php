@@ -130,7 +130,10 @@ if (!$results) {
     die;
 }
 
-// "Defer" grezzo (non ottimizzato, per adesso va comunque bene così)
+// "Defer" grezzo (non ottimizzato, per adesso va comunque bene così).
+// Esso consiste nell'assegnazione di valori sicuramente unici TEMPORANEI
+// per la colonna "RenderIndex". Questo per rispettare il vincolo UNIQUE di
+// tale colonna.
 // Costruzione dinamica per costrutto "$sql"
 $sql = "";
 
@@ -167,7 +170,7 @@ for ($i = 0; $i < count($indici); $i++) {
 $results = $db->exec($sql);
 
 if ($results) {
-    setSessionVariable("statusPHP", "Stato di attivazione aggiornato con successo.");
+    setSessionVariable("statusPHP", "Stato aggiornato con successo.");
     setSessionVariable("statusPHPRedirect", null);
     header("location: redirect.php?target=moduliSelector.php&ms=300");
     die;
