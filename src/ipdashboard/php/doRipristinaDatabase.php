@@ -12,7 +12,7 @@ if (!test_input_valid_post_isset("submit")) {
 }
 
 // hardcoded URL (garantito immutabile)
-$hardURL = "https://github.com/AndreaGrandieri/MagicMirror-GBM/blob/dispenser/stable.sqlite?raw=true";
+$hardURL = "https://github.com/AndreaGrandieri/MagicMirror-GBM/blob/mirror/stable.sqlite?raw=true";
 $fileName = "../settings.sqlite";
 
 if (file_put_contents($fileName, file_get_contents($hardURL))) {
@@ -21,7 +21,7 @@ if (file_put_contents($fileName, file_get_contents($hardURL))) {
     header("location: redirect.php?target=index.php&ms=300");
     die;
 } else {
-    setSessionVariable("statusPHP", "Ripristino Database NON riuscito. Ref: <a href='https://github.com/AndreaGrandieri/MagicMirror-GBM/blob/dispenser/stable.sqlite?raw=true'>https://github.com/AndreaGrandieri/MagicMirror-GBM/blob/dispenser/stable.sqlite?raw=true</a>");
+    setSessionVariable("statusPHP", "Ripristino Database NON riuscito. Ref: <a href='https://github.com/AndreaGrandieri/MagicMirror-GBM/blob/mirror/stable.sqlite?raw=true'>https://github.com/AndreaGrandieri/MagicMirror-GBM/blob/mirror/stable.sqlite?raw=true</a>");
     setSessionVariable("statusPHPRedirect", null);
     header("location: redirect.php?target=index.php&ms=300");
     die;
