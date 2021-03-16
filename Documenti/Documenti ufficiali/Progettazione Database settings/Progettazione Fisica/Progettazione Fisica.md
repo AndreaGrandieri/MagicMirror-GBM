@@ -14,6 +14,7 @@ Piattaforma: `SQLite`
 
 ---
 
+String delimiter: `'`
 Escaped: `"`
 
 ---
@@ -71,10 +72,10 @@ CREATE TABLE globals (
 
 ```sql
 INSERT INTO globals
-    SELECT \"address\" AS NomeGlobale, '\"localhost\"' AS JsonFragment, '\"localhost\"' AS JsonStableFragment
-    UNION ALL SELECT \"port\", '8080', '8080'
-    UNION ALL SELECT \"basePath\", '\"/\"', '\"/\"'
-    UNION ALL SELECT \"ipWhitelist\", '[
+    SELECT 'address' AS NomeGlobale, '\"localhost\"' AS JsonFragment, '\"localhost\"' AS JsonStableFragment
+    UNION ALL SELECT 'port', '8080', '8080'
+    UNION ALL SELECT 'basePath', '\"/\"', '\"/\"'
+    UNION ALL SELECT 'ipWhitelist', '[
 \"127.0.0.1\",
 \"::ffff:127.0.0.1\",
 \"::1\"
@@ -83,11 +84,11 @@ INSERT INTO globals
 \"::ffff:127.0.0.1\",
 \"::1\"
 ]'
-    UNION ALL SELECT \"useHttps\", 'false', 'false'
-    UNION ALL SELECT \"httpsPrivateKey\", '\"\"', '\"\"'
-    UNION ALL SELECT \"httpsCertificate\", '\"\"', '\"\"'
-    UNION ALL SELECT \"language\", '\"en\"', '\"en\"'
-    UNION ALL SELECT \"logLevel\", '[
+    UNION ALL SELECT 'useHttps', 'false', 'false'
+    UNION ALL SELECT 'httpsPrivateKey', '\"\"', '\"\"'
+    UNION ALL SELECT 'httpsCertificate', '\"\"', '\"\"'
+    UNION ALL SELECT 'language', '\"en\"', '\"en\"'
+    UNION ALL SELECT 'logLevel', '[
 \"INFO\",
 \"LOG\",
 \"WARN\",
@@ -98,9 +99,9 @@ INSERT INTO globals
 \"WARN\",
 \"ERROR\"
 ]'
-    UNION ALL SELECT \"timeFormat\", '24', '24'
-    UNION ALL SELECT \"units\", '\"metric\"', '\"metric\"'
-    UNION ALL SELECT \"serverOnly\", 'false', 'false';
+    UNION ALL SELECT 'timeFormat', '24', '24'
+    UNION ALL SELECT 'units', '\"metric\"', '\"metric\"'
+    UNION ALL SELECT 'serverOnly', 'false', 'false';
 ```
 
 MagicMirror-GBM
