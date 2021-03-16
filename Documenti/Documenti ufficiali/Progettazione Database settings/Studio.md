@@ -14,7 +14,7 @@ Per quanto riguardi i moduli, essi sono caratterizzati da:
 
 - Nome
 - Stato di attivazione (moduli attivi oppure no)
-- Ordine di render grafico
+- Ordine di render grafico, valore UNICO per modulo
 - Frammento JSON descrittore (del modulo stesso)
 - Frammento JSON descrittore (del modulo stesso) stabile di default (per permettere ripristini in seguito a manipolazioni errate)
 
