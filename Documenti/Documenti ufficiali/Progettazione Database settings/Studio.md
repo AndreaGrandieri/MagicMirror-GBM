@@ -1,23 +1,25 @@
-# studio DB (temp)
+# Studio Database
 
-Una analisi accurata del funzionamento precario dell'interfaccia IP ha rilevato la necessità di adottare l'utilizzo DB locale per automatizzare e rendere più sicure le operazioni effettuate su informazioni persistenti.
+Una analisi accurata del funzionamento dell'interfaccia IP ha rilevato la necessità di adottare l'utilizzo di un Database locale,
+per automatizzare, ottimizzare e rendere più sicure le operazioni effettuate su informazioni persistenti.
 
-La piattaforma di implementazione è SQLite, in quanto effettua il salvataggio del DB come un singolo file, binario, direttamente presente nella directory di lavoro (questa) (ricorda molto il lavoro con "classici" file).
+La piattaforma di implementazione richiesta è `SQLite`, in quanto rispetta il criterio di `Database Locale`, salvando digitalmente il Database come un singolo file, binario, direttamente nella directory di lavoro _(ricorda molto la logica dei "classici" file)_. Questo rende nulle configurazioni ulteriori che si potrebbero presentare con altre piattaforme.
 
-## Tabelle
+Si ha la necessità di memorizzare informazioni riguardanti:
 
-Il DB avrà le seguenti tabelle:
+- Moduli
+- Impostazioni Globali
 
-- modules
+Per quanto riguardi i moduli, essi sono caratterizzati da:
 
-Qui vengono salvati TUTTI i moduli installati nel MagicMirror, con il proprio nome fungente da CHIAVE PRIMARIA. Ogni modulo vedrà indicato il proprio stato di attivazione grazie all'ausilio di un valore booleano.
-Ogni modulo E' PROPRIO QUI che salverà il PROPRIO FRAMMENTO JSON! Esso verrà salvato come testo in un attributo del DB. Un altro attributo dello stesso tipo verrà utilizzato per il salvataggio del FRAMMENTO STABILE DI DEFAULT.
-Ogni modulo, infine, vedrà indicata la propria POSIZIONE DI AVVIAMENTO, fondamentale per l'ordine di rendering elementare nell'interfaccia del MagicMirror.
+- Nome
+- Stato di attivazione (moduli attivi oppure no)
+- Ordine di render grafico
+- Frammento JSON descrittore (del modulo stesso)
+- Frammento JSON descrittore (del modulo stesso) stabile di default (per permettere ripristini in seguito a manipolazioni errate)
 
-- NomeModulo TEXT NOT NULL PRIMARY KEY
-- Active INTEGER (BOOLEAN) NOT NULL
-- RenderIndex INTEGER NOT NULL
-- JsonFragment TEXT NOT NULL
-- JsonStableFragment TEXT NOT NULL
-  
-_Possono (e lo faranno) seguire altre tabelle._
+Per quanto riguarda le impostazioni globali, esse sono caratterizzate da:
+
+- Nome
+- Frammento JSON descrittore (della globale stessa)
+- Frammento JSON descrittore (della globale stesa) stabile di default (per permettere ripristini in seguito a manipolazioni errate)
