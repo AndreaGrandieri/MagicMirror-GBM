@@ -8,9 +8,19 @@
 ---
 ---
 
-## Sequenza Costruzione
+## Note
 
-Escaped: `"`.
+Piattaforma: `SQLite`
+
+---
+
+Escaped: `"`
+
+---
+---
+---
+
+## Sequenza Costruzione
 
 1. Creazione Database
 
