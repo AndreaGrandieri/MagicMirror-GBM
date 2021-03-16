@@ -15,6 +15,7 @@ Piattaforma: `SQLite`
 ---
 
 String delimiter: `'`
+
 Escaped: `"`
 
 ---
