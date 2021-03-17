@@ -24,18 +24,20 @@ if (!test_input_valid_get_isset("nomeModulo")) {
 $nomeModulo = test_input($_GET["nomeModulo"]);
 
 // Interrogo tabella "modules"
-$results = $db->query("SELECT JsonFragment FROM modules WHERE NomeModulo='$nomeModulo'");
+$results = $db->query("SELECT JsonFragment, JsonStableFragment FROM modules WHERE NomeModulo='$nomeModulo'");
 
 if (gettype($results) !== "boolean") {
   $row = $results->fetchArray(SQLITE3_ASSOC);
 
   if (gettype($row) !== "boolean") {
     $jsonParsedModulo = json_decode($row["JsonFragment"], true);
+    $jsonParsedModuloStable = json_decode($row["JsonStableFragment"], true);
     $jsonParsedModuloHeader = array("module" => $jsonParsedModulo["module"]);
     unset($jsonParsedModulo["module"]);
 
     $jsonContentModulo = json_encode($jsonParsedModulo, JSON_PRETTY_PRINT);
     $jsonContentModuloHeader = json_encode($jsonParsedModuloHeader, JSON_PRETTY_PRINT);
+    $jsonContentModuloStable = json_encode($jsonParsedModuloStable, JSON_PRETTY_PRINT);
   } else {
     setSessionVariable("statusPHP", "Nessuna corrispondenza trovata per \"nomeModulo\" specificato.");
     setSessionVariable("statusPHPRedirect", null);
@@ -105,7 +107,12 @@ setSessionVariable("statusPHPRedirect", null);
 
     <h4>JSON</h4>
     <p>
+    <div class="CODE">
       <textarea id="code-json" name="code-json"><?php echo "$jsonContentModulo\n" ?></textarea>
+    </div>
+    <div class="CODE">
+      <textarea id="code-json-stable" name="code-json-stable"><?php echo "$jsonContentModuloStable\n" ?></textarea>
+    </div>
     </p>
 
     <p>
@@ -141,6 +148,15 @@ setSessionVariable("statusPHPRedirect", null);
 
     // Semplice aggiunta event handler "change" (riferimento GOOD)
     editor_json.on("change", safeLock);
+
+    var editor_json_stable = CodeMirror.fromTextArea(document.getElementById("code-json-stable"), {
+      lineNumbers: true,
+      mode: "application/json",
+      gutters: ["CodeMirror-lint-markers"],
+      lint: true,
+      readOnly: true
+    });
+    editor_json_stable.setSize(700, 300);
 
     var editor_json_header = CodeMirror.fromTextArea(document.getElementById("code-json-header"), {
       lineNumbers: true,
