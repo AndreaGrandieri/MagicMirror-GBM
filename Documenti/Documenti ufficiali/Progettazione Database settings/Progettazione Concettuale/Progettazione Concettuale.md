@@ -62,8 +62,6 @@ _Nessuna associazione._
 
 ## Diagramma ER
 
-![Database settings - Diagramma ER - MagicMirror-GBM](Database%20settings%20-%20Diagramma%20ER%20-%20MagicMirror-GBM.jpg)
-
-![Database settings - Diagramma ER - MagicMirror-GBM](Database%20settings%20-%20Diagramma%20ER%20-%20MagicMirror-GBM.png)
+![Database settings - Diagramma ER - MagicMirror-GBM PNG](Database%20settings%20-%20Diagramma%20ER%20-%20MagicMirror-GBM.png)
 
 MagicMirror-GBM
