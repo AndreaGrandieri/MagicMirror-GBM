@@ -39,6 +39,13 @@ $codeJson = ($_POST["code-json"]);
 $codeJsonHeader = ($_POST["code-json-header"]);
 $nomeModulo = ($_POST["nomeModulo"]);
 
+if (gettype(json_decode($codeJson, true)) !== "array") {
+    setSessionVariable("statusPHP", "Rilevato frammento JSON non valido. Rilevato RFC 7159, qui non applicabile. Riprova.");
+    setSessionVariable("statusPHPRedirect", null);
+    header("location: redirect.php?target=moduloSettings.php?nomeModulo=$nomeModulo&ms=300");
+    die;
+}
+
 // $jsonContent contiene il payload JSON per il frammento JSON interessato con gli aggiornamenti
 // prelevati dall'editor (codemirror)
 $jsonContent = json_encode(json_decode($codeJsonHeader, true) + json_decode($codeJson, true), JSON_PRETTY_PRINT);

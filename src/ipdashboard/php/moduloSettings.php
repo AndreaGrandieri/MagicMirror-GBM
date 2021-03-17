@@ -34,6 +34,7 @@ if (gettype($results) !== "boolean") {
     $jsonParsedModuloStable = json_decode($row["JsonStableFragment"], true);
     $jsonParsedModuloHeader = array("module" => $jsonParsedModulo["module"]);
     unset($jsonParsedModulo["module"]);
+    unset($jsonParsedModuloStable["module"]);
 
     $jsonContentModulo = json_encode($jsonParsedModulo, JSON_PRETTY_PRINT);
     $jsonContentModuloHeader = json_encode($jsonParsedModuloHeader, JSON_PRETTY_PRINT);
@@ -95,6 +96,7 @@ setSessionVariable("statusPHPRedirect", null);
 <script src="../codemirror-5.59.4/addon/lint/javascript-lint.js"></script>
 <script src="../codemirror-5.59.4/addon/lint/json-lint.js"></script>
 <script src="../utils/utils.js" type="module"></script>
+<script src="../utils/moduloSettings.js" type="module"></script>
 
 <body>
 
@@ -127,61 +129,16 @@ setSessionVariable("statusPHPRedirect", null);
 
     <!-- Bottone per salvataggio modifiche -->
     <div id="submitButton"></div>
-
-    <!-- Bottone per ripristino valori default -->
-    <!-- QUI -->
   </form>
 
+  <!-- Bottone copia contenuto da editor_json_stable a editor_json -->
+  <div id="copyStableButton">
+    <input type="button" id="copyStable" name="copyStable" onclick="copyStable()" value="COPIA DEFAULT">
+  </div>
+
+  <!-- Inizializzatore -->
   <script type="module">
-    import * as utils from "../utils/utils.js";
-
-    var editor_json = CodeMirror.fromTextArea(document.getElementById("code-json"), {
-      lineNumbers: true,
-      mode: "application/json",
-      gutters: ["CodeMirror-lint-markers"],
-      lint: {
-        "getAnnotations": jsonValidator,
-        "async": true
-      }
-    });
-    editor_json.setSize(700, 300);
-
-    // Semplice aggiunta event handler "change" (riferimento GOOD)
-    editor_json.on("change", safeLock);
-
-    var editor_json_stable = CodeMirror.fromTextArea(document.getElementById("code-json-stable"), {
-      lineNumbers: true,
-      mode: "application/json",
-      gutters: ["CodeMirror-lint-markers"],
-      lint: true,
-      readOnly: true
-    });
-    editor_json_stable.setSize(700, 300);
-
-    var editor_json_header = CodeMirror.fromTextArea(document.getElementById("code-json-header"), {
-      lineNumbers: true,
-      mode: "application/json",
-      gutters: ["CodeMirror-lint-markers"],
-      lint: true,
-      readOnly: true
-    });
-    editor_json_header.setSize(700, 100);
-
-    function jsonValidator(cm, updateLinting, options) {
-      var errors = CodeMirror.lint.json(cm, options);
-
-      updateLinting(errors);
-
-      if (errors.length > 0) {
-        utils.clearAndInject("submitButton", "<input type='submit' id='save' name='save' value='SALVA' disabled>");
-      } else {
-        utils.clearAndInject("submitButton", "<input type='submit' id='save' name='save' value='SALVA'>");
-      }
-    }
-
-    function safeLock(cm, changeObj) {
-      utils.clearAndInject("submitButton", "<input type='submit' id='save' name='save' value='SALVA' disabled>");
-    }
+    initModuloSettings();
   </script>
 
   <br>
