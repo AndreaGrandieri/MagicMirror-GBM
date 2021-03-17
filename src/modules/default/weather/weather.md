@@ -58,6 +58,20 @@ Visualizza il meteo per il giorno corrente.
 
 ---
 
+## Notifiche
+
+Le notifiche sono uno strumento utilizzato dai moduli per comunicare con:
+
+- L'OS del MagicMirror
+- Altri moduli
+- Attori umani
+
+| Notifica        | Direzione     | Trigger                                                                                    | Descrizione                                             |
+| --------------- | ------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
+| `Nome-Notifica` | `IN` or `OUT` | _Che azione causa l'`OUT` della notifica._ or _Che azione segue dall'`IN` della notifica._ | _Qui breve descrizione del significato della notifica._ |
+
+---
+
 ## Screenshots
 
 Schermata del modulo funzionante:

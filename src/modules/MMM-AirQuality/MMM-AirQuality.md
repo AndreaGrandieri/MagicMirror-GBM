@@ -38,6 +38,18 @@ dell'aria nella zona desiderata specificata.
 
 ---
 
+## Notifiche
+
+Le notifiche sono uno strumento utilizzato dai moduli per comunicare con:
+
+- L'OS del MagicMirror
+- Altri moduli
+- Attori umani
+
+_Niente da segnalare._
+
+---
+
 ## Screenshots
 
 Questa è la visualizzazione del modulo in situazione di funzionamento corretto:
