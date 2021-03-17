@@ -50,9 +50,14 @@ Le notifiche sono uno strumento utilizzato dai moduli per comunicare con:
 - Altri moduli
 - Attori umani
 
-| Notifica        | Direzione     | Trigger                                                                                    | Descrizione                                             |
-| --------------- | ------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
-| `Nome-Notifica` | `IN` or `OUT` | _Che azione causa l'`OUT` della notifica._ or _Che azione segue dall'`IN` della notifica._ | _Qui breve descrizione del significato della notifica._ |
+| Notifica                      | Direzione | Trigger                                                                                                       | Payload _(inline js)_                     | Descrizione |
+| ----------------------------- | --------- | ------------------------------------------------------------------------------------------------------------- | ----------------------------------------- | ----------- |
+| `MMM-Screencast:START-DIAL`   | `OUT`     | Quando il `DIAL server` entra in fase di esecuzione.                                                          | `{ port: <PORT_USED> }`                   | ---         |
+| `MMM-Screencast:LAUNCH-APP`   | `OUT`     | Quando l'app che invia la richiesta di cast entra in fase di inizializzazione.                                | `{ app: <APP_NAME>, state: <APP_STATE> }` | ---         |
+| `MMM-Screencast:RUN-APP`      | `OUT`     | Quando l'app che invia la richiesta di cast entra in fase di esecuzione.                                      | `{ app: <APP_NAME>, state: <APP_STATE> }` | ---         |
+| `MMM-Screencast:STOP-APP`     | `OUT`     | Quando l'app che invia la richiesta di cast termina la sua esecuzione.                                        | `{ app: <APP_NAME>, state: <APP_STATE> }` | ---         |
+| `MMM-Screencast:CONFIG-ERROR` | `OUT`     | Quando è stato rilevato un errore di configurazione del modulo.                                               | `{ message: <MESSAGE_ABOUT_ERROR>}`       | ---         |
+| `MMM-Screencast:CLOSE`        | `IN`      | Chiede l'arresto dell'esecuzione dell'app che invia la richiesta di cast (se si trova in fase di esecuzione). | `---`                                     | ---         |
 
 ---
 
