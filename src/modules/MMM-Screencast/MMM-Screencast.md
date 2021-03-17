@@ -52,7 +52,7 @@ Le notifiche sono uno strumento utilizzato dai moduli per comunicare con:
 
 | Notifica                      | Direzione | Trigger                                                                        | Payload _(inline)_                        | Descrizione |
 | ----------------------------- | --------- | ------------------------------------------------------------------------------ | ----------------------------------------- | ----------- |
-| `MMM-Screencast:START-DIAL`   | `OUT`     | Quando il `DIAL server` entra in fase di esecuzione.                           | `{ port: <PORT_USED> }`{:.javascript}     | ---         |
+| `MMM-Screencast:START-DIAL`   | `OUT`     | Quando il `DIAL server` entra in fase di esecuzione.                           | `{ port: <PORT_USED> }`{:.js}             | ---         |
 | `MMM-Screencast:LAUNCH-APP`   | `OUT`     | Quando l'app che invia la richiesta di cast entra in fase di inizializzazione. | `{ app: <APP_NAME>, state: <APP_STATE> }` | ---         |
 | `MMM-Screencast:RUN-APP`      | `OUT`     | Quando l'app che invia la richiesta di cast entra in fase di esecuzione.       | `{ app: <APP_NAME>, state: <APP_STATE> }` | ---         |
 | `MMM-Screencast:STOP-APP`     | `OUT`     | Quando l'app che invia la richiesta di cast termina la sua esecuzione.         | `{ app: <APP_NAME>, state: <APP_STATE> }` | ---         |
