@@ -11,7 +11,6 @@ Il seguente modulo visualizza lo stato di connessione Internet del MagicMirror.
 ```js
 {
     module: 'MMM-Online-State',
-    // you may choose any location
     position: 'top_right',
     config: {
         displaySymbol: true,

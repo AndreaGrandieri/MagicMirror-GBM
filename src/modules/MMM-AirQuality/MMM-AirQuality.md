@@ -12,7 +12,6 @@ dell'aria nella zona desiderata specificata.
 ```js
 {
     module: 'MMM-AirQuality',
-    // you may choose any location
     position: 'top_center',
     config: {
         location: 'milan',

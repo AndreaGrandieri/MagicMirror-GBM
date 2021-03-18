@@ -15,7 +15,6 @@ si invia il cast e il MagicMirror alla stessa rete locale (LAN).__
 ```js
 {
     module: 'MMM-Screencast',
-    // This position is for a hidden <div /> and not the screencast window
     position: 'bottom_right', 
     config: {
         position: 'center',
