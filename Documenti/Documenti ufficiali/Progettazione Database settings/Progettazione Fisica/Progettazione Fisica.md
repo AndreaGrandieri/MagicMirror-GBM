@@ -66,7 +66,177 @@ CREATE TABLE globals (
 4. Inserimento record default per la tabella `modules`
 
 ```sql
--- TODO
+INSERT INTO modules
+    SELECT 'MMM-AirQuality' AS NomeModulo, 1 AS Active, 0 AS RenderIndex, '{
+\"module\": \"MMM-AirQuality\",
+\"position\": \"top_center\",
+\"config\": {
+\"location\": \"milan\",
+\"lang\": \"eng\",
+\"updateInterval\": 30,
+\"showLocation\": true,
+\"showIndex\": true
+}
+}' AS JsonFragment, '{
+\"module\": \"MMM-AirQuality\",
+\"position\": \"top_center\",
+\"config\": {
+\"location\": \"milan\",
+\"lang\": \"eng\",
+\"updateInterval\": 30,
+\"showLocation\": true,
+\"showIndex\": true
+}
+}' AS JsonStableFragment
+    UNION ALL SELECT 'clock', 1, 1, '{
+\"module\": \"clock\",
+\"position\": \"top_left\",
+\"config\": {
+\"timeFormat\": 24,
+\"displaySeconds\": true,
+\"showDate\": true,
+\"displayType\": \"digital\",
+\"timezone\": \"Europe/Rome\"
+}
+}', '{
+\"module\": \"clock\",
+\"position\": \"top_left\",
+\"config\": {
+\"timeFormat\": 24,
+\"displaySeconds\": true,
+\"showDate\": true,
+\"displayType\": \"digital\",
+\"timezone\": \"Europe/Rome\"
+}
+}'
+    UNION ALL SELECT 'weather', 1, 2, '{
+\"module\": \"weather\",
+\"position\": \"top_right\",
+\"config\": {
+\"weatherProvider\": \"openweathermap\",
+\"units\": \"metric\",
+\"degreeLabel\": true,
+\"updateInterval\": 600000,
+\"lang\": \"en\",
+\"initialLoadDelay\": 1000,
+\"onlyTemp\": false,
+\"showHumidity\": true,
+\"showIndoorTemperature\": true,
+\"showIndoorHumidity\": true,
+\"showSun\": true,
+\"colored\": true,
+\"showPrecipitationAmount\": true,
+\"maxNumberOfDays\": 5,
+\"locationID\": \"\",
+\"apiKey\": \"YOUR_OPENWEATHERMAP_APIKEY\"
+}
+}', '{
+\"module\": \"weather\",
+\"position\": \"top_right\",
+\"config\": {
+\"weatherProvider\": \"openweathermap\",
+\"units\": \"metric\",
+\"degreeLabel\": true,
+\"updateInterval\": 600000,
+\"lang\": \"en\",
+\"initialLoadDelay\": 1000,
+\"onlyTemp\": false,
+\"showHumidity\": true,
+\"showIndoorTemperature\": true,
+\"showIndoorHumidity\": true,
+\"showSun\": true,
+\"colored\": true,
+\"showPrecipitationAmount\": true,
+\"maxNumberOfDays\": 5,
+\"locationID\": \"\",
+\"apiKey\": \"YOUR_OPENWEATHERMAP_APIKEY\"
+}
+}'
+    UNION ALL SELECT 'weatherforecast', 1, 3, '{
+\"module\": \"weatherforecast\",
+\"position\": \"top_right\",
+\"config\": {
+\"units\": \"metric\",
+\"updateInterval\": 600000,
+\"lang\": \"en\",
+\"initialLoadDelay\": 1000,
+\"colored\": true,
+\"showRainAmount\": true,
+\"maxNumberOfDays\": 5,
+\"roundTemp\": true,
+\"locationID\": \"\",
+\"appid\": \"YOUR_OPENWEATHERMAP_APIKEY\"
+}
+}', '{
+\"module\": \"weatherforecast\",
+\"position\": \"top_right\",
+\"config\": {
+\"units\": \"metric\",
+\"updateInterval\": 600000,
+\"lang\": \"en\",
+\"initialLoadDelay\": 1000,
+\"colored\": true,
+\"showRainAmount\": true,
+\"maxNumberOfDays\": 5,
+\"roundTemp\": true,
+\"locationID\": \"\",
+\"appid\": \"YOUR_OPENWEATHERMAP_APIKEY\"
+}
+}'
+    UNION ALL SELECT 'MMM-StopwatchTimer', 1, 4, '{
+\"module\": \"MMM-StopwatchTimer\",
+\"config\": {
+\"animation\": true
+}
+}', '{
+\"module\": \"MMM-StopwatchTimer\",
+\"config\": {
+\"animation\": true
+}
+}'
+    UNION ALL SELECT 'MMM-Screencast', 1, 5, '{
+\"module\": \"MMM-Screencast\",
+\"position\": \"bottom_right\", 
+\"config\": {
+\"position\": \"center\",
+\"height\": 600,
+\"width\": 1000,
+\"castName\": \"MagicMirror-GBM-cast\"
+}
+}', '{
+\"module\": \"MMM-Screencast\",
+\"position\": \"bottom_right\", 
+\"config\": {
+\"position\": \"center\",
+\"height\": 600,
+\"width\": 1000,
+\"castName\": \"MagicMirror-GBM-cast\"
+}
+}'
+    UNION ALL SELECT 'MMM-Online-State', 1, 6, '{
+\"module\": \"MMM-Online-State\",
+\"position\": \"top_right\",
+\"config\": {
+\"displaySymbol\": true,
+\"symbolOnline\": \"fas fa-globe\",
+\"symbolOffline\": \"fas fa-globe\",
+\"colored\": true,
+\"colorOnline\": \"#FFFFFF\",
+\"colorOffline\": \"#FF0000\"
+}
+}', '{
+\"module\": \"MMM-Online-State\",
+\"position\": \"top_right\",
+\"config\": {
+\"displaySymbol\": true,
+\"symbolOnline\": \"fas fa-globe\",
+\"symbolOffline\": \"fas fa-globe\",
+\"colored\": true,
+\"colorOnline\": \"#FFFFFF\",
+\"colorOffline\": \"#FF0000\"
+}
+}'
+    UNION ALL SELECT -- TODO
 ```
 
 5. Inserimento record default per la tabella `globals`
