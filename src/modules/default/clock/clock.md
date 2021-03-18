@@ -11,7 +11,6 @@ Il seguente modulo mostra la data e l'ora correnti.
 ```js
 {
     module: "clock",
-    // you may choose any location
     position: "top_left",
     config: {
         timeFormat: 24,
