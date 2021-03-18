@@ -96,7 +96,7 @@ setSessionVariable("statusPHPRedirect", null);
 <script src="../codemirror-5.59.4/addon/lint/javascript-lint.js"></script>
 <script src="../codemirror-5.59.4/addon/lint/json-lint.js"></script>
 <script src="../utils/utils.js" type="module"></script>
-<script src="../utils/moduloSettings.js" type="module"></script>
+<script src="../utils/editor.js" type="module"></script>
 
 <body>
 

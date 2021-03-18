@@ -24,7 +24,7 @@ if (!test_input_valid_get_isset("nomeGlobale")) {
 $nomeGlobale = test_input($_GET["nomeGlobale"]);
 
 // Interrogo tabella "modules"
-$results = $db->query("SELECT JsonFragment FROM globals WHERE nomeGlobale='$nomeGlobale'");
+$results = $db->query("SELECT JsonFragment, JsonStableFragment FROM globals WHERE nomeGlobale='$nomeGlobale'");
 
 if (gettype($results) !== "boolean") {
   $row = $results->fetchArray(SQLITE3_ASSOC);
@@ -32,6 +32,9 @@ if (gettype($results) !== "boolean") {
   if (gettype($row) !== "boolean") {
     $jsonParsedGlobale = json_decode($row["JsonFragment"], true);
     $jsonContentGlobale = json_encode($jsonParsedGlobale, JSON_PRETTY_PRINT);
+
+    $jsonParsedGlobaleStable = json_decode($row["JsonStableFragment"], true);
+    $jsonContentGlobaleStable = json_encode($jsonParsedGlobaleStable, JSON_PRETTY_PRINT);
   } else {
     setSessionVariable("statusPHP", "Nessuna corrispondenza trovata per \"nomeGlobale\" specificato.");
     setSessionVariable("statusPHPRedirect", null);
@@ -89,6 +92,7 @@ setSessionVariable("statusPHPRedirect", null);
 <script src="../codemirror-5.59.4/addon/lint/javascript-lint.js"></script>
 <script src="../codemirror-5.59.4/addon/lint/json-lint.js"></script>
 <script src="../utils/utils.js" type="module"></script>
+<script src="../utils/editor.js" type="module"></script>
 
 <body>
 
@@ -97,7 +101,12 @@ setSessionVariable("statusPHPRedirect", null);
   <form action="saveEditorContentGlobal.php" method="POST">
     <h4>JSON</h4>
     <p>
+    <div class="CODE">
       <textarea id="code-json" name="code-json"><?php echo "$jsonContentGlobale\n" ?></textarea>
+    </div>
+    <div class="CODE">
+      <textarea id="code-json-stable" name="code-json-stable"><?php echo "$jsonContentGlobaleStable\n" ?></textarea>
+    </div>
     </p>
 
     <p>
@@ -117,38 +126,14 @@ setSessionVariable("statusPHPRedirect", null);
     <!-- QUI -->
   </form>
 
+  <!-- Bottone copia contenuto da editor_json_stable a editor_json -->
+  <div id="copyStableButton">
+    <input type="button" id="copyStable" name="copyStable" onclick="copyStable()" value="COPIA DEFAULT">
+  </div>
+
+  <!-- Inizializzatore -->
   <script type="module">
-    import * as utils from "../utils/utils.js";
-
-    var editor_json = CodeMirror.fromTextArea(document.getElementById("code-json"), {
-      lineNumbers: true,
-      mode: "application/json",
-      gutters: ["CodeMirror-lint-markers"],
-      lint: {
-        "getAnnotations": jsonValidator,
-        "async": true
-      }
-    });
-    editor_json.setSize(700, 300);
-
-    // Semplice aggiunta event handler "change" (riferimento GOOD)
-    editor_json.on("change", safeLock);
-
-    function jsonValidator(cm, updateLinting, options) {
-      var errors = CodeMirror.lint.json(cm, options);
-
-      updateLinting(errors);
-
-      if (errors.length > 0) {
-        utils.clearAndInject("submitButton", "<input type='submit' id='save' name='save' value='SALVA' disabled>");
-      } else {
-        utils.clearAndInject("submitButton", "<input type='submit' id='save' name='save' value='SALVA'>");
-      }
-    }
-
-    function safeLock(cm, changeObj) {
-      utils.clearAndInject("submitButton", "<input type='submit' id='save' name='save' value='SALVA' disabled>");
-    }
+    initModuloSettings();
   </script>
 
   <br>
