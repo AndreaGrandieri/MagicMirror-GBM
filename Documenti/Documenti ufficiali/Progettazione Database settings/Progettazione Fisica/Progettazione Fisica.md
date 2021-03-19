@@ -236,7 +236,31 @@ INSERT INTO modules
 \"colorOffline\": \"#FF0000\"
 }
 }'
-    UNION ALL SELECT -- TODO
+    UNION ALL SELECT 'MMM-ip', 1, 7, '{
+\"module\": \"MMM-ip\",
+\"position\": \"bottom_right\",
+\"config\": {
+\"fontSize\": 18,
+\"families\": [
+\"IPv4\"
+],
+\"types\": [
+\"wlan0\"
+]
+}
+}', '{
+\"module\": \"MMM-ip\",
+\"position\": \"bottom_right\",
+\"config\": {
+\"fontSize\": 18,
+\"families\": [
+\"IPv4\"
+],
+\"types\": [
+\"wlan0\"
+]
+}
+}';
 ```
 
 5. Inserimento record default per la tabella `globals`
