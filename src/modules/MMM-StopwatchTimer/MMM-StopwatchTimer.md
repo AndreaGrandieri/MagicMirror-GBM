@@ -35,29 +35,17 @@ Le notifiche sono uno strumento utilizzato dai moduli per comunicare con:
 - Altri moduli
 - Attori umani
 
-| Notifica        | Direzione     | Trigger                                                                                    | Descrizione                                             |
-| --------------- | ------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
-| `Nome-Notifica` | `IN` or `OUT` | _Che azione causa l'`OUT` della notifica._ or _Che azione segue dall'`IN` della notifica._ | _Qui breve descrizione del significato della notifica._ |
+| Notifica                   | Direzione | Trigger                                             | Payload _(inline js)_ | Descrizione                                                                                                                                             |
+| -------------------------- | --------- | --------------------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `START_TIMER`              | `IN`      | Avvio del timer con `x` secondi.                    | `x`                   | ---                                                                                                                                                     |
+| `PAUSE_STOPWATCHTIMER`     | `IN`      | Mette in pausa il timer o cronometro.               | `---`                 | Il timer o cronometro rimane in pausa (fermo) visualizzato sullo schermo del MagicMirror.                                                               |
+| `UNPAUSE_TIMER`            | `IN`      | Toglie dallo stato di pausa un timer in pausa.      | `---`                 | Il timer riprende a scorrere.                                                                                                                           |
+| `START_STOPWATCH`          | `IN`      | Avvio del cronometro.                               | `---`                 | ---                                                                                                                                                     |
+| `UNPAUSE_STOPWATCH`        | `IN`      | Toglie dallo stato di pausa un cronometro in pausa. | `---`                 | Il cronometro riprende a scorrere.                                                                                                                      |
+| `INTERRUPT_STOPWATCHTIMER` | `IN`      | Arresta l'esecuzione di un timer o cronometro.      | `---`                 | Questo causa la perdità dello stato di attività del timer o cronometro e l'arresto della visualizzazione di quest'ultimo sullo schermo del MagicMirror. |
 
 ---
 
 ## Screenshots
 
 ![resources/Timer.gif](resources/Timer.gif)
-
-
----
-
-## Notifiche
-Provvisorio (guarda [https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/90](https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/90))
-
-Le seguenti notifiche possono essere utilizzate per controllare questo modulo
-
-| Notifiche                | Descrizione                                                                                              |
-| ------------------------ | -------------------------------------------------------------------------------------------------------- |
-| START_TIMER              | Avvia un timer di N secondi. È necessario specificare la quantità di secondi                             |
-| PAUSE_STOPWATCHTIMER     | Mette in pausa il timer / cronometro attualmente in esecuzione. Sarà comunque visualizzato sullo schermo |
-| UNPAUSE_TIMER            | Se il timer è stato messo in pausa in precedenza, riprenderà l'esecuzione                                |
-| START_STOPWATCH          | Il cronometro inizia a funzionare                                                                        |
-| UNPAUSE_STOPWATCH        | Se il cronometro è stato messo in pausa in precedenza, riprenderà l'esecuzione                           |
-| INTERRUPT_STOPWATCHTIMER | Lo specchio smetterà di visualizzare il timer o il cronometro attualmente visualizzati                   |
