@@ -22,9 +22,11 @@ Visualizza eventi da uno o più calendari.
         getRelative: 1,
         urgency: 0,
         calendars: [
-            url: "YOUR_CALENDAR_ICAL_URL",
-            color: "#00E0E0",
-            name: "YOUR_CALENDAR_NAME",
+            {
+                url: "YOUR_CALENDAR_ICAL_URL",
+                color: "#00E0E0",
+                name: "YOUR_CALENDAR_NAME"
+            }
         ]
     }
 }
@@ -51,7 +53,7 @@ Visualizza eventi da uno o più calendari.
 | `getRelative`                | `Number`          | `0 <= x <= 48` ore. Un valore di _0_ ore disabilita questa funzionalità.                                                                                                 | `6`            | `OPTIONAL`     | Quante ore all'accadere di un evento devono mancare per visualizzare il _tempo_ di quell'evento in formato `"relative"`.      |
 | `urgency`                    | `Number`          | `x >= 0`: giorni. Un valore di _0_ giorni disabilita questa funzionalità.                                                                                                | `7`            | `OPTIONAL`     | Quanti giorni all'accadere di un evento devono mancare per visualizzare il _tempo_ di quell'evento in formato `"relative"`.   |
 | `broadcastEvents`            | `Boolean`         | `true`: Broadcast notifiche per eventi del calendario attivo. <br> `false`: Broadcast notifiche per eventi del calendario disattivo.                                     | `true`         | `OPTIONAL`     | Attiva il broadcast notifiche per eventi del calendario _(guarda la sezione Notifiche per maggiori dettagli)_.                |
-| `calendars`                  | `Array -> String` | _Regole di compilazione riportate sotto_.                                                                                                                                | `---`          | `REQUIRED`     | Lista di calendari dai quali prelevare gli eventi.                                                                            |
+| `calendars`                  | `Array -> Object` | _Regole di compilazione riportate sotto_.                                                                                                                                | `---`          | `REQUIRED`     | Lista di calendari dai quali prelevare gli eventi.                                                                            |
 
 `calendars`:
 
@@ -134,3 +136,18 @@ E' possibile anche usare il seguente link: [https://calendar.google.com/calendar
 5. Visualizzare e copiare negli appunti l'indirizzo
 
 ![step5](resources%2FICAL%20Google%20Calendar/step5.PNG)
+
+6. Dall'IP Dashboard, recarsi nella configurazione del modulo `calendar`
+
+![step6](resources%2FICAL%20Google%20Calendar/step6.PNG)
+
+7. Incollare l'indirizzo nell'apposita sezione
+
+![step7](resources%2FICAL%20Google%20Calendar/step7.PNG)
+![step7_2](resources%2FICAL%20Google%20Calendar/step7_2.PNG)
+
+8. 
+
+8. Compilare lo stato del Database, per rendere effettive le modifiche
+
+![step8](resources%2FICAL%20Google%20Calendar/step8.PNG)
