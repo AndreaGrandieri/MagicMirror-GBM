@@ -1,4 +1,4 @@
-# Clock
+# clock
 
 ## tl;dr
 
@@ -44,9 +44,10 @@ Le notifiche sono uno strumento utilizzato dai moduli per comunicare con:
 - Altri moduli
 - Attori umani
 
-| Notifica        | Direzione     | Trigger                                                                                    | Descrizione                                             |
-| --------------- | ------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
-| `Nome-Notifica` | `IN` or `OUT` | _Che azione causa l'`OUT` della notifica._ or _Che azione segue dall'`IN` della notifica._ | _Qui breve descrizione del significato della notifica._ |
+| Notifica       | Direzione | Trigger               | Payload _(inline js)_ | Descrizione |
+| -------------- | --------- | --------------------- | --------------------- | ----------- |
+| `CLOCK_SECOND` | `OUT`     | Ogni secondo passato. | `second_value`        | ---         |
+| `CLOCK_MINUTE` | `OUT`     | Ogni munuto passato.  | `minute_value`        | ---         |
 
 ---
 
