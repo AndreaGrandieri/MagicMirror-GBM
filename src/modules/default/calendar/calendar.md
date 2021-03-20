@@ -9,7 +9,25 @@ Visualizza eventi da uno o più calendari.
 ## config.js fragment
 
 ```js
-// Qui frammento di configurazione da inserire nel file globale "config.js"
+{
+    module: "calendar",
+    position: "top_left",
+    config: {
+        showLocation: true,
+        wrapEvents: true,
+        wrapLocationEvents: true,
+        fetchInterval: 1000,
+        displayRepeatingCountTitle: false,
+        timeFormat: "relative",
+        getRelative: 1,
+        urgency: 0,
+        calendars: [
+            url: "YOUR_CALENDAR_ICAL_URL",
+            color: "#00E0E0",
+            name: "YOUR_CALENDAR_NAME",
+        ]
+    }
+}
 ```
 
 ---
@@ -74,6 +92,45 @@ _Qui (se presenti, consigliati)._
 
 ---
 
-## \<Altro\>
+## ICAL
 
-_Qui altre informazioni, se necessarie. Denominare il paragrafo a dovere._
+Il _Internet Calendaring and Scheduling Core Object Specification (iCal)_ è un formato multimediale che permette
+lo scambio di informazioni riguardanti schedulazione e gestione del calendario.
+Esempi di informazioni interessate sono:
+
+- Eventi
+- TODOs
+- Stato di Libero / occupato
+
+Questi file hanno estensione: `.ical`.
+Questo formato è conforme allo standard `RFC 5545` per lo scambio di dati relativi a calendari.
+
+Le modalità per ottenere un __RIFERIMENTO ICAL__ per il proprio calendario possono differire in base al
+provider utilizzato fornitore del calendario. Qui di seguito vengono riportati gli step per `Google Calendar`,
+il provider più utilizzato.
+
+_Una ricerca su Internet può fornire indicazioni e chiarire dubbi per qualsiasi provider._
+
+### Google Calendar
+
+1. Aprire Google Calendar
+
+E' possibile anche usare il seguente link: [https://calendar.google.com/calendar](https://calendar.google.com/calendar)
+
+![step1](resources%2FICAL%20Google%20Calendar/step1.PNG)
+
+2. Identificare il calendario d'interesse
+
+![step2](resources%2FICAL%20Google%20Calendar/step2.PNG)
+
+3. Aprire le impostazioni relative a quel calendario
+
+![step3](resources%2FICAL%20Google%20Calendar/step3.PNG)
+
+4. Nelle impostazioni generiche del calendario, individuare la sezione: `Indirizzo segreto in formato iCal`
+
+![step4](resources%2FICAL%20Google%20Calendar/step4.PNG)
+
+5. Visualizzare e copiare negli appunti l'indirizzo
+
+![step5](resources%2FICAL%20Google%20Calendar/step5.PNG)
