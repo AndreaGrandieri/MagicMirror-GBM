@@ -146,8 +146,10 @@ E' possibile anche usare il seguente link: [https://calendar.google.com/calendar
 ![step7](resources%2FICAL%20Google%20Calendar/step7.PNG)
 ![step7_2](resources%2FICAL%20Google%20Calendar/step7_2.PNG)
 
-8. 
-
-8. Compilare lo stato del Database, per rendere effettive le modifiche
+8. Salvare le modifiche
 
 ![step8](resources%2FICAL%20Google%20Calendar/step8.PNG)
+
+9.  Compilare lo stato del Database, per rendere effettive le modifiche
+
+![step9](resources%2FICAL%20Google%20Calendar/step9.PNG)
