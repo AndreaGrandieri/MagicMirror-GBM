@@ -82,15 +82,17 @@ Le notifiche sono uno strumento utilizzato dai moduli per comunicare con:
 - Altri moduli
 - Attori umani
 
-| Notifica          | Direzione | Trigger                                                                            | Payload _(inline js)_                                                                                                                                                                   | Descrizione |
-| ----------------- | --------- | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `CALENDAR_EVENTS` | `OUT`     | La notifica è in funzione se il valore della proprietà `broadcastEvents` è `true`. | `[{title: "TITOLO_EVENTO", startDate: "DATA_INIZIO_EVENTO", endDate: "DATA_FINE_EVENTO", fullDayEvent: "EVENTO_TUTTA GIORNATA?", location: "LOCATION_EVENTO", geo: "INFO_GEO_EVENTO"}]` | ---         |
+| Notifica          | Direzione | Trigger                                                                            | Payload _(inline js)_                                                                                                                                                                   | Descrizione                                                                                                                                                     |
+| ----------------- | --------- | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `CALENDAR_EVENTS` | `OUT`     | La notifica è in funzione se il valore della proprietà `broadcastEvents` è `true`. | `[{title: "TITOLO_EVENTO", startDate: "DATA_INIZIO_EVENTO", endDate: "DATA_FINE_EVENTO", fullDayEvent: "EVENTO_TUTTA GIORNATA?", location: "LOCATION_EVENTO", geo: "INFO_GEO_EVENTO"}]` | Le informazioni relative agli eventi presenti nel calendario interessato vengono trasmesse agli altri moduli, per comunicare con quest'ultimi (se compatibili). |
 
 ---
 
 ## Screenshots
 
-_Qui (se presenti, consigliati)._
+Scheramata del modulo in funzione in modo corretto in una qualsiasi configurazione _(non specificata)_:
+
+![working_module.PNG](resources/working_module.PNG)
 
 ---
 
@@ -150,6 +152,74 @@ E' possibile anche usare il seguente link: [https://calendar.google.com/calendar
 
 ![step8](resources%2FICAL%20Google%20Calendar/step8.PNG)
 
-9.  Compilare lo stato del Database, per rendere effettive le modifiche
+9. Compilare lo stato del Database, per rendere effettive le modifiche
 
 ![step9](resources%2FICAL%20Google%20Calendar/step9.PNG)
+
+---
+
+## timeFormat
+
+Di seguito sono riportati vari esempi delle possibili configurazioni.
+Essi, insieme ad un po' di testing individuale possono aiutare a capire il funzionamento
+delle proprietà `timeFormat` + `getRelative` + `urgency`:
+
+### Considerazioni
+
+Si verificano le seguenti associazioni:
+
+- `getRelative` considerato con `timeFormat: "relative"`
+- `urgency` considerato con `timeFormat: "absolute"`
+
+`getRelative`, quando entra in azione, trasforma:
+
+- Riferimento di tempo del tipo: `Today at 14:00` in `(starts) In an hour`
+
+`urgency`, quando entra in azione, trasforma:
+
+- Riferimento di tempo del tipo: `Apr 30th` in `(starts) In a month`
+
+### rel1
+
+![rel1](resources/rel/rel1.PNG)
+![rel1_1](resources/rel/rel1_1.PNG)
+
+### rel2
+
+![rel2](resources/rel/rel2.PNG)
+![rel2_1](resources/rel/rel2_1.PNG)
+
+### rel3
+
+![rel3](resources/rel/rel3.PNG)
+![rel3_1](resources/rel/rel3_1.PNG)
+
+### rel4
+
+![rel4](resources/rel/rel4.PNG)
+![rel4_1](resources/rel/rel4_1.PNG)
+
+### rel5
+
+![rel5](resources/rel/rel5.PNG)
+![rel5_1](resources/rel/rel5_1.PNG)
+
+### rel6
+
+![rel6](resources/rel/rel6.PNG)
+![rel6_1](resources/rel/rel6_1.PNG)
+
+### rel7
+
+![rel7](resources/rel/rel7.PNG)
+![rel7_1](resources/rel/rel7_1.PNG)
+
+### timeFormat puro
+
+`timeFormat: "absolute"` senza alcun modificatore (senza `urgency`):
+
+![absolute_timeFormat.PNG](resources/absolute_timeFormat.PNG)
+
+`timeFormat: "relative"` senza alcun modificatore (senza `getRelative`):
+
+![relative_timeFormat.PNG](resources/relative_timeFormat.PNG)
