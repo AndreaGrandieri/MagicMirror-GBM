@@ -66,9 +66,10 @@ Le notifiche sono uno strumento utilizzato dai moduli per comunicare con:
 - Altri moduli
 - Attori umani
 
-| Notifica        | Direzione     | Trigger                                                                                    | Descrizione                                             |
-| --------------- | ------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
-| `Nome-Notifica` | `IN` or `OUT` | _Che azione causa l'`OUT` della notifica._ or _Che azione segue dall'`IN` della notifica._ | _Qui breve descrizione del significato della notifica._ |
+| Notifica             | Direzione | Trigger                                                                      | Payload _(inline js)_      | Descrizione                                                                 |
+| -------------------- | --------- | ---------------------------------------------------------------------------- | -------------------------- | --------------------------------------------------------------------------- |
+| `INDOOR_TEMPERATURE` | `IN`      | Visualizza la temperatura locale della zona di collocazione del MagicMirror. | `INDOOR_TEMPERATURE_VALUE` | Notifica in funzione solo se il valore di `showIndoorTemperature` è `true`. |
+| `INDOOR_HUMIDITY`    | `IN`      | Visualizza l'umidità locale della zona di collocazione del MagicMirror.      | `INDOOR_HUMIDITY_VALUE`    | Notifica in funzione solo se il valore di `showIndoorHumidity` è `true`.    |
 
 ---
 
