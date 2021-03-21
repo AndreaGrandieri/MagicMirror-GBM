@@ -77,7 +77,7 @@ Le notifiche sono uno strumento utilizzato dai moduli per comunicare con:
 
 Schermata del modulo funzionante:
 
-![working_module](resources/working_module.PNG)
+![working_module](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/weather/working_module.PNG)
 
 ---
 
@@ -102,9 +102,9 @@ in quanto quest'ultima viene, appunto, identificata univocamente.
 Per ottenere il valore di `locationID`:
 
 - Visita prima di tutto: [https://openweathermap.org/](https://openweathermap.org/).
-- Utilizza <br> ![search_bar_getlocationID](resources/search_bar_getlocationID.PNG) <br>
+- Utilizza <br> ![search_bar_getlocationID](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/weather/search_bar_getlocationID.PNG) <br>
   per cercare la tua zona di interesse.
-- Una volta effettuata la ricerca <br> ![search_bar_used_getlocationID](resources/search_bar_used_getlocationID.PNG) <br>
+- Una volta effettuata la ricerca <br> ![search_bar_used_getlocationID](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/weather/search_bar_used_getlocationID.PNG) <br>
   potrai notare che l'__URL__ della pagina correntemente visualizzata contiene proprio
   il valore di `locationID`: <br>
-  ![url_gotlocationID](resources/url_gotlocationID.PNG)
+  ![url_gotlocationID](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/weather/url_gotlocationID.PNG)

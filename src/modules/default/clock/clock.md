@@ -55,6 +55,6 @@ Le notifiche sono uno strumento utilizzato dai moduli per comunicare con:
 
 Questa è la visualizzazione del modulo in situazione di funzionamento corretto:
 
-![resources/clock.png](resources/clock.png)
+![clock.png](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/clock/clock.png)
 
 ---
