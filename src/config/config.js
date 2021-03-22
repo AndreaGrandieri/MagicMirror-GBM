@@ -119,9 +119,18 @@ var config = {
 			config: {
 				feeds: [
 					{
-						title: "New York Times",
-						url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+						title: "Il Giornale",
+						url: "https://www.ilgiornale.it/feed.xml"
+					},
+					{
+						title: "Corriere della sera",
+						url: "http://xml2.corriereobjects.it/rss/homepage.xml"
+					},
+					{
+						title: "La Gazzetta dello Sport",
+						url: "https://www.gazzetta.it/rss/home.xml"
 					}
+					
 				],
 				showSourceTitle: true,
 				showPublishDate: true,
