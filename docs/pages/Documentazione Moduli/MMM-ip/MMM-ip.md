@@ -54,7 +54,7 @@ Schermata del modulo in esecuzione correttamente:
 
 _In questo esempio `ens33` è il nome dell'interfaccia di rete._
 
-![working_module.PNG](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/MMM-ip/working_module.PNG)
+![working_module.PNG](../../../assets/MMM-ip/working_module.PNG)
 
 ---
 

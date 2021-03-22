@@ -48,4 +48,4 @@ Le notifiche sono uno strumento utilizzato dai moduli per comunicare con:
 
 ## Screenshots
 
-![Timer.gif](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/MMM-StopwatchTimer/Timer.gif)
+![Timer.gif](../../../assets/MMM-StopwatchTimer/Timer.gif)
