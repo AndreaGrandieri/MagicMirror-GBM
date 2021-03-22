@@ -223,3 +223,5 @@ Si verificano le seguenti associazioni:
 `timeFormat: "relative"` senza alcun modificatore (senza `getRelative`):
 
 ![relative_timeFormat.PNG](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/relative_timeFormat.PNG)
+
+![test.PNG](resources/test.PNG)
