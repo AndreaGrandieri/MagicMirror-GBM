@@ -92,7 +92,7 @@ Le notifiche sono uno strumento utilizzato dai moduli per comunicare con:
 
 Scheramata del modulo in funzione in modo corretto in una qualsiasi configurazione _(non specificata)_:
 
-![working_module.PNG](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/working_module.PNG)
+![working_module.PNG](../../../assets/calendar/working_module.PNG)
 
 ---
 
@@ -121,40 +121,40 @@ _Una ricerca su Internet può fornire indicazioni e chiarire dubbi per qualsiasi
 
 E' possibile anche usare il seguente link: [https://calendar.google.com/calendar](https://calendar.google.com/calendar)
 
-![step1](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/ICAL%20Google%20Calendar/step1.PNG)
+![step1](../../../assets/calendar/ICAL%20Google%20Calendar/step1.PNG)
 
 1. Identificare il calendario d'interesse
 
-![step2](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/ICAL%20Google%20Calendar/step2.PNG)
+![step2](../../../assets/calendar/ICAL%20Google%20Calendar/step2.PNG)
 
 3. Aprire le impostazioni relative a quel calendario
 
-![step3](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/ICAL%20Google%20Calendar/step3.PNG)
+![step3](../../../assets/calendar/ICAL%20Google%20Calendar/step3.PNG)
 
 4. Nelle impostazioni generiche del calendario, individuare la sezione: `Indirizzo segreto in formato iCal`
 
-![step4](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/ICAL%20Google%20Calendar/step4.PNG)
+![step4](../../../assets/calendar/ICAL%20Google%20Calendar/step4.PNG)
 
 5. Visualizzare e copiare negli appunti l'indirizzo
 
-![step5](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/ICAL%20Google%20Calendar/step5.PNG)
+![step5](../../../assets/calendar/ICAL%20Google%20Calendar/step5.PNG)
 
 6. Dall'IP Dashboard, recarsi nella configurazione del modulo `calendar`
 
-![step6](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/ICAL%20Google%20Calendar/step6.PNG)
+![step6](../../../assets/calendar/ICAL%20Google%20Calendar/step6.PNG)
 
 7. Incollare l'indirizzo nell'apposita sezione
 
-![step7](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/ICAL%20Google%20Calendar/step7.PNG)
-![step7_2](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/ICAL%20Google%20Calendar/step7_2.PNG)
+![step7](../../../assets/calendar/ICAL%20Google%20Calendar/step7.PNG)
+![step7_2](../../../assets/calendar/ICAL%20Google%20Calendar/step7_2.PNG)
 
 8. Salvare le modifiche
 
-![step8](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/ICAL%20Google%20Calendar/step8.PNG)
+![step8](../../../assets/calendar/ICAL%20Google%20Calendar/step8.PNG)
 
 9. Compilare lo stato del Database, per rendere effettive le modifiche
 
-![step9](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/ICAL%20Google%20Calendar/step9.PNG)
+![step9](../../../assets/calendar/ICAL%20Google%20Calendar/step9.PNG)
 
 ---
 
@@ -181,47 +181,45 @@ Si verificano le seguenti associazioni:
 
 ### rel1
 
-![rel1](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/rel/rel1.PNG)
-![rel1_1](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/rel/rel1_1.PNG)
+![rel1](../../../assets/calendar/rel/rel1.PNG)
+![rel1_1](../../../assets/calendar/rel/rel1_1.PNG)
 
 ### rel2
 
-![rel2](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/rel/rel2.PNG)
-![rel2_1](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/rel/rel2_1.PNG)
+![rel2](../../../assets/calendar/rel/rel2.PNG)
+![rel2_1](../../../assets/calendar/rel/rel2_1.PNG)
 
 ### rel3
 
-![rel3](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/rel/rel3.PNG)
-![rel3_1](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/rel/rel3_1.PNG)
+![rel3](../../../assets/calendar/rel/rel3.PNG)
+![rel3_1](../../../assets/calendar/rel/rel3_1.PNG)
 
 ### rel4
 
-![rel4](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/rel/rel4.PNG)
-![rel4_1](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/rel/rel4_1.PNG)
+![rel4](../../../assets/calendar/rel/rel4.PNG)
+![rel4_1](../../../assets/calendar/rel/rel4_1.PNG)
 
 ### rel5
 
-![rel5](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/rel/rel5.PNG)
-![rel5_1](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/rel/rel5_1.PNG)
+![rel5](../../../assets/calendar/rel/rel5.PNG)
+![rel5_1](../../../assets/calendar/rel/rel5_1.PNG)
 
 ### rel6
 
-![rel6](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/rel/rel6.PNG)
-![rel6_1](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/rel/rel6_1.PNG)
+![rel6](../../../assets/calendar/rel/rel6.PNG)
+![rel6_1](../../../assets/calendar/rel/rel6_1.PNG)
 
 ### rel7
 
-![rel7](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/rel/rel7.PNG)
-![rel7_1](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/rel/rel7_1.PNG)
+![rel7](../../../assets/calendar/rel/rel7.PNG)
+![rel7_1](../../../assets/calendar/rel/rel7_1.PNG)
 
 ### timeFormat puro
 
 `timeFormat: "absolute"` senza alcun modificatore (senza `urgency`):
 
-![absolute_timeFormat.PNG](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/absolute_timeFormat.PNG)
+![absolute_timeFormat.PNG](../../../assets/calendar/absolute_timeFormat.PNG)
 
 `timeFormat: "relative"` senza alcun modificatore (senza `getRelative`):
 
-![relative_timeFormat.PNG](https://raw.githubusercontent.com/AndreaGrandieri/MagicMirror-GBM/main/assets/calendar/relative_timeFormat.PNG)
-
-![test.PNG](resources/test.PNG)
+![relative_timeFormat.PNG](../../../assets/calendar/relative_timeFormat.PNG)
