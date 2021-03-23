@@ -171,6 +171,20 @@ var config = {
 				]
 			}
 		},
+		{
+			module: 'MMM-Mail',
+			position: 'bottom_left',
+			header: 'Email',
+			config: {
+				user: 'YOUR_EMAIL_ADDRESS_HERE',
+				pass: 'YOUR_EMAIL_PASSWORD_HERE',
+				host: 'imap.gmail.com',
+				port: 993,
+				numberOfEmails: 5,
+				fade: true,
+				subjectlength: 50
+			}
+		},
 	]
 };
 
