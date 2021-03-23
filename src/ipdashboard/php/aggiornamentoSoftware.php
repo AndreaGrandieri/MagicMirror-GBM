@@ -71,31 +71,29 @@ setSessionVariable("statusPHPRedirect", null);
 
     <?php
     if ($isScopeValid) {
-        echo '<br>
-    <div id="commitsCounter">
-        <span style="color: blue"><b>remote <?php echo "(origin/$branch)" ?></b></span> è avanti di
-        <?php echo "<span style=\"color: green\"><b>$commits</b></span>" ?>
+        echo "<br>
+    <div id=\"commitsCounter\">
+        <span style=\"color: blue\"><b>remote (origin/$branch)</b></span> è avanti di
+        <span style=\"color: green\"><b>$commits</b></span>
         in confronto a
-        <span style="color: darkviolet"><b>local <?php echo "($branch)" ?></b></span>.
+        <span style=\"color: darkviolet\"><b>local ($branch)</b></span>.
     </div>
 
-    <p style="color: red">
-        <b>Durante l\'aggiornamento software, NON chiudere la finestra del browser! Al termine
+    <p style=\"color: red\">
+        <b>Durante l'aggiornamento software, NON chiudere la finestra del browser! Al termine
             della procedura si verrà riportati alla schermata principale automaticamente.</b>
     </p>
 
-    <form action="doAggiornamentoSoftware.php" method="POST">
-        <div id="submitdiv">
-            <?php
-            echo $button
-            ?>
+    <form action=\"doAggiornamentoSoftware.php\" method=\"POST\">
+        <div id=\"submitdiv\">
+            $button
         </div>
-    </form>';
+    </form>";
     } else {
-        echo '<p><span style="color: darkviolet"><b>local <?php echo "($branch)" ?></b></span> non ha
+        echo "<p><span style=\"color: darkviolet\><b>local ($branch)</b></span> non ha
         un riferimento remoto come fonte degli aggiornamenti. Dunque, non è possibile procedere.
-        Effettuare il checkout di un altro <span style="color: darkviolet"><b>local</b></span> che abbia
-        un riferimento remoto.</p>';
+        Effettuare il checkout di un altro <span style=\"color: darkviolet\"><b>local</b></span> che abbia
+        un riferimento remoto.</p>";
     }
     ?>
 
