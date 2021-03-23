@@ -90,7 +90,7 @@ setSessionVariable("statusPHPRedirect", null);
         </div>
     </form>";
     } else {
-        echo "<p><span style=\"color: darkviolet\><b>local ($branch)</b></span> non ha
+        echo "<p><span style=\"color: darkviolet\"><b>local ($branch)</b></span> non ha
         un riferimento remoto come fonte degli aggiornamenti. Dunque, non è possibile procedere.
         Effettuare il checkout di un altro <span style=\"color: darkviolet\"><b>local</b></span> che abbia
         un riferimento remoto.</p>";
