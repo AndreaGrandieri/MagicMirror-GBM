@@ -162,12 +162,6 @@ var config = {
 			}
 		},
 		{
-			module: 'MMM-StopwatchTimer',
-			config: {
-				animation: true
-			}
-		},
-		{
 			module: 'MMM-ip',
 			position: 'bottom_right',
 			config: {
