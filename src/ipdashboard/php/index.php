@@ -13,6 +13,12 @@ startNewSessionCheck();
 // Ottengo "statusPHP"
 $statusPHP = readSessionVariable("statusPHP");
 
+// Ottiene nome del branch checked out (git)
+$output = array();
+exec("git symbolic-ref HEAD --short", $output);
+
+$branch = $output[0];
+
 setSessionVariable("statusPHP", null);
 setSessionVariable("statusPHPRedirect", null);
 ?>
@@ -35,8 +41,13 @@ setSessionVariable("statusPHPRedirect", null);
 
     <h1>MagicMirror-GBM IP Dashboard</h1>
 
+    <p>
+        Checked out branch:
+        <span style="color: darkviolet"><b><?php echo $branch ?></b></span>
+    </p>
+
     <!-- Tabella delle scelte -->
-    <table style="width:60%">
+    <table style=" width:60%">
         <tr>
             <th>Opzione</th>
             <th>Descrizione</th>
@@ -48,6 +59,10 @@ setSessionVariable("statusPHPRedirect", null);
         <tr>
             <td><a href="globalsSelector.php">Globals Selector</a></td>
             <td>Modifica le globali in attività per il MagicMirror.</td>
+        </tr>
+        <tr>
+            <td><a href="aggiornamentoSoftware.php">Aggiornamento Software</a></td>
+            <td>Aggiorna il software del MagicMirror.</td>
         </tr>
         <tr>
             <td><a href="ripristinaDatabase.php">Ripristina Database</a></td>
