@@ -1,5 +1,5 @@
 ---
-zip_url: www.google.com
+layout: MMM-AirQuality
 ---
 
 # MMM-AirQuality
