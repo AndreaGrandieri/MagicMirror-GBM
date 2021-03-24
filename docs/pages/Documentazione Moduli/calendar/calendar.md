@@ -1,3 +1,7 @@
+---
+layout: noheader
+---
+
 # calendar
 
 ## tl;dr

@@ -1,3 +1,7 @@
+---
+layout: noheader
+---
+
 # MMM-StopwatchTimer
 
 ## tl;dr

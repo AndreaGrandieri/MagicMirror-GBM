@@ -1,3 +1,7 @@
+---
+layout: noheader
+---
+
 # weather
 
 ## tl;dr
