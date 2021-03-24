@@ -1,3 +1,7 @@
+---
+layout: noheader
+---
+
 # MMM-AirQuality
 
 ## tl;dr

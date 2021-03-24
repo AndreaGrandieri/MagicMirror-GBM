@@ -1,3 +1,7 @@
+---
+layout: noheader
+---
+
 # MMM-ip
 
 ## tl;dr

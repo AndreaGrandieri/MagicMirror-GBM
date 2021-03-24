@@ -1,3 +1,7 @@
+---
+layout: noheader
+---
+
 # MMM-Online-State
 
 ## tl;dr
