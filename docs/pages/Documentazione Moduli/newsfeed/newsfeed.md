@@ -1,3 +1,7 @@
+---
+layout: noheader
+---
+
 # newsfeed
 
 ## tl;dr
