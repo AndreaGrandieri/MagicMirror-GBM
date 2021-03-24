@@ -6,4 +6,4 @@ layout: noheader
 
 _La versione più recente del documento è in cima alla lista:_
 
-- ![file-pdf.svg](../icons/file-pdf.svg) [DocumentoDeiRequisitiConfigurazionePrivata_v2_0_.pdf](../assets/DocumentoDeiRequisitiConfigurazionePrivata/DocumentoDeiRequisitiConfigurazionePrivata_v2_0_.pdf)
+- ![file-pdf.svg](../assets/icons/file-pdf.svg) [DocumentoDeiRequisitiConfigurazionePrivata_v2_0_.pdf](../assets/DocumentoDeiRequisitiConfigurazionePrivata/DocumentoDeiRequisitiConfigurazionePrivata-v2.0/DocumentoDeiRequisitiConfigurazionePrivata_v2_0_.pdf)
