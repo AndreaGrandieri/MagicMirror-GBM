@@ -88,6 +88,8 @@ setSessionVariable("statusPHPRedirect", null);
         <div id=\"submitdiv\">
             $button
         </div>
+
+        <textarea id=\"pullfrom\" name=\"pullfrom\" hidden>$branch</textarea> 
     </form>";
     } else {
         echo "<p><span style=\"color: darkviolet\"><b>local ($branch)</b></span> non ha
