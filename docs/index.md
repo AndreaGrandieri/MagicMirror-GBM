@@ -23,3 +23,30 @@
 ![GitHub PR from shields.io](https://img.shields.io/github/issues-pr/AndreaGrandieri/MagicMirror-GBM)
 
 ---
+
+## Indice Moduli
+
+Di seguito l'indice dei moduli, con la relativa documentazione:
+
+- [MMM-AirQuality](pages/Documentazione%20Moduli/MMM-AirQuality/MMM-AirQuality)
+- [MMM-DHT]()
+- [newsfeed](pages/Documentazione%20Moduli/../Documentazione%20Moduli/newsfeed/newsfeed)
+- [MMM-AVStock]()
+- [clock](pages/Documentazione%20Moduli/clock/clock)
+- [weather](pages/Documentazione%20Moduli/weather/weather)
+- [weatherforecast](pages/Documentazione%20Moduli/weatherforecast/weatherforecast)
+- [calendar](pages/Documentazione%20Moduli/calendar/calendar)
+- [MMM-Memo]()
+- [MMM-Screencast](pages/Documentazione%20Moduli/MMM-Screencast/MMM-Screencast)
+- [MMM-Mail]()
+- [raspotify]()
+- [MMM-Online-State](pages/Documentazione%20Moduli/MMM-Online-State/MMM-Online-State)
+- [MMM-ip](pages/Documentazione%20Moduli/MMM-ip/MMM-ip)
+
+---
+
+## Documento dei Requisiti
+
+Il Documento dei Requisiti è il documento chiave per formalizzare i fabbisogni del cliente relativamente al sistema da sviluppare, in modo non ambiguo. Cliente, utenti e sviluppatori contribuiscono alla stesura del documento di specifica dei requisiti. Può essere usato come contratto tra cliente e sviluppatori.
+
+[Archivio Documenti dei Requisiti](pages/ArchivioDocumentiDeiRequisiti)

@@ -1,3 +1,7 @@
+---
+layout: noheader
+---
+
 # clock
 
 ## tl;dr
