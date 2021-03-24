@@ -1,5 +1,5 @@
 ---
-layout: MMM-AirQuality
+show_downloads: false
 ---
 
 # MMM-AirQuality
