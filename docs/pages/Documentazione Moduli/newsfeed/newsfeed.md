@@ -1,4 +1,4 @@
-# News Feed
+# newsfeed
 
 ## tl;dr
 
@@ -105,4 +105,4 @@ Le notifiche sono uno strumento utilizzato dai moduli per comunicare con:
 
 _News Feed Screenshot usando come giornale il "Corriere della sera"._
 
-![NFScreenshot](../../../assets/NewsFeed/NFScreenshot.png)
+![NFScreenshot](../../../assets/newsfeed/NFScreenshot.png)
