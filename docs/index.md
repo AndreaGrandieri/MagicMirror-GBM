@@ -1,5 +1,3 @@
-## MagicMirror-GBM
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
 <!--
@@ -24,22 +22,30 @@
 
 ---
 
+## Risorse Esterne
+
+Di seguito riportati i link alle risorse esterne:
+
+- [OneDrive Pubblico](https://1drv.ms/u/s!AmstWNn8EkEuhJJGwNbAYBMuLQ6aEQ?e=HI0WOz)
+
+---
+
 ## Indice Moduli
 
 Di seguito l'indice dei moduli, con la relativa documentazione:
 
 - [MMM-AirQuality](pages/Documentazione%20Moduli/MMM-AirQuality/MMM-AirQuality)
-- [MMM-DHT]()
+- [MMM-DHT]() ___(MISSING)___
 - [newsfeed](pages/Documentazione%20Moduli/../Documentazione%20Moduli/newsfeed/newsfeed)
-- [MMM-AVStock]()
+- [MMM-AVStock]() ___(MISSING)___
 - [clock](pages/Documentazione%20Moduli/clock/clock)
 - [weather](pages/Documentazione%20Moduli/weather/weather)
 - [weatherforecast](pages/Documentazione%20Moduli/weatherforecast/weatherforecast)
 - [calendar](pages/Documentazione%20Moduli/calendar/calendar)
-- [MMM-Memo]()
+- [MMM-Memo]() ___(MISSING)___
 - [MMM-Screencast](pages/Documentazione%20Moduli/MMM-Screencast/MMM-Screencast)
-- [MMM-Mail]()
-- [raspotify]()
+- [MMM-Mail]() ___(MISSING)___
+- [raspotify]() ___(MISSING)___
 - [MMM-Online-State](pages/Documentazione%20Moduli/MMM-Online-State/MMM-Online-State)
 - [MMM-ip](pages/Documentazione%20Moduli/MMM-ip/MMM-ip)
 
@@ -49,4 +55,4 @@ Di seguito l'indice dei moduli, con la relativa documentazione:
 
 Il Documento dei Requisiti è il documento chiave per formalizzare i fabbisogni del cliente relativamente al sistema da sviluppare, in modo non ambiguo. Cliente, utenti e sviluppatori contribuiscono alla stesura del documento di specifica dei requisiti. Può essere usato come contratto tra cliente e sviluppatori.
 
-[Archivio Documenti dei Requisiti](pages/ArchivioDocumentiDeiRequisiti)
+- [Archivio Documenti dei Requisiti](pages/ArchivioDocumentiDeiRequisiti)
