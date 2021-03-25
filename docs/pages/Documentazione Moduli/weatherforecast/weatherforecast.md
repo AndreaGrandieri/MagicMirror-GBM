@@ -10,30 +10,30 @@ Visualizza il meteo per il numero di giorni specificati.
 
 ---
 
-## config.js fragment
+## Config JSON Fragment
 
-```js
+```json
 {
-    module: "weatherforecast",
-    position: "top_right",
-    config: {
-        units: "metric",
-        updateInterval: 600000,
-        lang: "en",
-        initialLoadDelay: 1000,
-        colored: true,
-        showRainAmount: true,
-        maxNumberOfDays: 5,
-        roundTemp: true,
-        locationID: "",
-        appid: "YOUR_OPENWEATHERMAP_APIKEY"
+    "module": "weatherforecast",
+    "position": "top_right",
+    "config": {
+        "units": "metric",
+        "updateInterval": 600000,
+        "lang": "en",
+        "initialLoadDelay": 1000,
+        "colored": true,
+        "showRainAmount": true,
+        "maxNumberOfDays": 5,
+        "roundTemp": true,
+        "locationID": "",
+        "appid": "YOUR_OPENWEATHERMAP_APIKEY"
     }
 }
 ```
 
 ---
 
-## Proprietà (config section)
+## Proprietà (Config Section)
 
 | Proprietà          | Tipo      | Valori                                                                                                                                                                                           | Valore Default    | Inderogabilità | Descrizione                                                                                                  |
 | ------------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------- | -------------- | ------------------------------------------------------------------------------------------------------------ |

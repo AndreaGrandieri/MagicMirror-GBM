@@ -10,36 +10,36 @@ Visualizza il meteo per il giorno corrente.
 
 ---
 
-## config.js fragment
+## Config JSON Fragment
 
-```js
+```json
 {
-    module: "weather",
-    position: "top_right",
-    config: {
-        weatherProvider: "openweathermap",
-        units: "metric",
-        degreeLabel: true,
-        updateInterval: 600000,
-        lang: "en",
-        initialLoadDelay: 1000,
-        onlyTemp: false,
-        showHumidity: true,
-        showIndoorTemperature: true,
-        showIndoorHumidity: true,
-        showSun: true,
-        colored: true,
-        showPrecipitationAmount: true,
-        maxNumberOfDays: 5,
-        locationID: "",
-        apiKey: "YOUR_OPENWEATHERMAP_APIKEY"
+    "module": "weather",
+    "position": "top_right",
+    "config": {
+        "weatherProvider": "openweathermap",
+        "units": "metric",
+        "degreeLabel": true,
+        "updateInterval": 600000,
+        "lang": "en",
+        "initialLoadDelay": 1000,
+        "onlyTemp": false,
+        "showHumidity": true,
+        "showIndoorTemperature": true,
+        "showIndoorHumidity": true,
+        "showSun": true,
+        "colored": true,
+        "showPrecipitationAmount": true,
+        "maxNumberOfDays": 5,
+        "locationID": "",
+        "apiKey": "YOUR_OPENWEATHERMAP_APIKEY"
     }
 }
 ```
 
 ---
 
-## Proprietà (config section)
+## Proprietà (Config Section)
 
 | Proprietà                 | Tipo      | Valori                                                                                                                                                                                                           | Valore Default     | Inderogabilità | Descrizione                                                                                                  |
 | ------------------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ | -------------- | ------------------------------------------------------------------------------------------------------------ |

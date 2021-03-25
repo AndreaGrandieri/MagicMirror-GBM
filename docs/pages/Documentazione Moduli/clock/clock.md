@@ -10,32 +10,32 @@ Il seguente modulo mostra la data e l'ora correnti.
 
 ---
 
-## config.js fragment
+## Config JSON Fragment
 
-```js
+```json
 {
-    module: "clock",
-    position: "top_left",
-    config: {
-        timeFormat: 24,
-        displaySeconds: true,
-        showDate: true,
-        displayType: 'digital',
-        timezone: 'Europe/Rome',
+    "module": "clock",
+    "position": "top_left",
+    "config": {
+        "timeFormat": 24,
+        "displaySeconds": true,
+        "showDate": true,
+        "displayType": "digital",
+        "timezone": "Europe/Rome"
     }
 }
 ```
 
 ---
 
-## Proprietà (config section)
+## Proprietà (Config Section)
 
 | Proprietà        | Tipo      | Valori                                                                                       | Valore Default        | Inderogabilità | Descrizione                                                         |
 | ---------------- | --------- | -------------------------------------------------------------------------------------------- | --------------------- | -------------- | ------------------------------------------------------------------- |
 | `timeFormat`     | `Number`  | `12` <br> `24`                                                                               | _`config.timeFormat`_ | `OPTIONAL`     | Formato dell'ora (12 o 24 ore)                                      |
 | `displaySeconds` | `Boolean` | `true`: visualizzazione secondi attivato. <br> `false`: visualizzazione secondi disattivato. | `true`                | `OPTIONAL`     | Attiva / disattiva visualizzazione secondi.                         |
 | `showDate`       | `Boolean` | `true`: visualizzazione data attivato. <br> `false`: visualizzazione data disattivato.       | `true`                | `OPTIONAL`     | Attiva / disattiva visualizzazione data.                            |
-| `displayType`    | `String`  | `digital` <br> `analog` <br> `both`                                                          | `"digital"`           | `OPTIONAL`     | Visualizzazione orario come orologio analogico, digitale o entrambi |
+| `displayType`    | `String`  | `"digital"` <br> `"analog"` <br> `"both"`                                                    | `"digital"`           | `OPTIONAL`     | Visualizzazione orario come orologio analogico, digitale o entrambi |
 | `timezone`       | `String`  | Qui puoi trovare / cercare tutte le possibili zone: https://momentjs.com/timezone/.          | `---`                 | `REQUIRED`     | Zona di cui mostrare l'ora                                          |
 
 ---
