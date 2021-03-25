@@ -10,18 +10,18 @@ Visualizza gli indirizzi IP __locali__ delle interfacce di rete attive nel __Ras
 
 ---
 
-## config.js fragment
+## Config JSON Fragment
 
-```js
+```json
 {
-    module: 'MMM-ip',
-    position: 'bottom_right',
-    config: {
-        fontSize: 18,
-        families: [
+    "module": "MMM-ip",
+    "position": "bottom_right",
+    "config": {
+        "fontSize": 18,
+        "families": [
             "IPv4"
         ],
-        types: [
+        "types": [
             "wlan0"
         ]
     }
@@ -30,12 +30,12 @@ Visualizza gli indirizzi IP __locali__ delle interfacce di rete attive nel __Ras
 
 ---
 
-## Proprietà (config section)
+## Proprietà (Config Section)
 
 | Proprietà  | Tipo                | Valori                                                                                          | Valore Default | Inderogabilità | Descrizione                                                                                 |
 | ---------- | ------------------- | ----------------------------------------------------------------------------------------------- | -------------- | -------------- | ------------------------------------------------------------------------------------------- |
 | `fontSize` | `Integer`           | Qualsiasi valore `> 0`. Unità di misura: `pixel`.                                               | `9`            | `OPTIONAL`     | Dimensione in pixel del font per la visualizzazione degli elementi renderizzati dal modulo. |
-| `families` | `Array` -> `String` | `"IPv4"`: Visualizza indirizzi IPv4. <br> `IPv6`: Visualizza indirizzi IPv6 .                   | `---`          | `REQUIRED`     | Tipologia / Tipologie di indirizzi IP da visualizzare.                                      |
+| `families` | `Array` -> `String` | `"IPv4"`: Visualizza indirizzi IPv4. <br> `"IPv6"`: Visualizza indirizzi IPv6 .                 | `---`          | `REQUIRED`     | Tipologia / Tipologie di indirizzi IP da visualizzare.                                      |
 | `types`    | `Array` -> `String` | Nome interfaccia / interfacce di rete da monitorare. _Guarda sotto per ulteriori informazioni_. | `---`          | `REQUIRED`     | Interfaccia / Interfacce di rete da monitorare.                                             |
 
 ---
