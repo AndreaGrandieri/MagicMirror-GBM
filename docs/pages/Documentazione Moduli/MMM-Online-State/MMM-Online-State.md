@@ -10,26 +10,26 @@ Il seguente modulo visualizza lo stato di connessione Internet del MagicMirror.
 
 ---
 
-## config.js fragment
+## Config JSON Fragment
 
-```js
+```json
 {
-    module: 'MMM-Online-State',
-    position: 'top_right',
-    config: {
-        displaySymbol: true,
-        symbolOnline: "fas fa-globe",
-        symbolOffline: "fas fa-globe",
-        colored: true,
-        colorOnline: "#FFFFFF",
-        colorOffline: "#FF0000"
+    "module": "MMM-Online-State",
+    "position": "top_right",
+    "config": {
+        "displaySymbol": true,
+        "symbolOnline": "fas fa-globe",
+        "symbolOffline": "fas fa-globe",
+        "colored": true,
+        "colorOnline": "#FFFFFF",
+        "colorOffline": "#FF0000"
     }
 }
 ```
 
 ---
 
-## Proprietà (config section)
+## Proprietà (Config Section)
 
 | Proprietà       | Tipo      | Valori                                                                                                           | Valore Default | Inderogabilità | Descrizione                                                                       |
 | --------------- | --------- | ---------------------------------------------------------------------------------------------------------------- | -------------- | -------------- | --------------------------------------------------------------------------------- |

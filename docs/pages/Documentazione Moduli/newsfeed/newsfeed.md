@@ -10,42 +10,38 @@ Questo modulo visualizza i titoli delle notizie in base a un feed RSS.
 
 ---
 
-## config.js fragment
+## Config JSON Fragment
 
-```js
+```json
 {
-    module: "newsfeed",
-    position: "bottom_bar",
-    config:
-    {
-        feeds:
-            [
-                {
-                    title: "Il Giornale",
-                    url: "https://www.ilgiornale.it/feed.xml"
-                },
-                {
-                    title: "Corriere della sera",
-                    url: "http://xml2.corriereobjects.it/rss/homepage.xml"
-                },
-                {
-                    title: "La Gazzetta dello Sport",
-                    url: "https://www.gazzetta.it/rss/home.xml"
-                }
-
-            ],
-
-        showSourceTitle: true,
-        showPublishDate: true,
-        broadcastNewsFeeds: true,
-        broadcastNewsUpdates: true
+    "module": "newsfeed",
+    "position": "bottom_bar",
+    "config": {
+        "feeds": [
+            {
+                "title": "Il Giornale",
+                "url": "https://www.ilgiornale.it/feed.xml"
+            },
+            {
+                "title": "Corriere della sera",
+                "url": "http://xml2.corriereobjects.it/rss/homepage.xml"
+            },
+            {
+                "title": "La Gazzetta dello Sport",
+                "url": "https://www.gazzetta.it/rss/home.xml"
+            }
+        ],
+        "showSourceTitle": true,
+        "showPublishDate": true,
+        "broadcastNewsFeeds": true,
+        "broadcastNewsUpdates": true
     }
 }
 ```
 
 ---
 
-## Proprietà (config section)
+## Proprietà (Config Section)
 
 | Proprietà              | Tipo      | Valori                                                                                    | Valore Default                                                                                                     | Inderogabilità | Descrizione                                                                                                                                                                                         |
 | ---------------------- | --------- | ----------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -66,9 +62,9 @@ Questo modulo visualizza i titoli delle notizie in base a un feed RSS.
 | `maxNewsItems`         | `Number`  | `0 - ...`                                                                                 | `0`                                                                                                                | `OPTIONAL`     | Permette di definire la quantità totale di notizie da scorrere. (0 per illimitato).                                                                                                                 |
 | `ignoreOldItems`       | `Boolean` | `true`: è attivo <br> `false`: non è attivo                                               | `false`                                                                                                            | `OPTIONAL`     | Permette di ignorare le notizie obsolete.                                                                                                                                                           |
 | `ignoreOlderThan`      | `Number`  | `1 - ...`                                                                                 | `86400000 (1 giorno)`                                                                                              | `OPTIONAL`     | Permette di definire, in millisceondi, la quantità di tempo che deve trascorrere affinché le notizie vengano considerate obsolete.                                                                  |
-| `removeStartTags`      | `String`  | `title` <br> `description` <br> `both`                                                    | `---`                                                                                                              | `OPTIONAL`     | Permette la rimozione di tag specificati dall'inizio della descrizione e / o del titolo di un elemento.                                                                                             |
+| `removeStartTags`      | `String`  | `"title"` <br> `"description"` <br> `"both"`                                              | `---`                                                                                                              | `OPTIONAL`     | Permette la rimozione di tag specificati dall'inizio della descrizione e / o del titolo di un elemento.                                                                                             |
 | `startTags`            | `Object`  | `[TAG]` <br> `[TAG1, TAG2,...]`                                                           | `---`                                                                                                              | `OPTIONAL`     | Permette di definire quali tag rimuovere all'inizio dell'elemento del feed.                                                                                                                         |
-| `removeEndTags`        | `String`  | `title` <br> `description` <br> `both`                                                    | `---`                                                                                                              | `OPTIONAL`     | Permette di rimuovere i tag specificati alla fine della descrizione e / o del titolo di un articolo.                                                                                                |
+| `removeEndTags`        | `String`  | `"title"` <br> `"description"` <br> `"both"`                                              | `---`                                                                                                              | `OPTIONAL`     | Permette di rimuovere i tag specificati alla fine della descrizione e / o del titolo di un articolo.                                                                                                |
 | `endTags`              | `Object`  | `[TAG]` <br> `[TAG1, TAG2,...]`                                                           | `---`                                                                                                              | `OPTIONAL`     | Permette di definire quali tag rimuovere alla fine dell'elemento del feed.                                                                                                                          |
 | `prohibitedWords`      | `Object`  | `[word]` <br> `[word11, word2,...]`                                                       | `---`                                                                                                              | `OPTIONAL`     | Permette di rimuovere un elemento del feed di notizie se una di queste parole si trova ovunque nel titolo, senza distinzione tra maiuscole e minuscole.                                             |
 | `scrollLength`         | `Number`  | `1 - 10000`                                                                               | `500`                                                                                                              | `OPTIONAL`     | Permette di scorrere l'intera pagina dell'articolo di notizie di un determinato numero di pixel quando viene ricevuta una notifica `ARTICLE_MORE_DETAILS` e l'articolo completo è già visualizzato. |
@@ -76,11 +72,11 @@ Questo modulo visualizza i titoli delle notizie in base a un feed RSS.
 
 La proprietà `feeds` contiene un array con più oggetti. Essi hanno le seguenti proprietà:
 
-| Proprietà  | Tipo     | Valori                              | Valore Default                                             | Inderogabilità | Descrizione                                                    |
-| ---------- | -------- | ----------------------------------- | ---------------------------------------------------------- | -------------- | -------------------------------------------------------------- |
-| `title`    | `Stribg` | `---`                               | `New York Times`                                           | `OPTIONAL`     | Il nome della fonte del feed da visualizzare sopra le notizie. |
-| `url`      | `String` | `---`                               | `http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml` | `REQUIRED`     | L'URL del feed utilizzato per i titoli.                        |
-| `encoding` | `String` | `UTF-8`<br>`ISO-8859-1`<br>`ecc...` | `UTF-8`                                                    | `OPTIONAL`     | La codifica del feed di notizie.                               |
+| Proprietà  | Tipo     | Valori                                    | Valore Default                                               | Inderogabilità | Descrizione                                                    |
+| ---------- | -------- | ----------------------------------------- | ------------------------------------------------------------ | -------------- | -------------------------------------------------------------- |
+| `title`    | `String` | `---`                                     | `"New York Times"`                                           | `OPTIONAL`     | Il nome della fonte del feed da visualizzare sopra le notizie. |
+| `url`      | `String` | `---`                                     | `"http://www.nytimes.com/services/xml/rss/nyt/HomePage.xml"` | `REQUIRED`     | L'URL del feed utilizzato per i titoli.                        |
+| `encoding` | `String` | `"UTF-8"`<br>`"ISO-8859-1"`<br>`"ecc..."` | `"UTF-8"`                                                    | `OPTIONAL`     | La codifica del feed di notizie.                               |
 
 ---
 

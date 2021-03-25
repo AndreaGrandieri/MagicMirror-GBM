@@ -11,25 +11,25 @@ dell'aria nella zona desiderata specificata.
 
 ---
 
-## config.js fragment
+## Config JSON Fragment
 
-```js
+```json
 {
-    module: 'MMM-AirQuality',
-    position: 'top_center',
-    config: {
-        location: 'milan',
-        lang: 'eng',
-        updateInterval: 30,
-        showLocation: true,
-        showIndex: true 
+    "module": "MMM-AirQuality",
+    "position": "top_center",
+    "config": {
+        "location": "milan",
+        "lang": "eng",
+        "updateInterval": 30,
+        "showLocation": true,
+        "showIndex": true
     }
 }
 ```
 
 ---
 
-## Proprietà (config section)
+## Proprietà (Config Section)
 
 | Proprietà        | Tipo      | Valori                                                                                                                                                                                       | Valore Default | Inderogabilità | Descrizione                                                                         |
 | ---------------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- | -------------- | ----------------------------------------------------------------------------------- |
