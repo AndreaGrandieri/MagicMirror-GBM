@@ -22,6 +22,20 @@ _Qui una breve descrizione dello scopo del modulo._
 
 ---
 
+## Notifiche
+
+Le notifiche sono uno strumento utilizzato dai moduli per comunicare con:
+
+- L'OS del MagicMirror
+- Altri moduli
+- Attori umani
+
+| Notifica        | Direzione     | Trigger                                                                                    | Payload _(inline js)_              | Descrizione                                                   |
+| --------------- | ------------- | ------------------------------------------------------------------------------------------ | ---------------------------------- | ------------------------------------------------------------- |
+| `Nome-Notifica` | `IN` or `OUT` | _Che azione causa l'`OUT` della notifica._ or _Che azione segue dall'`IN` della notifica._ | `JS PAYLOAD QUI se presente o ---` | _Qui breve descrizione del significato della notifica o ---._ |
+
+---
+
 ## Screenshots
 
 _Qui (se presenti, consigliati)._
