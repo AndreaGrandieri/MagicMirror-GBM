@@ -5,6 +5,37 @@ docs:
 - title: Home Page
   url: index
 
+- title: Indice Moduli
+  subfolderitems:
+    - page: MMM-AirQuality
+      url: /pages/Documentazione%20Moduli/MMM-AirQuality/MMM-AirQuality
+    - page: MMM-DHT
+      url: /pages/Documentazione%20Moduli/MMM-DHT/MMM-DHT   
+    - page: newsfeed
+      url: /pages/Documentazione%20Moduli/newsfeed/newsfeed
+    - page: MMM-AVStock
+      url: /pages/Documentazione%20Moduli/MMM-AVStock/MMM-AVStock
+    - page: clock
+      url: /pages/Documentazione%20Moduli/clock/clock
+    - page: weather
+      url: /pages/Documentazione%20Moduli/weather/weather
+    - page: weatherforecast
+      url: /pages/Documentazione%20Moduli/weatherforecast/weatherforecast
+    - page: calendar
+      url: /pages/Documentazione%20Moduli/calendar/calendar
+    - page: MMM-Memo
+      url: /pages/Documentazione%20Moduli/MMM-Memo/MMM-Memo
+    - page: MMM-Screencast
+      url: /pages/Documentazione%20Moduli/MMM-Screencast/MMM-Screencast
+    - page: MMM-Mail
+      url: /pages/Documentazione%20Moduli/MMM-Mail/MMM-Mail
+    - page: raspotify
+      url: /pages/Documentazione%20Moduli/raspotify/raspotify
+    - page: MMM-Online-State
+      url: /pages/Documentazione%20Moduli/MMM-Online-State/MMM-Online-State
+    - page: MMM-ip
+      url: /pages/Documentazione%20Moduli/MMM-ip/MMM-ip   
+
 - title: Archivio Documenti dei Requisiti
   url: pages/ArchivioDocumentiDeiRequisiti
 
