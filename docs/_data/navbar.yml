@@ -1,0 +1,10 @@
+docs:
+
+- title: Home Page
+url: index.md
+
+- title: Archivio Documenti dei Requisiti
+url: pages/ArchivioDocumentiDeiRequisiti.md
+
+- title: Archivio BMC
+url: pages/ArchivioBMC.md
