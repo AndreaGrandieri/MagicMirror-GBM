@@ -12,7 +12,7 @@
     <![endif]-->
 
     <style>
-      ul {
+      ul.navbar_ {
         list-style-type: none;
         margin: 0;
         padding: 0;
@@ -20,11 +20,11 @@
         background-color: #333;
       }
 
-      li {
+      li.navbar_ {
         float: left;
       }
 
-      li a,
+      li.navbar_ a.navbar_,
       .dropbtn {
         display: inline-block;
         color: white;
@@ -33,7 +33,7 @@
         text-decoration: none;
       }
 
-      li a:hover,
+      li.navbar_ a.navbar_:hover,
       .dropdown:hover .dropbtn {
         background-color: red;
       }
@@ -51,7 +51,7 @@
         z-index: 1;
       }
 
-      .dropdown-content a {
+      .dropdown-content a.navbar_ {
         color: black;
         padding: 12px 16px;
         text-decoration: none;
@@ -59,7 +59,7 @@
         text-align: left;
       }
 
-      .dropdown-content a:hover {
+      .dropdown-content a.navbar_:hover {
         background-color: #f1f1f1;
       }
 
@@ -74,16 +74,17 @@
 
   <body>
     <div id="container">
-      <ul>
+      <ul class=".navbar_">
         {% for item in site.data.navbar.docs %}
         {% if item.url %}
-        <li><a href="{{ site.data.navbar.endpoint }}{{ item.url }}">{{ item.title }}</a></li>
+        <li class=".navbar_"><a class=".navbar_"
+            href="{{ site.data.navbar.endpoint }}{{ item.url }}">{{ item.title }}</a></li>
         {% else %}
         <li class="dropdown">
           <a href="javascript:void(0)" class="dropbtn">{{ item.title }}</a>
           <div class="dropdown-content">
             {% for entry in item.subfolderitems %}
-            <a href="{{ site.data.navbar.endpoint }}{{ entry.url }}">{{ entry.page }}</a>
+            <a class=".navbar_" href="{{ site.data.navbar.endpoint }}{{ entry.url }}">{{ entry.page }}</a>
             {% endfor %}
           </div>
         </li>
