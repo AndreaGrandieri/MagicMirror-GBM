@@ -1,10 +1,12 @@
+endpoint: /MagicMirror-GBM
+
 docs:
 
 - title: Home Page
-  url: /index.md
+  url: {{ endpoint }}/index
 
 - title: Archivio Documenti dei Requisiti
-  url: /pages/ArchivioDocumentiDeiRequisiti.md
+  url: {{ endpoint }}/pages/ArchivioDocumentiDeiRequisiti
 
 - title: Archivio BMC
-  url: /pages/ArchivioBMC.md
+  url: {{ endpoint }}/pages/ArchivioBMC
