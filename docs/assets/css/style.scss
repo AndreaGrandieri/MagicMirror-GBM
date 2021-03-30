@@ -4,16 +4,7 @@
 @import "{{ site.theme }}";
 
 table {
-    table-layout: fixed;
-    overflow-x: auto
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
 }
-
-/*
-tbody {
-    overflow: auto;
-}
-
-thead, tbody tr {
-    overflow: auto;
-}
-*/
