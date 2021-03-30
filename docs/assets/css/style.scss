@@ -4,6 +4,17 @@
 @import "{{ site.theme }}";
 
 table {
+    display: block;
+    overflow: auto;
+}
+
+tbody {
+    display: block;
+    max-height: 100px;
+    overflow: auto;
+}
+
+thead, tbody tr {
+    display: table;
     width: 100%;
-    overflow-x: auto;
 }
