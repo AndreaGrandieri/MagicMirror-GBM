@@ -5,11 +5,11 @@
 
 table {
     display: block;
+    overflow: auto;
 }
 
 tbody {
     display: block;
-    overflow: auto;
 }
 
 thead, tbody tr {
