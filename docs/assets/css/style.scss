@@ -4,15 +4,13 @@
 @import "{{ site.theme }}";
 
 table {
-    display: table;
     overflow: auto;
 }
 
 tbody {
-    display: table;
+    overflow: auto;
 }
 
 thead, tbody tr {
-    display: table;
-    width: 100%;
+    overflow: auto;
 }
