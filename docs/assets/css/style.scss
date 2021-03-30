@@ -4,9 +4,10 @@
 @import "{{ site.theme }}";
 
 table {
-    overflow: auto;
+    table-layout: fixed;
 }
 
+/*
 tbody {
     overflow: auto;
 }
@@ -14,3 +15,4 @@ tbody {
 thead, tbody tr {
     overflow: auto;
 }
+*/
