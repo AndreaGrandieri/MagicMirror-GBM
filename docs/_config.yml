@@ -1,6 +1,2 @@
 theme: jekyll-theme-leap-day
 show_downloads: true
-
-github:
-  zip_url: javascript:getLatestRelease(`https://api.github.com/repos/AndreaGrandieri/MagicMirror-GBM/releases/latest`, `zip`)
-  tar_url: javascript:getLatestRelease(`https://api.github.com/repos/AndreaGrandieri/MagicMirror-GBM/releases/latest`, `tar`)
