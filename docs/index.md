@@ -4,7 +4,9 @@
 <script src="https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/_includes/buttons.html" type="text/javascript">
 -->
 
+<!--
 <script src="js/main.js"></script>
+-->
 
 <!--
 {% include buttons.html %}
