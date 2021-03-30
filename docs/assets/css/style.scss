@@ -4,8 +4,7 @@
 @import "{{ site.theme }}";
 
 table {
-    table-layout: fixed;
-    overflow: auto;
+    overflow-x: auto
 }
 
 /*
