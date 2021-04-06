@@ -130,7 +130,7 @@ var config = {
 						title: "La Gazzetta dello Sport",
 						url: "https://www.gazzetta.it/rss/home.xml"
 					}
-					
+
 				],
 				showSourceTitle: true,
 				showPublishDate: true,
@@ -174,6 +174,16 @@ var config = {
 				]
 			}
 		},
+		{
+			module: "MMM-DHT-Sensor",
+			position: "",
+			config: {
+				sensorPin: 2,
+				sensorType: 22,
+				units: "metric",
+				updateInterval: 1000
+			}
+		}
 	]
 };
 
