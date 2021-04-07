@@ -53,8 +53,8 @@ module.exports = NodeHelper.create({
 					user: payload.user,
 					pass: payload.pass,
 				},
-				useSecureTransport: true,
-				requireTLS: true
+				useSecureTransport: false,
+				ignoreTLS: true
 			}
 			];
 
