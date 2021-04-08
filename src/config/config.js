@@ -178,10 +178,10 @@ var config = {
 			module: "MMM-DHT-Sensor",
 			position: "",
 			config: {
-				sensorPin: 2,
+				sensorPin: 16,
 				sensorType: 22,
 				units: "metric",
-				updateInterval: 1000
+				updateInterval: 10000
 			}
 		}
 	]
