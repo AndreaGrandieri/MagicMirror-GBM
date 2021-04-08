@@ -63,10 +63,6 @@ var config = {
 			}
 		},
 		{
-			module: "compliments",
-			position: "lower_third"
-		},
-		{
 			module: "currentweather",
 			position: "top_right",
 			config: {
@@ -111,6 +107,19 @@ var config = {
 				updateInterval: 30,
 				showLocation: true,
 				showIndex: true
+			}
+		},
+		{
+			module: 'MMM-Online-State',
+			// you may choose any location
+			position: 'top_right',
+			config: {
+				displaySymbol: true,
+				symbolOnline: "fas fa-globe",
+				symbolOffline: "fas fa-globe",
+				colored: true,
+				colorOnline: "#FFFFFF",
+				colorOffline: "#FF0000"
 			}
 		},
 	]

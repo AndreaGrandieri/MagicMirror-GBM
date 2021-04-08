@@ -1,7 +1,7 @@
 # MagicMirror-GBM
 
 ![GitHub Releases and Pre from shields.io](https://img.shields.io/github/v/release/AndreaGrandieri/MagicMirror-GBM?include_prereleases)
-![Dependecies from david-dm.org](https://status.david-dm.org/gh/AndreaGrandieri/MagicMirror-GBM.svg)
+![Dependecies from shields.io&david-dm.org](https://img.shields.io/david/AndreaGrandieri/MagicMirror-GBM?path=src)
 ![GitHub License from shields.io](https://img.shields.io/github/license/AndreaGrandieri/MagicMirror-GBM)
 ![GitHub Code Size from shields.io](https://img.shields.io/github/languages/code-size/AndreaGrandieri/MagicMirror-GBM)
 ![GitHub Releases Download Count from shields.io](https://img.shields.io/github/downloads/AndreaGrandieri/MagicMirror-GBM/total)
