@@ -26,20 +26,20 @@ Di seguito riportati i link alle risorse esterne:
 
 Di seguito l'indice dei moduli, con la relativa documentazione:
 
-- [MMM-AirQuality](pages/Documentazione%20Moduli/MMM-AirQuality/MMM-AirQuality)
-- [MMM-DHT]() ___(MISSING)___
-- [newsfeed](pages/Documentazione%20Moduli/../Documentazione%20Moduli/newsfeed/newsfeed)
+- [MMM-AirQuality](pages/DocumentazioneModuli/MMM-AirQuality/MMM-AirQuality)
+- [MMM-DHT-Sensor](pages/DocumentazioneModuli/MMM-DHT-Sensor/MMM-DHT-Sensor)
+- [newsfeed](pages/DocumentazioneModuli/newsfeed/newsfeed)
 - [MMM-AVStock]() ___(MISSING)___
-- [clock](pages/Documentazione%20Moduli/clock/clock)
-- [weather](pages/Documentazione%20Moduli/weather/weather)
-- [weatherforecast](pages/Documentazione%20Moduli/weatherforecast/weatherforecast)
-- [calendar](pages/Documentazione%20Moduli/calendar/calendar)
+- [clock](pages/DocumentazioneModuli/clock/clock)
+- [weather](pages/DocumentazioneModuli/weather/weather)
+- [weatherforecast](pages/DocumentazioneModuli/weatherforecast/weatherforecast)
+- [calendar](pages/DocumentazioneModuli/calendar/calendar)
 - [MMM-Memo]() ___(MISSING)___
-- [MMM-Screencast](pages/Documentazione%20Moduli/MMM-Screencast/MMM-Screencast)
+- [MMM-Screencast](pages/DocumentazioneModuli/MMM-Screencast/MMM-Screencast)
 - [MMM-Mail]() ___(MISSING)___
 - [raspotify]() ___(MISSING)___
-- [MMM-Online-State](pages/Documentazione%20Moduli/MMM-Online-State/MMM-Online-State)
-- [MMM-ip](pages/Documentazione%20Moduli/MMM-ip/MMM-ip)
+- [MMM-Online-State](pages/DocumentazioneModuli/MMM-Online-State/MMM-Online-State)
+- [MMM-ip](pages/DocumentazioneModuli/MMM-ip/MMM-ip)
 
 ---
 
