@@ -106,3 +106,29 @@ Le notifiche sono uno strumento utilizzato dai moduli per comunicare con:
 _News Feed Screenshot usando come giornale il "Corriere della sera"._
 
 ![NFScreenshot](../../../assets/newsfeed/NFScreenshot.png)
+
+---
+
+## RSS Tutorial
+Per aggiungere una sorgente di notizie o News Feed occorre:
+
+1. Cercare su internet la sorgente rss del giornale interessato:
+   
+    ![ricerca](../../../assets/newsfeed/ricerca.png)
+
+2. Selezionare tra i risultati proposti quello più opportuno:
+
+    ![risultati](../../../assets/newsfeed/risultati.png)
+
+3. La pagina che si aprirà deve essere tipo:
+
+    ![rsss](../../../assets/newsfeed/rsss.png)
+
+4. Selezionare la voce che più ci interessa ad esempio _Corriere home – tutte le notizie_ (la prima voce della colonna Notizie) e si aprirà una pagina del tipo:
+       
+    ![rss](../../../assets/newsfeed/rss.png)
+
+5. Copiare l’URL della pagina es: http://xml2.corriereobjects.it/rss/homepage.xml
+6. Aggiungere l’URL con relativo nome all’array _feeds_:
+   
+    ![add](../../../assets/newsfeed/add.png)
