@@ -141,7 +141,7 @@ E' possibile anche usare il seguente link: [https://calendar.google.com/calendar
 
 5. Visualizzare e copiare negli appunti l'indirizzo
 
-![step5](../../../assets/calendar/ICALGoogleCalendar/step5.PNG)
+![step5](../../../assets/calendar/ICALGoogleCalendar/step5.png)
 
 6. Dall'IP Dashboard, recarsi nella configurazione del modulo `calendar`
 
