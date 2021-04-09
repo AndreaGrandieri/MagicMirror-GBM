@@ -175,17 +175,6 @@ var config = {
 			}
 		},
 		{
-			module: "MMM-AVStock",
-			position: "top_left",
-			config: {
-				apiKey: "YOUR_ALPHAVANTAGE_KEY",
-				mode: "table",
-				chartType: "line",
-				symbols: ["AAPL", "GOOGL", "TSLA"],
-				alias: ["APPLE", "GOOGLE", "TESLA"]
-			}
-		},
-		{
 			module: "MMM-DHT-Sensor",
 			position: "",
 			config: {
@@ -193,6 +182,19 @@ var config = {
 				sensorType: 22,
 				units: "metric",
 				updateInterval: 10000
+			}
+		},
+		{
+			module: "MMM-AVStock",
+			position: "bottom_left",
+			config: {
+				apiKey: "YOUR_ALPHAVANTAGE_KEY",
+				mode: "table",
+				chartType: "line",
+				symbols: ["AAPL", "GOOGL", "TSLA"],
+				alias: ["APPLE", "GOOGLE", "TESLA"],
+				showChart: true,
+				direction: "column"
 			}
 		}
 	]
