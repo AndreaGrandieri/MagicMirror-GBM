@@ -1,0 +1,16 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+// ESSENZIALE, sempre da mettere: questo evita
+// che le tabelle risultino sproporzionate rispetto
+// allo spazio utile della pagina web e aggiunge
+// uno scroll-orizzontale per visualizzare
+// (scorrendo orizzontalmente) gli elementi in
+// overflow (oltre il limite) della tabella
+table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}

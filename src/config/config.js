@@ -184,6 +184,16 @@ var config = {
 				symbols: ["AAPL", "GOOGL", "TSLA"],
 				alias: ["APPLE", "GOOGLE", "TESLA"]
 			}
+		},
+		{
+			module: "MMM-DHT-Sensor",
+			position: "",
+			config: {
+				sensorPin: 16,
+				sensorType: 22,
+				units: "metric",
+				updateInterval: 10000
+			}
 		}
 	]
 };
