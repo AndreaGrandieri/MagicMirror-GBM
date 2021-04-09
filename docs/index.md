@@ -29,7 +29,7 @@ Di seguito l'indice dei moduli, con la relativa documentazione:
 - [MMM-AirQuality](pages/DocumentazioneModuli/MMM-AirQuality/MMM-AirQuality)
 - [MMM-DHT-Sensor](pages/DocumentazioneModuli/MMM-DHT-Sensor/MMM-DHT-Sensor)
 - [newsfeed](pages/DocumentazioneModuli/newsfeed/newsfeed)
-- [MMM-AVStock]() ___(MISSING)___
+- [MMM-AVStock](pages/DocumentazioneModuli/MMM-AVStock/MMM-AVStock)
 - [clock](pages/DocumentazioneModuli/clock/clock)
 - [weather](pages/DocumentazioneModuli/weather/weather)
 - [weatherforecast](pages/DocumentazioneModuli/weatherforecast/weatherforecast)
