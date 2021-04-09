@@ -125,40 +125,40 @@ _Una ricerca su Internet può fornire indicazioni e chiarire dubbi per qualsiasi
 
 E' possibile anche usare il seguente link: [https://calendar.google.com/calendar](https://calendar.google.com/calendar)
 
-![step1](../../../assets/calendar/ICAL%20Google%20Calendar/step1.PNG)
+![step1](../../../assets/calendar/ICALGoogleCalendar/step1.PNG)
 
 1. Identificare il calendario d'interesse
 
-![step2](../../../assets/calendar/ICAL%20Google%20Calendar/step2.PNG)
+![step2](../../../assets/calendar/ICALGoogleCalendar/step2.PNG)
 
 3. Aprire le impostazioni relative a quel calendario
 
-![step3](../../../assets/calendar/ICAL%20Google%20Calendar/step3.PNG)
+![step3](../../../assets/calendar/ICALGoogleCalendar/step3.PNG)
 
 4. Nelle impostazioni generiche del calendario, individuare la sezione: `Indirizzo segreto in formato iCal`
 
-![step4](../../../assets/calendar/ICAL%20Google%20Calendar/step4.PNG)
+![step4](../../../assets/calendar/ICALGoogleCalendar/step4.PNG)
 
 5. Visualizzare e copiare negli appunti l'indirizzo
 
-![step5](../../../assets/calendar/ICAL%20Google%20Calendar/step5.PNG)
+![step5](../../../assets/calendar/ICALGoogleCalendar/step5.PNG)
 
 6. Dall'IP Dashboard, recarsi nella configurazione del modulo `calendar`
 
-![step6](../../../assets/calendar/ICAL%20Google%20Calendar/step6.PNG)
+![step6](../../../assets/calendar/ICALGoogleCalendar/step6.PNG)
 
 7. Incollare l'indirizzo nell'apposita sezione
 
-![step7](../../../assets/calendar/ICAL%20Google%20Calendar/step7.PNG)
-![step7_2](../../../assets/calendar/ICAL%20Google%20Calendar/step7_2.PNG)
+![step7](../../../assets/calendar/ICALGoogleCalendar/step7.PNG)
+![step7_2](../../../assets/calendar/ICALGoogleCalendar/step7_2.PNG)
 
 8. Salvare le modifiche
 
-![step8](../../../assets/calendar/ICAL%20Google%20Calendar/step8.PNG)
+![step8](../../../assets/calendar/ICALGoogleCalendar/step8.PNG)
 
 9. Compilare lo stato del Database, per rendere effettive le modifiche
 
-![step9](../../../assets/calendar/ICAL%20Google%20Calendar/step9.PNG)
+![step9](../../../assets/calendar/ICALGoogleCalendar/step9.PNG)
 
 ---
 
