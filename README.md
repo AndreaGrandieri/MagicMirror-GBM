@@ -14,4 +14,4 @@
 
 ## Link Risorse
 
-- [Google Drive Pubblico](https://drive.google.com/drive/folders/1RB5jGSsagwttrNZzQNZJpSRXsG5SzBGs?usp=sharing)
+- [OneDrive Pubblico](https://1drv.ms/u/s!AmstWNn8EkEuhJJGwNbAYBMuLQ6aEQ?e=HI0WOz)

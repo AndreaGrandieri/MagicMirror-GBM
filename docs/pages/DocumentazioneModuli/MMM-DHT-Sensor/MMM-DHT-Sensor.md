@@ -1,3 +1,7 @@
+---
+layout: noheader
+---
+
 # MMM-DHT-Sensor
 
 ## tl;dr
