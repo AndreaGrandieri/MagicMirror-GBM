@@ -6,15 +6,17 @@ _Qui una breve descrizione dello scopo del modulo._
 
 ---
 
-## config.js fragment
+## Config JSON Fragment
 
-```js
-// Qui frammento di configurazione da inserire nel file globale "config.js"
+```json
+// Qui frammento di configurazione del modulo, con valori di default a nostra
+// scelta (possono differire dagli "autentici" valori di default registrati
+// dal modulo)
 ```
 
 ---
 
-## Proprietà (config section)
+## Proprietà (Config Section)
 
 | Proprietà        | Tipo                                               | Valori                                                                             | Valore Default          | Inderogabilità           | Descrizione              |
 | ---------------- | -------------------------------------------------- | ---------------------------------------------------------------------------------- | ----------------------- | ------------------------ | ------------------------ |
