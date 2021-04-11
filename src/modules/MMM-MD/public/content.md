@@ -6,4 +6,4 @@ Write MD. Render it on the MagicMirror!
 Any MD syntax is supported. Multimedia is supported too!
 Autoscroll if content is too much.
 
-![AndreaGrandieri_pp](MMM-MD/AndreaGrandieri_pp.JPG)
+![AndreaGrandieri_pp](modules/MMM-MD/public/AndreaGrandieri_pp.JPG)
