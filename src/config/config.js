@@ -196,6 +196,13 @@ var config = {
 				showChart: true,
 				direction: "column"
 			}
+		},
+		{
+			module: "MMM-MD",
+			position: "center",
+			config: {
+
+			}
 		}
 	]
 };
