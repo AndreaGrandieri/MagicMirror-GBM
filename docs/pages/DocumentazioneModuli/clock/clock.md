@@ -1,6 +1,6 @@
 ---
 layout: noheader
-permalink: :output_ext
+permalink: /:output_ext
 ---
 
 # clock
