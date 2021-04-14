@@ -1,6 +1,6 @@
 ---
 layout: noheader
-permalink: /clock.html
+permalink: ./clock.html
 ---
 
 # clock
