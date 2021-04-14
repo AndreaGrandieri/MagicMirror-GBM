@@ -1,7 +1,5 @@
 # MagicMirror-GBM
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-
 ![GitHub Releases and Pre from shields.io](https://img.shields.io/github/v/release/AndreaGrandieri/MagicMirror-GBM?include_prereleases)
 [![Node.js CI](https://github.com/AndreaGrandieri/MagicMirror-GBM/actions/workflows/node.js.yml/badge.svg)](https://github.com/AndreaGrandieri/MagicMirror-GBM/actions/workflows/node.js.yml)
 [![CodeQL](https://github.com/AndreaGrandieri/MagicMirror-GBM/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/AndreaGrandieri/MagicMirror-GBM/actions/workflows/codeql-analysis.yml)
@@ -29,12 +27,12 @@ Di seguito l'indice dei moduli, con la relativa documentazione:
 - [MMM-AirQuality](pages/DocumentazioneModuli/MMM-AirQuality/MMM-AirQuality)
 - [MMM-DHT-Sensor](pages/DocumentazioneModuli/MMM-DHT-Sensor/MMM-DHT-Sensor)
 - [newsfeed](pages/DocumentazioneModuli/newsfeed/newsfeed)
-- [MMM-AVStock]() ___(MISSING)___
+- [MMM-AVStock](pages/DocumentazioneModuli/MMM-AVStock/MMM-AVStock)
 - [clock](pages/DocumentazioneModuli/clock/clock)
 - [weather](pages/DocumentazioneModuli/weather/weather)
 - [weatherforecast](pages/DocumentazioneModuli/weatherforecast/weatherforecast)
 - [calendar](pages/DocumentazioneModuli/calendar/calendar)
-- [MMM-Memo]() ___(MISSING)___
+- [MMM-MD](pages/DocumentazioneModuli/MMM-MD/MMM-MD)
 - [MMM-Screencast](pages/DocumentazioneModuli/MMM-Screencast/MMM-Screencast)
 - [MMM-Mail]() ___(MISSING)___
 - [raspotify]() ___(MISSING)___

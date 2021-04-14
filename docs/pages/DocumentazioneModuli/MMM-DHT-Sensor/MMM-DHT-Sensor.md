@@ -84,7 +84,7 @@ di campionamento __non__ inferiore a `2000 ms`.
 ## pin GPIO
 
 __Presta Attenzione:__ i pin GPIO del Raspberry Pi possono essere riferiti
-seguendo (molti) diversi standard. La proprietà xxx del modulo utilizza
+seguendo (molti) diversi standard. La proprietà `sensorPin` del modulo utilizza
 lo standard evidenziato in giallo:
 
 ![pin_GPIO_ref](../../../assets/MMM-DHT-Sensor/pin_GPIO_ref.PNG)
