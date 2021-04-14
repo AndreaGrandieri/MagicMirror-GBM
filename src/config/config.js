@@ -201,7 +201,6 @@ var config = {
 			module: "MMM-MD",
 			position: "center",
 			config: {
-
 			}
 		}
 	]
