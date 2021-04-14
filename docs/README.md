@@ -28,7 +28,7 @@ Di seguito l'indice dei moduli, con la relativa documentazione:
 - [MMM-DHT-Sensor](pages/DocumentazioneModuli/MMM-DHT-Sensor/MMM-DHT-Sensor)
 - [newsfeed](pages/DocumentazioneModuli/newsfeed/newsfeed)
 - [MMM-AVStock](pages/DocumentazioneModuli/MMM-AVStock/MMM-AVStock)
-- [clock](pages/DocumentazioneModuli/clock/clock)
+- [clock](pages/DocumentazioneModuli/clock/clock.md)
 - [weather](pages/DocumentazioneModuli/weather/weather)
 - [weatherforecast](pages/DocumentazioneModuli/weatherforecast/weatherforecast)
 - [calendar](pages/DocumentazioneModuli/calendar/calendar)
