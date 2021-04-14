@@ -33,6 +33,15 @@ Module.register("MMM-MD", {
 		// Max interval: +INFms
 		interval: 50,
 
+		// Tempo di stalo prima (ms) che l'autoscroll,
+		// una volta raggiunto il limite verso il basso,
+		// ricominci il processo di scorrimento
+		// dall'inizio (limite verso l'alto)
+		// Min interval: 0ms
+		// Ideal (default) interval: 100ms
+		// Max interval: +INFms
+		staller: 100,
+
 		// Width (larghezza) del box del modulo
 		width: "calc(100 % - 25 %)",
 
@@ -71,6 +80,19 @@ Module.register("MMM-MD", {
 
 		if (!checkStatus) {
 			this.config.interval = 50;
+		}
+
+		// Controlli sulla configurazione
+		// "this.config.staller"
+		checkStatus = false;
+		if (typeof (this.config.staller) === "number") {
+			if (this.config.staller >= 0) {
+				checkStatus = true;
+			}
+		}
+
+		if (!checkStatus) {
+			this.config.staller = 100;
 		}
 
 		// "this.config.width"
@@ -117,7 +139,7 @@ Module.register("MMM-MD", {
 		// del contenuto in altezza (height) (*)
 		var i = 0;
 		var maxima = null;
-		var staller = 100;
+		var staller = this.config.staller;
 
 		// Schedulamento funzione (*)
 		window.setInterval(function () {
