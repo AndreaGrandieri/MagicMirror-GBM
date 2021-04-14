@@ -1,6 +1,6 @@
 ---
 layout: noheader
-permalink: /:path/:basename/:output_ext
+permalink: /:path/:basename:output_ext
 ---
 
 # clock
