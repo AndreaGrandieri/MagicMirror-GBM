@@ -1,6 +1,6 @@
 ---
 layout: noheader
-permalink: ./clock.html
+permalink: /:categories/clock.html
 ---
 
 # clock
