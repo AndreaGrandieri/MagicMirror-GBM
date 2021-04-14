@@ -1,7 +1,5 @@
 # MagicMirror-GBM
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-
 ![GitHub Releases and Pre from shields.io](https://img.shields.io/github/v/release/AndreaGrandieri/MagicMirror-GBM?include_prereleases)
 [![Node.js CI](https://github.com/AndreaGrandieri/MagicMirror-GBM/actions/workflows/node.js.yml/badge.svg)](https://github.com/AndreaGrandieri/MagicMirror-GBM/actions/workflows/node.js.yml)
 [![CodeQL](https://github.com/AndreaGrandieri/MagicMirror-GBM/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/AndreaGrandieri/MagicMirror-GBM/actions/workflows/codeql-analysis.yml)
