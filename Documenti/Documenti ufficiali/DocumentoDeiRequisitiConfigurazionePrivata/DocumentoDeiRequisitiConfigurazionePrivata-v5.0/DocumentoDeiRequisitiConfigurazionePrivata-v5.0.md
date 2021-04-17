@@ -2,9 +2,9 @@
 
 Documento dei requisiti MagicMirror-GBM configurazione ad uso privato
 
-*ver. 4.0* 
+*ver. 5.0* 
 
-13/04/2021
+17/04/2021
 
 ---
 
@@ -47,6 +47,7 @@ Le figure che influenzano lo sviluppo del sistema software sono:
   - 2.1.1.5 Il sistema dovrà permettere la modifica della lingua
   - 2.1.1.6 Il sistema dovrà permettere la regolazione del volume
   - 2.1.1.7 Il sistema dovrà permettere la gestione delle notifiche
+ 
 
 - 2.1.2 Il sistema dovrà integrare il modulo **MMM-AirQuality**
 - 2.1.3 Il sistema dovrà integrare il modulo **MMM-DHT**
@@ -61,6 +62,7 @@ Le figure che influenzano lo sviluppo del sistema software sono:
 - 2.1.12 Il sistema dovrà integrare il modulo **MMM-Mail**
 - 2.1.13 Il sistema dovrà integrare il modulo **MMM-Online-State**
 - 2.1.14 Il sistema dovrà integrare il modulo **MMM-ip**
+- 2.1.15 Il sistema dovrà entrare in *fase di standby* quando esso non rileva più movimenti.
 
 ### 2.2 Requisiti informativi
 
@@ -97,7 +99,8 @@ L'interfaccia proposta dal sistema è stata appositamente studiata per garantire
 - Schermo con interfaccia HDMI
 - Telaio specchio
 - Two-way mirror
-- Sensore DHT22
+- Sensore rilevatore di temperatura ed umidità locali (DHT22)
+- Sensore di movimento P.I.R. (hc-sr501)
 
 ### 3.3 Requisiti di prestazione
   
@@ -141,3 +144,5 @@ L'utilizzo di API esterne è soggetto a limitazioni poste dai fornitori delle AP
 - **Human-centered design**: approccio di problem solving che coinvolge la prospettiva del cliente in tutti gli step della risoluzione stessa.
   
 - **Two-way mirror**: particolare tipo di specchio che da un lato riflette la luce mentre dall'altro ne permette il passaggio.
+
+- **Sensore di movimento P.I.R.**: acronimo di *Passive InfraRed* è un sensore elettronico che rileva la radiazione infrarossa (IR) irradiata dagli oggetti nel suo campo visivo.
