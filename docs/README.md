@@ -24,20 +24,20 @@ Di seguito riportati i link alle risorse esterne:
 
 Di seguito l'indice dei moduli, con la relativa documentazione:
 
-- [MMM-AirQuality](pages/DocumentazioneModuli/MMM-AirQuality/MMM-AirQuality)
-- [MMM-DHT-Sensor](pages/DocumentazioneModuli/MMM-DHT-Sensor/MMM-DHT-Sensor)
-- [newsfeed](pages/DocumentazioneModuli/newsfeed/newsfeed)
-- [MMM-AVStock](pages/DocumentazioneModuli/MMM-AVStock/MMM-AVStock)
-- [clock](pages/DocumentazioneModuli/clock/clock)
-- [weather](pages/DocumentazioneModuli/weather/weather)
-- [weatherforecast](pages/DocumentazioneModuli/weatherforecast/weatherforecast)
-- [calendar](pages/DocumentazioneModuli/calendar/calendar)
-- [MMM-MD](pages/DocumentazioneModuli/MMM-MD/MMM-MD)
-- [MMM-Screencast](pages/DocumentazioneModuli/MMM-Screencast/MMM-Screencast)
+- [MMM-AirQuality](pages/DocumentazioneModuli/MMM-AirQuality/MMM-AirQuality.md)
+- [MMM-DHT-Sensor](pages/DocumentazioneModuli/MMM-DHT-Sensor/MMM-DHT-Sensor.md)
+- [newsfeed](pages/DocumentazioneModuli/newsfeed/newsfeed.md)
+- [MMM-AVStock](pages/DocumentazioneModuli/MMM-AVStock/MMM-AVStock.md)
+- [clock](pages/DocumentazioneModuli/clock/clock.md)
+- [weather](pages/DocumentazioneModuli/weather/weather.md)
+- [weatherforecast](pages/DocumentazioneModuli/weatherforecast/weatherforecast.md)
+- [calendar](pages/DocumentazioneModuli/calendar/calendar.md)
+- [MMM-MD](pages/DocumentazioneModuli/MMM-MD/MMM-MD.md)
+- [MMM-Screencast](pages/DocumentazioneModuli/MMM-Screencast/MMM-Screencast.md)
 - [MMM-Mail]() ___(MISSING)___
 - [raspotify]() ___(MISSING)___
-- [MMM-Online-State](pages/DocumentazioneModuli/MMM-Online-State/MMM-Online-State)
-- [MMM-ip](pages/DocumentazioneModuli/MMM-ip/MMM-ip)
+- [MMM-Online-State](pages/DocumentazioneModuli/MMM-Online-State/MMM-Online-State.md)
+- [MMM-ip](pages/DocumentazioneModuli/MMM-ip/MMM-ip.md)
 
 ---
 
@@ -45,7 +45,7 @@ Di seguito l'indice dei moduli, con la relativa documentazione:
 
 Il Documento dei Requisiti è il documento chiave per formalizzare i fabbisogni del cliente relativamente al sistema da sviluppare, in modo non ambiguo. Cliente, utenti e sviluppatori contribuiscono alla stesura del documento di specifica dei requisiti. Può essere usato come contratto tra cliente e sviluppatori.
 
-- [Archivio Documenti dei Requisiti](pages/ArchivioDocumentiDeiRequisiti)
+- [Archivio Documenti dei Requisiti](pages/ArchivioDocumentiDeiRequisiti.md)
 
 ---
 
@@ -53,4 +53,4 @@ Il Documento dei Requisiti è il documento chiave per formalizzare i fabbisogni 
 
 Il BMC (Business Model Canvas) è un modello di gestione strategica utilizzato per sviluppare nuovi modelli di business e documentare quelli esistenti. Offre un grafico visivo con elementi che descrivono la proposta di valore, l'infrastruttura, i clienti e le finanze di un'azienda o di un prodotto, aiutando le aziende ad allineare le proprie attività evidenziando potenziali compromessi.
 
-- [Archivio BMC](pages/ArchivioBMC)
+- [Archivio BMC](pages/ArchivioBMC.md)
