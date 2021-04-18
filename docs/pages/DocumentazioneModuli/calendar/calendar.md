@@ -1,5 +1,6 @@
 ---
 layout: noheader
+permalink: /:path/:basename:output_ext
 ---
 
 # calendar
