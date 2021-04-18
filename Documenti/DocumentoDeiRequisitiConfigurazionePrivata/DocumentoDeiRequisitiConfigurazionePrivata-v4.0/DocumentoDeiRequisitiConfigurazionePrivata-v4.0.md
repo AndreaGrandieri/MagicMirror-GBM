@@ -44,11 +44,9 @@ Le figure che influenzano lo sviluppo del sistema software sono:
   - 2.1.1.2 Il sistema dovrà consentire la gestione del microfono e della fotocamera
   - 2.1.1.3 Il sistema dovrà permettere il reset del sistema stesso
   - 2.1.1.4 Il sistema dovrà permettere una fase di configurazione iniziale
-  - 2.1.1.6 Il sistema dovrà permettere la modifica della lingua
-  - 2.1.1.7 Il sistema dovrà permettere la regolazione del volume
-  - 2.1.1.8 Il sistema dovrà permettere la modifica delle suonerie
-  - 2.1.1.9 Il sistema dovrà permettere la gestione delle notifiche
-  - 2.1.1.10 Il sistema dovrà consentire la modifica dello sfondo
+  - 2.1.1.5 Il sistema dovrà permettere la modifica della lingua
+  - 2.1.1.6 Il sistema dovrà permettere la regolazione del volume
+  - 2.1.1.7 Il sistema dovrà permettere la gestione delle notifiche
 
 - 2.1.2 Il sistema dovrà integrare il modulo **MMM-AirQuality**
 - 2.1.3 Il sistema dovrà integrare il modulo **MMM-DHT**
