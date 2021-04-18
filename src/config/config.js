@@ -202,6 +202,19 @@ var config = {
 			position: "center",
 			config: {
 			}
+		},
+		{
+			module: "MMM-PIR-Sensor",
+			position: "top_right",
+			config: {
+				sensorPin: 3,
+				powerSaving: true,
+				powerSavingNotification: true,
+				powerSavingMessage: "Attivazione modalità sospensione...",
+				preventHDMITimeout: 5,
+				presenceIndicatorColor: "white",
+				runSimulator: true
+			}
 		}
 	]
 };
