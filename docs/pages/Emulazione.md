@@ -6,7 +6,7 @@ permalink: /:path/:basename:output_ext
 # Emulazione
 
 A fini di testing individuale e decentralizzato (la centralizzazione richiede inderogabilmente l'accesso all'hardware
-del MagicMirror (vedi _(ultima versione)_ __Documento dei Requisiti__)), può essere utilizzata una __Virtual Machine__ (macchina
+del MagicMirror (vedi _(ultima versione)_ [Documento dei Requisiti](ArchivioDocumentiDeiRequisiti.md))), può essere utilizzata una __Virtual Machine__ (macchina
 virtuale), presentante le seguenti configurazioni (consigliate):
 
 - OS: `Ubuntu 20.04.2 LTS (o superiore)`
