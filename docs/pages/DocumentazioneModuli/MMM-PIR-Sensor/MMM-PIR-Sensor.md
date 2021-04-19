@@ -67,11 +67,11 @@ Le notifiche sono uno strumento utilizzato dai moduli per comunicare con:
 
 Icona visualizzata dal modulo se una presenza è rilevata:
 
-![module_interface_presence_fired](../../../MMM-PIR-Sensor/module_interface_presence_fired.jpg)
+![module_interface_presence_fired](../../../assets/MMM-PIR-Sensor/module_interface_presence_fired.jpg)
 
 Notifica visualizzata prima dell'entrata in modalità sospensione:
 
-![module_interface_entering_sleepmode_notify](../../../MMM-PIR-Sensor/module_interface_entering_sleepmode_notify.png)
+![module_interface_entering_sleepmode_notify](../../../assets/MMM-PIR-Sensor/module_interface_entering_sleepmode_notify.png)
 
 ---
 
