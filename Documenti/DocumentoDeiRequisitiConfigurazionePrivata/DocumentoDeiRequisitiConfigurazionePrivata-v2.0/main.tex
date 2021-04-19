@@ -1,0 +1,188 @@
+\documentclass[a4paper,11pt]{article}       % Articolo, Foglio A4, Carattere 11
+\usepackage[T1]{fontenc}                    % Codifica dei font
+\usepackage[utf8]{inputenc}                 % Codifica dell'input da tastiera
+\usepackage[italian]{babel}                 % Lingua: italiano
+\usepackage{hyperref}                       % Collegamenti ipertestuali
+\usepackage[toc]{glossaries}                % Gestione glossario
+
+
+% Set-up url
+\hypersetup
+{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue,
+}
+
+% Dichiarazione glossario
+\makeglossaries
+
+\newglossaryentry{Human-centered design}
+{
+    name = Human-centered design,
+    description = {approccio di problem solving che coinvolge la prospettiva del cliente in tutti gli step della risoluzione stessa}
+}
+
+\newglossaryentry{Two-way mirror}
+{
+    name = Two-way mirror,
+    description = {particolare tipo di specchio che da un lato riflette la luce mentre dall'altro ne permette il passaggio}
+}
+
+\begin{document}
+\begin{titlepage}
+    \centering
+        \vspace*{1in}
+        \begin{Large}
+            MagicMirror-GBM 
+            
+            configurazione ad uso privato\par
+        \end{Large} 
+        \vspace{1.5in}
+        \vfill
+        Documento dei requisiti\\
+        \vspace{0.1in}ver. 2.0
+\end{titlepage}
+
+% numerazione romana delle pagine
+\pagenumbering{roman}
+
+%Indice dei contenuti
+\tableofcontents
+\newpage
+
+%Numerazione araba delle pagine
+\pagenumbering{arabic}
+
+\section{Premesse del progetto}
+    \subsection{Obiettivi e scopo del progetto}
+        Piattaforma Open Source modulare per trasformare un classico specchio in un sistema digitale multifunzione.
+    \subsection{Contesto di business}
+        Nella continua evoluzione tecnologica degli ultimi anni si è rilevata sempre più utile l'integrazione della domotica e della tecnologia in strumenti di uso quotidiano.
+    \subsection{Stakeholders}
+        Le figure che influenzano lo sviluppo del sistema software sono:
+        \begin{itemize}
+            \item Committente: \textbf{NonSoloTelefonia Lab}
+            \item Clienti: \textbf{\gls{Human-centered design}}
+            \item Developers (analisti, progettisti)
+        \end{itemize}
+
+\newpage
+
+\section{Servizi del sistema}
+    
+    \subsection{Requisiti funzionali}
+        \begin{itemize}
+            \item[2.1.1] Il sistema dovrà consentire la modifica delle impostazioni del sistema software stesso.
+                \begin{itemize}
+                    \item[2.1.1.1] Il sistema dovrà consentire la gestione delle impostazioni di connettività.
+                    \item[2.1.1.2] Il sistema dovrà consentire la gestione del microfono e della fotocamera.
+                    \item[2.1.1.3] Il sistema dovrà permettere il reset del sistema stesso.
+                    \item[2.1.1.4] Il sistema dovrà permettere una fase di configurazione iniziale.
+                    \item[2.1.1.5] Il sistema dovrà permettere la modifica della lingua.
+                    \item[2.1.1.6] Il sistema dovrà permettere la regolazione del volume.
+                    \item[2.1.1.7] Il sistema dovrà permettere la modifica delle suonerie.
+                    \item[2.1.1.8] Il sistema dovrà permettere la gestione delle notifiche.
+                    \item[2.1.1.9] Il sistema dovrà consentire la modifica dello sfondo.
+                \end{itemize}
+            \item[2.1.2] Il sistema dovrà integrare il modulo \textbf{MMM-AirQuality}.
+            \item[2.1.3] Il sistema dovrà integrare il modulo \textbf{MMM-DHT}.
+            \item[2.1.4] Il sistema dovrà integrare il modulo \textbf{newsfeed}.
+            \item[2.1.5] Il sistema dovrà integrare il modulo \textbf{MMM-AVStock}.
+            \item[2.1.6] Il sistema dovrà integrare il modulo \textbf{clock}.
+            \item[2.1.7] Il sistema dovrà integrare il modulo \textbf{weather}.
+            \item[2.1.8] Il sistema dovrà integrare il modulo \textbf{weatherforecast}.
+            \item[2.1.9] Il sistema dovrà integrare il modulo \textbf{calendar}.
+            \item[2.1.10] Il sistema dovrà integrare il modulo \textbf{alert}.
+            \item[2.1.11] Il sistema dovrà integrare il modulo \textbf{MMM-Memo}.
+            \item[2.1.12] Il sistema dovrà integrare il modulo \textbf{camera}.
+            \item[2.1.13] Il sistema dovrà integrare il modulo \textbf{MMM-Screencast}.
+            \item[2.1.14] Il sistema dovrà integrare il modulo \textbf{MMM-Mail}.
+            \item[2.1.15] Il sistema dovrà integrare il modulo \textbf{annyang}.
+            \item[2.1.16] Il sistema dovrà integrare il modulo \textbf{openlayers}.
+            \item[2.1.17] Il sistema dovrà integrare il modulo \textbf{raspotify}.
+            \item[2.1.18] Il sistema dovrà integrare il modulo \textbf{MMM-Online-State}.
+        \end{itemize}
+        
+    \subsection{Requisiti informativi}
+        Il linguaggio utilizzato per lo scambio di informazioni tra le componenti interne ed esterne del sistema è il JSON.
+
+\newpage
+
+\section{Vincoli di sistema}
+    
+    \subsection{Requisiti di interfaccia}
+        L'interfaccia proposta dal sistema è stata appositamente studiata per garantire una fruizione di contenuti intuitiva ed immediata.
+        
+        \begin{itemize}
+            \item[3.1.1] Interfaccia principale
+                \begin{itemize}
+                    \item[3.1.1.1] Visualizzazione della qualità dell'aria per la zona specificata.
+                    \item[3.1.1.2] Visualizzazione della temperatura e dell'umidità locali (usa sensore: DHT11).
+                    \item[3.1.1.2] Visualizzazione delle news più recenti.
+                    \item[3.1.1.3] Visualizzazione degli aggiornamenti relativi alle quotazioni in borsa.
+                    \item[3.1.1.4] Visualizzazione della data e dell'ora correnti.
+                    \item[3.1.1.5] Visualizzazione delle previsioni meteo.
+                    \item[3.1.1.6] Visualizzazione di un calendario interattivo.
+                    \item[3.1.1.7] Visualizzazione delle annotazioni.
+                    \item[3.1.1.8] Visualizzazione delle email in entrata.
+                    \item[3.1.1.9] Visualizzazione dello stato della connessione.
+                \end{itemize}   
+                
+            \item[3.1.2] Interfaccia modulo MMM-Screencast
+                \begin{itemize}
+                    \item[3.1.2.1] Visualizzazione di contenuti multimediali.
+                \end{itemize}
+            \item[3.1.3] Interfaccia modulo openlayers
+                \begin{itemize}
+                    \item[3.1.3.1] Visualizzazione di mappe interattive.
+                \end{itemize}
+            \item[3.1.4] Interfaccia modulo camera
+                \begin{itemize}
+                    \item[3.1.4.1] Visualizzazione del feed video di una webcam.
+                \end{itemize}
+        \end{itemize}
+    
+    \subsection{Requisiti tecnologici}
+        L'intero progetto è stato realizzato utilizzando i seguenti strumenti:
+        \begin{itemize}
+            \item Raspberry Pi modello 2 o superiore
+            \item Sensore DHT11
+            \item Microfono
+            \item Fotocamera
+            \item Casse audio
+            \item Schermo con interfaccia HDMI
+            \item Telaio specchio
+            \item \gls{Two-way mirror}
+        \end{itemize}
+        
+    \subsection{Requisiti di prestazione}
+        Non si registrano particolari esigenze in questo ambito.
+    
+    \subsection{Requisiti di sicurezza}
+        Non si registrano particolari esigenze in questo ambito.
+    
+    \subsection{Requisiti operativi}
+        L'intero progetto è stato realizzato utilizzando i seguenti linguaggi:
+        \begin{itemize}
+            \item JavaScript
+            \item CSS
+            \item HTML
+            \item PHP
+        \end{itemize}
+        L'intero progetto è basato sulle seguenti piattaforme:
+        \begin{itemize}
+            \item npm + Node.js v10.x o superiore
+            \item Electron
+        \end{itemize}
+        Si relaziona con sistemi operativi Raspberry Pi OS (full version).
+    
+    \subsection{Requisiti politici e legali}
+        Il sistema software open source è rilasicato sotto la licenza \href{https://github.com/AndreaGrandieri/MagicMirror-GBM/blob/main/LICENSE}{Apache-2.0}.
+    
+    \subsection{Vincoli API esterne}
+        L'utilizzo di API esterne è soggetto a limitazioni poste dai fornitori delle API stesse. Pertanto si invita ad una consultazione dei regolamenti di utilizzo delle singole API.
+\clearpage
+    \printglossary[nonumberlist]
+
+\end{document}

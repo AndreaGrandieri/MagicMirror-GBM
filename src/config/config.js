@@ -59,6 +59,20 @@ var config = {
 			}
 		},
 		{
+			module: "MMM-PIR-Sensor",
+			position: "bottom_right",
+			config: {
+				sensorPin: 17,
+				powerSaving: true,
+				powerSavingDelay: 900,
+				powerSavingNotification: false,
+				powerSavingMessage: "Attivazione modalità sospensione...",
+				preventHDMITimeout: 5,
+				presenceIndicatorColor: "white",
+				runSimulator: false
+			}
+		},
+		{
 			module: "clock",
 			position: "top_left"
 		},
@@ -119,9 +133,18 @@ var config = {
 			config: {
 				feeds: [
 					{
-						title: "New York Times",
-						url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+						title: "Il Giornale",
+						url: "https://www.ilgiornale.it/feed.xml"
+					},
+					{
+						title: "Corriere della sera",
+						url: "http://xml2.corriereobjects.it/rss/homepage.xml"
+					},
+					{
+						title: "La Gazzetta dello Sport",
+						url: "https://www.gazzetta.it/rss/home.xml"
 					}
+
 				],
 				showSourceTitle: true,
 				showPublishDate: true,
@@ -153,12 +176,6 @@ var config = {
 			}
 		},
 		{
-			module: 'MMM-StopwatchTimer',
-			config: {
-				animation: true
-			}
-		},
-		{
 			module: 'MMM-ip',
 			position: 'bottom_right',
 			config: {
@@ -185,6 +202,35 @@ var config = {
 				subjectlength: 50
 			}
 		},
+		{
+			module: "MMM-DHT-Sensor",
+			position: "",
+			config: {
+				sensorPin: 16,
+				sensorType: 22,
+				units: "metric",
+				updateInterval: 10000
+			}
+		},
+		{
+			module: "MMM-AVStock",
+			position: "bottom_left",
+			config: {
+				apiKey: "YOUR_ALPHAVANTAGE_KEY",
+				mode: "table",
+				chartType: "line",
+				symbols: ["AAPL", "GOOGL", "TSLA"],
+				alias: ["APPLE", "GOOGLE", "TESLA"],
+				showChart: true,
+				direction: "column"
+			}
+		},
+		{
+			module: "MMM-MD",
+			position: "center",
+			config: {
+			}
+		}
 	]
 };
 

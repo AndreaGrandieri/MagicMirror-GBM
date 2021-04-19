@@ -1,0 +1,49 @@
+# \<Nome-Modulo\>
+
+## tl;dr
+
+_Qui una breve descrizione dello scopo del modulo._
+
+---
+
+## Config JSON Fragment
+
+```json
+// Qui frammento di configurazione del modulo, con valori di default a nostra
+// scelta (possono differire dagli "autentici" valori di default registrati
+// dal modulo)
+```
+
+---
+
+## Proprietà (Config Section)
+
+| Proprietà        | Tipo                                               | Valori                                                                             | Valore Default          | Inderogabilità           | Descrizione              |
+| ---------------- | -------------------------------------------------- | ---------------------------------------------------------------------------------- | ----------------------- | ------------------------ | ------------------------ |
+| `Nome-Proprietà` | `Tipo` _guarda [DataTypesJS.PNG](DataTypesJS.PNG)_ | `valore1`: _descrizione / vincoli_ <br> `valore2`: _descrizione / vincoli_ _[...]_ | `valore`: _descrizione_ | `REQUIRED` or `OPTIONAL` | _Qui breve descrizione._ |
+
+---
+
+## Notifiche
+
+Le notifiche sono uno strumento utilizzato dai moduli per comunicare con:
+
+- L'OS del MagicMirror
+- Altri moduli
+- Attori umani
+
+| Notifica        | Direzione     | Trigger                                                                                    | Payload _(inline js)_              | Descrizione                                                   |
+| --------------- | ------------- | ------------------------------------------------------------------------------------------ | ---------------------------------- | ------------------------------------------------------------- |
+| `Nome-Notifica` | `IN` or `OUT` | _Che azione causa l'`OUT` della notifica._ or _Che azione segue dall'`IN` della notifica._ | `JS PAYLOAD QUI se presente o ---` | _Qui breve descrizione del significato della notifica o ---._ |
+
+---
+
+## Screenshots
+
+_Qui (se presenti, consigliati)._
+
+---
+
+## \<Altro\>
+
+_Qui altre informazioni, se necessarie. Denominare il paragrafo a dovere._
