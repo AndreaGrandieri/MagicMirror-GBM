@@ -59,6 +59,20 @@ var config = {
 			}
 		},
 		{
+			module: "MMM-PIR-Sensor",
+			position: "top_right",
+			config: {
+				sensorPin: 17,
+				powerSaving: true,
+				powerSavingDelay: 900,
+				powerSavingNotification: false,
+				powerSavingMessage: "Attivazione modalità sospensione...",
+				preventHDMITimeout: 5,
+				presenceIndicatorColor: "white",
+				runSimulator: false
+			}
+		},
+		{
 			module: "clock",
 			position: "top_left"
 		},
@@ -201,19 +215,6 @@ var config = {
 			module: "MMM-MD",
 			position: "center",
 			config: {
-			}
-		},
-		{
-			module: "MMM-PIR-Sensor",
-			position: "top_right",
-			config: {
-				sensorPin: 3,
-				powerSaving: true,
-				powerSavingNotification: true,
-				powerSavingMessage: "Attivazione modalità sospensione...",
-				preventHDMITimeout: 5,
-				presenceIndicatorColor: "white",
-				runSimulator: true
 			}
 		}
 	]

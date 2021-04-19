@@ -14,9 +14,10 @@ di sospensione del MagicMirror quando necessario.
     "module": "MMM-PIR-Sensor",
     "position": "top_right",
     "config": {
-        "sensorPin": null,
+        "sensorPin": 17,
         "powerSaving": true,
-        "powerSavingNotification": true,
+        "powerSavingDelay": 900,
+        "powerSavingNotification": false,
         "powerSavingMessage": "Attivazione modalità sospensione...",
         "preventHDMITimeout": 5,
         "presenceIndicatorColor": "white",
@@ -33,6 +34,7 @@ di sospensione del MagicMirror quando necessario.
 | ------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `sensorPin`               | `Integer` | Qualsiasi valore numerico di pin GPIO valido. Qui maggiori dettagli: [https://www.raspberrypi.org/documentation/usage/gpio/](https://www.raspberrypi.org/documentation/usage/gpio/), [https://pinout.xyz/](https://pinout.xyz/) | `22`                                       | `OPTIONAL`     | Pin GPIO al quale il sensore interno del MagicMirror è connesso. __E' sconsigliata la modifica di questa proprietà.__                                                                                                       |
 | `powerSaving`             | `Boolean` | `true`: Il modulo esegue il suo scopo. <br> `false`: Il modulo non esegue il suo scopo (è disattivato).                                                                                                                         | `true`                                     | `OPTIONAL`     | Attiva o disattiva l'esecuzione da parte del modulo del suo scopo di esistenza.                                                                                                                                             |
+| `powerSavingDelay`        | `Integer` | Valore numerico `x` (secondi), con `x >= 0`. `0` disattiva questa funzione.                                                                                                                                                     | `0`                                        | `OPTIONAL`     | Delay prima di entrare in modalità sospensione. Il conteggio inizia da quando il sensore non rileva più una presenza.                                                                                                       |
 | `powerSavingNotification` | `Boolean` | `true`: Attiva la visualizzazione di una notifica prima dell'entrata in modalità sospensione. <br> `false`: Disattiva la visualizzazione di una notifica prima dell'entrata in modalità sospensione.                            | `false`                                    | `OPTIONAL`     | Attiva o disattiva la visualizzazione di una notifica prima dell'entrata in modalità sospensione.                                                                                                                           |
 | `powerSavingMessage`      | `String`  | Qualsiasi stringa.                                                                                                                                                                                                              | `"Monitor will be turn Off by PIR module"` | `OPTIONAL`     | Contenuto del messaggio visualizzato prima dell'entrata in modalità sospensione. __Visualizzazione solo se il valore della proprietà `powerSavingNotification` è `true`.__                                                  |
 | `preventHDMITimeout`      | `Integer` | Valore numerico `x` (minuti), con `0 <= x <= 10`. `0` disattiva questa funzione.                                                                                                                                                | `0`                                        | `OPTIONAL`     | Attiva o disattiva l'entrata e uscita intermittente dalla modalità sospensione. Questo permette di evitare lo spegnimento automaticato per alcuni schermi la cui configurazione causa lo spegnimento in assenza di segnale. |
@@ -64,8 +66,8 @@ _Qui (se presenti, consigliati)._
 
 ## MagicMirror Default Hardware
 
-Il sensore interno del MagicMirror è il `---`.
-Il pin GPIO utilizzato dal sensore è il `GPIO/BCM ---` [https://pinout.xyz/pinout/pin36_gpio16](https://pinout.xyz/pinout/pin36_gpio16).
+Il sensore interno del MagicMirror è il `HC-SR501`.
+Il pin GPIO utilizzato dal sensore è il `GPIO/BCM 17` [https://pinout.xyz/pinout/pin36_gpio16](https://pinout.xyz/pinout/pin36_gpio16).
 
 ## pin GPIO
 
@@ -73,4 +75,4 @@ __Presta Attenzione:__ i pin GPIO del Raspberry Pi possono essere riferiti
 seguendo (molti) diversi standard. La proprietà `sensorPin` del modulo utilizza
 lo standard evidenziato in giallo:
 
-![pin_GPIO_ref](../../../assets/MMM-DHT-Sensor/pin_GPIO_ref.PNG)
+![pin_GPIO_ref](../../../assets/MMM-PIR-Sensor/pin_GPIO_ref.PNG)
