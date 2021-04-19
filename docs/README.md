@@ -35,9 +35,9 @@ Di seguito l'indice dei moduli, con la relativa documentazione:
 - [MMM-MD](pages/DocumentazioneModuli/MMM-MD/MMM-MD.md)
 - [MMM-Screencast](pages/DocumentazioneModuli/MMM-Screencast/MMM-Screencast.md)
 - [MMM-Mail]() ___(MISSING)___
-- [raspotify]() ___(MISSING)___
 - [MMM-Online-State](pages/DocumentazioneModuli/MMM-Online-State/MMM-Online-State.md)
 - [MMM-ip](pages/DocumentazioneModuli/MMM-ip/MMM-ip.md)
+- [MMM-PIR-Sensor](pages/DocumentazioneModuli/MMM-PIR-Sensor/MMM-PIR-Sensor.md)
 
 ---
 
@@ -60,3 +60,9 @@ Il BMC (Business Model Canvas) è un modello di gestione strategica utilizzato p
 ## Emulazione
 
 Qui i dettagli: [Emulazione](pages/Emulazione.md)
+
+---
+
+## raspotify
+
+___Aggiungere dettagli...___
