@@ -1,3 +1,8 @@
+---
+layout: noheader
+permalink: /:path/:basename:output_ext
+---
+
 # MMM-PIR-Sensor
 
 ## tl;dr
@@ -12,7 +17,7 @@ di sospensione del MagicMirror quando necessario.
 ```json
 {
     "module": "MMM-PIR-Sensor",
-    "position": "top_right",
+    "position": "bottom_right",
     "config": {
         "sensorPin": 17,
         "powerSaving": true,
@@ -60,14 +65,20 @@ Le notifiche sono uno strumento utilizzato dai moduli per comunicare con:
 
 ## Screenshots
 
-_Qui (se presenti, consigliati)._
+Icona visualizzata dal modulo se una presenza è rilevata:
+
+![module_interface_presence_fired](../../../MMM-PIR-Sensor/module_interface_presence_fired.jpg)
+
+Notifica visualizzata prima dell'entrata in modalità sospensione:
+
+![module_interface_entering_sleepmode_notify](../../../MMM-PIR-Sensor/module_interface_entering_sleepmode_notify.png)
 
 ---
 
 ## MagicMirror Default Hardware
 
 Il sensore interno del MagicMirror è il `HC-SR501`.
-Il pin GPIO utilizzato dal sensore è il `GPIO/BCM 17` [https://pinout.xyz/pinout/pin36_gpio16](https://pinout.xyz/pinout/pin36_gpio16).
+Il pin GPIO utilizzato dal sensore è il `GPIO/BCM 17` [https://it.pinout.xyz/pinout/pin11_gpio17](https://it.pinout.xyz/pinout/pin11_gpio17).
 
 ## pin GPIO
 

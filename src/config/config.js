@@ -60,7 +60,7 @@ var config = {
 		},
 		{
 			module: "MMM-PIR-Sensor",
-			position: "top_right",
+			position: "bottom_right",
 			config: {
 				sensorPin: 17,
 				powerSaving: true,
