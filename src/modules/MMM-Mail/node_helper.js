@@ -60,7 +60,7 @@ module.exports = NodeHelper.create({
 			];
 
 			var client = new ImapClient(login[0], login[1], login[2]);
-			process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+			// process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 			//Create the Event Functions
 			//==================================
