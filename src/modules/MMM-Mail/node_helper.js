@@ -46,6 +46,20 @@ module.exports = NodeHelper.create({
 		var that = this;
 		if (notification === 'LISTEN_EMAIL') {
 
+			var request = require("request");
+			var agentOptions;
+			var agent;
+
+			agentOptions = {
+				host: payload.host,
+				port: payload.port,
+				path: "/",
+				rejectUnauthorized: false
+			};
+
+			agent = new https.Agent(agentOptions);
+
+			/*
 			var login = [payload.host,
 			payload.port,
 			{
@@ -58,8 +72,11 @@ module.exports = NodeHelper.create({
 				rejectUnauthorized: false
 			}
 			];
+			*/
 
-			var client = new ImapClient(login[0], login[1], login[2]);
+			var client = new ImapClient(agent);
+
+			// var client = new ImapClient(login[0], login[1], login[2]);
 			// process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
 
 			//Create the Event Functions
