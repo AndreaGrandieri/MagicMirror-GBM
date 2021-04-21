@@ -20,6 +20,13 @@ Di seguito riportati i link alle risorse esterne:
 
 ---
 
+## MagicMirror-GBM-OS
+
+Il MagicMirror-GBM è reso funzionale dal suo sistema operativo: `MagicMirror-GBM-OS`.
+Qui i dettagli: [MagicMirror-GBM-OS](pages/MagicMirror-GBM-OS.md)
+
+---
+
 ## Indice Moduli
 
 Di seguito l'indice dei moduli, con la relativa documentazione:
