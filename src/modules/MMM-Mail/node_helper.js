@@ -53,7 +53,7 @@ module.exports = NodeHelper.create({
 					user: payload.user,
 					pass: payload.pass,
 				},
-				agent: {
+				tls: {
 					rejectUnauthorized: false
 				}
 			}
