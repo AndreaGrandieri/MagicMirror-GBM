@@ -26,31 +26,42 @@ Ecco riportate le principali caratteristiche e requisiti essenziali:
 
 Di seguito riportati i passaggi per costruire il `MagicMirror-GBM-OS` partendo da una distribuzione `Raspberry Pi OS Full (32-bit)` grezza:
 
-1. Installare `nodejs`:
+1. Disattivare spegnimento automatico schermo Raspberry:
+
+    ```shell
+    # Accesso al file "autostart"
+    sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+
+    # Appendere (in coda) al contenuto del file:
+    @xset s off
+    @xset -dpms
+    ```
+
+2. Installare `nodejs`:
 
     ```shell
     sudo apt install nodejs
     ```
 
-2. Installare `npm`:
+3. Installare `npm`:
 
     ```shell
     sudo apt install npm
     ```
 
-3. Installare `npm-recursive-install`:
+4. Installare `npm-recursive-install`:
 
     ```shell
     sudo npm i -g recursive-install
     ```
 
-4. Installare `electron` globalmente:
+5. Installare `electron` globalmente:
 
     ```shell
     sudo npm install -g electron --unsafe-perm=true --allow-root
     ```
 
-5. Installare `bcm2835`:
+6. Installare `bcm2835`:
 
     ```shell
     wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.52.tar.gz
@@ -62,8 +73,16 @@ Di seguito riportati i passaggi per costruire il `MagicMirror-GBM-OS` partendo d
     sudo make install
     ```
 
-6. Installare `raspotify`:
+7. Installare `raspotify`:
 
     ```shell
     sudo curl -sL https://dtcooper.github.io/raspotify/install.sh | sh
+    ```
+
+_Qui gli altri step_
+
+ultimo_step. Riavviare il Raspberry:
+
+    ```shell
+    sudo shutdown -r now
     ```
