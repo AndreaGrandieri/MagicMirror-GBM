@@ -57,6 +57,10 @@ setSessionVariable("statusPHPRedirect", null);
             <td>Modifica i moduli in attività per il MagicMirror.</td>
         </tr>
         <tr>
+            <td><a href="WIFIConfigurator.php">Configuratore WIFI</a></td>
+            <td>Configura la connettivà WIFI (alla rete) per il MagicMirror.</td>
+        </tr>
+        <tr>
             <td><a href="globalsSelector.php">Globals Selector</a></td>
             <td>Modifica le globali in attività per il MagicMirror.</td>
         </tr>
