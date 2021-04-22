@@ -40,6 +40,23 @@ setSessionVariable("statusPHPRedirect", null);
     <form action="doWIFIConfigurator.php" method="POST">
         SSID: <input type="text" id="SSID" name="SSID"><br><br>
         Password: <input type="password" id="pssw" name="pssw"><br><br>
+        Country Code: 
+        <select name="countrycode" id="countrycode">
+            <?php
+            // Parsing di "iso3166-1_country-code.csv"
+            $csvFile = fopen("../assets/iso3166-1_country-code.csv", "r");
+            fgetcsv($csvFile);
+            $countrycodeArray = array();
+            while ($csvResult = fgetcsv($csvFile)) {
+                echo "<option value='$csvResult[1]'>$csvResult[0] ($csvResult[1])</option>";
+                array_push($countrycodeArray, $csvResult);
+            }
+            fclose($csvFile);
+
+            // Salvo in sessione
+            setSessionVariable("countrycodeArray", $countrycodeArray);
+            ?>
+        </select>
 
         <input type="submit" id="submit" name="submit" value="SALVA">
     </form>

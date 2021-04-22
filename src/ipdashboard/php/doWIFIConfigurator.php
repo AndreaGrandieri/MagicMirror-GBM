@@ -25,6 +25,22 @@ if (!test_input_valid_post_isset("pssw")) {
     die;
 }
 
+if (!test_input_valid_post_isset("countrycode")) {
+    setSessionVariable("statusPHP", "Rilevati valori non validi. Riprova.");
+    setSessionVariable("statusPHPRedirect", null);
+    header("location: redirect.php?target=index.php&ms=300");
+    die;
+}
+
+$countrycode = ($_POST["countrycode"]);
+
+if (!in_array($countrycode, readSessionVariable("countrycodeArray"))) {
+    setSessionVariable("statusPHP", "Rilevati valori non validi. Riprova.");
+    setSessionVariable("statusPHPRedirect", null);
+    header("location: redirect.php?target=index.php&ms=300");
+    die;    
+}
+
 $SSID = ($_POST["SSID"]);
 $pssw = ($_POST["pssw"]);
 
@@ -44,14 +60,16 @@ if (!$file) {
 
 // Preparo testo da scrivere
 /*
-preambolo (prime 3 righe): obbligatorie statiche
-parametri di rete (oggetto "network"): obbligatorio dinamico
+- preambolo (prime 2 righe): obbligatorie statiche
+- parametri di country (riga 3): obbligatorio dinamico
+compilato con i dati in input (dall'utente)
+- parametri di rete (oggetto "network"): obbligatorio dinamico
 compilato con i dati in input (dall'utente)
 */
 $txt = "
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
-country=<Insert 2 letter ISO 3166-1 country code here>
+country=$countrycode
 network={
     ssid=\"$SSID\"
     psk=\"$pssw\"
