@@ -19,6 +19,9 @@ Ecco riportate le principali caratteristiche e requisiti essenziali:
 - Raspberry Pi: `3 o superiore`
 - Storage Memory: `minimo 8GB`
 - RAM: `minimo 1GB`
+- Username: `MagicMirror-GBM-User`
+- Password: `magicmirrorgbm`
+- Internet configurations: _none_
 
 ---
 
@@ -82,13 +85,26 @@ Di seguito riportati i passaggi per costruire il `MagicMirror-GBM-OS` partendo d
     sudo curl -sL https://dtcooper.github.io/raspotify/install.sh | sh
     ```
 
+    Configurazione denominazione cast service:
+
+    ```shell
+    # Accesso al file "raspotify"
+    sudo nano /etc/default/raspotify
+    ```
+
+    Modificare l'opzione `DEVICE_NAME` nel file:
+
+    ```txt
+    DEVICE_NAME="MagicMirror-GBM-spotify-cast"
+    ```
+
 8. Clonare repo `AndreaGrandieri/MagicMirror-GBM` nella dir `~`:
 
     ```shell
     git clone https://www.github.com/AndreaGrandieri/MagicMirror-GBM
     ```
 
-9. Installazione LAMP (Linux, Apache, MySQL, PHP)
+9. Installazione LAMP (Linux, Apache, MySQL, PHP):
 
     ```shell
     sudo apt install apache2
@@ -118,7 +134,13 @@ Di seguito riportati i passaggi per costruire il `MagicMirror-GBM-OS` partendo d
     sudo service apache2 restart
     ```
 
-_ultimo\_step_. Riavviare il Raspberry:
+10. Eseguire installazione ricorsiva nella dir `~/MagicMirror-GBM/src` con checkout del branch `main`:
+
+    ```shell
+    npm-recursive-install
+    ```
+
+11. Riavviare il Raspberry:
 
     ```shell
     sudo shutdown -r now
