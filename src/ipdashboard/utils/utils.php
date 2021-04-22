@@ -193,3 +193,16 @@ function checkPassword($pssw, $strengthRequired)
 
     return $strength >= $strengthRequired;
 }
+
+// Esegue un comando terminal (cmd o terminal) IN BACKGROUND
+function execInBackground($cmd) {
+    // This will execute $cmd in the background (no cmd window) 
+    // without PHP waiting for it to finish, on both Windows and Unix.
+
+    if (substr(php_uname(), 0, 7) == "Windows"){
+        pclose(popen("start /B ". $cmd, "r")); 
+    }
+    else {
+        exec($cmd . " > /dev/null &");  
+    }
+}

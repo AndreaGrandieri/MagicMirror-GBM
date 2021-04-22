@@ -69,6 +69,10 @@ setSessionVariable("statusPHPRedirect", null);
             <td>Aggiorna il software del MagicMirror.</td>
         </tr>
         <tr>
+            <td><a href="doReboot.php">Riavvia MagicMirror</a></td>
+            <td>Riavvia il MagicMirror.</td>
+        </tr>
+        <tr>
             <td><a href="ripristinaDatabase.php">Ripristina Database</a></td>
             <td>Ripristina il Database ad uno stato stabile di default.</td>
         </tr>
