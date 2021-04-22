@@ -31,8 +31,11 @@ Di seguito riportati i passaggi per costruire il `MagicMirror-GBM-OS` partendo d
     ```shell
     # Accesso al file "autostart"
     sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+    ```
 
-    # Appendere (in coda) al contenuto del file:
+    Appendere (in coda) al contenuto del file:
+
+    ```txt
     @xset s off
     @xset -dpms
     ```
@@ -79,9 +82,43 @@ Di seguito riportati i passaggi per costruire il `MagicMirror-GBM-OS` partendo d
     sudo curl -sL https://dtcooper.github.io/raspotify/install.sh | sh
     ```
 
-_Qui gli altri step_
+8. Clonare repo `AndreaGrandieri/MagicMirror-GBM` nella dir `~`:
 
-ultimo_step. Riavviare il Raspberry:
+    ```shell
+    git clone https://www.github.com/AndreaGrandieri/MagicMirror-GBM
+    ```
+
+9. Installazione LAMP (Linux, Apache, MySQL, PHP)
+
+    ```shell
+    sudo apt install apache2
+    sudo apt install mysql-server
+    sudo mysql_secure_installation
+    sudo apt install php libapache2-mod-php php-mysql
+    ```
+
+    Modifica della root di serving per Apache
+
+    ```shell
+    cd /etc/apache2/sites-available
+
+    # Accesso al file "000-default.conf"
+    sudo nano 000-default.conf
+    ```
+
+    Modificare l'opzione `DocumentRoot` nel file:
+
+    ```conf
+    DocumentRoot /MagicMirror-GBM/src/ipdashboard
+    ```
+
+    Riavviare il servizio `apache2`:
+
+    ```shell
+    sudo service apache2 restart
+    ```
+
+_ultimo\_step_. Riavviare il Raspberry:
 
     ```shell
     sudo shutdown -r now
