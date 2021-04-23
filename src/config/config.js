@@ -190,17 +190,16 @@ var config = {
 		},
 		{
 			module: 'MMM-Mail',
-			position: 'bottom_left',
+			position: 'bottom_right',
 			header: 'Email',
 			config: {
 				user: 'YOUR_EMAIL_ADDRESS_HERE',
 				pass: 'YOUR_EMAIL_PASSWORD_HERE',
-				host: 'imap.gmail.com',
+				host: 'YOUR_HOST_HERE',
 				port: 993,
 				numberOfEmails: 5,
 				fade: true,
-				subjectlength: 50,
-				rejectUnauthorized: false
+				subjectlength: 50
 			}
 		},
 		{

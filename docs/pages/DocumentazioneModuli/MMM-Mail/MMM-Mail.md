@@ -54,6 +54,21 @@ Questa è la visualizzazione del modulo in situazione di funzionamento corretto:
 
 ---
 
+## Supporto Provider
+
+Il modulo è in continuo aggiornamento con lo scopo di includere il numero maggiore possibile di provider di posta elettronica
+compatibili. Di seguito un elenco riassuntivo dello stato di compatibilità ed inclusione:
+
+| Provider                              | Supporto | Necessario `Low Level Security (App)` | Necessaria `Password per app` | Necessario `rejectUnauthorized` | Dettagli                                                                                                                |
+| ------------------------------------- | -------- | ------------------------------------- | ----------------------------- | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| GMAIL                                 | NO       | ---                                   | ---                           | ---                             | ---                                                                                                                     |
+| MICROSOFT 365, OUTLOOK, HOTMAIL, LIVE | SI       | NO                                    | NO                            | NO                              | Riceve email e visualizza relativa notifica, ma la lista a schermo delle email NON viene compilata (aka: rimane vuota). |
+| YAHOO                                 | SI       | NO                                    | SI                            | NO                              | ---                                                                                                                     |
+| LIBERO                                | SI       | NO                                    | NO                            | NO                              | ---                                                                                                                     |
+| ICLOUD                                | SI       | NO                                    | SI                            | NO                              | ---                                                                                                                     |
+
+---
+
 ## Host IMAP
 
 In base al provider di posta elettronica utilizzato, le impostazioni qui di seguito elencate possono
@@ -128,3 +143,22 @@ più utilizzati:
 3. Attivare l'opzione `Consenti app meno sicure`:
 
 	![step3](../../../assets/MMM-Mail/step3.png)
+
+---
+
+## Password per App
+
+Molti provider, per tutelare l'account del cliente utilizzatore, NON permettono l'utilizzo della _vera password_
+dell'account di quest'ultimo in app di terze parti non riconosciute e / o verificate dal provider stesso.
+Ovviamente, per non causare un fenomeno di _incompatibilità di massa_, i provider mettono a disposizione il sistema
+delle: __Password per App__.
+Brevemente, questo sistema permette di generare password univoche per ogni app di terze parti con la quale si vuole
+utilizzare l'account utente del provider.
+Ovviamente le password generate sono univoche, differenti dalla _vera password_ dell'account e funzionali sono per l'app
+di terze parti target della generazione.
+Con questo semplice metodo, è possibile tutelare (in gran parte) l'account utente (in quanto stiamo tutelando la _vera password_).
+Inoltre, questo metodo è essenziale per interagire con app che non supportano fattori di autenticazione avanzati che, invece, il
+provider prevede per l'accesso ai suoi servizi.
+
+_Generalizzare la procedura per generare la password univoca per app di terze parti è complicato dato l'elevato numero di provider (di posta
+elettronica e non solo). __E' facilmente possibile trovare informazioni sul web.___
