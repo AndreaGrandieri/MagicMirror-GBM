@@ -199,7 +199,8 @@ var config = {
 				port: 993,
 				numberOfEmails: 5,
 				fade: true,
-				subjectlength: 50
+				subjectlength: 50,
+				rejectUnauthorized: false
 			}
 		},
 		{
