@@ -7,7 +7,7 @@ permalink: /:path/:basename:output_ext
 
 ## tl;dr
 
-Visualizza eventi da uno o più calendari.
+Visualizza eventi da uno o __più__ calendari.
 
 ---
 
@@ -28,9 +28,9 @@ Visualizza eventi da uno o più calendari.
         "urgency": 0,
         "calendars": [
             {
-                "url": "YOUR_CALENDAR_ICAL_URL",
+                "url": "webcal://ical.mac.com/ical/Italian32Holidays.ics",
                 "color": "#00E0E0",
-                "name": "YOUR_CALENDAR_NAME"
+                "name": "Festività italiane"
             }
         ]
     }
