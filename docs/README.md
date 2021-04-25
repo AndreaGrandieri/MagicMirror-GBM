@@ -81,4 +81,4 @@ ___Aggiungere dettagli...___
 Il Database `settings` è il punto di salvataggio e recupero di tutte le informazioni riguardanti la configurazione
 di default e personale dell'utilizzatore.
 
-- [Archivio Analisi DB settings](pages/ProgettazioneDatabase_settings)
+- [Archivio Analisi DB settings](pages/ProgettazioneDatabase_settings/ProgettazioneDatabase_settings.md)
