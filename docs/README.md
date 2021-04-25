@@ -73,3 +73,12 @@ Qui i dettagli: [Emulazione](pages/Emulazione.md)
 ## raspotify
 
 ___Aggiungere dettagli...___
+
+---
+
+## DB settings
+
+Il Database `settings` è il punto di salvataggio e recupero di tutte le informazioni riguardanti la configurazione
+di default e personale dell'utilizzatore.
+
+- [Archivio Analisi DB settings](pages/ProgettazioneDatabase_settings)
