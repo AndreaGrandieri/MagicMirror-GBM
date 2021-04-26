@@ -49,6 +49,14 @@ Il Documento dei Requisiti è il documento chiave per formalizzare i fabbisogni 
 
 ---
 
+## UML Component Diagram
+
+UML Component diagrams are used in modeling the physical aspects of object-oriented systems that are used for visualizing, specifying, and documenting component-based systems and also for constructing executable systems through forward and reverse engineering. Component diagrams are essentially class diagrams that focus on a system's components that often used to model the static implementation view of a system.
+
+- [Archivio UML Component Diagram](pages/ArchivioUMLComponentDiagram.md)
+
+---
+
 ## BMC
 
 Il BMC (Business Model Canvas) è un modello di gestione strategica utilizzato per sviluppare nuovi modelli di business e documentare quelli esistenti. Offre un grafico visivo con elementi che descrivono la proposta di valore, l'infrastruttura, i clienti e le finanze di un'azienda o di un prodotto, aiutando le aziende ad allineare le proprie attività evidenziando potenziali compromessi.
