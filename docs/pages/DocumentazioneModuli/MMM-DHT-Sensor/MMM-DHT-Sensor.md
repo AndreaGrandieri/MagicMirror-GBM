@@ -1,5 +1,6 @@
 ---
 layout: noheader
+permalink: /:path/:basename:output_ext
 ---
 
 # MMM-DHT-Sensor
@@ -16,7 +17,6 @@ e umidità locali letti dal sensore interno del MagicMirror.
 ```json
 {
     "module": "MMM-DHT-Sensor",
-    "position": "",
     "config": {
         "sensorPin": 16,
         "sensorType": 22,
@@ -84,7 +84,7 @@ di campionamento __non__ inferiore a `2000 ms`.
 ## pin GPIO
 
 __Presta Attenzione:__ i pin GPIO del Raspberry Pi possono essere riferiti
-seguendo (molti) diversi standard. La proprietà xxx del modulo utilizza
+seguendo (molti) diversi standard. La proprietà `sensorPin` del modulo utilizza
 lo standard evidenziato in giallo:
 
 ![pin_GPIO_ref](../../../assets/MMM-DHT-Sensor/pin_GPIO_ref.PNG)

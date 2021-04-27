@@ -59,6 +59,20 @@ var config = {
 			}
 		},
 		{
+			module: "MMM-PIR-Sensor",
+			position: "bottom_right",
+			config: {
+				sensorPin: 17,
+				powerSaving: true,
+				powerSavingDelay: 900,
+				powerSavingNotification: false,
+				powerSavingMessage: "Attivazione modalità sospensione...",
+				preventHDMITimeout: 5,
+				presenceIndicatorColor: "white",
+				runSimulator: false
+			}
+		},
+		{
 			module: "clock",
 			position: "top_left"
 		},
@@ -175,6 +189,20 @@ var config = {
 			}
 		},
 		{
+			module: 'MMM-Mail',
+			position: 'bottom_right',
+			header: 'Email',
+			config: {
+				user: 'YOUR_EMAIL_ADDRESS_HERE',
+				pass: 'YOUR_EMAIL_PASSWORD_HERE',
+				host: 'YOUR_HOST_HERE',
+				port: 993,
+				numberOfEmails: 5,
+				fade: true,
+				subjectlength: 50
+			}
+		},
+		{
 			module: "MMM-DHT-Sensor",
 			position: "",
 			config: {
@@ -195,6 +223,12 @@ var config = {
 				alias: ["APPLE", "GOOGLE", "TESLA"],
 				showChart: true,
 				direction: "column"
+			}
+		},
+		{
+			module: "MMM-MD",
+			position: "center",
+			config: {
 			}
 		}
 	]

@@ -1,3 +1,8 @@
+---
+layout: noheader
+permalink: /:path/:basename:output_ext
+---
+
 # MMM-AVStock
 
 ## tl;dr
