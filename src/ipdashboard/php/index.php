@@ -61,6 +61,10 @@ setSessionVariable("statusPHPRedirect", null);
             <td>Configura la connettivà WIFI (alla rete) per il MagicMirror.</td>
         </tr>
         <tr>
+            <td><a href="AudioConfigurator.php">Configuratore Audio</a></td>
+            <td>Configura l'output audio per il MagicMirror.</td>
+        </tr>
+        <tr>
             <td><a href="globalsSelector.php">Globals Selector</a></td>
             <td>Modifica le globali in attività per il MagicMirror.</td>
         </tr>
