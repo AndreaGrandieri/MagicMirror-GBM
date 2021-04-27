@@ -27,9 +27,16 @@ Ecco riportate le principali caratteristiche e requisiti essenziali:
 
 ## Costruzione
 
-Di seguito riportati i passaggi per costruire il `MagicMirror-GBM-OS` partendo da una distribuzione `Raspberry Pi OS Full (32-bit)` grezza:
+Di seguito riportati i passaggi per costruire il `MagicMirror-GBM-OS` partendo da una distribuzione `Raspberry Pi OS Full (32-bit)` grezza.
+Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-GBM-Emulation-VM`. Esse sono indicate con: ___(+VM)___:
 
-1. Disattivare spegnimento automatico schermo Raspberry:
+1. __SOLO__ ___(+VM)___: Installare tools vmware:
+
+    ```shell
+    sudo apt install open-vm-tools-desktop open-vm-tools
+    ```
+
+2. Disattivare spegnimento automatico schermo Raspberry:
 
     ```shell
     # Accesso al file "autostart"
@@ -43,31 +50,31 @@ Di seguito riportati i passaggi per costruire il `MagicMirror-GBM-OS` partendo d
     @xset -dpms
     ```
 
-2. Installare `nodejs`:
+3. Installare `nodejs` ___(+VM)___:
 
     ```shell
     sudo apt install nodejs
     ```
 
-3. Installare `npm`:
+4. Installare `npm` ___(+VM)___:
 
     ```shell
     sudo apt install npm
     ```
 
-4. Installare `npm-recursive-install`:
+5. Installare `npm-recursive-install` ___(+VM)___:
 
     ```shell
     sudo npm i -g recursive-install
     ```
 
-5. Installare `electron` globalmente:
+6. Installare `electron` globalmente ___(+VM)___:
 
     ```shell
     sudo npm install -g electron --unsafe-perm=true --allow-root
     ```
 
-6. Installare `bcm2835`:
+7. Installare `bcm2835`:
 
     ```shell
     wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.52.tar.gz
@@ -79,7 +86,7 @@ Di seguito riportati i passaggi per costruire il `MagicMirror-GBM-OS` partendo d
     sudo make install
     ```
 
-7. Installare `raspotify`:
+8. Installare `raspotify`:
 
     ```shell
     sudo curl -sL https://dtcooper.github.io/raspotify/install.sh | sh
@@ -98,13 +105,19 @@ Di seguito riportati i passaggi per costruire il `MagicMirror-GBM-OS` partendo d
     DEVICE_NAME="MagicMirror-GBM-spotify-cast"
     ```
 
-8. Clonare repo `AndreaGrandieri/MagicMirror-GBM` nella dir `~`:
+9. __SOLO__ ___(+VM)___: Installare `git`:
+
+    ```shell
+    sudo apt install git
+    ```
+
+10. Clonare repo `AndreaGrandieri/MagicMirror-GBM` nella dir `~` ___(+VM)___:
 
     ```shell
     git clone https://www.github.com/AndreaGrandieri/MagicMirror-GBM
     ```
 
-9. Installazione LAMP (Linux, Apache, MySQL, PHP):
+11. Installazione LAMP (Linux, Apache, MySQL, PHP) ___(+VM)___:
 
     ```shell
     sudo apt install apache2
@@ -134,14 +147,14 @@ Di seguito riportati i passaggi per costruire il `MagicMirror-GBM-OS` partendo d
     sudo service apache2 restart
     ```
 
-10. Eseguire installazione ricorsiva nella dir `~/MagicMirror-GBM/src` con checkout del branch `main`:
-
-    ```shell
-    npm-recursive-install
-    ```
-
-11. Riavviare il Raspberry:
+12. Riavviare il Raspberry ___(+VM)___:
 
     ```shell
     sudo shutdown -r now
+    ```
+
+13. Eseguire installazione ricorsiva nella dir `~/MagicMirror-GBM/src` con checkout del branch `main` ___(+VM)___:
+
+    ```shell
+    npm-recursive-install
     ```

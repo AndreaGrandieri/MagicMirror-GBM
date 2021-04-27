@@ -13,7 +13,7 @@ virtuale), presentante le seguenti configurazioni (consigliate):
 - Disco Rigido: `minimo 32GB`
 - RAM: `minimo 4GB`
 
-La macchina virtuale, una volta installata e operativa, necessita di essere inizializzata sulla base delle istruzioni riportate in [oscreate](blablabla).
+La macchina virtuale, una volta installata e operativa, necessita di essere inizializzata sulla base delle istruzioni riportate in [MagicMirror-GBM-OS](MagicMirror-GBM-OS.md).
 
 ## Limitazioni
 
