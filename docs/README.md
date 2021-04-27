@@ -65,6 +65,15 @@ I Diagrammi dei Componenti sono essenzialmente Diagrammi delle Classi, che però
 
 ---
 
+## Use Case Diagrams
+
+Un Diagramma dei Casi d'Uso (Generico e Specifico) viene utilizzato per riasummere chi (Attori) e come (Sequenze) effettua interazioni con il sistema / i sistemi in questione.
+
+- [Archivio Generic Use Case Diagram](pages/UseCaseDiagrams/ArchivioGenericUseCaseDiagram.md)
+- [Archivio Specific Use Case Diagram](pages/UseCaseDiagrams/ArchivioSpecificUseCaseDiagram.md)
+
+---
+
 ## BMC
 
 Il BMC (Business Model Canvas) è un modello di gestione strategica utilizzato per sviluppare nuovi modelli di business e documentare quelli esistenti. Offre un grafico visivo con elementi che descrivono la proposta di valore, l'infrastruttura, i clienti e le finanze di un'azienda o di un prodotto, aiutando le aziende ad allineare le proprie attività evidenziando potenziali compromessi.
