@@ -5,6 +5,8 @@ permalink: /:path/:basename:output_ext
 
 # Emulazione
 
+Download: _QUI BOTTONE / LINK DOWNLOAD BINARIO_
+
 A fini di testing individuale e decentralizzato (la centralizzazione richiede inderogabilmente l'accesso all'hardware
 del MagicMirror (vedi _(ultima versione)_ [Documento dei Requisiti](ArchivioDocumentiDeiRequisiti.md))), può essere utilizzata una __Virtual Machine__ (macchina
 virtuale), presentante le seguenti configurazioni (consigliate):
