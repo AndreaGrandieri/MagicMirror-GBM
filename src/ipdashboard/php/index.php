@@ -13,6 +13,15 @@ startNewSessionCheck();
 // Ottengo "statusPHP"
 $statusPHP = readSessionVariable("statusPHP");
 
+// Controllo se esiste DB settings (file: "settings.sqlite").
+// Se non esiste, lo recupero attraverso l'uso di "doRipristinaDatabaseBackdoor.php"
+if (!file_exists("../settings.sqlite")) {
+    setSessionVariable("statusPHP", "Inizializzazione Database...");
+    setSessionVariable("statusPHPRedirect", null);
+    header("location: redirect.php?target=doRipristinaDatabaseBackdoor.php&ms=300");
+    die;
+}
+
 // Ottiene nome del branch checked out (git)
 $output = array();
 exec("git symbolic-ref HEAD --short", $output);
