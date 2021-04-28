@@ -8,7 +8,7 @@ startNewSessionCheck();
 $statusPHP = readSessionVariable("statusPHP");
 
 // Riavvio (exec in background)
-execInBackground("sudo shutdown -r now");
+execInBackground("sudo reboot");
 
 setSessionVariable("statusPHP", "Comando di riavvio inviato. Il MagicMirror dovrebbe trovarsi in stato di riavvio e l'interfaccia
 non sarà disponibile fino al termine del processo.");
