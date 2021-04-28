@@ -49,7 +49,7 @@ setSessionVariable("statusPHPRedirect", null);
             $countrycodeArray = array();
             while ($csvResult = fgetcsv($csvFile)) {
                 echo "<option value='$csvResult[1]'>$csvResult[0] ($csvResult[1])</option>";
-                array_push($countrycodeArray, $csvResult);
+                array_push($countrycodeArray, $csvResult[1]);
             }
             fclose($csvFile);
 
