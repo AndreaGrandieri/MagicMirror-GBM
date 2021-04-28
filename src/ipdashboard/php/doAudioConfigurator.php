@@ -19,7 +19,7 @@ if (!test_input_valid_post_isset("dispositivioutputaudio")) {
 }
 
 // analogoverride
-if (!test_input_valid_post_isset("analogoverride")) {
+if (!test_input_valid_post("analogoverride")) {
     // verified
     $analogoverride = "alsa_output.platform-bcm2835_audio.analog-stereo";
 } else {
@@ -27,7 +27,7 @@ if (!test_input_valid_post_isset("analogoverride")) {
 }
 
 // digitaloverride
-if (!test_input_valid_post_isset("digitaloverride")) {
+if (!test_input_valid_post("digitaloverride")) {
     // verified
     $digitaloverride = "alsa_output.platform-bcm2835_audio.digital-stereo";
 } else {
@@ -35,7 +35,7 @@ if (!test_input_valid_post_isset("digitaloverride")) {
 }
 
 // usboverride
-if (!test_input_valid_post_isset("usboverride")) {
+if (!test_input_valid_post("usboverride")) {
     // unverified
     $usboverride = "2";
 } else {
@@ -88,8 +88,7 @@ switch ($dispositivioutputaudio) {
 - static: diverso testo immutabile
 - injections: diverso testo dinamico nel testo immutabile
 */
-$txt = "
-# /etc/default/raspotify -- Arguments/configuration for librespot
+$txt = "# /etc/default/raspotify -- Arguments/configuration for librespot
 
 # Device name on Spotify Connect
 DEVICE_NAME=\"MagicMirror-GBM-spotify-cast\"
@@ -183,8 +182,7 @@ switch ($dispositivioutputaudio) {
 - static: diverso testo immutabile
 - injections: diverso testo dinamico nel testo immutabile
 */
-$txt = "
-#!/usr/bin/pulseaudio -nF
+$txt = "#!/usr/bin/pulseaudio -nF
 #
 # This file is part of PulseAudio.
 #
