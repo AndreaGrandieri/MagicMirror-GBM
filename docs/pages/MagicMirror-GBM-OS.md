@@ -15,7 +15,7 @@ Download: _QUI BOTTONE / LINK DOWNLOAD BINARIO_
 
 Ecco riportate le principali caratteristiche e requisiti essenziali:
 
-- Distribuzione: `Raspberry Pi OS Full (32-bit)`
+- Distribuzione: `Raspberry Pi OS (32-bit)`
 - Raspberry Pi: `3 o superiore`
 - Storage Memory: `minimo 8GB`
 - RAM: `minimo 1GB`
@@ -123,6 +123,20 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     sudo apt install apache2
     sudo apt install mysql-server
     sudo mysql_secure_installation
+    ```
+
+    mysql_secure_installation:
+
+    ```shell
+    VALIDATE PASSWORD COMPONENT: NO
+    Password: gbm
+    Remove anonymous users: NO
+    Disallow root login remotely: NO
+    Remove test database and access to it: YES
+    Reload privilegies table now: YES
+    ```
+
+    ```shell
     sudo apt install php libapache2-mod-php php-mysql
     ```
 
@@ -147,13 +161,39 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     sudo service apache2 restart
     ```
 
-12. Riavviare il Raspberry ___(+VM)___:
+12. Imposto dispositivo di default per output audio (OS + Raspotify)
+    [https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/76#issuecomment-827711074](https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/76#issuecomment-827711074)
+    [https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/228#issuecomment-828311332](https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/228#issuecomment-828311332)
+
+    ```shell
+    # Accesso al file "raspotify" (riferimenti utili: https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/76#issuecomment-827711074)
+    sudo nano /etc/default/raspotify
+    ```
+
+    Modifica l'opzione `OPTIONS` nel file:
+
+    ```txt
+    OPTIONS="--device hw:1"
+    ```
+
+    ```shell
+    # Accesso al file "default.pa" (riferimenti utili: https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/228#issuecomment-828311332)
+    sudo nano /etc/pulse/default.pa
+    ```
+
+    Modifica l'opzione `set-default-sink` nel file:
+
+    ```pa
+    set-default-sink alsa_output.platform-bcm2835_audio.analog-stereo
+    ```
+
+13. Riavviare il Raspberry ___(+VM)___:
 
     ```shell
     sudo shutdown -r now
     ```
 
-13. Eseguire installazione ricorsiva nella dir `~/MagicMirror-GBM/src` con checkout del branch `main` ___(+VM)___:
+14. Eseguire installazione ricorsiva nella dir `~/MagicMirror-GBM/src` con checkout del branch `main` ___(+VM)___:
 
     ```shell
     npm-recursive-install
