@@ -11,14 +11,14 @@ if (!test_input_valid_post_isset("submit")) {
     die;
 }
 
-if (!test_input_valid_post_isset("SSID")) {
+if (!test_input_valid_post("SSID")) {
     setSessionVariable("statusPHP", "Rilevati valori non validi. Riprova.");
     setSessionVariable("statusPHPRedirect", null);
     header("location: redirect.php?target=index.php&ms=300");
     die;
 }
 
-if (!test_input_valid_post_isset("pssw")) {
+if (!test_input_valid_post("pssw")) {
     setSessionVariable("statusPHP", "Rilevati valori non validi. Riprova.");
     setSessionVariable("statusPHPRedirect", null);
     header("location: redirect.php?target=index.php&ms=300");
@@ -66,8 +66,7 @@ compilato con i dati in input (dall'utente)
 - parametri di rete (oggetto "network"): obbligatorio dinamico
 compilato con i dati in input (dall'utente)
 */
-$txt = "
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+$txt = "ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
 update_config=1
 country=$countrycode
 network={
