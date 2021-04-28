@@ -39,6 +39,20 @@ setSessionVariable("statusPHPRedirect", null);
             <option value="USB">USB</option>
         </select>
 
+        <br><br>
+
+        Override <b>LASCIARE VUOTO IN CASO DI INCERTEZZE</b>.<br>
+        <i>pactl</i> output:
+        <?php
+        $sink = array();
+        exec("pactl list sinks short", $sink);
+        echo implode(", ", $sink); 
+        ?>
+        <br><br>
+        analogoverride: <input type="text" id="analogoverride" name="analogoverride"><br>
+        digitaloverride: <input type="text" id="digitaloverride" name="digitaloverride"><br>
+        usboverride: <input type="text" id="usboverride" name="usboverride"><br><br>
+
         <input type="submit" id="submit" name="submit" value="SALVA">
     </form>
 

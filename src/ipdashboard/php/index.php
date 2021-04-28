@@ -74,7 +74,23 @@ setSessionVariable("statusPHPRedirect", null);
         </tr>
         <tr>
             <td><a href="doReboot.php">Riavvia MagicMirror</a></td>
-            <td>Riavvia il MagicMirror.</td>
+            <td>
+            Riavvia il MagicMirror.<br>
+            Operazione necessaria dopo:
+            <ul>
+                <li>
+                Compilazione (necessaria dopo):
+                <ul>
+                    <li>Modifica moduli</li>
+                    <li>Modifica globali</li>
+                    <li>Ripristino Database</li>
+                </ul>
+                </li>
+                <li>Configurazione WIFI</li>
+                <li>Configurazione Audio</li>
+                <li>aggiornamento Software</li>
+            </ul>
+            </td>
         </tr>
         <tr>
             <td><a href="ripristinaDatabase.php">Ripristina Database</a></td>
