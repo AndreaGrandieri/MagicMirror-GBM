@@ -12,6 +12,10 @@ virtuale), presentante le seguenti configurazioni (consigliate):
 - OS: `Ubuntu 20.04.2 LTS (o superiore)`
 - Disco Rigido: `minimo 32GB`
 - RAM: `minimo 4GB`
+- Nome Personale: `MagicMirror-GBM-Emulation-VM`
+- Nome PC: `magicmirrogbmemulationvm`
+- Note utente: `magic-mirror-gbm-emulation-vm`
+- Password: `gbm`
 
 La macchina virtuale, una volta installata e operativa, necessita di essere inizializzata sulla base delle istruzioni riportate in [MagicMirror-GBM-OS](MagicMirror-GBM-OS.md).
 
