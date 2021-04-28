@@ -127,7 +127,7 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     sudo apt install php libapache2-mod-php php-mysql
     ```
 
-    Modifica della root di serving per Apache
+    Modifica della root di serving per Apache e rilascio consensi
 
     ```shell
     cd /etc/apache2/sites-available
@@ -140,6 +140,25 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
 
     ```conf
     DocumentRoot /home/pi/MagicMirror-GBM/src/ipdashboard
+    ```
+
+    Rilascio consensi:
+
+    ```shell
+    cd /etc/apache2
+
+    # Accesso al file "apache2.conf"
+    sudo nano apache2.conf
+    ```
+
+    Modificare l'opzione `<Directory /></Directory>` nel file (dovrebbe trovarsi alla riga ___153___):
+
+    ```conf
+    <Directory />
+        Options Indexes FollowSymLinks Includes ExecCGI
+        AllowOverride All
+        Require all granted
+    </Directory>
     ```
 
     Installazione di sqlite:
