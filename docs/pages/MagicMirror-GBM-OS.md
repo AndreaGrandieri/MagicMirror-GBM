@@ -92,19 +92,6 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     sudo curl -sL https://dtcooper.github.io/raspotify/install.sh | sh
     ```
 
-    Configurazione denominazione cast service:
-
-    ```shell
-    # Accesso al file "raspotify"
-    sudo nano /etc/default/raspotify
-    ```
-
-    Modificare l'opzione `DEVICE_NAME` nel file:
-
-    ```txt
-    DEVICE_NAME="MagicMirror-GBM-spotify-cast"
-    ```
-
 9. __SOLO__ ___(+VM)___: Installare `git`:
 
     ```shell
@@ -121,19 +108,19 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
 
     ```shell
     sudo apt install apache2
-    sudo apt install mysql-server
+    sudo apt install mariadb-server
     sudo mysql_secure_installation
     ```
 
     mysql_secure_installation:
 
-    ```shell
-    VALIDATE PASSWORD COMPONENT: NO
-    Password: gbm
-    Remove anonymous users: NO
-    Disallow root login remotely: NO
-    Remove test database and access to it: YES
-    Reload privilegies table now: YES
+    ```txt
+    Enter current password for root (enter for none): gbm
+    Change the root password?: n
+    Remove anonymous users: n
+    Disallow root login remotely: n
+    Remove test database and access to it: y
+    Reload privilegies table now: y
     ```
 
     ```shell
@@ -152,7 +139,13 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     Modificare l'opzione `DocumentRoot` nel file:
 
     ```conf
-    DocumentRoot /MagicMirror-GBM/src/ipdashboard
+    DocumentRoot /home/pi/MagicMirror-GBM/src/ipdashboard
+    ```
+
+    Installazione di sqlite:
+
+    ```shell
+    sudo apt-get install php-sqlite3
     ```
 
     Riavviare il servizio `apache2`:
@@ -161,13 +154,41 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     sudo service apache2 restart
     ```
 
-12. Imposto dispositivo di default per output audio (OS + Raspotify)
+12. Modifica dei `sudoers`, in modo tale da permettere l'interfaccia IP l'esecuzione di alcuni comandi che richiedono privilegi di admin:
+
+    ```shell
+    # Accesso al file: "sudoers"
+    sudo visudo
+    ```
+
+    Appendere (in coda) al contenuto del file:
+
+    ```txt
+    www-data ALL = NOPASSWD: /sbin/reboot, /sbin/halt
+    ```
+
+13. Fornisco permessi di scrittura file protetti all'interfaccia IP:
+
+    ```shell
+    sudo chown -R www-data:www-data /etc/default/raspotify
+    sudo chmod -R g+w /etc/default/raspotify
+    sudo chown -R www-data:www-data /etc/pulse/default.pa
+    sudo chmod -R g+w /etc/pulse/default.pa
+    ```
+
+14. Imposto dispositivo di default per output audio (OS + Raspotify) + configurazione denominazione cast service per Raspotify:
     [https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/76#issuecomment-827711074](https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/76#issuecomment-827711074)
     [https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/228#issuecomment-828311332](https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/228#issuecomment-828311332)
 
     ```shell
     # Accesso al file "raspotify" (riferimenti utili: https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/76#issuecomment-827711074)
     sudo nano /etc/default/raspotify
+    ```
+
+    Modificare l'opzione `DEVICE_NAME` nel file:
+
+    ```txt
+    DEVICE_NAME="MagicMirror-GBM-spotify-cast"
     ```
 
     Modifica l'opzione `OPTIONS` nel file:
@@ -187,13 +208,13 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     set-default-sink alsa_output.platform-bcm2835_audio.analog-stereo
     ```
 
-13. Riavviare il Raspberry ___(+VM)___:
+15. Riavviare il Raspberry ___(+VM)___:
 
     ```shell
     sudo shutdown -r now
     ```
 
-14. Eseguire installazione ricorsiva nella dir `~/MagicMirror-GBM/src` con checkout del branch `main` ___(+VM)___:
+16. Eseguire installazione ricorsiva nella dir `~/MagicMirror-GBM/src` con checkout del branch `main` ___(+VM)___:
 
     ```shell
     npm-recursive-install
