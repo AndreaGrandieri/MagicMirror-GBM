@@ -3,6 +3,8 @@
 @author Andrea Grandieri g.andreus02@gmail.com
 */
 
+// $target è DAL PUNTO DI VISTA DI "redirect.php"
+
 require "../utils/utils.php";
 
 // Gestione sessione
@@ -10,7 +12,7 @@ startNewSessionCheck();
 
 if (
     test_input_valid_get("target") &&
-    test_input_valid_get("ms")
+    test_input_valid_get_isset("ms")
 ) {
     // Normalizzo valori    
     $target = test_input($_GET["target"]);
@@ -18,7 +20,6 @@ if (
     $msgOnlyHere = readSessionVariable("statusPHPRedirect");
     $ms = test_input($_GET["ms"]);
 } else {
-
     $target = "cul-de-sac.php";
     $msg = null;
     $msgOnlyHere = "Safe redirect";
