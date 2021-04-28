@@ -191,8 +191,16 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     ```shell
     sudo chown -R www-data:www-data /etc/default/raspotify
     sudo chmod -R g+w /etc/default/raspotify
+
     sudo chown -R www-data:www-data /etc/pulse/default.pa
     sudo chmod -R g+w /etc/pulse/default.pa
+
+    sudo chown -R www-data:www-data /etc/wpa_supplicant/wpa_supplicant.conf
+    sudo chmod -R g+w /etc/wpa_supplicant/wpa_supplicant.conf
+
+    sudo chown -R www-data:www-data /home/pi/MagicMirror-GBM/src/ipdashboard/
+    
+    sudo chown -R www-data:www-data /home/pi/MagicMirror-GBM/src/config/config.js
     ```
 
 14. Imposto dispositivo di default per output audio (OS + Raspotify) + configurazione denominazione cast service per Raspotify:
