@@ -15,4 +15,4 @@ Tutto quello che ti serve è: Spotify, su smartphone o computer.
 
 In ascolto su `MagicMirror-GBM`:
 
-![playing_on_MagicMirror-GBM.jpg](../assets/playing_on_MagicMirror-GBM.jpg)
+![playing_on_MagicMirror-GBM.jpg](../assets/raspotify/playing_on_MagicMirror-GBM.jpg)

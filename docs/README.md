@@ -99,3 +99,9 @@ Il Database `settings` è il punto di salvataggio e recupero di tutte le informa
 di default e personale dell'utilizzatore.
 
 - [Archivio Analisi DB settings](pages/ProgettazioneDatabase_settings/ProgettazioneDatabase_settings.md)
+
+---
+
+## Schema di Rete
+
+Qui i dettagli: [schemaDiRete](pages/schemaDiRete.md)
