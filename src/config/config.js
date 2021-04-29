@@ -204,7 +204,6 @@ var config = {
 		},
 		{
 			module: "MMM-DHT-Sensor",
-			position: "",
 			config: {
 				sensorPin: 16,
 				sensorType: 22,
