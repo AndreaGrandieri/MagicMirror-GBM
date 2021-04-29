@@ -104,4 +104,4 @@ di default e personale dell'utilizzatore.
 
 ## Schema di Rete
 
-Qui i dettagli: [schemaDiRete](pages/schemaDiRete.md)
+Qui i dettagli: [Schema di Rete](pages/schemaDiRete.md)
