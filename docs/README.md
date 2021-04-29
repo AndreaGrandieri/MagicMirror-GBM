@@ -12,14 +12,6 @@
 
 ---
 
-## Risorse Esterne
-
-Di seguito riportati i link alle risorse esterne:
-
-- [OneDrive Pubblico](https://1drv.ms/u/s!AmstWNn8EkEuhJJGwNbAYBMuLQ6aEQ?e=HI0WOz)
-
----
-
 ## MagicMirror-GBM-OS
 
 Il MagicMirror-GBM è reso funzionale dal suo sistema operativo: `MagicMirror-GBM-OS`.
@@ -97,7 +89,7 @@ Qui i dettagli: [Emulazione](pages/Emulazione.md)
 
 ## raspotify
 
-___Aggiungere dettagli...___
+Qui i dettagli: [raspotify](pages/raspotify.md)
 
 ---
 
