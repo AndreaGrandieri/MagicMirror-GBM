@@ -17,7 +17,9 @@ Ecco riportate le principali caratteristiche e requisiti essenziali:
 
 - Distribuzione: `Raspberry Pi OS (32-bit)`
 - Raspberry Pi: `3 o superiore`
-- Storage Memory: `minimo 8GB`
+- __nodejs: `v10.24.0`__
+- __npm: `v5.8.0`__
+- Storage Memory: `minimo (rischioso) 8GB; minimo consigliato: 16GB`
 - RAM: `minimo 1GB`
 - Username: `MagicMirror-GBM-User`
 - Password: `magicmirrorgbm`
@@ -39,6 +41,8 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
 2. Disattivare spegnimento automatico schermo Raspberry:
 
     ```shell
+    cd \
+
     # Accesso al file "autostart"
     sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
     ```
@@ -68,13 +72,7 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     sudo npm i -g recursive-install
     ```
 
-6. Installare `electron` globalmente ___(+VM)___:
-
-    ```shell
-    sudo npm install -g electron --unsafe-perm=true --allow-root
-    ```
-
-7. Installare `bcm2835`:
+6. Installare `bcm2835`:
 
     ```shell
     wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.52.tar.gz
@@ -84,24 +82,34 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     make
     sudo make check
     sudo make install
+    cd \
     ```
 
-8. Installare `raspotify`:
+7. Installare `raspotify`:
 
     ```shell
     sudo curl -sL https://dtcooper.github.io/raspotify/install.sh | sh
     ```
 
-9. __SOLO__ ___(+VM)___: Installare `git`:
+8. __SOLO__ ___(+VM)___: Installare `git`:
 
     ```shell
     sudo apt install git
     ```
 
-10. Clonare repo `AndreaGrandieri/MagicMirror-GBM` nella dir `~` ___(+VM)___:
+9. Clonare repo `AndreaGrandieri/MagicMirror-GBM` nella dir `~` ___(+VM)___:
 
     ```shell
     git clone https://www.github.com/AndreaGrandieri/MagicMirror-GBM
+    ```
+
+10. Installare `electron` ___(+VM)___:
+
+    ```shell
+    cd MagicMirror-GBM/src/
+
+    npm install electron --save-dev
+    cd \
     ```
 
 11. Installazione LAMP (Linux, Apache, MySQL, PHP) ___(+VM)___:
@@ -145,6 +153,7 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     Rilascio consensi:
 
     ```shell
+    cd \
     cd /etc/apache2
 
     # Accesso al file "apache2.conf"
@@ -164,6 +173,7 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     Installazione di sqlite:
 
     ```shell
+    cd \
     sudo apt-get install php-sqlite3
     ```
 
@@ -244,5 +254,7 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
 16. Eseguire installazione ricorsiva nella dir `~/MagicMirror-GBM/src` con checkout del branch `main` ___(+VM)___:
 
     ```shell
+    cd MagicMirror-GBM/src/    
+
     npm-recursive-install
     ```
