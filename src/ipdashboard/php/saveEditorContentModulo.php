@@ -4,68 +4,46 @@ require "../utils/utils.php";
 // Gestione sessione
 startNewSessionCheck();
 
-// Connette al DB locale
-try {
-    $db = new SQLite3("../settings.sqlite", SQLITE3_OPEN_READWRITE);
-} catch (Exception $e) {
-    setSessionVariable("statusPHP", "Unable to query database.");
+if (!test_input_valid_post("code-md")) {
+    var_dump($_POST["code-md"]);
+    die;
+
+
+
+    setSessionVariable("statusPHP", "Rilevati valori non validi. Riprova.");
     setSessionVariable("statusPHPRedirect", null);
     header("location: redirect.php?target=index.php&ms=300");
     die;
 }
 
-if (!test_input_valid_post("code-json-header")) {
-    setSessionVariable("statusPHP", "Rilevati valori non validi. Riprova.");
+$codeMD = ($_POST["code-md"]);
+
+// Salva il contenuto di $codeMD nel file "../../modules/MMM-MD/public/content.md"
+$file = fopen("../../modules/MMM-MD/public/content.md", "w");
+
+// Controllo stato di apertura file (in scrittura)
+if (!$file) {
+    setSessionVariable("statusPHP", "Impossibile comunicare con lo stream IO. Riprova.");
     setSessionVariable("statusPHPRedirect", null);
-    header("location: redirect.php?target=moduliSelector.php&ms=300");
+    header("location: redirect.php?target=index.php&ms=300");
     die;
 }
 
-if (!test_input_valid_post("code-json")) {
-    setSessionVariable("statusPHP", "Rilevati valori non validi. Riprova.");
+// Scrivo
+if (!fwrite($file, $codeMD)) {
+    setSessionVariable("statusPHP", "Impossibile salvare il contenuto dell'Embedded Editor nel file target. Riprova.");
     setSessionVariable("statusPHPRedirect", null);
-    header("location: redirect.php?target=moduliSelector.php&ms=300");
+    header("location: redirect.php?target=index.php&ms=300");
     die;
 }
 
-if (!test_input_valid_post("nomeModulo")) {
-    setSessionVariable("statusPHP", "Rilevati valori non validi. Riprova.");
-    setSessionVariable("statusPHPRedirect", null);
-    header("location: redirect.php?target=moduliSelector.php&ms=300");
-    die;
-}
+// Chiudo risorsa (file)
+fclose($file);
 
-$codeJson = ($_POST["code-json"]);
-$codeJsonHeader = ($_POST["code-json-header"]);
-$nomeModulo = ($_POST["nomeModulo"]);
-
-if (gettype(json_decode($codeJson, true)) !== "array") {
-    setSessionVariable("statusPHP", "Rilevato frammento JSON non valido. Rilevato RFC 7159, qui non applicabile. Riprova.");
-    setSessionVariable("statusPHPRedirect", null);
-    header("location: redirect.php?target=moduloSettings.php?nomeModulo=$nomeModulo&ms=300");
-    die;
-}
-
-// $jsonContent contiene il payload JSON per il frammento JSON interessato con gli aggiornamenti
-// prelevati dall'editor (codemirror)
-$jsonContent = json_encode(json_decode($codeJsonHeader, true) + json_decode($codeJson, true), JSON_PRETTY_PRINT);
-
-// Salva il contenuto di $jsonContent nel file database
-$results = $db->exec("UPDATE modules
-            SET JsonFragment = '$jsonContent'
-            WHERE NomeModulo = '$nomeModulo'");
-
-if ($results) {
-    setSessionVariable("statusPHP", "Salvataggio effettuato con successo.");
-    setSessionVariable("statusPHPRedirect", null);
-    header("location: redirect.php?target=moduloSettings.php?nomeModulo=$nomeModulo&ms=300");
-    die;
-} else {
-    setSessionVariable("statusPHP", "Error while updating the database.");
-    setSessionVariable("statusPHPRedirect", null);
-    header("location: redirect.php?target=moduloSettings.php?nomeModulo=$nomeModulo&ms=300");
-    die;
-}
+setSessionVariable("statusPHP", "Salvataggio del contenuto dell'Embedded Editor nel file target effettuato con successo.");
+setSessionVariable("statusPHPRedirect", null);
+header("location: redirect.php?target=MMM-MD-ContentEditor.php&ms=300");
+die;
 
 setSessionVariable("statusPHP", null);
 setSessionVariable("statusPHPRedirect", null);
