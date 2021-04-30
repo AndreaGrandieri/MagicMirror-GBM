@@ -244,6 +244,9 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     sudo chown -R www-data:www-data /home/pi/MagicMirror-GBM/src/ipdashboard/
     
     sudo chown -R www-data:www-data /home/pi/MagicMirror-GBM/src/config/config.js
+
+    sudo chown -R www-data:www-data /home/pi/MagicMirror-GBM/src/modules/MMM-MD/public/content.md
+    sudo chmod -R g+w /home/pi/MagicMirror-GBM/src/modules/MMM-MD/public/content.md
     ```
 
 15. Imposto dispositivo di default per output audio (OS + Raspotify) + configurazione denominazione cast service per Raspotify:
