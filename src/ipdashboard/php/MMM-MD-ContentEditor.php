@@ -4,21 +4,18 @@ require "../utils/utils.php";
 // Gestione sessione
 startNewSessionCheck();
 
-$file = fopen("../../modules/MMM-MD/public/content.md", "r");
-
-// Controllo stato di apertura file (in lettura)
-if (!$file) {
-    setSessionVariable("statusPHP", "Impossibile comunicare con lo stream IO. Riprova.");
+// Connette al DB locale
+try {
+    $db = new SQLite3("../settings.sqlite", SQLITE3_OPEN_READWRITE);
+} catch (Exception $e) {
+    setSessionVariable("statusPHP", "Unable to query database.");
     setSessionVariable("statusPHPRedirect", null);
     header("location: redirect.php?target=index.php&ms=300");
     die;
 }
 
-// Lettura file
+$file = fopen("../../modules/MMM-MD/public/content.md", "r");
 $filesUperContent = fread($file, filesize("../../modules/MMM-MD/public/content.md"));
-
-// Chiudo risorsa (file)
-fclose($file);
 
 // Ottengo "statusPHP"
 $statusPHP = readSessionVariable("statusPHP");
@@ -38,7 +35,7 @@ setSessionVariable("statusPHPRedirect", null);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MMM-MD-Content Editor</title>
+    <title>Moduli Settings</title>
 </head>
 
 <link rel="stylesheet" href="../codemirror-5.59.4/lib/codemirror.css">
