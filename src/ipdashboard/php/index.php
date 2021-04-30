@@ -108,6 +108,7 @@ setSessionVariable("statusPHPRedirect", null);
                     <li>Configurazione WIFI</li>
                     <li>Configurazione Audio</li>
                     <li>aggiornamento Software</li>
+                    <li>MMM-MD Content Editor</li>
                 </ul>
             </td>
         </tr>
