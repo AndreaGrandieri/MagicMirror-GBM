@@ -65,6 +65,14 @@ Da qui puoi:
 
 ---
 
+> globalSettings.php
+
+Embedded editor JSON. Qui puoi modificare il frammento JSON di configurazione della globale selezionata. __E' sconsigliata la modifica di queste informazioni se non strettamente necessario.__
+
+![globalSettings.php.PNG](../assets/Overview-GUI/ipdashboard-GUI/globalSettings.php.PNG)
+
+---
+
 > aggiornamentoSoftware.php
 
 Da qui puoi aggiornare il software del MagicMirror-GBM.
