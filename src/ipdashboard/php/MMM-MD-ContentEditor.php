@@ -14,6 +14,9 @@ try {
     die;
 }
 
+$file = fopen("../../modules/MMM-MD/public/content.md", "r");
+$filesUperContent = fread($file, filesize("../../modules/MMM-MD/public/content.md"));
+
 // Ottengo "statusPHP"
 $statusPHP = readSessionVariable("statusPHP");
 
@@ -59,12 +62,14 @@ setSessionVariable("statusPHPRedirect", null);
         <h4>MD</h4>
         <p>
         <div class="CODE">
-            <textarea id="code-md" name="code-md"><?php echo "$jsonContentModulo\n" ?></textarea>
+            <textarea id="code-md" name="code-md"><?php echo "$filesUperContent\n" ?></textarea>
         </div>
         </p>
 
         <!-- Bottone per salvataggio modifiche -->
-        <div id="submitButton"></div>
+        <div id="submitButton">
+            <input type='submit' id='save' name='save' value='SALVA'>
+        </div>
     </form>
 
     <!-- Inizializzatore -->
