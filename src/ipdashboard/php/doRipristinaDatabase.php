@@ -12,7 +12,7 @@ if (!test_input_valid_post_isset("submit")) {
 }
 
 // hardcoded URL (garantito immutabile)
-$hardURL = "https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSmhhVjRfaEhTTzgyamwzQVE_ZT1oNU16RlU/root/content";
+$hardURL = "https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSnNodEJsOGg2U0xzZDQxQlE_ZT12ZHVGaGs/root/content";
 $fileName = "../settings.sqlite";
 
 if (file_put_contents($fileName, file_get_contents($hardURL))) {
