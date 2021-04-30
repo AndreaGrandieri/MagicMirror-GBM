@@ -64,6 +64,10 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
 
         ![6.png](../assets/MagicMirror-OS/default-rasp-guidedprime/6.png)
 
+    7. Puoi anche assegnare un nome personalizzato al dispositivo Raspberry (per essere individuato più facilmente nella rete)
+
+        ![7.png](../assets/MagicMirror-OS/default-rasp-guidedprime/7.png)
+
 3. Disattivare spegnimento automatico schermo Raspberry:
 
     ```shell
