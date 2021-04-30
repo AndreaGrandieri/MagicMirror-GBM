@@ -12,6 +12,10 @@
 
 ---
 
+![one-face-GUI.gif](assets/Overview-GUI/MagicMirror-GBM-GUI/one-face-GUI.gif)
+
+---
+
 ## MagicMirror-GBM-OS
 
 Il MagicMirror-GBM è reso funzionale dal suo sistema operativo: `MagicMirror-GBM-OS`.
