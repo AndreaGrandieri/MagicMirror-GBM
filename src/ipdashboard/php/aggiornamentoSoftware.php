@@ -11,15 +11,15 @@ $statusPHP = readSessionVariable("statusPHP");
 $output = array();
 exec("git symbolic-ref HEAD --short", $output);
 
-var_dump($output);
-die;
-
 $branch = $output[0];
 
 // Controllo l'esistenza del branch in remoto, altrimenti
 // non ha senso parlare di aggiornamento
 $output = array();
 exec("git ls-remote --heads origin $branch", $output);
+
+var_dump($output);
+die;
 
 if (!array_key_exists(0, $output)) {
     // Il branch checked out è SOLO LOCALE
