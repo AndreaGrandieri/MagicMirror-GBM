@@ -1,5 +1,7 @@
 import * as utils from "./utils.js";
 
+// JSON Verruckt
+
 var editor_json;
 var editor_json_header;
 var editor_json_stable;
@@ -61,3 +63,28 @@ function copyStable() {
     editor_json.setValue(editor_json_stable.getValue());
 }
 globalThis.copyStable = copyStable;
+
+////////////////////////////////////////////////////////////////////
+
+// MD Verruckt
+
+var editor_md;
+
+function initModuloSettingsMD() {
+    editor_md = CodeMirror.fromTextArea(document.getElementById("code-md"), {
+        lineNumbers: true,
+        mode: "text/x-markdown"
+        /*
+        gutters: ["CodeMirror-lint-markers"],
+        lint: {
+            "getAnnotations": jsonValidator,
+            "async": true
+        }
+        */
+    });
+    editor_md.setSize(700, 300);
+
+    // Semplice aggiunta event handler "change" (riferimento GOOD)
+    editor_md.on("change", safeLock);
+}
+globalThis.initModuloSettingsMD = initModuloSettingsMD;
