@@ -258,3 +258,11 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
 
     npm-recursive-install
     ```
+
+17. Impostare avvio automatico del servizio:
+
+    ```shell
+    cd \
+    sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+    @npm run start --prefix /home/pi/MagicMirror-GBM/src/
+    ```
