@@ -11,6 +11,9 @@ $statusPHP = readSessionVariable("statusPHP");
 $output = array();
 exec("git symbolic-ref HEAD --short", $output);
 
+var_dump($output);
+die;
+
 $branch = $output[0];
 
 // Controllo l'esistenza del branch in remoto, altrimenti
