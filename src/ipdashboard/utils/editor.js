@@ -85,6 +85,10 @@ function initModuloSettingsMD() {
     editor_md.setSize(700, 300);
 
     // Semplice aggiunta event handler "change" (riferimento GOOD)
-    editor_md.on("change", safeLock);
+    /*
+    NON SERVE IN QUANTO NESSUN ATTESA DI SICUREZZA PER UN LINTER IN
+    QUANTO NESSUN LINTER IN USO IN QUANTO NON NECESSARIO PER MD
+    */
+    // editor_md.on("change", safeLock);
 }
 globalThis.initModuloSettingsMD = initModuloSettingsMD;
