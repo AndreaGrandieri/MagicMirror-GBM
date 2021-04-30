@@ -12,11 +12,10 @@
 
 ---
 
-## Risorse Esterne
+## MagicMirror-GBM-OS
 
-Di seguito riportati i link alle risorse esterne:
-
-- [OneDrive Pubblico](https://1drv.ms/u/s!AmstWNn8EkEuhJJGwNbAYBMuLQ6aEQ?e=HI0WOz)
+Il MagicMirror-GBM è reso funzionale dal suo sistema operativo: `MagicMirror-GBM-OS`.
+Qui i dettagli: [MagicMirror-GBM-OS](pages/MagicMirror-GBM-OS.md)
 
 ---
 
@@ -41,6 +40,13 @@ Di seguito l'indice dei moduli, con la relativa documentazione:
 
 ---
 
+## MagicMirror-GBM IP Dashboard
+
+Il MagicMirror-GBM può essere configurato grazie alla sua interfaccia web: `MagicMirror-GBM IP Dashboard`.
+Qui i dettagli: [MagicMirror-GBM-IP-Dashboard](pages/MagicMirror-GBM-IP-Dashboard.md)
+
+---
+
 ## Documento dei Requisiti
 
 Il Documento dei Requisiti è il documento chiave per formalizzare i fabbisogni del cliente relativamente al sistema da sviluppare, in modo non ambiguo. Cliente, utenti e sviluppatori contribuiscono alla stesura del documento di specifica dei requisiti. Può essere usato come contratto tra cliente e sviluppatori.
@@ -55,6 +61,15 @@ I Diagrammi dei Componenti UML sono usati per la modellazione degli aspetti fisi
 I Diagrammi dei Componenti sono essenzialmente Diagrammi delle Classi, che però pongono il focus sui moduli (HW + SW) componenti un sistema per realizzare una visione d'unico dell'implementazione statica di esso stesso.
 
 - [Archivio UML Component Diagram](pages/ArchivioUMLComponentDiagram.md)
+
+---
+
+## Use Case Diagrams
+
+Un Diagramma dei Casi d'Uso (Generico e Specifico) viene utilizzato per riasummere chi (Attori) e come (Sequenze) effettua interazioni con il sistema / i sistemi in questione.
+
+- [Archivio Generic Use Case Diagram](pages/UseCaseDiagrams/ArchivioGenericUseCaseDiagram.md)
+- [Archivio Specific Use Case Diagram](pages/UseCaseDiagrams/ArchivioSpecificUseCaseDiagram.md)
 
 ---
 
@@ -74,4 +89,19 @@ Qui i dettagli: [Emulazione](pages/Emulazione.md)
 
 ## raspotify
 
-___Aggiungere dettagli...___
+Qui i dettagli: [raspotify](pages/raspotify.md)
+
+---
+
+## DB settings
+
+Il Database `settings` è il punto di salvataggio e recupero di tutte le informazioni riguardanti la configurazione
+di default e personale dell'utilizzatore.
+
+- [Archivio Analisi DB settings](pages/ProgettazioneDatabase_settings/ProgettazioneDatabase_settings.md)
+
+---
+
+## Schema di Rete
+
+Qui i dettagli: [Schema di Rete](pages/schemaDiRete.md)
