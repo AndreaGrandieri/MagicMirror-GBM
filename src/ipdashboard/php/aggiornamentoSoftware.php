@@ -18,9 +18,6 @@ $branch = $output[0];
 $output = array();
 exec("git ls-remote --heads origin $branch", $output);
 
-var_dump($output);
-die;
-
 if (!array_key_exists(0, $output)) {
     // Il branch checked out è SOLO LOCALE
     // Discussione di aggiornamenti non possibile in questo contesto
@@ -34,6 +31,9 @@ if (!array_key_exists(0, $output)) {
     $output = array();
     exec("git fetch");
     exec("git rev-list --left-only --count origin/$branch...$branch", $output);
+
+    var_dump($output);
+    die;
 
     if ($output[0] == 0) {
         // Nessun aggiornamento disponibile
