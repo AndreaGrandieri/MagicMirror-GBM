@@ -81,9 +81,15 @@ setSessionVariable("statusPHPRedirect", null);
             <td><a href="globalsSelector.php">Globals Selector</a></td>
             <td>Modifica le globali in attività per il MagicMirror.</td>
         </tr>
+        <!--
+            <tr>
+                <td><a href="aggiornamentoSoftware.php">Aggiornamento Software</a></td>
+                <td>Aggiorna il software del MagicMirror.</td>
+            </tr>
+        -->
         <tr>
-            <td><a href="aggiornamentoSoftware.php">Aggiornamento Software</a></td>
-            <td>Aggiorna il software del MagicMirror.</td>
+            <td><a href="#">Aggiornamento Software</a></td>
+            <td>Aggiorna il software del MagicMirror. <b><i><span style="color: #e67e00">Coming soon...</span></i></b></td>
         </tr>
         <tr>
             <td><a href="doReboot.php">Riavvia MagicMirror</a></td>
