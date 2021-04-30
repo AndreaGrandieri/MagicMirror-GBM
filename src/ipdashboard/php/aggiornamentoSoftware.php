@@ -29,7 +29,7 @@ if (!array_key_exists(0, $output)) {
     // (aka) Controlla il numero di commits di cui il "checked_out_branch"
     // è behind in confronto a "origin/checked_out_branch"
     $output = array();
-    exec("git fetch", $output);
+    exec("sudo git fetch", $output);
 
     var_dump($output);
     die;
