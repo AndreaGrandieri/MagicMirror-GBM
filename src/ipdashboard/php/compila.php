@@ -52,7 +52,13 @@ $results = $db->query("SELECT JsonFragment FROM modules WHERE Active = 1 ORDER B
 // Per definizione, i moduli sono contenuti in un array, identificato da "modules".
 // L'identificativo "modules", per definizione, è contenuto al più esterno livello di wrappering, 
 // cioè il wrapper stesso
-$jsonContentModules = "\"modules\": [";
+$jsonContentModules = "\"modules\": [{
+module: \"alert\",
+},
+{
+module: \"updatenotification\",
+position: \"top_bar\"
+},";
 $modulesCounter = 0;
 
 if (gettype($results) !== "boolean") {
@@ -66,10 +72,7 @@ if (gettype($results) !== "boolean") {
     header("location: redirect.php?target=index.php&ms=300");
     die;
 }
-
-if ($modulesCounter > 0) {
-    $jsonContentModules = substr($jsonContentModules, 0, strlen($jsonContentModules) - 1);
-}
+$jsonContentModules = substr($jsonContentModules, 0, strlen($jsonContentModules) - 1);
 
 $wrapper .= $jsonContentGlobals .= $jsonContentModules . "]" . "}";
 
