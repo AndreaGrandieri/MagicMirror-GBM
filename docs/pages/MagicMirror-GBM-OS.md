@@ -21,8 +21,10 @@ Ecco riportate le principali caratteristiche e requisiti essenziali:
 - __npm: `v5.8.0`__
 - Storage Memory: `minimo (rischioso) 8GB; minimo consigliato: 16GB`
 - RAM: `minimo 1GB`
-- Username: `MagicMirror-GBM-User`
-- Password: `magicmirrorgbm`
+- Nome Personale: `pi`
+- Nome PC: `magicmirrorgbm`
+- Nome utente: `pi`
+- Password: `gbm`
 - Internet configurations: _none_
 
 ---
