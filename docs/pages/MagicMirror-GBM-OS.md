@@ -259,10 +259,26 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     npm-recursive-install
     ```
 
-17. Impostare avvio automatico del servizio:
+17. Abilitare la modalità `CLI-ONLY` di Raspberry Pi:
 
     ```shell
     cd \
+    sudo raspi-config
+    ```
+
+    Segui i passaggi riportati nelle foto:
+
+    ![1.png](../assets/MagicMirror-OS/1.png)
+
+    ![2.png](../assets/MagicMirror-OS/2.png)
+
+    ![3.png](../assets/MagicMirror-OS/3.png)
+
+    ![4.png](../assets/MagicMirror-OS/4.png)
+
+18. Impostare avvio automatico del servizio:
+
+    ```shell
     sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
     @npm run start --prefix /home/pi/MagicMirror-GBM/src/
     ```
