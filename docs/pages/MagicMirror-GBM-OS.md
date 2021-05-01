@@ -7,7 +7,7 @@ permalink: /:path/:basename:output_ext
 
 Il MagicMirror-GBM è reso funzionale dal suo sistema operativo: `MagicMirror-GBM-OS`.
 
-Download: _QUI BOTTONE / LINK DOWNLOAD BINARIO_
+- ![file-archive.svg](../assets/favicon/file-archive.svg) [MagicMirror-GBM-OS_v1.3.img.gz](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSnRPbFl2MlZrRTNMV3I0blE_ZT1YWDFoREM/root/content)
 
 ---
 
@@ -305,7 +305,6 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
 18. Impostare avvio automatico del servizio:
 
     ```shell
-    cd \
     sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
     @npm run start --prefix /home/pi/MagicMirror-GBM/src/
     ```
