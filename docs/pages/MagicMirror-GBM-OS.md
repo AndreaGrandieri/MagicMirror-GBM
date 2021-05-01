@@ -7,7 +7,12 @@ permalink: /:path/:basename:output_ext
 
 Il MagicMirror-GBM è reso funzionale dal suo sistema operativo: `MagicMirror-GBM-OS`.
 
-Download: _QUI BOTTONE / LINK DOWNLOAD BINARIO_
+- ![file-archive.svg](../assets/favicon/file-archive.svg) [MagicMirror-GBM-OS_v1.3.img.gz](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSnRPbFl2MlZrRTNMV3I0blE_ZT1YWDFoREM/root/content)
+
+Puoi scrivere / flashare l'OS su una scheda SD pronta all'uso in un sistema Raspberry Pi usando
+il software `Raspberry Pi Imager` ([https://www.raspberrypi.org/software/](https://www.raspberrypi.org/software/)).
+
+![flash-using-raspberry-pi-imager.PNG](../assets/MagicMirror-OS/flash-using-raspberry-pi-imager.PNG)
 
 ---
 
@@ -135,10 +140,17 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     git clone https://www.github.com/AndreaGrandieri/MagicMirror-GBM
     ```
 
+    Effettuare il checkout alla release (versione) desiderata (qui maggiori dettagli: [Release Log](ReleaseLog.md))
+
+    ```shell
+    cd MagicMirror-GBM/
+    git checkout v.X.X -b v.X.X
+    ```
+
 11. Installare `electron` ___(+VM)___:
 
     ```shell
-    cd MagicMirror-GBM/src/
+    cd src/
 
     npm install electron --save-dev
     cd \
