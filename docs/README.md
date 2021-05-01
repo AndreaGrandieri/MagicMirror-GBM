@@ -16,12 +16,6 @@
 
 ---
 
-## Release Log
-
-Qui i dettagli: [Release Log](pages/ReleaseLog.md)
-
----
-
 ## MagicMirror-GBM-OS
 
 Il MagicMirror-GBM è reso funzionale dal suo sistema operativo: `MagicMirror-GBM-OS`.
