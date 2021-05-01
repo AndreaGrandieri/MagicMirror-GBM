@@ -135,6 +135,12 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     git clone https://www.github.com/AndreaGrandieri/MagicMirror-GBM
     ```
 
+    Effettuare il checkout alla release (versione) desiderata (qui maggiori dettagli: [Release Log](ReleaseLog.md))
+
+    ```shell
+    git checkout v.X.X -b v.X.X
+    ```
+
 11. Installare `electron` ___(+VM)___:
 
     ```shell
