@@ -53,11 +53,11 @@ $results = $db->query("SELECT JsonFragment FROM modules WHERE Active = 1 ORDER B
 // L'identificativo "modules", per definizione, è contenuto al più esterno livello di wrappering, 
 // cioè il wrapper stesso
 $jsonContentModules = "\"modules\": [{
-module: \"alert\",
+\"module\": \"alert\",
 },
 {
-module: \"updatenotification\",
-position: \"top_bar\"
+\"module\": \"updatenotification\",
+\"position\": \"top_bar\"
 },";
 $modulesCounter = 0;
 
