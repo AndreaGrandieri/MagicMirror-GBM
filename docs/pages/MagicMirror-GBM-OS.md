@@ -138,13 +138,14 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     Effettuare il checkout alla release (versione) desiderata (qui maggiori dettagli: [Release Log](ReleaseLog.md))
 
     ```shell
+    cd MagicMirror-GBM/
     git checkout v.X.X -b v.X.X
     ```
 
 11. Installare `electron` ___(+VM)___:
 
     ```shell
-    cd MagicMirror-GBM/src/
+    cd src/
 
     npm install electron --save-dev
     cd \
@@ -304,6 +305,7 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
 18. Impostare avvio automatico del servizio:
 
     ```shell
+    cd \
     sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
     @npm run start --prefix /home/pi/MagicMirror-GBM/src/
     ```
