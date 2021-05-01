@@ -17,6 +17,15 @@ Home Page. Da qui puoi accedere le diverse funzionalità dell'interfaccia.
 
 ---
 
+> MMM-MD-ContentEditor.php
+
+Embedded editor MD. Qui puoi modificare il contenuto renderizzato e visualizzato dal modulo MMM-MD.
+Qui per maggiori informazioni: [https://github.com/AndreaGrandieri/MMM-MD](https://github.com/AndreaGrandieri/MMM-MD)
+
+![MMM-MD-ContentEditor.php.PNG](../assets/Overview-GUI/ipdashboard-GUI/MMM-MD-ContentEditor.php.PNG)
+
+---
+
 > moduliSelector.php
 
 Lista dei moduli presenti nel Database del MagicMirror-GBM.
@@ -62,6 +71,14 @@ Da qui puoi:
 - Accedere all'embedded editor per modificare il frammento di configurazione della globale
 
 ![globalsSelector.php.PNG](../assets/Overview-GUI/ipdashboard-GUI/globalsSelector.php.PNG)
+
+---
+
+> globalSettings.php
+
+Embedded editor JSON. Qui puoi modificare il frammento JSON di configurazione della globale selezionata. __E' sconsigliata la modifica di queste informazioni se non strettamente necessario.__
+
+![globalSettings.php.PNG](../assets/Overview-GUI/ipdashboard-GUI/globalSettings.php.PNG)
 
 ---
 

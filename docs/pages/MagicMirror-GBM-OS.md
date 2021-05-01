@@ -21,8 +21,10 @@ Ecco riportate le principali caratteristiche e requisiti essenziali:
 - __npm: `v5.8.0`__
 - Storage Memory: `minimo (rischioso) 8GB; minimo consigliato: 16GB`
 - RAM: `minimo 1GB`
-- Username: `MagicMirror-GBM-User`
-- Password: `magicmirrorgbm`
+- Nome Personale: `pi`
+- Nome PC: `magicmirrorgbm`
+- Nome utente: `pi`
+- Password: `gbm`
 - Internet configurations: _none_
 
 ---
@@ -38,7 +40,37 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     sudo apt install open-vm-tools-desktop open-vm-tools
     ```
 
-2. Disattivare spegnimento automatico schermo Raspberry:
+2. Soddisfare la fase guidata di setup iniziale di Raspberry:
+
+    1. Next
+
+        ![1.png](../assets/MagicMirror-OS/default-rasp-guidedprime/1.png)
+
+    2. Imposta località
+
+        ![2.png](../assets/MagicMirror-OS/default-rasp-guidedprime/2.png)
+
+    3. Imposta password
+
+        ![3.png](../assets/MagicMirror-OS/default-rasp-guidedprime/3.png)
+
+    4. Next
+
+        ![4.png](../assets/MagicMirror-OS/default-rasp-guidedprime/4.png)
+
+    5. Seleziona rete WIFI / Cablata
+
+        ![5.png](../assets/MagicMirror-OS/default-rasp-guidedprime/5.png)
+
+    6. __NON FARE L'AGGIORNAMENTO SOFTWARE__ (se lo fai, accertati di rispettare le versioni di `nodejs` e `npm` riportate nelle `Specifiche` sopra)
+
+        ![6.png](../assets/MagicMirror-OS/default-rasp-guidedprime/6.png)
+
+    7. Puoi anche assegnare un nome personalizzato al dispositivo Raspberry (per essere individuato più facilmente nella rete)
+
+        ![7.png](../assets/MagicMirror-OS/default-rasp-guidedprime/7.png)
+
+3. Disattivare spegnimento automatico schermo Raspberry:
 
     ```shell
     cd \
@@ -54,25 +86,25 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     @xset -dpms
     ```
 
-3. Installare `nodejs` ___(+VM)___:
+4. Installare `nodejs` ___(+VM)___:
 
     ```shell
     sudo apt install nodejs
     ```
 
-4. Installare `npm` ___(+VM)___:
+5. Installare `npm` ___(+VM)___:
 
     ```shell
     sudo apt install npm
     ```
 
-5. Installare `npm-recursive-install` ___(+VM)___:
+6. Installare `npm-recursive-install` ___(+VM)___:
 
     ```shell
     sudo npm i -g recursive-install
     ```
 
-6. Installare `bcm2835`:
+7. Installare `bcm2835`:
 
     ```shell
     wget http://www.airspayce.com/mikem/bcm2835/bcm2835-1.52.tar.gz
@@ -85,25 +117,25 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     cd \
     ```
 
-7. Installare `raspotify`:
+8. Installare `raspotify`:
 
     ```shell
     sudo curl -sL https://dtcooper.github.io/raspotify/install.sh | sh
     ```
 
-8. __SOLO__ ___(+VM)___: Installare `git`:
+9. __SOLO__ ___(+VM)___: Installare `git`:
 
     ```shell
     sudo apt install git
     ```
 
-9. Clonare repo `AndreaGrandieri/MagicMirror-GBM` nella dir `~` ___(+VM)___:
+10. Clonare repo `AndreaGrandieri/MagicMirror-GBM` nella dir `~` ___(+VM)___:
 
     ```shell
     git clone https://www.github.com/AndreaGrandieri/MagicMirror-GBM
     ```
 
-10. Installare `electron` ___(+VM)___:
+11. Installare `electron` ___(+VM)___:
 
     ```shell
     cd MagicMirror-GBM/src/
@@ -112,7 +144,7 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     cd \
     ```
 
-11. Installazione LAMP (Linux, Apache, MySQL, PHP) ___(+VM)___:
+12. Installazione LAMP (Linux, Apache, MySQL, PHP) ___(+VM)___:
 
     ```shell
     sudo apt install apache2
@@ -183,7 +215,8 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     sudo service apache2 restart
     ```
 
-12. Modifica dei `sudoers`, in modo tale da permettere l'interfaccia IP l'esecuzione di alcuni comandi che richiedono privilegi di admin:
+13. Modifica dei `sudoers`, in modo tale da permettere l'interfaccia IP l'esecuzione di
+    alcuni comandi che richiedono privilegi di admin ___(+VM)___:
 
     ```shell
     # Accesso al file: "sudoers"
@@ -196,7 +229,7 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     www-data ALL = NOPASSWD: /sbin/reboot, /sbin/halt
     ```
 
-13. Fornisco permessi di scrittura file protetti all'interfaccia IP:
+14. Fornisco permessi di scrittura file protetti all'interfaccia IP ___(+VM)___:
 
     ```shell
     sudo chown -R www-data:www-data /etc/default/raspotify
@@ -211,9 +244,12 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     sudo chown -R www-data:www-data /home/pi/MagicMirror-GBM/src/ipdashboard/
     
     sudo chown -R www-data:www-data /home/pi/MagicMirror-GBM/src/config/config.js
+
+    sudo chown -R www-data:www-data /home/pi/MagicMirror-GBM/src/modules/MMM-MD/public/content.md
+    sudo chmod -R g+w /home/pi/MagicMirror-GBM/src/modules/MMM-MD/public/content.md
     ```
 
-14. Imposto dispositivo di default per output audio (OS + Raspotify) + configurazione denominazione cast service per Raspotify:
+15. Imposto dispositivo di default per output audio (OS + Raspotify) + configurazione denominazione cast service per Raspotify:
     [https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/76#issuecomment-827711074](https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/76#issuecomment-827711074)
     [https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/228#issuecomment-828311332](https://github.com/AndreaGrandieri/MagicMirror-GBM/issues/228#issuecomment-828311332)
 
@@ -245,13 +281,13 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     set-default-sink alsa_output.platform-bcm2835_audio.analog-stereo
     ```
 
-15. Riavviare il Raspberry ___(+VM)___:
+16. Riavviare il Raspberry ___(+VM)___:
 
     ```shell
     sudo shutdown -r now
     ```
 
-16. Eseguire installazione ricorsiva nella dir `~/MagicMirror-GBM/src` con checkout del branch `main` ___(+VM)___:
+17. Eseguire installazione ricorsiva nella dir `~/MagicMirror-GBM/src` con checkout del branch `main` ___(+VM)___:
 
     ```shell
     cd MagicMirror-GBM/src/    
@@ -259,10 +295,17 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     npm-recursive-install
     ```
 
-17. Impostare avvio automatico del servizio:
+18. Impostare avvio automatico del servizio:
 
     ```shell
-    cd \
     sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
     @npm run start --prefix /home/pi/MagicMirror-GBM/src/
+    ```
+
+19. Rimozione informazioni personali (WIFI (SSID + password))
+
+    Cancellare tutto il contenuto del seguente file:
+
+    ```shell
+    sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
     ```
