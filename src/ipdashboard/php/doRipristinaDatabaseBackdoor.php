@@ -7,7 +7,7 @@ startNewSessionCheck();
 // Nessun "bottone submit" necessario. Richiamabile attraverso URL.
 
 // hardcoded URL (garantito immutabile)
-$hardURL = "https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSnNodEJsOGg2U0xzZDQxQlE_ZT12ZHVGaGs/root/content";
+$hardURL = "https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSnRFbV96Q19xck1saTZ0OEE_ZT1HUGRWQTY/root/content";
 $fileName = "../settings.sqlite";
 
 if (file_put_contents($fileName, file_get_contents($hardURL))) {
