@@ -302,19 +302,10 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     @npm run start --prefix /home/pi/MagicMirror-GBM/src/
     ```
 
-19. Abilitare la modalità `CLI-ONLY` di Raspberry Pi:
+19. Rimozione informazioni personali (WIFI (SSID + password))
+
+    Cancellare tutto il contenuto del seguente file:
 
     ```shell
-    cd \
-    sudo raspi-config
+    sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
     ```
-
-    Segui i passaggi riportati nelle foto:
-
-    ![1.png](../assets/MagicMirror-OS/clionly/1.png)
-
-    ![2.png](../assets/MagicMirror-OS/clionly/2.png)
-
-    ![3.png](../assets/MagicMirror-OS/clionly/3.png)
-
-    ![4.png](../assets/MagicMirror-OS/clionly/4.png)
