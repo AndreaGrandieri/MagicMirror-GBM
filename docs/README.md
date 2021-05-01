@@ -18,7 +18,7 @@
 
 ## Release Log
 
-Qui i dettagli: [ReleaseLog](pages/ReleaseLog.md)
+Qui i dettagli: [Release Log](pages/ReleaseLog.md)
 
 ---
 
