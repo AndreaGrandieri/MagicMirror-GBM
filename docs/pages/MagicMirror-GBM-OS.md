@@ -9,6 +9,11 @@ Il MagicMirror-GBM è reso funzionale dal suo sistema operativo: `MagicMirror-GB
 
 - ![file-archive.svg](../assets/favicon/file-archive.svg) [MagicMirror-GBM-OS_v1.3.img.gz](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSnRPbFl2MlZrRTNMV3I0blE_ZT1YWDFoREM/root/content)
 
+Puoi scrivere / flashare l'OS su una scheda SD pronta all'uso in un sistema Raspberry Pi usando
+il software `Raspberry Pi Imager` ([https://www.raspberrypi.org/software/](https://www.raspberrypi.org/software/)).
+
+![flash-using-raspberry-pi-imager.PNG](../assets/MagicMirror-OS/flash-using-raspberry-pi-imager.PNG)
+
 ---
 
 ## Specifiche
