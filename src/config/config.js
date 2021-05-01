@@ -8,11 +8,11 @@ var config = JSON.parse(`{"address": "localhost","basePath": "/","httpsCertifica
         "WARN",
         "ERROR"
         ],"port": 8080,"serverOnly": false,"timeFormat": 24,"units": "metric","useHttps": false,"modules": [{
-module: "alert",
+"module": "alert",
 },
 {
-module: "updatenotification",
-position: "top_bar"
+"module": "updatenotification",
+"position": "top_bar"
 },{
         "module": "MMM-AirQuality",
         "position": "top_center",
