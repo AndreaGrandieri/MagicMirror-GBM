@@ -13,8 +13,8 @@ Il risultato è una VM in formato OVF, facilmente importabile in un software di 
 (consigliato: `VMWare`).
 Download:
 
-- ![file-archive.svg](../assets/favicon/file-archive.svg) [MagicMirror-GBM-Emulation-VM.zip](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSjFES21OVHByQWhIemtmTlE_ZT10ZzVoa0k/root/content)
-- ![file-archive.svg](../assets/favicon/file-archive.svg) [MagicMirror-GBM-Emulation-VM.z01](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSjFES21OVHByQWhIemtmTlE_ZT1BNVJUQWg/root/content)
+- ![file-archive.svg](../assets/favicon/file-archive.svg) [MagicMirror-GBM-Emulation-VM.zip](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSjFBaDJZcXJaSzZfaXRxa1E_ZT13YmNzM0c/root/content)
+- ![file-archive.svg](../assets/favicon/file-archive.svg) [MagicMirror-GBM-Emulation-VM.z01](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSjFEWkotU3FKRVpScVJ1cUE_ZT1vbmp3TnU/root/content)
 - ![file-archive.svg](../assets/favicon/file-archive.svg) [MagicMirror-GBM-Emulation-VM.z02](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSjFCdXpUNUt5Y21EYldyR2c_ZT1Zb3UycXQ/root/content)
 - ![file-archive.svg](../assets/favicon/file-archive.svg) [MagicMirror-GBM-Emulation-VM.z03](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSjFFXzhQVkw1ME1tcnVDblE_ZT14SnVTZWE/root/content)
 
