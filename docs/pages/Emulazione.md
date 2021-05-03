@@ -13,10 +13,10 @@ Il risultato è una VM in formato OVF, facilmente importabile in un software di 
 (consigliato: `VMWare`).
 Download:
 
-- ![file-archive.svg](../assets/favicon/file-archive.svg) [MagicMirror-GBM-Emulation-VM.zip](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSjFES21OVHByQWhIemtmTlE_ZT10ZzVoa0k/root/content)
-- ![file-archive.svg](../assets/favicon/file-archive.svg) [MagicMirror-GBM-Emulation-VM.z01](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSjFES21OVHByQWhIemtmTlE_ZT1BNVJUQWg/root/content)
-- ![file-archive.svg](../assets/favicon/file-archive.svg) [MagicMirror-GBM-Emulation-VM.z02](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSjFCdXpUNUt5Y21EYldyR2c_ZT1Zb3UycXQ/root/content)
-- ![file-archive.svg](../assets/favicon/file-archive.svg) [MagicMirror-GBM-Emulation-VM.z03](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSjFFXzhQVkw1ME1tcnVDblE_ZT14SnVTZWE/root/content)
+- ![file-archive.svg](../assets/favicon/file-archive.svg) [MagicMirror-GBM-Emulation-VM.zip](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSmswWmNEMUg0eVlrX2prVnc_ZT02Y29VZUc/root/content)
+- ![file-archive.svg](../assets/favicon/file-archive.svg) [MagicMirror-GBM-Emulation-VM.z01](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSmsxYWFUbzM0NV9SUjBsU1E_ZT1uZk9XbVI/root/content)
+- ![file-archive.svg](../assets/favicon/file-archive.svg) [MagicMirror-GBM-Emulation-VM.z02](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSmsyNWIyUUxjNTlwZnd1emc_ZT1qNnBSSVM/root/content)
+- ![file-archive.svg](../assets/favicon/file-archive.svg) [MagicMirror-GBM-Emulation-VM.z03](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSmszQmhSeUIzV3FNcE1UWkE_ZT1MMkFFeGU/root/content)
 
 A fini di testing individuale e decentralizzato (la centralizzazione richiede inderogabilmente l'accesso all'hardware
 del MagicMirror (vedi _(ultima versione)_ [Documento dei Requisiti](ArchivioDocumentiDeiRequisiti.md))), può essere utilizzata una __Virtual Machine__ (macchina
