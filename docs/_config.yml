@@ -1,2 +1,6 @@
 theme: jekyll-theme-leap-day
 show_downloads: true
+
+# Plugins
+plugins:
+  - jekyll-redirect-from
