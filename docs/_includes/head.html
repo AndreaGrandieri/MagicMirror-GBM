@@ -1,0 +1,76 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+  <!-- Importing javascript "global.js" file -->
+  <script type="module" src="/engine/js/global.js"></script>
+
+  <!-- Retrive the theme asap to reduce the chance of flickering of the screen (sudden switch from light to dark) -->
+  <!-- Call function "retrieveTheme" -->
+  <script type="module">
+    retrieveTheme();
+  </script>
+
+  <!-- Font awesome kit -->
+  <script src="https://kit.fontawesome.com/872c0cdba3.js" crossorigin="anonymous"></script>
+
+  {% unless site.plugins contains "jekyll-seo-tag" %}
+    <title>{{ page.title }} - {{ site.title }}</title>
+
+    {% if page.description %}
+      <meta name="Description" content="{{ page.description }}">
+    {% endif %}
+  {% endunless %}
+
+  <!-- DA RIVEDERE (FAVICON) -->
+  <!-- favicon auto-generated from https://realfavicongenerator.net/ -->
+  <!-- <link rel="apple-touch-icon" sizes="180x180" href="/assets/rich/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/rich/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/rich/icons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/rich/icons/site.webmanifest">
+  <link rel="mask-icon" href="/assets/rich/icons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/assets/rich/icons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#603cba">
+  <meta name="msapplication-config" content="/assets/rich/icons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff"> -->
+
+  <!-- favicon formato SVG (!!!) -->
+  <!-- <link rel="icon" type="image/svg+xml" href="/assets/rich/icons/minimal_asFavicon_0x7253ed.svg"/>
+  <link rel="shortcut icon" href="/assets/rich/icons/minimal_asFavicon_0x7253ed.svg" type="image/svg+xml"> -->
+  
+  <!-- favicon formato ICO (standard) -->
+  <!-- <link rel="icon" type="image/x-icon" href="/assets/rich/icons/minimal_asFavicon_0x7253ed.ico"/>
+  <link rel="shortcut icon" href="/assets/rich/icons/minimal_asFavicon_0x7253ed.ico" type="image/x-icon"> -->
+
+  <!-- favicon per compatibilità browser Safari -->
+  <!-- <link rel="mask-icon" type="image/svg+xml" href="/assets/rich/icons/minimal_asFavicon_0x7253ed.svg"/> -->
+  <!-- <link rel="mask-icon" type="image/svg+xml" href="/assets/rich/icons/minimal_asFavicon_black_ai_serving_svg.svg"/> -->
+
+  <!-- <link rel="shortcut icon" href="{{ 'favicon.ico' | relative_url }}" type="image/x-icon"> -->
+
+  <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}">
+
+  {% if site.ga_tracking != nil %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_tracking }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '{{ site.ga_tracking }}'{% unless site.ga_tracking_anonymize_ip == nil %}, { 'anonymize_ip': true }{% endunless %});
+    </script>
+
+  {% endif %}
+
+  {% if site.search_enabled != false %}
+    <script type="text/javascript" src="{{ '/assets/js/vendor/lunr.min.js' | relative_url }}"></script>
+  {% endif %}
+  <script type="text/javascript" src="{{ '/assets/js/just-the-docs.js' | relative_url }}"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% seo %}
+
+  {% include head_custom.html %}
+
+</head>

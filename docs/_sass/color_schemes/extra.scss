@@ -1,0 +1,32 @@
+.filter-purple {
+    filter: brightness(0) saturate(100%) invert(35%) sepia(81%) saturate(2271%) hue-rotate(234deg) brightness(91%) contrast(104%);
+}
+
+// Supplitive CSS for fa
+/*******************************/
+
+.duotone-purple {
+    --fa-primary-color: #7253ed;
+    --fa-secondary-color: #381885;
+}
+
+.duotone-purple-inverted {
+    --fa-secondary-color: #7253ed;
+    --fa-primary-color: #381885;
+}
+
+.brand-purple {
+    color: #7253ed;
+}
+
+/*******************************/
+
+// For some still undefined reason that's not working
+// Update: yep it works, it just needs to be tagged: "!important"
+// // .label-epic {
+// //     background-color: #342D7E;
+// // }
+
+.bg-purple-epic-custom01 {
+    background-color: #342D7E !important;
+}
