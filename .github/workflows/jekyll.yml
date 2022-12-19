@@ -6,6 +6,10 @@
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
 name: Deploy Jekyll site to Pages
 
+defaults:
+  run:
+    working-directory: ./docsite
+
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -42,7 +46,6 @@ jobs:
         id: pages
         uses: actions/configure-pages@v2
       - name: Build with Jekyll
-        working-directory: ./docsite
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
