@@ -40,7 +40,7 @@ jobs:
         uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa # v1.115.3
         with:
           ruby-version: '3.0' # Not needed with a .ruby-version file
-          # Setting to false will skip the command "bundle install". Should be put to false since "bundle install" is run in the next step
+          # Settinga to false will skip the command "bundle install". Should be put to false since "bundle install" is run in the next step
           bundler-cache: false # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Run bundle install
