@@ -58,6 +58,8 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v2
+        with:
+          path: ./docsite
       # Regards "default working-directory" set above
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
