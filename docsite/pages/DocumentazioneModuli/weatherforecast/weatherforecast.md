@@ -1,11 +1,11 @@
 ---
 # Specifies the "filament" HTML page to be used. The HTML page must be located in the "_layouts" folder.
 # (should always be this)
-layout: weatherforecast
+layout: alwaysnaviffamily
 
 # Page title
 # If omitted, the page will not be included in the navbar
-title: Emulazione
+title: weatherforecast
 
 # Specifies the order of the current page from the point of view of the navbar
 # Can have repetition in the numbers, for parent-child hierarchies

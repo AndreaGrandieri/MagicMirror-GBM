@@ -18,7 +18,7 @@ nav_exclude: false
 has_children: false
 
 # If this page represents the child page of a section that, therefore, has ONE parent page, specify it in the following way
-# # parent: Namespace
+parent: MagicMirror-GBM
 
 # If this page is a parent page, a Table Of Contents will be automatically generated containing all related child pages. Use the option below to disable this functionality.
 has_toc: false
