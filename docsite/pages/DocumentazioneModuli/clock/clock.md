@@ -107,6 +107,6 @@ Le notifiche sono uno strumento utilizzato dai moduli per comunicare con:
 
 Questa è la visualizzazione del modulo in situazione di funzionamento corretto:
 
-![clock.png](../../../assets/clock/clock.png)
+[![clock.png](../../../assets/clock/clock.png)](../../../assets/clock/clock.png)
 
 ---

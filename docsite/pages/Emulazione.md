@@ -65,7 +65,7 @@ Download:
 - ![file-archive.svg](../assets/favicon/file-archive.svg) [MagicMirror-GBM-Emulation-VM.z03](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSjFFXzhQVkw1ME1tcnVDblE_ZT14SnVTZWE/root/content)
 
 A fini di testing individuale e decentralizzato (la centralizzazione richiede inderogabilmente l'accesso all'hardware
-del MagicMirror (vedi _(ultima versione)_ [Documento dei Requisiti](ArchivioDocumentiDeiRequisiti.md))), può essere utilizzata una __Virtual Machine__ (macchina
+del MagicMirror (vedi _(ultima versione)_ [Documento dei Requisiti](ArchivioDocumentiDeiRequisiti))), può essere utilizzata una __Virtual Machine__ (macchina
 virtuale), presentante le seguenti configurazioni (consigliate):
 
 - OS: `Ubuntu 20.04.2 LTS (o superiore)`
@@ -76,7 +76,7 @@ virtuale), presentante le seguenti configurazioni (consigliate):
 - Note utente: `magic-mirror-gbm-emulation-vm`
 - Password: `gbm`
 
-La macchina virtuale, una volta installata e operativa, necessita di essere inizializzata sulla base delle istruzioni riportate in [MagicMirror-GBM-OS](MagicMirror-GBM-OS.md).
+La macchina virtuale, una volta installata e operativa, necessita di essere inizializzata sulla base delle istruzioni riportate in [MagicMirror-GBM-OS](MagicMirror-GBM-OS).
 
 ## Limitazioni
 

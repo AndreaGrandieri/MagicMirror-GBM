@@ -114,11 +114,11 @@ Le notifiche sono uno strumento utilizzato dai moduli per comunicare con:
 
 Icona visualizzata dal modulo se una presenza è rilevata:
 
-![module_interface_presence_fired](../../../assets/MMM-PIR-Sensor/module_interface_presence_fired.jpg)
+[![module_interface_presence_fired](../../../assets/MMM-PIR-Sensor/module_interface_presence_fired.jpg)](../../../assets/MMM-PIR-Sensor/module_interface_presence_fired.jpg)
 
 Notifica visualizzata prima dell'entrata in modalità sospensione:
 
-![module_interface_entering_sleepmode_notify](../../../assets/MMM-PIR-Sensor/module_interface_entering_sleepmode_notify.png)
+[![module_interface_entering_sleepmode_notify](../../../assets/MMM-PIR-Sensor/module_interface_entering_sleepmode_notify.png)](../../../assets/MMM-PIR-Sensor/module_interface_entering_sleepmode_notify.png)
 
 ---
 
@@ -133,4 +133,4 @@ __Presta Attenzione:__ i pin GPIO del Raspberry Pi possono essere riferiti
 seguendo (molti) diversi standard. La proprietà `sensorPin` del modulo utilizza
 lo standard evidenziato in giallo:
 
-![pin_GPIO_ref](../../../assets/MMM-PIR-Sensor/pin_GPIO_ref.PNG)
+[![pin_GPIO_ref](../../../assets/MMM-PIR-Sensor/pin_GPIO_ref.PNG)](../../../assets/MMM-PIR-Sensor/pin_GPIO_ref.PNG)

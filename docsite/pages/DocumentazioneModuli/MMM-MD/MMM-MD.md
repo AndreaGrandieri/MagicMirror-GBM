@@ -107,11 +107,11 @@ _Nulla da segnalare._
 
 Interfaccia del modulo funzionante (1):
 
-![module_focus](../../../assets/MMM-MD/module_focus.PNG)
+[![module_focus](../../../assets/MMM-MD/module_focus.PNG)](../../../assets/MMM-MD/module_focus.PNG)
 
 Interfaccia del modulo funzionante (2):
 
-![module_overview](../../../assets/MMM-MD/module_overview.PNG)
+[![module_overview](../../../assets/MMM-MD/module_overview.PNG)](../../../assets/MMM-MD/module_overview.PNG)
 
 ---
 

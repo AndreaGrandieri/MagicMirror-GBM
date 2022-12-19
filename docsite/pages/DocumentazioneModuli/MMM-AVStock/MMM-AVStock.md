@@ -113,23 +113,23 @@ _Nulla da segnalare._
 Visualizzazione `mode`: `"table"` _(`chartType`: `"line"`)_:
 Visualizzazione `chartType`: `"line"` _(`mode`: `"table"`)_:
 
-![mode_table_chartType_line](../../../assets/MMM-AVStock/mode_table_chartType_line.PNG)
+[![mode_table_chartType_line](../../../assets/MMM-AVStock/mode_table_chartType_line.PNG)](../../../assets/MMM-AVStock/mode_table_chartType_line.PNG)
 
 Visualizzazione `mode`: `"ticker"` _(`chartType`: `"line"`)_:
 
-![mode_ticker](../../../assets/MMM-AVStock/mode_ticker.gif)
+[![mode_ticker](../../../assets/MMM-AVStock/mode_ticker.gif)](../../../assets/MMM-AVStock/mode_ticker.gif)
 
 Visualizzazione `mode`: `"grid"` _(`chartType`: `"line"`)_:
 
-![mode_grid](../../../assets/MMM-AVStock/mode_grid.PNG)
+[![mode_grid](../../../assets/MMM-AVStock/mode_grid.PNG)](../../../assets/MMM-AVStock/mode_grid.PNG)
 
 Visualizzazione `chartType`: `"candlestick"` _(`mode`: `"table"`)_:
 
-![chartType_candlestick](../../../assets/MMM-AVStock/chartType_candlestick.PNG)
+[![chartType_candlestick](../../../assets/MMM-AVStock/chartType_candlestick.PNG)](../../../assets/MMM-AVStock/chartType_candlestick.PNG)
 
 Visualizzazione `chartType`: `"ohlc"` _(`mode`: `"table"`)_:
 
-![chartType_ohlc](../../../assets/MMM-AVStock/chartType_ohlc.PNG)
+[![chartType_ohlc](../../../assets/MMM-AVStock/chartType_ohlc.PNG)](../../../assets/MMM-AVStock/chartType_ohlc.PNG)
 
 ---
 
@@ -144,16 +144,16 @@ Di seguito le istruzioni per ottenere la propria chiave personale gratuita:
 
 2. Cliccare il pulsante riportato nell'immagine
 
-![step2](../../../assets/MMM-AVStock/step2.PNG)
+[![step2](../../../assets/MMM-AVStock/step2.PNG)](../../../assets/MMM-AVStock/step2.PNG)
 
 3. Compila il form riportato nell'immagine __con gli stessi dati__, eccetto
    per il campo `Email`; qui, al posto di `YOUR@EMAIL`, __inserisci la tua _(vera)_ email__.
 
-![step3](../../../assets/MMM-AVStock/step3.PNG)
+[![step3](../../../assets/MMM-AVStock/step3.PNG)](../../../assets/MMM-AVStock/step3.PNG)
 
 4. Una volta effettuata la registrazione, la chiave personale verrà visualizzata
    __per un periodo di tempo limitato__ nella zona indicata dalla freccia
    nell'immagine. __Copiare e conservare in un posto sicuro questa chiave.__
    __Essa rappresenta il valore da utilizzare per compilare la proprietà `apiKey`__.
 
-![step4](../../../assets/MMM-AVStock/step4.png)
+[![step4](../../../assets/MMM-AVStock/step4.png)](../../../assets/MMM-AVStock/step4.png)
