@@ -9,7 +9,7 @@ title: Archivio Analisi DB settings
 
 # Specifies the order of the current page from the point of view of the navbar
 # Can have repetition in the numbers, for parent-child hierarchies
-nav_order: 10
+nav_order: 11
 
 # Let exclude the page from the navbar
 nav_exclude: false

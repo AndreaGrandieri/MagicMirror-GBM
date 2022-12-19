@@ -9,7 +9,7 @@ title: MagicMirror-GBM IP Dashboard
 
 # Specifies the order of the current page from the point of view of the navbar
 # Can have repetition in the numbers, for parent-child hierarchies
-nav_order: 2
+nav_order: 3
 
 # Let exclude the page from the navbar
 nav_exclude: false
