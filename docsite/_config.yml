@@ -140,3 +140,7 @@ color_scheme: light
 plugins:
   - jekyll-redirect-from
   # # - jekyll-last-modified-at
+
+#################################################################
+
+baseurl: MagicMirror-GBM
