@@ -1,4 +1,4 @@
-name: Testing the GitHub Pages publication
+name: Jekyll builder
 
 on:
   push
