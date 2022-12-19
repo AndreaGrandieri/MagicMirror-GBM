@@ -17,10 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: bundle
-        working-directory: ./docsite
+        working-directory: docsite
       
   second:
     runs-on: ubuntu-latest
     steps:
       - run: bundle exec jekyll build
-        working-directory: ./docsite
+        working-directory: docsite
