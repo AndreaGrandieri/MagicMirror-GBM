@@ -15,7 +15,7 @@ nav_order: 10
 nav_exclude: false
 
 # If this page represents the parent page of a section that, therefore, has children, specify it in the following way
-has_children: false
+has_children: true
 
 # If this page represents the child page of a section that, therefore, has ONE parent page, specify it in the following way
 parent: MagicMirror-GBM
