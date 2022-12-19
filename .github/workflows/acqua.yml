@@ -45,7 +45,7 @@ jobs:
       - name: Retrive "_site" output from runner
         uses: actions/upload-pages-artifact@v1
         with:
-          path: docsite   
+          path: docsite/_site   
 
   deploy:
     runs-on: ubuntu-latest
