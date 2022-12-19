@@ -6,9 +6,9 @@
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
 name: Deploy Jekyll site to Pages
 
-defaults:
-  run:
-    working-directory: /docsite
+# # defaults:
+# #   run:
+# #     working-directory: /docsite
 
 on:
   # Runs on pushes targeting the default branch
@@ -36,6 +36,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          # Path
+          path: docsite
       - name: Setup Ruby
         uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa # v1.115.3
         with:
