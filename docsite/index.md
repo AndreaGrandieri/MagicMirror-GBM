@@ -35,6 +35,7 @@ search_exclude: false
 ---
 
 # MagicMirror-GBM
+{: .no_toc }
 
 ---
 
