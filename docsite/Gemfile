@@ -25,7 +25,7 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 gem "just-the-docs"
 
 # Gem (package) regarding the plugin: "jekyll-redirect-from"
-# # gem 'jekyll-redirect-from'
+gem 'jekyll-redirect-from'
 
 # Gem (package) regarding the plugin: "jekyll-last-modified-at" (https://github.com/gjtorikian/jekyll-last-modified-at)
 # # gem "jekyll-last-modified-at"
