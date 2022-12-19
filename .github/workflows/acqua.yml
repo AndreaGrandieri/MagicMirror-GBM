@@ -41,7 +41,10 @@ jobs:
         working-directory: docsite
       - name: Run "bundle exec jekyll build"
         run: bundle exec jekyll build
-        working-directory: docsite 
+        working-directory: docsite
+      - name: Retrive "_site" output from runner
+        uses: actions/upload-pages-artifact@v1
+        working-directory: docsite      
 
   deploy:
     runs-on: ubuntu-latest
@@ -49,4 +52,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v1
-        working-directory: docsite
+        # working-directory: docsite
