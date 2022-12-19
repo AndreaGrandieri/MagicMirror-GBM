@@ -1,7 +1,12 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
+#################################################################
+#################################################################
+##                                                             ##
+##                                                             ##
+## Andrea Grandieri andreagrandieri.github.io                  ##
+##                                                             ##
+##                                                             ##
+#################################################################
+#################################################################
 
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
 name: Deploy Jekyll site to Pages
@@ -34,25 +39,32 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # Disregards "default working-directory" set above, because it is not needed here
       - name: Checkout
         uses: actions/checkout@v3
+      # Disregards "default working-directory" set above. Due to this, the "bundle install" command will be skipped
       - name: Setup Ruby
         uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa # v1.115.3
         with:
           ruby-version: '3.0' # Not needed with a .ruby-version file
-          # Settinga to false will skip the command "bundle install". Should be put to false since "bundle install" is run in the next step
-          bundler-cache: false # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
+          # runs 'bundle install' and caches installed gems automatically
+          # Setting to false will skip the command "bundle install". Should be put to false since "bundle install" is run in the next step
+          bundler-cache: false
+      # Regards "default working-directory" set above
       - name: Run bundle install
-        run: bundle cache
+        # There's no point in running "bundle cache": the GitHub Action's runner gets destroyed after the workflow is done. Thus, no cache will be used
+        run: bundle install
+      # Disregards "default working-directory" set above, because it is not needed here
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v2
+      # Regards "default working-directory" set above
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+      # Disregards "default working-directory" set above. Due to this, the option "with path" is used
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v1
@@ -63,7 +75,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}/docsite
     runs-on: ubuntu-latest
     needs: build
     steps:
