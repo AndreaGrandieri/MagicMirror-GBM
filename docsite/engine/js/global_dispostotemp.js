@@ -26,25 +26,25 @@ function themeModeSwitcher() {
   // Checks if the "sessionStorage" object is supported by the browser
   if (typeof (Storage) !== "undefined") {
     if (sessionStorage.theme) {
-      if (sessionStorage.theme == "custom_light") {
+      if (sessionStorage.theme == light_name) {
         toggleDarkMode()
       } else {
         toggleLightMode()
       }
     } else {
-      sessionStorage.theme = "custom_light"
+      sessionStorage.theme = light_name
       toggleDarkMode()
     }
   } else {
     // Continuity won't work
     if (themeModeSwitcher.theme !== "undefined") {
-      if (themeModeSwitcher.theme == "custom_light") {
+      if (themeModeSwitcher.theme == light_name) {
         toggleDarkMode()
       } else {
         toggleLightMode()
       }
     } else {
-      themeModeSwitcher.theme = "custom_light"
+      themeModeSwitcher.theme = light_name
       toggleDarkMode()
     }
   }
@@ -56,11 +56,11 @@ function toggleDarkMode() {
 
   // Checks if the "sessionStorage" object is supported by the browser
   if (typeof (Storage) !== "undefined") {
-    sessionStorage.theme = "custom_dark"
+    sessionStorage.theme = dark_name
     jtd.setTheme(sessionStorage.theme)
   } else {
     // Continuity won't work
-    themeModeSwitcher.theme = "custom_dark"
+    themeModeSwitcher.theme = dark_name
     jtd.setTheme(themeModeSwitcher.theme)
   }
 }
@@ -71,11 +71,11 @@ function toggleLightMode() {
 
   // Checks if the "sessionStorage" object is supported by the browser
   if (typeof (Storage) !== "undefined") {
-    sessionStorage.theme = "custom_light"
+    sessionStorage.theme = light_name
     jtd.setTheme(sessionStorage.theme)
   } else {
     // Continuity won't work
-    themeModeSwitcher.theme = "custom_light"
+    themeModeSwitcher.theme = light_name
     jtd.setTheme(themeModeSwitcher.theme)
   }
 }
@@ -85,7 +85,7 @@ function retrieveTheme() {
   // Checks if the "sessionStorage" object is supported by the browser
   if (typeof (Storage) !== "undefined") {
     if (sessionStorage.theme) {
-      if (sessionStorage.theme == "custom_light") {
+      if (sessionStorage.theme == light_name) {
         toggleLightMode()
       } else {
         toggleDarkMode()
@@ -94,7 +94,7 @@ function retrieveTheme() {
   } else {
     // Continuity won't work
     if (themeModeSwitcher.theme !== "undefined") {
-      if (themeModeSwitcher.theme == "custom_light") {
+      if (themeModeSwitcher.theme == light_name) {
         toggleLightMode()
       } else {
         toggleDarkMode()
