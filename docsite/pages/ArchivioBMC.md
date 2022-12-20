@@ -53,4 +53,4 @@ search_exclude: false
 
 _La versione più recente del BMC è in cima alla lista:_
 
-- <i class="fa-solid fa-file-pdf fa-3x"></i> [MagicMirror-GBM_BMC_v1.0.pdf](../assets/BMC/MagicMirror-GBM_BMC_v1.0.pdf)
+- <i class="fa-solid fa-file-pdf fa-2x"></i> [MagicMirror-GBM_BMC_v1.0.pdf](../assets/BMC/MagicMirror-GBM_BMC_v1.0.pdf)

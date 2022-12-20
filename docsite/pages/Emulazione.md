@@ -59,10 +59,10 @@ Il risultato è una VM in formato OVF, facilmente importabile in un software di 
 (consigliato: `VMWare`).
 Download:
 
-- <i class="fa-solid fa-file-zipper fa-3x"></i> [MagicMirror-GBM-Emulation-VM.zip](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSjFBaDJZcXJaSzZfaXRxa1E_ZT13YmNzM0c/root/content)
-- <i class="fa-solid fa-file-zipper fa-3x"></i> [MagicMirror-GBM-Emulation-VM.z01](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSjFEWkotU3FKRVpScVJ1cUE_ZT1vbmp3TnU/root/content)
-- <i class="fa-solid fa-file-zipper fa-3x"></i> [MagicMirror-GBM-Emulation-VM.z02](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSjFCdXpUNUt5Y21EYldyR2c_ZT1Zb3UycXQ/root/content)
-- <i class="fa-solid fa-file-zipper fa-3x"></i> [MagicMirror-GBM-Emulation-VM.z03](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSjFFXzhQVkw1ME1tcnVDblE_ZT14SnVTZWE/root/content)
+- <i class="fa-solid fa-file-zipper fa-2x"></i> [MagicMirror-GBM-Emulation-VM.zip](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSjFBaDJZcXJaSzZfaXRxa1E_ZT13YmNzM0c/root/content)
+- <i class="fa-solid fa-file-zipper fa-2x"></i> [MagicMirror-GBM-Emulation-VM.z01](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSjFEWkotU3FKRVpScVJ1cUE_ZT1vbmp3TnU/root/content)
+- <i class="fa-solid fa-file-zipper fa-2x"></i> [MagicMirror-GBM-Emulation-VM.z02](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSjFCdXpUNUt5Y21EYldyR2c_ZT1Zb3UycXQ/root/content)
+- <i class="fa-solid fa-file-zipper fa-2x"></i> [MagicMirror-GBM-Emulation-VM.z03](https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbXN0V05uOEVrRXVoSjFFXzhQVkw1ME1tcnVDblE_ZT14SnVTZWE/root/content)
 
 A fini di testing individuale e decentralizzato (la centralizzazione richiede inderogabilmente l'accesso all'hardware
 del MagicMirror (vedi _(ultima versione)_ [Documento dei Requisiti](ArchivioDocumentiDeiRequisiti))), può essere utilizzata una __Virtual Machine__ (macchina
