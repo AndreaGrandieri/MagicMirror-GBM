@@ -1,7 +1,8 @@
 @import "./color_schemes/light";
 
 .fa-file-zipper {
-    color: #7253ed;
+    // Set color from class ".text-purple-000"
+    color: $text-purple-000;
 }
 
 .fa-file-pdf {
