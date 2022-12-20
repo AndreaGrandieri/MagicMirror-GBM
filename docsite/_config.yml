@@ -91,7 +91,7 @@ gh_edit_link: false
 #################################################################
 
 # Color scheme supports "light" (default) and "dark"
-color_scheme: custom_light
+color_scheme: custom_dark
 
 #################################################################
 
