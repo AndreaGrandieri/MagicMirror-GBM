@@ -53,5 +53,5 @@ search_exclude: false
 
 _La versione più recente del documento è in cima alla lista:_
 
-- <i class="fa-solid fa-file-pdf"></i> [SpecificUseCaseDiagram-v2.0_MagicMirror-GBM.pdf](../../assets/UseCaseDiagrams/Specific/SpecificUseCaseDiagram-v2.0_MagicMirror-GBM.pdf)
-- <i class="fa-solid fa-file-pdf"></i> [SpecificUseCaseDiagram-v1.0_MagicMirror-GBM.pdf](../../assets/UseCaseDiagrams/Specific/SpecificUseCaseDiagram-v1.0_MagicMirror-GBM.pdf)
+- <i class="fa-solid fa-file-pdf fa-3x"></i> [SpecificUseCaseDiagram-v2.0_MagicMirror-GBM.pdf](../../assets/UseCaseDiagrams/Specific/SpecificUseCaseDiagram-v2.0_MagicMirror-GBM.pdf)
+- <i class="fa-solid fa-file-pdf fa-3x"></i> [SpecificUseCaseDiagram-v1.0_MagicMirror-GBM.pdf](../../assets/UseCaseDiagrams/Specific/SpecificUseCaseDiagram-v1.0_MagicMirror-GBM.pdf)
