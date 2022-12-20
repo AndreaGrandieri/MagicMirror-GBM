@@ -35,7 +35,7 @@ search_exclude: false
 
 # Bare: redirect page
 redirect_to:
-    - /MagicMirror-GBM/#indice-moduli
+    - /#indice-moduli
 ---
 
 <!-- Bare Page -->
