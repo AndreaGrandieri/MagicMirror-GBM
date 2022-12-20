@@ -10,6 +10,10 @@
 
 // This is a module. The globalThis export is used.
 
+// Global variables
+var light_name = "custom_light"
+var dark_name = "custom_dark"
+
 // Function to switch between light and dark mode
 // The function should be called within a button
 function themeModeSwitcher() {
@@ -22,25 +26,25 @@ function themeModeSwitcher() {
   // Checks if the "sessionStorage" object is supported by the browser
   if (typeof (Storage) !== "undefined") {
     if (sessionStorage.theme) {
-      if (sessionStorage.theme == "light") {
+      if (sessionStorage.theme == light_name) {
         toggleDarkMode()
       } else {
         toggleLightMode()
       }
     } else {
-      sessionStorage.theme = "light"
+      sessionStorage.theme = light_name
       toggleDarkMode()
     }
   } else {
     // Continuity won't work
     if (themeModeSwitcher.theme !== "undefined") {
-      if (themeModeSwitcher.theme == "light") {
+      if (themeModeSwitcher.theme == light_name) {
         toggleDarkMode()
       } else {
         toggleLightMode()
       }
     } else {
-      themeModeSwitcher.theme = "light"
+      themeModeSwitcher.theme = light_name
       toggleDarkMode()
     }
   }
@@ -52,11 +56,11 @@ function toggleDarkMode() {
 
   // Checks if the "sessionStorage" object is supported by the browser
   if (typeof (Storage) !== "undefined") {
-    sessionStorage.theme = "dark"
+    sessionStorage.theme = dark_name
     jtd.setTheme(sessionStorage.theme)
   } else {
     // Continuity won't work
-    themeModeSwitcher.theme = "dark"
+    themeModeSwitcher.theme = dark_name
     jtd.setTheme(themeModeSwitcher.theme)
   }
 }
@@ -67,11 +71,11 @@ function toggleLightMode() {
 
   // Checks if the "sessionStorage" object is supported by the browser
   if (typeof (Storage) !== "undefined") {
-    sessionStorage.theme = "light"
+    sessionStorage.theme = light_name
     jtd.setTheme(sessionStorage.theme)
   } else {
     // Continuity won't work
-    themeModeSwitcher.theme = "light"
+    themeModeSwitcher.theme = light_name
     jtd.setTheme(themeModeSwitcher.theme)
   }
 }
@@ -81,7 +85,7 @@ function retrieveTheme() {
   // Checks if the "sessionStorage" object is supported by the browser
   if (typeof (Storage) !== "undefined") {
     if (sessionStorage.theme) {
-      if (sessionStorage.theme == "light") {
+      if (sessionStorage.theme == light_name) {
         toggleLightMode()
       } else {
         toggleDarkMode()
@@ -90,7 +94,7 @@ function retrieveTheme() {
   } else {
     // Continuity won't work
     if (themeModeSwitcher.theme !== "undefined") {
-      if (themeModeSwitcher.theme == "light") {
+      if (themeModeSwitcher.theme == light_name) {
         toggleLightMode()
       } else {
         toggleDarkMode()
