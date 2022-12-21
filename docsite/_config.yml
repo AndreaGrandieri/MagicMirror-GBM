@@ -64,7 +64,7 @@ search:
 # Links as: "javascript:***" are not compatible with the "aux_links_new_tab" option set to true
 aux_links:
   "<i class=\"fa-brands fa-github fa-3x\"></i>":
-    - "https://github.com/AndreaGrandieri"
+    - "https://github.com/AndreaGrandieri/MagicMirror-GBM"
   # # "<div id=\"lightdarkSwitcherButton\"><i class=\"fa-solid fa-moon fa-3x\"></i></div>":
   # #   - "javascript:themeModeSwitcher();"
 
@@ -148,3 +148,7 @@ plugins:
 # Example: looking at: "andreagrandieri.github.io/MagicMirror-GBM" set baseurl: "MagicMirror-GBM"
 # Example: looking at: "andreagrandieri.github.io" do not specify a baseurl; "" will be the default
 baseurl: MagicMirror-GBM
+
+#################################################################
+
+show_downloads: true
