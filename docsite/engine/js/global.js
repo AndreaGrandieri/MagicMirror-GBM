@@ -11,8 +11,8 @@
 // This is a module. The globalThis export is used.
 
 // Global variables
-var light_name = "light"
-var dark_name = "dark"
+var light_name = "custom_light"
+var dark_name = "custom_dark"
 
 // Function to switch between light and dark mode
 // The function should be called within a button

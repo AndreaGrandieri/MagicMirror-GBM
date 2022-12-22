@@ -98,8 +98,7 @@ gh_edit_link: false
 
 # Color scheme should always start with: "custom_light"
 # Vanilla themes will never be used, even if the custom ones just import the vanilla one without making any adding: this is to make easy to add styles (in scss) in future
-# # color_scheme: custom_light
-color_scheme: light
+color_scheme: custom_light
 
 #################################################################
 
@@ -180,7 +179,6 @@ baseurl: MagicMirror-GBM
 # #     title: Warning
 # #     color: red
 
-callouts_level: quiet
 callouts:
   motto:
     title: Motto
