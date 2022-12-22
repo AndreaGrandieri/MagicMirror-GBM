@@ -166,6 +166,7 @@ baseurl: MagicMirror-GBM
 # #     title: Motto
 # #     color: blue
 
+callouts_level: quiet # or loud
 callouts:
   highlight:
     color: yellow
