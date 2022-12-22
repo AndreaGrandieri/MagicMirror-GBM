@@ -96,17 +96,6 @@ gh_edit_link: false
 
 #################################################################
 
-# Callouts
-# See: https://just-the-docs.github.io/just-the-docs/docs/configuration/#callouts
-# See: https://just-the-docs.github.io/just-the-docs/docs/ui-components/callouts/
-
-callouts:
-  motto:
-    title: Motto
-    color: blue
-
-#################################################################
-
 # Color scheme should always start with: "custom_light"
 # Vanilla themes will never be used, even if the custom ones just import the vanilla one without making any adding: this is to make easy to add styles (in scss) in future
 color_scheme: custom_light
@@ -167,3 +156,28 @@ plugins:
 baseurl: MagicMirror-GBM
 
 #################################################################
+
+# Callouts
+# See: https://just-the-docs.github.io/just-the-docs/docs/configuration/#callouts
+# See: https://just-the-docs.github.io/just-the-docs/docs/ui-components/callouts/
+
+# # callouts:
+# #   motto:
+# #     title: Motto
+# #     color: blue
+
+callouts:
+  highlight:
+    color: yellow
+  important:
+    title: Important
+    color: blue
+  new:
+    title: New
+    color: green
+  note:
+    title: Note
+    color: purple
+  warning:
+    title: Warning
+    color: red
