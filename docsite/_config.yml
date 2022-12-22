@@ -162,6 +162,6 @@ baseurl: MagicMirror-GBM
 # See: https://just-the-docs.github.io/just-the-docs/docs/ui-components/callouts/
 
 callouts:
-  motto:
-    title: Motto
-    color: blue
+    motto:
+        title: Motto
+        color: blue
