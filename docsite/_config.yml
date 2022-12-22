@@ -179,7 +179,6 @@ baseurl: MagicMirror-GBM
 # #     title: Warning
 # #     color: red
 
-callouts_level: loud
 callouts:
   motto:
     title: Motto
