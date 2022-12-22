@@ -182,5 +182,6 @@ baseurl: MagicMirror-GBM
 callouts_level: quiet
 callouts:
   motto:
-    # title: Motto (to make able to define a custom title, no title must be set here)
+    # To define a custom title, use class: "{: .motto-title}"
+    title: Motto
     color: purple
