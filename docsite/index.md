@@ -1,7 +1,8 @@
 ---
 # Specifies the "filament" HTML page to be used. The HTML page must be located in the "_layouts" folder.
 # (should always be this)
-layout: alwaysnaviffamily
+# layout: alwaysnaviffamily
+layout: default
 
 # Page title
 # If omitted, the page will not be included in the navbar
