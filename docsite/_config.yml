@@ -183,4 +183,4 @@ callouts_level: quiet
 callouts:
   motto:
     title: Motto
-    color: blue
+    color: red
