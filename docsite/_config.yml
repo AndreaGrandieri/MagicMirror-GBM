@@ -65,9 +65,9 @@ search:
 # The last entry of this list appears on the far right
 # Links as: "javascript:***" are not compatible with the "aux_links_new_tab" option set to true
 aux_links:
-  "<i class=\"fa-solid fa-down-long fa-3x\"></i> ZIP":
+  "<i class=\"fa-solid fa-down-long fa-3x\"></i> <div class=\".fs-5\">ZIP</div>":
     - https://github.com/AndreaGrandieri/MagicMirror-GBM/zipball/main
-  "<i class=\"fa-solid fa-down-long fa-3x\"></i> TAR":
+  "<i class=\"fa-solid fa-down-long fa-3x\"></i> <div class=\".fs-5\">TAR</div>":
     - https://github.com/AndreaGrandieri/MagicMirror-GBM/tarball/main
   "<i class=\"fa-brands fa-github fa-3x\"></i>":
     - "https://github.com/AndreaGrandieri/MagicMirror-GBM"
