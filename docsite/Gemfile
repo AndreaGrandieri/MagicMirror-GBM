@@ -22,7 +22,7 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # GEMS
 # Gem (package) regarding the theme in use: "just-the-docs"
-gem "just-the-docs"
+gem "just-the-docs", "0.4.0.rc3"
 
 # Gem (package) regarding the plugin: "jekyll-redirect-from"
 gem 'jekyll-redirect-from'
