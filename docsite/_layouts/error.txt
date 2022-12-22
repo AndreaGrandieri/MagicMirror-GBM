@@ -1,1 +1,1 @@
-Manca "cp_errordocument.html"
+Mancano pagine di errore custom (per non ricadere su quelle di gh pages)
