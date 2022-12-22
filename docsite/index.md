@@ -51,6 +51,13 @@ search_exclude: false
 
 ---
 
+{: .motto }
+> tl;dr
+>
+> Piattaforma Open Source modulare per trasformare un classico specchio in un sistema digitale multifunzione ad interazione passiva, dove l'immaginazione è l'unico limite.
+
+---
+
 ![GitHub Releases and Pre from shields.io](https://img.shields.io/github/v/release/AndreaGrandieri/MagicMirror-GBM?include_prereleases)
 [![Node.js CI](https://github.com/AndreaGrandieri/MagicMirror-GBM/actions/workflows/node.js.yml/badge.svg)](https://github.com/AndreaGrandieri/MagicMirror-GBM/actions/workflows/node.js.yml)
 [![CodeQL](https://github.com/AndreaGrandieri/MagicMirror-GBM/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/AndreaGrandieri/MagicMirror-GBM/actions/workflows/codeql-analysis.yml)

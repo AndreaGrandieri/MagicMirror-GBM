@@ -156,3 +156,12 @@ plugins:
 baseurl: MagicMirror-GBM
 
 #################################################################
+
+# Callouts
+# See: https://just-the-docs.github.io/just-the-docs/docs/configuration/#callouts
+# See: https://just-the-docs.github.io/just-the-docs/docs/ui-components/callouts/
+
+callouts:
+  motto:
+    title: Motto
+    color: blue
