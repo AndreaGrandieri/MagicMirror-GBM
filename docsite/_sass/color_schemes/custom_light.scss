@@ -1,28 +1,5 @@
 @import "./color_schemes/light";
 
-// #7253ed is: "purple-000"
-// Using native "purple-000" would be nice (future update)
-
-// // // .fa-file-zipper {
-// // //     color: #7253ed; 
-// // // }
-
-// // // .fa-file-pdf {
-// // //     color: #7253ed;       
-// // // }
-
-// // // .fa-php {
-// // //     color: #7253ed;   
-// // // }
-
-// // // .fa-markdown {
-// // //     color: #7253ed; 
-// // // }
-
-// // // .fa-database {
-// // //     color: #7253ed; 
-// // // }
-
 .fa-file-zipper {
     color: $purple-000; 
 }
@@ -47,7 +24,7 @@
 
 // For some still undefined reason that's not working
 // Update: yep it works, it just needs to be tagged: "!important"
-// // .label-epic {
+// // .bg-purple-epic-custom01 {
 // //     background-color: #342D7E;
 // // }
 

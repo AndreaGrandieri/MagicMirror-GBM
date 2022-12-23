@@ -1,23 +1,28 @@
 @import "./color_schemes/dark";
 
+// Using rules in "dominant-color-name_custom_light.scss"
+
+$link-color: x;
+$btn-primary-color: x;
+
 .fa-file-zipper {
-    color: $blue-000; 
+    color: x; 
 }
 
 .fa-file-pdf {
-    color: $blue-000;  
+    color: x;     
 }
 
 .fa-php {
-    color: $blue-000;   
+    color: x;   
 }
 
 .fa-markdown {
-    color: $blue-000; 
+    color: x; 
 }
 
 .fa-database {
-    color: $blue-000; 
+    color: x; 
 }
 
 /*******************************/
