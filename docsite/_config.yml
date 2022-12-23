@@ -96,7 +96,7 @@ back_to_top_text: "Back to top"
 # Define the footer content in the _includes/footer_custom.html file
 
 # Footer "Edit this page on GitHub" link text
-gh_edit_link: false
+gh_edit_link: true
 
 #################################################################
 
