@@ -179,8 +179,10 @@ baseurl: MagicMirror-GBM
 # #     title: Warning
 # #     color: red
 
+# Default: quiet
 callouts_level: quiet
-callouts_opacity: 0.3
+# Default: 0.2
+callouts_opacity: 0.2
 callouts:
   motto:
     # To define a custom title, use class: "{: .motto-title}"
