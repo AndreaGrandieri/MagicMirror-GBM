@@ -180,7 +180,7 @@ baseurl: MagicMirror-GBM
 # #     color: red
 
 callouts_level: quiet
-callouts_opacity: 0.5
+callouts_opacity: 0.3
 callouts:
   motto:
     # To define a custom title, use class: "{: .motto-title}"
