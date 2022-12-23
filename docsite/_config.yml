@@ -183,13 +183,19 @@ baseurl: MagicMirror-GBM
 callouts_level: quiet
 # Default: 0.2
 callouts_opacity: 0.2
+
+# Default colors problems:
+# purple: in dark mode, the title is too dark
+# blue: in dark mode, the title is too dark
+# grey-dk: in the dark mode, the title is too dark
+
 callouts:
   # Motto: the motto of the project
   motto:
     # To define a custom title, use class: "{: .motto-title}"
     title: Motto
     # color: purple
-    color: grey-dk
+    color: yellow
   # Warning: highlight the need of particular attention to the interested content
   warning:
     title: Warning
@@ -198,5 +204,6 @@ callouts:
   note:
     title: Note
     color: blue
+  # Generic Purpose Highlighting
   generic-purpose-highlighting:
     color: grey-lt
