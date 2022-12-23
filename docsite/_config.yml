@@ -138,11 +138,6 @@ color_scheme: custom_light
 
 #################################################################
 
-# Let specify a custom SCSS file
-# # color_scheme: NOME_FILE_SCSS
-
-#################################################################
-
 # Plugins
 plugins:
   - jekyll-redirect-from
