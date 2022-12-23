@@ -188,14 +188,14 @@ callouts_opacity: 0.2
 # purple: in dark mode, the title is too dark
 # blue: in dark mode, the title is too dark
 # grey-dk: in the dark mode, the title is too dark
+# green: in the dark mode, the title is too dark
 
 callouts:
   # Motto: the motto of the project
   motto:
     # To define a custom title, use class: "{: .motto-title}"
     title: Motto
-    # color: purple
-    color: green
+    color: fixpurple
   # Warning: highlight the need of particular attention to the interested content
   warning:
     title: Warning
@@ -207,3 +207,13 @@ callouts:
   # Generic Purpose Highlighting
   generic-purpose-highlighting:
     color: grey-lt
+  # Serie di tester (presenza solo temporanea)
+  bluetest:
+    title: bluetest
+    color: fixblue
+  greydktest:
+    title: greydktest
+    color: fixgrey-dk  
+  greentest:
+    title: greentest
+    color: fixgreen
