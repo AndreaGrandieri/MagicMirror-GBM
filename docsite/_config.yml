@@ -85,17 +85,18 @@ aux_links_new_tab: true
 # Supports true (default) or false
 heading_anchors: true
 
-# Back to top link
-back_to_top: true
-back_to_top_text: "Back to top"
-
 #################################################################
 
 # FOOTER CONTENT
 # It appears at the bottom of every page's main content
 # Define the footer content in the _includes/footer_custom.html file
 
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
 # Footer "Edit this page on GitHub" link text
+# For some still undefined reasons (at least to me) this must be "true" for the "back to top link" to work
 gh_edit_link: true
 
 #################################################################
@@ -187,7 +188,3 @@ callouts:
     # To define a custom title, use class: "{: .motto-title}"
     title: Motto
     color: purple
-
-#################################################################
-
-
