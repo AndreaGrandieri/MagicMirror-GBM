@@ -51,25 +51,25 @@ search_exclude: false
 
 ---
 
-{: .motto-title }
+{: .motto-title } 
 > tl;dr
 >
 > Piattaforma Open Source modulare per trasformare un classico specchio in un sistema digitale multifunzione ad interazione passiva, dove l'immaginazione è l'unico limite.
 
 
-{: .bluetest }
+{: .bluetest } 
 > tl;dr
 >
 > Piattaforma Open Source modulare per trasformare un classico specchio in un sistema digitale multifunzione ad interazione passiva, dove l'immaginazione è l'unico limite.
 
 
-{: .greydktest }
+{: .greydktest } 
 > tl;dr
 >
 > Piattaforma Open Source modulare per trasformare un classico specchio in un sistema digitale multifunzione ad interazione passiva, dove l'immaginazione è l'unico limite.
 
 
-{: .greentest }
+{: .greentest } 
 > tl;dr
 >
 > Piattaforma Open Source modulare per trasformare un classico specchio in un sistema digitale multifunzione ad interazione passiva, dove l'immaginazione è l'unico limite.

@@ -180,7 +180,7 @@ baseurl: MagicMirror-GBM
 # #     color: red
 
 # Default: quiet
-callouts_level: loud
+callouts_level: quiet
 # Default: 0.2
 callouts_opacity: 0.2
 
