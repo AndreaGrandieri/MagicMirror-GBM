@@ -195,7 +195,7 @@ callouts:
     # To define a custom title, use class: "{: .motto-title}"
     title: Motto
     # color: purple
-    color: yellow
+    color: green
   # Warning: highlight the need of particular attention to the interested content
   warning:
     title: Warning
