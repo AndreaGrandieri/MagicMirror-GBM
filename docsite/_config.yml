@@ -184,7 +184,17 @@ callouts_level: quiet
 # Default: 0.2
 callouts_opacity: 0.2
 callouts:
+  # Motto: the motto of the project
   motto:
     # To define a custom title, use class: "{: .motto-title}"
     title: Motto
-    color: purple
+    # color: purple
+    color: grey-lt
+  # Warning: highlight the need of particular attention to the interested content
+  warning:
+    title: Warning
+    color: yellow
+  # Note: just to bring more attention to the interested content
+  note:
+    title: Note
+    color: blue
