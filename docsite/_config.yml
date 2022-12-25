@@ -217,3 +217,5 @@ callouts:
   greentest:
     title: greentest
     color: fixgreen
+
+permalink: /:path/:basename:output_ext
