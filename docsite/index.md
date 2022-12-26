@@ -51,8 +51,10 @@ search_exclude: false
 
 ---
 
+<p style="color:black;">tl;dr</p>
+
 {: .motto-title } 
-> <p style="color:black;">tl;dr</p>
+> tl;dr
 >
 > Piattaforma Open Source modulare per trasformare un classico specchio in un sistema digitale multifunzione ad interazione passiva, dove l'immaginazione è l'unico limite.
 
