@@ -195,7 +195,7 @@ callouts:
   motto:
     # To define a custom title, use class: "{: .motto-title}"
     title: Motto
-    color: fixpurple
+    color: purple
   # Warning: highlight the need of particular attention to the interested content
   warning:
     title: Warning
@@ -205,15 +205,10 @@ callouts:
     title: Note
     color: blue
   # Generic Purpose Highlighting
-  generic-purpose-highlighting:
+  generic-purpose-highlighting-grey-lt:
     color: grey-lt
-  # Serie di tester (presenza solo temporanea)
-  bluetest:
-    title: bluetest
-    color: fixblue
-  greydktest:
-    title: greydktest
-    color: fixgrey-dk  
-  greentest:
-    title: greentest
-    color: fixgreen
+  generic-purpose-highlighting-grey-dk:
+    color: grey-dk
+  generic-purpose-highlighting-green:
+    color: green
+

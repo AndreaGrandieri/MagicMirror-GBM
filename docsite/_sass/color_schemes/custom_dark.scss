@@ -34,6 +34,26 @@
 
 /*******************************/
 
-.blockquote-title-fixer {
-    color: $text-grey-lt-000 !important;
+// Blockquote fixing
+// Since blockquote titles in dark mode result too dark due to a bug that prevents lighter colors to opt in, we tacke the problem by manually defining lighter colors and applying them to the blockquote titles via inline css.
+// DO NOT FORGET INLINE CSS FOR <p></p>!
+
+// Fixing purple
+.blockquote-title-fixer-purple {
+    color: $purple-000 !important;
+}
+
+// Fixing blue
+.blockquote-title-fixer-blue {
+    color: $blue-000 !important;
+}
+
+// Fixing grey-dk
+.blockquote-title-fixer-grey-dk {
+    color: $grey-dk-000 !important;
+}
+
+// Fixing green
+.blockquote-title-fixer-green {
+    color: $green-000 !important;
 }
