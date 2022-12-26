@@ -53,6 +53,7 @@ search_exclude: false
 
 {: .motto-title } 
 > tl;dr
+> {: .text-grey-dk-300 }
 >
 > Piattaforma Open Source modulare per trasformare un classico specchio in un sistema digitale multifunzione ad interazione passiva, dove l'immaginazione è l'unico limite.
 
