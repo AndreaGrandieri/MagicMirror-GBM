@@ -56,36 +56,6 @@ search_exclude: false
 >
 > Piattaforma Open Source modulare per trasformare un classico specchio in un sistema digitale multifunzione ad interazione passiva, dove l'immaginazione è l'unico limite.
 
-{: .note-title } 
-> <p class="blockquote-title-fixer-blue">tl;dr</p>
->
-> Piattaforma Open Source modulare per trasformare un classico specchio in un sistema digitale multifunzione ad interazione passiva, dove l'immaginazione è l'unico limite.
-
-{: .generic-purpose-highlighting-grey-lt-title } 
-> tl;dr
->
-> Piattaforma Open Source modulare per trasformare un classico specchio in un sistema digitale multifunzione ad interazione passiva, dove l'immaginazione è l'unico limite.
-
-{: .generic-purpose-highlighting-grey-dk-title } 
-> <p class="blockquote-title-fixer-grey-dk">tl;dr</p>
->
-> Piattaforma Open Source modulare per trasformare un classico specchio in un sistema digitale multifunzione ad interazione passiva, dove l'immaginazione è l'unico limite.
-
-{: .generic-purpose-highlighting-green-title } 
-> <p class="blockquote-title-fixer-green">tl;dr</p>
->
-> Piattaforma Open Source modulare per trasformare un classico specchio in un sistema digitale multifunzione ad interazione passiva, dove l'immaginazione è l'unico limite.
-
-{: .warning-title } 
-> tl;dr
->
-> Piattaforma Open Source modulare per trasformare un classico specchio in un sistema digitale multifunzione ad interazione passiva, dove l'immaginazione è l'unico limite.
-
-{: .critical-warning-title } 
-> tl;dr
->
-> Piattaforma Open Source modulare per trasformare un classico specchio in un sistema digitale multifunzione ad interazione passiva, dove l'immaginazione è l'unico limite.
-
 ---
 
 ![GitHub Releases and Pre from shields.io](https://img.shields.io/github/v/release/AndreaGrandieri/MagicMirror-GBM?include_prereleases)
