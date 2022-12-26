@@ -56,27 +56,27 @@ search_exclude: false
 >
 > Piattaforma Open Source modulare per trasformare un classico specchio in un sistema digitale multifunzione ad interazione passiva, dove l'immaginazione è l'unico limite.
 
-{: .note } 
+{: .note-title } 
 > <p class="blockquote-title-fixer-blue">tl;dr</p>
 >
 > Piattaforma Open Source modulare per trasformare un classico specchio in un sistema digitale multifunzione ad interazione passiva, dove l'immaginazione è l'unico limite.
 
-{: .generic-purpose-highlighting-grey-lt } 
+{: .generic-purpose-highlighting-grey-lt-title } 
 > tl;dr
 >
 > Piattaforma Open Source modulare per trasformare un classico specchio in un sistema digitale multifunzione ad interazione passiva, dove l'immaginazione è l'unico limite.
 
-{: .generic-purpose-highlighting-grey-dk } 
+{: .generic-purpose-highlighting-grey-dk-title } 
 > <p class="blockquote-title-fixer-grey-dk">tl;dr</p>
 >
 > Piattaforma Open Source modulare per trasformare un classico specchio in un sistema digitale multifunzione ad interazione passiva, dove l'immaginazione è l'unico limite.
 
-{: .generic-purpose-highlighting-green } 
+{: .generic-purpose-highlighting-green-title } 
 > <p class="blockquote-title-fixer-green">tl;dr</p>
 >
 > Piattaforma Open Source modulare per trasformare un classico specchio in un sistema digitale multifunzione ad interazione passiva, dove l'immaginazione è l'unico limite.
 
-{: .warning } 
+{: .warning-title } 
 > tl;dr
 >
 > Piattaforma Open Source modulare per trasformare un classico specchio in un sistema digitale multifunzione ad interazione passiva, dove l'immaginazione è l'unico limite.
