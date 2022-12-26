@@ -204,6 +204,10 @@ callouts:
   note:
     title: Note
     color: blue
+  # Critical Warning: more serious than "warning"
+  critical-warning:
+    title: Critical Warning
+    color: red
   # Generic Purpose Highlighting
   generic-purpose-highlighting-grey-lt:
     color: grey-lt
