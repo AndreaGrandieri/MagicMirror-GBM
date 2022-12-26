@@ -51,7 +51,7 @@ search_exclude: false
 
 ---
 
-<p style="color:black;">tl;dr</p>
+<p>tl;dr</p>
 
 {: .motto-title } 
 > tl;dr
