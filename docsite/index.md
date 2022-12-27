@@ -32,6 +32,8 @@ has_toc: false
 
 # Let exclude the page from the search engine (client-side)
 search_exclude: false
+
+# Notice: codeblocks highlighting supported languages listed here: https://www.fabriziomusacchio.com/blog/2021-08-11-Syntax_Highlighting_in_Jekyll/
 ---
 
 # MagicMirror-GBM

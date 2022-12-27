@@ -132,7 +132,7 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
 
     Appendere (in coda) al contenuto del file:
 
-    ```txt
+    ```plaintext
     @xset s off
     @xset -dpms
     ```
@@ -212,7 +212,7 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
 
     mysql_secure_installation:
 
-    ```txt
+    ```plaintext
     Enter current password for root (enter for none): gbm
     Change the root password?: n
     Remove anonymous users: n
@@ -283,7 +283,7 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
 
     Appendere (in coda) al contenuto del file:
 
-    ```txt
+    ```plaintext
     www-data ALL = NOPASSWD: /sbin/reboot, /sbin/halt
     ```
 
@@ -318,13 +318,13 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
 
     Modificare l'opzione `DEVICE_NAME` nel file:
 
-    ```txt
+    ```plaintext
     DEVICE_NAME="MagicMirror-GBM-spotify-cast"
     ```
 
     Modifica l'opzione `OPTIONS` nel file:
 
-    ```txt
+    ```plaintext
     OPTIONS="--device hw:1"
     ```
 
