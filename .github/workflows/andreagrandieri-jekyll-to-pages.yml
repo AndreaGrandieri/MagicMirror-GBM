@@ -18,9 +18,11 @@
 name: AndreaGrandieri/Deploy Jekyll site to Pages
 
 on:
-  # Runs on pushes targeting the specified branch
+  # Runs on pushes targeting the specified branch targeting the "docsite/" directory
   push:
     branches: ["main"]
+    paths:
+      - docsite/**
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
