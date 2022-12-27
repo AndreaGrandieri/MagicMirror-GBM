@@ -335,9 +335,7 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
 
     Modifica l'opzione `set-default-sink` nel file:
 
-    ```plaintext
-    set-default-sink alsa_output.platform-bcm2835_audio.analog-stereo
-    ```
+    `set-default-sink alsa_output.platform-bcm2835_audio.analog-stereo`
 
 16. Riavviare il Raspberry ___(+VM)___:
 
