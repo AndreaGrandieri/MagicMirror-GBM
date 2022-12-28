@@ -1,0 +1,217 @@
+#################################################################
+#################################################################
+##                                                             ##
+##                                                             ##
+## Andrea Grandieri andreagrandieri.github.io                  ##
+##                                                             ##
+##                                                             ##
+#################################################################
+#################################################################
+
+# show_downloads: true is not implemented for this theme
+
+# Title propagated to the entire site, but within the domain (with consideration of subdomains)
+title: MagicMirror-GBM
+
+#################################################################
+
+# Specifies the theme in use
+theme: just-the-docs
+
+#################################################################
+
+# Path to the logo to be used in the site
+# # logo: "PATH"
+
+#################################################################
+
+# SEARCH
+# Enable or disable the site search
+# Supports true (default) or false
+search_enabled: true
+
+# Search settings
+search:
+  # GRANULARITY
+  # Split pages into sections that can be searched individually
+  # Supports 1 - 6, default: 2
+  # Levels refer to the number of # used in MD for headings
+  heading_level: 2
+  # Maximum amount of previews per search result
+  # Default: 3
+  previews: 3
+  # Maximum amount of words to display before a matched word in the preview
+  # Default: 5
+  preview_words_before: 5
+  # Maximum amount of words to display after a matched word in the preview
+  # Default: 10
+  preview_words_after: 10
+  # Set the search token separator
+  # Default: /[\s\-/]+/
+  # Example: enable support for hyphenated search words
+  tokenizer_separator: /[\s/]+/
+  # Display the relative url in search results
+  # Supports true (default) or false
+  rel_url: true
+  # Enable or disable the search button that appears in the bottom right corner of every page
+  # Supports true or false (default)
+  button: false
+
+#################################################################
+
+# AUX LINKS
+# Aux links are placed in the upper right corner of the site and are essentially simple links
+# Aux links for the upper right navigation
+# The last entry of this list appears on the far right
+# Links as: "javascript:***" are not compatible with the "aux_links_new_tab" option set to true
+aux_links:
+  "<i class=\"fa-solid fa-down-long fa-3x\"></i> <div class=\"fs-5\">ZIP</div>":
+    - https://github.com/AndreaGrandieri/MagicMirror-GBM/zipball/main
+  "<i class=\"fa-solid fa-down-long fa-3x\"></i> <div class=\"fs-5\">TAR</div>":
+    - https://github.com/AndreaGrandieri/MagicMirror-GBM/tarball/main
+  "<i class=\"fa-brands fa-github fa-3x\"></i>":
+    - "https://github.com/AndreaGrandieri/MagicMirror-GBM"
+  # # "<div id=\"lightdarkSwitcherButton\"><i class=\"fa-solid fa-moon fa-3x\"></i></div>":
+  # #   - "javascript:themeModeSwitcher();"
+
+# Makes Aux links open in a new tab. Default is false
+aux_links_new_tab: true
+
+#################################################################
+
+# ANCHOR LINKS
+# Anchor links in headings (the ###### in MD)
+# Heading anchor links appear on hover over h1-h6 tags in page content allowing users to deep link to a particular heading on a page.
+# Supports true (default) or false
+heading_anchors: true
+
+#################################################################
+
+# FOOTER CONTENT
+# It appears at the bottom of every page's main content
+# Define the footer content in the _includes/footer_custom.html file
+
+# Back to top link
+back_to_top: true
+back_to_top_text: "Back to top"
+
+# Footer "Edit this page on GitHub" link text
+# For some still undefined reasons (at least to me) this must be "true" for the "back to top link" to work
+gh_edit_link: true
+
+#################################################################
+
+# Color scheme should always start with: "custom_light"
+# Vanilla themes will never be used, even if the custom ones just import the vanilla one without making any adding: this is to make easy to add styles (in scss) in future
+color_scheme: custom_light
+
+#################################################################
+
+# Google Analytics Tracking (optional) (see Google)
+# # ga_tracking: IL_TUO_GA_TRACKING_ID 
+# Use GDPR compliant Google Analytics settings (true by default)
+# # ga_tracking_anonymize_ip: true 
+
+#################################################################
+
+# COLLECTION OF PAGES (CATEGORIES)
+# Folder containing all collections
+# # collections_dir: NAME_COLLECTIONS_WRAPPER_FOLDER
+
+# Follow enumerated steps:
+# # # FIRST THING TO DO: Define Jekyll collections
+# # collections:
+# #   # e.g.: Define a collection named "putnamehere", its documents reside in the "_putnamehere" directory
+# #   putnamehere:
+# #     permalink: "/:collection/:path/"
+# #     output: true
+
+# # # SECOND THING TO DO
+# # just_the_docs:
+# #   # Define which collections are used in just-the-docs
+# #   collections:
+# #     # Reference the "putnamehere" collection
+# #     putnamehere:
+# #       # Give the collection a name
+# #       name: putnamehere_or_whatnameyouwant
+# #       # Exclude the collection from the navigation
+# #       # Supports true or false (default)
+# #       nav_exclude: false
+# #       # Exclude the collection from the search
+# #       # Supports true or false (default)
+# #       search_exclude: false
+
+#################################################################
+
+# Plugins
+plugins:
+  - jekyll-redirect-from
+  # # - jekyll-last-modified-at
+
+#################################################################
+
+# Specificy the baseurl for the site
+# Example: looking at: "andreagrandieri.github.io/MagicMirror-GBM" set baseurl: "MagicMirror-GBM"
+# Example: looking at: "andreagrandieri.github.io" do not specify a baseurl; "" will be the default
+baseurl: MagicMirror-GBM
+
+#################################################################
+
+# Callouts
+# See: https://just-the-docs.github.io/just-the-docs/docs/configuration/#callouts
+# See: https://just-the-docs.github.io/just-the-docs/docs/ui-components/callouts/
+
+# e.g.:
+# # callouts_level: quiet # or loud
+# # callouts:
+# #   highlight:
+# #     color: yellow
+# #   important:
+# #     title: Important
+# #     color: blue
+# #   new:
+# #     title: New
+# #     color: green
+# #   note:
+# #     title: Note
+# #     color: purple
+# #   warning:
+# #     title: Warning
+# #     color: red
+
+# Default: quiet
+callouts_level: quiet
+# Default: 0.2
+callouts_opacity: 0.2
+
+# Default colors problems:
+# purple: in dark mode, the title is too dark
+# blue: in dark mode, the title is too dark
+# grey-dk: in the dark mode, the title is too dark
+# green: in the dark mode, the title is too dark
+
+callouts:
+  # Motto: the motto of the project
+  motto:
+    # To define a custom title, use class: "{: .motto-title}"
+    title: Motto
+    color: purple
+  # Warning: highlight the need of particular attention to the interested content
+  warning:
+    title: Warning
+    color: yellow
+  # Note: just to bring more attention to the interested content
+  note:
+    title: Note
+    color: blue
+  # Critical Warning: more serious than "warning"
+  critical-warning:
+    title: Critical Warning
+    color: red
+  # Generic Purpose Highlighting
+  generic-purpose-highlighting-grey-lt:
+    color: grey-lt
+  generic-purpose-highlighting-grey-dk:
+    color: grey-dk
+  generic-purpose-highlighting-green:
+    color: green
