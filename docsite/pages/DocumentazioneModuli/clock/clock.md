@@ -33,6 +33,8 @@ has_toc: false
 
 # Let exclude the page from the search engine (client-side)
 search_exclude: false
+
+permalink: index.html
 ---
 
 # clock
