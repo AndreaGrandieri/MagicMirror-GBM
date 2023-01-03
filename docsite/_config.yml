@@ -32,7 +32,7 @@ aux_links:
     - https://github.com/AndreaGrandieri/MagicMirror-GBM/tarball/main
   "<i class=\"fa-brands fa-github fa-3x\"></i>":
     - "https://github.com/AndreaGrandieri/MagicMirror-GBM"
-  "<i class="fa-solid fa-house fa-3x"></i>"
+  "<i class=\"fa-solid fa-house fa-3x\"></i>":
     - "andreagrandieri.github.io"
   # # "<div id=\"lightdarkSwitcherButton\"><i class=\"fa-solid fa-moon fa-3x\"></i></div>":
   # #   - "javascript:themeModeSwitcher();"
