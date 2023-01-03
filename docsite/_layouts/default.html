@@ -165,7 +165,7 @@ layout: table_wrappers
         {% endif %}
         <!-- Start Alter -->
         <!-- Even if there are no auxlinks, the hardcoded ones will be inserted -->
-        {% if site.aux_links == false %}
+        {% if !site.aux_links %}
         <nav aria-label="Auxiliary" class="aux-nav">
           <!-- Start Alter -->
           <!-- Hardcoded aux link to ignore the option "aux_links_new_tab"-->
