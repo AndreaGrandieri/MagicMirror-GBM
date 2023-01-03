@@ -163,6 +163,21 @@ layout: table_wrappers
           </ul>
         </nav>
         {% endif %}
+        <!-- Start Alter -->
+        <!-- Even if there are no auxlinks, the hardcoded ones will be inserted -->
+        {% if site.aux_links == false %}
+        <nav aria-label="Auxiliary" class="aux-nav">
+          <!-- Start Alter -->
+          <!-- Hardcoded aux link to ignore the option "aux_links_new_tab"-->
+          <ul class="aux-nav-list">
+            <a href="javascript:themeModeSwitcher();" class="site-button">
+              <div id="lightdarkSwitcherButton"><i class="fa-solid fa-moon fa-3x"></i></div>
+            </a>
+            <!-- End Alter -->
+          </ul>
+        </nav>
+        {% endif %}
+        <!-- End Alter -->
       </div>
       <div id="main-content-wrap" class="main-content-wrap">
         {% unless page.url == "/" %}
