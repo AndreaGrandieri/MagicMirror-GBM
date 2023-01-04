@@ -14,6 +14,7 @@
 var light_name = "custom_light"
 var dark_name = "custom_dark"
 var thirdOrderBrowserArray = []
+this.thirdOrderBrowserArray = thirdOrderBrowserArray
 
 // Function to switch between light and dark mode
 // The function should be called within a button
