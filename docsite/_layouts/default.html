@@ -282,8 +282,10 @@ layout: table_wrappers
         {% for secondOrderBrowser in firstOrderBrowser %}
         <script>console.log('{{ secondOrderBrowser }}');</script>
 
-          {% for thirdOrderBrowser in secondOrderBrowser.last %}
-          <script>console.log('TOB: {{ thirdOrderBrowser }}');</script>   
+          {% for thirdOrderBrowser in secondOrderBrowser %}
+            {% if thirdOrderBrowser.last %}
+              <script>console.log('TOB: {{ thirdOrderBrowser }}');</script>
+            {% endif %}  
           {% endfor %}
 
         {% endfor %}
