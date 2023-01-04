@@ -165,6 +165,10 @@ layout: table_wrappers
                   <!-- Using thirdOrderBrowser iff secondOrderBrowser is pointing to the last iterable item: i.e: item1item2item3 -->
                   {% if forloop.last %}
 
+                    <script type="module">
+                      flushThirdOrderBrowserArray();
+                    </script>
+
                     <!-- Tester: <script>console.log('{{ thirdOrderBrowser }}');</script> -->
                     <!-- Returns: itemN at each iteration with counting N (e.g.: item1, (then) item2, (then) item3) -->                    
                     {% for thirdOrderBrowser in secondOrderBrowser %}
@@ -173,24 +177,11 @@ layout: table_wrappers
                       </script>
                     {% endfor %}
 
-                    <script type="module">console.log(thirdOrderBrowserArray);</script>
+                    <div id="thirdOrderBrowserDiv"></div>
 
-                    <!-- <div id="resultant"></div>
-
-                    <script>
-                    
-                      htmlsupreme=  "<li class=\"aux-nav-list-item\"><a href=\"" + dynamArr[1] + "\"" + "class=\"site-button\"";
-                      if (dynamArr[2] == true) {
-                        htmlsupreme += " target=\"_blank\" rel=\"noopener noreferrer\"";
-                      }
-                      htmlsupreme += ">" + dynamArr[0] + "</a></li>";
-
-
-                      document.getElementById("resultant").innerHTML = htmlsupreme;
-                    
-                    
-                    </script> -->
-
+                    <script type="module">
+                      injectHMTLToThirdOrderBrowserDiv();
+                    </script>
                   {% endif %}
                 {% endfor %}
               {% endfor %}
