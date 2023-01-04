@@ -145,23 +145,19 @@ layout: table_wrappers
         {% include header_custom.html %}
         <!-- Start Alter -->
         <!-- Now it is able to specify the "new tab option" specifically for single link -->
-        <!-- Also using: https://stackoverflow.com/questions/38295128/access-name-of-yaml-items-pointer-reference-in-liquid-template -->
+        <!-- Also using: https://stackoverflow.com/questions/38295128/access-name-of-yaml-items-pointer-reference-in-liquid-template (see also: https://stackoverflow.com/questions/8206869/iterate-over-hashes-in-liquid-templates) -->
         {% if site.aux_links %}
         <nav aria-label="Auxiliary" class="aux-nav">
           <ul class="aux-nav-list">
             {% for link in site.aux_links %}
-            {% for internalbrowser in link %}
-            <li class="aux-nav-list-item">
-              <a href="{{ internalbrowser[1] }}" class="site-button" {% if internalbrowser[2] %} target="_blank" rel="noopener noreferrer"
-                {% endif %}>
-                {{ internalbrowser[0] }}
-              </a>
-              <!-- <a href="{{ link.last }}" class="site-button" {% if site.aux_links_new_tab %} target="_blank"
-                rel="noopener noreferrer" {% endif %}>
-                {{ link.first }}
-              </a> -->
-            </li>
-            {% endfor %}
+              {% for internalbrowser in link %}
+              <li class="aux-nav-list-item">
+                <a href="{{ internalbrowser[1] }}" class="site-button" {% if internalbrowser[2] %} target="_blank" rel="noopener noreferrer"
+                  {% endif %}>
+                  {{ internalbrowser[0] }}
+                </a>
+              </li>
+              {% endfor %}
             {% endfor %}
         <!-- End Alter -->
           </ul>
