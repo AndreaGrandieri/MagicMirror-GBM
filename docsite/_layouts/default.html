@@ -167,6 +167,7 @@ layout: table_wrappers
 
                     <!-- Array building in Liquid -->
                     {% assign dynamArr = "" | split: "" %}
+                    {% assign splitter = "|" %}
 
                     <!-- Tester: <script>console.log('{{ thirdOrderBrowser }}');</script> -->
                     <!-- Returns: itemN at each iteration with counting N (e.g.: item1, (then) item2, (then) item3) -->                    
@@ -174,7 +175,7 @@ layout: table_wrappers
                       {% unless forloop.last %}
                         {% assign dynamSingle = thirdOrderBrowser %}
                         {% assign dynamArr = dynamArr | concat: dynamSingle %}
-                        {% assign dynamArr = dynamArr | concat: '|' %}
+                        {% assign dynamArr = dynamArr | concat: splitter %}
                       {% endunless %}
 
                       {% if forloop.last %}
@@ -182,6 +183,8 @@ layout: table_wrappers
                         {% assign dynamArr = dynamArr | concat: dynamSingle %}
                       {% endif %}
                     {% endfor %}
+
+                    <script>console.log('{{ dynamArr }}');</script>
 
                     <li class="aux-nav-list-item">
                       <a href="{{ dynamArr[1] }}" class="site-button" {% if dynamArr[2] %} target="_blank" rel="noopener noreferrer"
