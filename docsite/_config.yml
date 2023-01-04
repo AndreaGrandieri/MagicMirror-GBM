@@ -26,23 +26,23 @@ title: MagicMirror-GBM
 # The last entry of this list appears on the far right
 # Links as: "javascript:***" are not compatible with the "aux_links_new_tab" option set to true
 aux_links:
-  link1:
+  - link1:
     - "<i class=\"fa-solid fa-down-long fa-3x\"></i> <div class=\"fs-5\">ZIP</div>"
     - https://github.com/AndreaGrandieri/MagicMirror-GBM/zipball/main
     - true
-  link2:
+  - link2:
     - "<i class=\"fa-solid fa-down-long fa-3x\"></i> <div class=\"fs-5\">TAR</div>"
     - https://github.com/AndreaGrandieri/MagicMirror-GBM/tarball/main
     - true
-  link3:
+  - link3:
     - "<i class=\"fa-brands fa-github fa-3x\"></i>"
     - "https://github.com/AndreaGrandieri/MagicMirror-GBM"
     - true
-  link4:
+  - link4:
     - "<i class=\"fa-solid fa-house fa-3x\"></i>"
     - "https://andreagrandieri.github.io/"
     - false
-  link5:
+  - link5:
     - "<div id=\"lightdarkSwitcherButton\"><i class=\"fa-solid fa-moon fa-3x\"></i></div>"
     - "javascript:themeModeSwitcher();"
     - false
