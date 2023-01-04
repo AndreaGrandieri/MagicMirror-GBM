@@ -151,15 +151,15 @@ layout: table_wrappers
           <ul class="aux-nav-list">
 
             <!-- Tester: <script>console.log('{{ link }}');</script> -->
-            <!-- Returns: ?? -->
+            <!-- Returns: {"link1"=>[item1, item2, item3]} at each iteration -->
             {% for link in site.aux_links %}
 
               <!-- Tester: <script>console.log('{{ firstOrderBrowser }}');</script> -->
-              <!-- Returns: {"link1"=>[item1, item2, item3]} at each iteration -->
+              <!-- Returns: link1item1item2item3 at each iteration -->
               {% for firstOrderBrowser in link %}
 
                 <!-- Tester: <script>console.log('{{ secondOrderBrowser }}');</script> -->
-                <!-- Returns: link1item1item2item3 at each iteration-->
+                <!-- Returns: -->
                 {% for secondOrderBrowser in firstOrderBrowser %}
 
                   <!-- Using thirdOrderBrowser iff secondOrderBrowser is pointing to the last iterable item: i.e: item1item2item3 -->
@@ -288,9 +288,27 @@ layout: table_wrappers
     <!-- Start Alter -->
     {% for link in site.aux_links %}
     <script>console.log('{{ link }}');</script>  
+  
 
       {% for firstOrderBrowser in link %}
       <script>console.log('{{ firstOrderBrowser }}');</script>
+
+        {% for secondOrderBrowser in firstOrderBrowser %}
+        <script>console.log('{{ secondOrderBrowser }}');</script>
+
+          {% if forloop.last %}            
+
+            {% for thirdOrderBrowser in secondOrderBrowser %}
+              <script>console.log('TOB: {{ thirdOrderBrowser }}');</script>
+              <script>console.log('TOB: {{ thirdOrderBrowser[0] }}');</script>
+              <script>console.log('TOB: {{ thirdOrderBrowser[1] }}');</script>
+              <script>console.log('TOB: {{ thirdOrderBrowser[2] }}');</script>
+            {% endfor %}
+
+          {% endif %}
+
+        {% endfor %}
+
       {% endfor %}
 
     {% endfor %}
