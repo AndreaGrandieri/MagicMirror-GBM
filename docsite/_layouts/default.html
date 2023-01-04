@@ -169,12 +169,11 @@ layout: table_wrappers
                     <!-- Returns: itemN at each iteration with counting N (e.g.: item1, (then) item2, (then) item3) -->                    
                     {% for thirdOrderBrowser in secondOrderBrowser %}
                       <script>
-                        var dynamArr = [];
-                        dynamArr.push('{{ thirdOrderBrowser }}');
+                      appendToThirdOrderBrowserArray('{{ thirdOrderBrowser }}');
                       </script>
                     {% endfor %}
 
-                    <script>console.log(dynamArr);</script>
+                    <script>console.log(thirdOrderBrowserArray);</script>
 
                     <div id="resultant"></div>
 

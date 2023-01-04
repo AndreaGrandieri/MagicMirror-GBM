@@ -13,6 +13,7 @@
 // Global variables
 var light_name = "custom_light"
 var dark_name = "custom_dark"
+var thirdOrderBrowserArray = []
 
 // Function to switch between light and dark mode
 // The function should be called within a button
@@ -103,3 +104,13 @@ function retrieveTheme() {
   }
 }
 globalThis.retrieveTheme = retrieveTheme
+
+function appendToThirdOrderBrowserArray(element) {
+  thirdOrderBrowserArray.push(element)
+}
+globalThis.appendToThirdOrderBrowserArray = appendToThirdOrderBrowserArray
+
+function injectHMTLToThirdOrderBrowserDiv() {
+
+}
+globalThis.injectHMTLToThirdOrderBrowserDiv = injectHMTLToThirdOrderBrowserDiv
