@@ -54,7 +54,7 @@ function themeModeSwitcher() {
 globalThis.themeModeSwitcher = themeModeSwitcher;
 
 function toggleDarkMode() {
-  document.getElementById("lightdarkSwitcherButton").innerHTML = "<i class=\"fa-solid fa-sun fa-3x\"></i>";
+  // document.getElementById("lightdarkSwitcherButton").innerHTML = "<i class=\"fa-solid fa-sun fa-3x\"></i>";
 
   // Checks if the "sessionStorage" object is supported by the browser
   if (typeof (Storage) !== "undefined") {
@@ -69,7 +69,7 @@ function toggleDarkMode() {
 globalThis.toggleDarkMode = toggleDarkMode;
 
 function toggleLightMode() {
-  document.getElementById("lightdarkSwitcherButton").innerHTML = "<i class=\"fa-solid fa-moon fa-3x\"></i>";
+  // document.getElementById("lightdarkSwitcherButton").innerHTML = "<i class=\"fa-solid fa-moon fa-3x\"></i>";
 
   // Checks if the "sessionStorage" object is supported by the browser
   if (typeof (Storage) !== "undefined") {
@@ -126,3 +126,29 @@ function flushThirdOrderBrowserArray() {
   thirdOrderBrowserArray = [];
 }
 globalThis.flushThirdOrderBrowserArray = flushThirdOrderBrowserArray;
+
+// It changes the icon of the button to switch between light and dark mode accordingly to the ALREADY retrieved theme
+// It should be called after the function "retrieveTheme()"
+function syncRetrieveTheme() {
+  // Check if element of id "lightdarkSwitcherButton" exists. If not, return. This is probably due to the not inserted button to switch between light and dark mode: in this case, this is not an error
+  if (!document.getElementById("lightdarkSwitcherButton")) {
+    return;
+  }
+
+  // Checks if the "sessionStorage" object is supported by the browser
+  if (typeof (Storage) !== "undefined") {
+    if (sessionStorage.theme == dark_name) {
+      document.getElementById("lightdarkSwitcherButton").innerHTML = "<i class=\"fa-solid fa-sun fa-3x\"></i>";
+    }
+    else {
+      document.getElementById("lightdarkSwitcherButton").innerHTML = "<i class=\"fa-solid fa-moon fa-3x\"></i>";
+    }
+  } else {
+    if (themeModeSwitcher.theme == dark_name) {
+      document.getElementById("lightdarkSwitcherButton").innerHTML = "<i class=\"fa-solid fa-sun fa-3x\"></i>";
+    } else {
+      document.getElementById("lightdarkSwitcherButton").innerHTML = "<i class=\"fa-solid fa-moon fa-3x\"></i>";
+    }
+  }
+}
+globalThis.syncRetrieveTheme = syncRetrieveTheme;
