@@ -266,11 +266,14 @@ layout: table_wrappers
     {% endif %}
 
     <!-- Start Alter -->
+    <!-- Using: https://stackoverflow.com/questions/38295128/access-name-of-yaml-items-pointer-reference-in-liquid-template -->
     {% for link in site.aux_links %}
-    <script>console.log('{{ link[0] }}');</script>
-    <script>console.log('{{ link[1] }}');</script>
-    <script>console.log('{{ link[2] }}');</script>
-    <script>console.log('{{ link[3] }}');</script>
+    {% for browser in link %}
+    <script>console.log('{{ browser[0] }}');</script>
+    <script>console.log('{{ browser[1] }}');</script>
+    <script>console.log('{{ browser[2] }}');</script>
+    <script>console.log('{{ browser[3] }}');</script>
+    {% endfor %}
     {% endfor %}
     <!-- End Alter -->
   </body>
