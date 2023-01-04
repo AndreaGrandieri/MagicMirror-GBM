@@ -149,14 +149,34 @@ layout: table_wrappers
         {% if site.aux_links %}
         <nav aria-label="Auxiliary" class="aux-nav">
           <ul class="aux-nav-list">
+
+            <!-- Tester: <script>console.log('{{ link }}');</script> -->
+            <!-- Returns: ?? -->
             {% for link in site.aux_links %}
-              {% for internalbrowser in link %}
-              <li class="aux-nav-list-item">
-                <a href="{{ internalbrowser[1] }}" class="site-button" {% if internalbrowser[2] %} target="_blank" rel="noopener noreferrer"
-                  {% endif %}>
-                  {{ internalbrowser[0] }}
-                </a>
-              </li>
+
+              <!-- Tester: <script>console.log('{{ firstOrderBrowser }}');</script> -->
+              <!-- Returns: {"link1"=>[item1, item2, item3]} at each iteration -->
+              {% for firstOrderBrowser in link %}
+
+                <!-- Tester: <script>console.log('{{ secondOrderBrowser }}');</script> -->
+                <!-- Returns: link1item1item2item3 at each iteration-->
+                {% for secondOrderBrowser in firstOrderBrowser %}
+
+                  <!-- Using thirdOrderBrowser iff secondOrderBrowser is pointing to the last iterable item: i.e: item1item2item3 -->
+                  {% if forloop.last %}
+
+                    <!-- Tester: <script>console.log('{{ thirdOrderBrowser }}');</script> -->
+                    <!-- Returns: itemN at each iteration with counting N -->
+                    {% for thirdOrderBrowser in secondOrderBrowser %}
+                      <li class="aux-nav-list-item">
+                        <a href="{{ thirdOrderBrowser[1] }}" class="site-button" {% if thirdOrderBrowser[2] %} target="_blank" rel="noopener noreferrer"
+                          {% endif %}>
+                          {{ thirdOrderBrowser[0] }}
+                        </a>
+                      </li>
+                    {% endfor %}
+                  {% endif %}
+                {% endfor %}
               {% endfor %}
             {% endfor %}
         <!-- End Alter -->
@@ -264,36 +284,10 @@ layout: table_wrappers
     </script>
     {% endif %}
 
-    <!-- Start Alter -->
-    <script>console.log('{{ site.aux_links }}');</script>
-    <!-- End Alter -->
 
     <!-- Start Alter -->
     {% for link in site.aux_links %}
-    <!-- <script>console.log('{{ link }}');</script>  
-    <script>console.log('{{ link[0] }}');</script>  
-    <script>console.log('{{ link[1] }}');</script>   -->
-    <!-- <script>console.log('{{ link.first }}');</script>   -->
-    <!-- <script>console.log('{{ link.last }}');</script>   -->
-
-      {% for firstOrderBrowser in link %}
-      <script>console.log('{{ firstOrderBrowser }}');</script>
-
-        {% for secondOrderBrowser in firstOrderBrowser %}
-        <script>console.log('{{ secondOrderBrowser }}');</script>
-
-          {% if forloop.last %}            
-
-            {% for thirdOrderBrowser in secondOrderBrowser %}
-              <script>console.log('TOB: {{ thirdOrderBrowser }}');</script>
-            {% endfor %}
-
-          {% endif %}
-
-        {% endfor %}
-
-      {% endfor %}
-
+    <script>console.log('{{ link }}');</script>  
     {% endfor %}
     <!-- End Alter -->
 
