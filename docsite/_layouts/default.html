@@ -263,6 +263,20 @@ layout: table_wrappers
       window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
     </script>
     {% endif %}
+
+    <!-- Start Alter -->
+    {% for link in site.aux_links %}
+      {% for internalbrowser in link %}
+      <script>console.log('This is link: {{ link[0] }}');</script>
+      <script>console.log('Whole-block content: {{ link[1] }}');</script>
+      <script>console.log('internalbrowser[0]');</script>
+      <script>console.log('internalbrowser[1]');</script>
+      <script>console.log('internalbrowser[2]');</script>
+      {% endfor %}
+    {% endfor %}
+    <!-- End Alter -->
+
+
   </body>
 
 </html>
