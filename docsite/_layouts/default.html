@@ -143,41 +143,27 @@ layout: table_wrappers
         <div></div>
         {% endif %}
         {% include header_custom.html %}
+        <!-- Start Alter -->
+        <!-- Now it is able to specify the "new tab option" specifically for single link -->
         {% if site.aux_links %}
         <nav aria-label="Auxiliary" class="aux-nav">
           <ul class="aux-nav-list">
             {% for link in site.aux_links %}
             <li class="aux-nav-list-item">
-              <a href="{{ link.last }}" class="site-button" {% if site.aux_links_new_tab %} target="_blank"
-                rel="noopener noreferrer" {% endif %}>
+              <a href="{{ link[1] }}" class="site-button" {% if link.last %} target="_blank" rel="noopener noreferrer"
+                {% endif %}>
                 {{ link.first }}
               </a>
+              <!-- <a href="{{ link.last }}" class="site-button" {% if site.aux_links_new_tab %} target="_blank"
+                rel="noopener noreferrer" {% endif %}>
+                {{ link.first }}
+              </a> -->
+          <!-- End Alter -->
             </li>
             {% endfor %}
-            <!-- Start Alter -->
-            <!-- Hardcoded aux link to ignore the option "aux_links_new_tab"-->
-            <a href="javascript:themeModeSwitcher();" class="site-button">
-              <div id="lightdarkSwitcherButton"><i class="fa-solid fa-moon fa-3x"></i></div>
-            </a>
-            <!-- End Alter -->
           </ul>
         </nav>
         {% endif %}
-        <!-- Start Alter -->
-        <!-- Even if there are no auxlinks, the hardcoded ones will be inserted -->
-        {% unless site.aux_links %}
-        <nav aria-label="Auxiliary" class="aux-nav">
-          <!-- Start Alter -->
-          <!-- Hardcoded aux link to ignore the option "aux_links_new_tab"-->
-          <ul class="aux-nav-list">
-            <a href="javascript:themeModeSwitcher();" class="site-button">
-              <div id="lightdarkSwitcherButton"><i class="fa-solid fa-moon fa-3x"></i></div>
-            </a>
-            <!-- End Alter -->
-          </ul>
-        </nav>
-        {% endunless %}
-        <!-- End Alter -->
       </div>
       <div id="main-content-wrap" class="main-content-wrap">
         {% unless page.url == "/" %}
