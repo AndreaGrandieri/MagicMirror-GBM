@@ -29,23 +29,23 @@ aux_links:
   link1:
     - "<i class=\"fa-solid fa-down-long fa-3x\"></i> <div class=\"fs-5\">ZIP</div>"
     - https://github.com/AndreaGrandieri/MagicMirror-GBM/zipball/main
-    - true
+    - "true"
   link2:
     - "<i class=\"fa-solid fa-down-long fa-3x\"></i> <div class=\"fs-5\">TAR</div>"
     - https://github.com/AndreaGrandieri/MagicMirror-GBM/tarball/main
-    - true
+    - "true"
   link3:
     - "<i class=\"fa-brands fa-github fa-3x\"></i>"
     - "https://github.com/AndreaGrandieri/MagicMirror-GBM"
-    - true
+    - "true"
   link4:
     - "<i class=\"fa-solid fa-house fa-3x\"></i>"
     - "https://andreagrandieri.github.io/"
-    - false
+    - "false"
   link5:
     - "<div id=\"lightdarkSwitcherButton\"><i class=\"fa-solid fa-moon fa-3x\"></i></div>"
     - "javascript:themeModeSwitcher();"
-    - false
+    - "false"
 
 # Makes Aux links open in a new tab. Default is false
 # # aux_links_new_tab: true
