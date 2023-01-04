@@ -271,6 +271,10 @@ layout: table_wrappers
     <!-- Start Alter -->
     {% for link in site.aux_links %}
     <script>console.log('{{ link }}');</script>  
+    <script>console.log('{{ link[0] }}');</script>  
+    <script>console.log('{{ link[1] }}');</script>  
+    <script>console.log('{{ link.first }}');</script>  
+    <script>console.log('{{ link.last }}');</script>  
     {% endfor %}
     <!-- End Alter -->
 
