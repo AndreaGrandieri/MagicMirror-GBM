@@ -278,6 +278,11 @@ layout: table_wrappers
 
       {% for firstOrderBrowser in link %}
       <script>console.log('{{ firstOrderBrowser }}');</script>
+
+        {% for secondOrderBrowser in firstOrderBrowser %}
+        <script>console.log('{{ secondOrderBrowser }}');</script>
+        {% endfor %}
+
       {% endfor %}
 
     {% endfor %}
