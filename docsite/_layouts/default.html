@@ -159,22 +159,29 @@ layout: table_wrappers
               {% for firstOrderBrowser in link %}
 
                 <!-- Tester: <script>console.log('{{ secondOrderBrowser }}');</script> -->
-                <!-- Returns: -->
+                <!-- Returns: itemN at each iteration with counting N (e.g: link1, (then) item1item2item3) -->
                 {% for secondOrderBrowser in firstOrderBrowser %}
 
                   <!-- Using thirdOrderBrowser iff secondOrderBrowser is pointing to the last iterable item: i.e: item1item2item3 -->
                   {% if forloop.last %}
 
+                    <!-- Array building in Liquid -->
+                    {% assign dynamArr = "" | split: "" %}
+
                     <!-- Tester: <script>console.log('{{ thirdOrderBrowser }}');</script> -->
-                    <!-- Returns: itemN at each iteration with counting N -->
+                    <!-- Returns: itemN at each iteration with counting N (e.g.: item1, (then) item2, (then) item3) -->                    
                     {% for thirdOrderBrowser in secondOrderBrowser %}
-                      <li class="aux-nav-list-item">
-                        <a href="{{ thirdOrderBrowser[1] }}" class="site-button" {% if thirdOrderBrowser[2] %} target="_blank" rel="noopener noreferrer"
-                          {% endif %}>
-                          {{ thirdOrderBrowser[0] }}
-                        </a>
-                      </li>
+                      {% assign dynamSingle = thirdOrderBrowser | split: '|' | first | split: '' %}
+                      {% assign dynamArr = dynamArr | concat: dynamSingle %}
                     {% endfor %}
+
+                    <li class="aux-nav-list-item">
+                      <a href="{{ thirdOrderBrowser[1] }}" class="site-button" {% if thirdOrderBrowser[2] %} target="_blank" rel="noopener noreferrer"
+                        {% endif %}>
+                        {{ thirdOrderBrowser[0] }}
+                      </a>
+                    </li>
+
                   {% endif %}
                 {% endfor %}
               {% endfor %}
@@ -283,37 +290,6 @@ layout: table_wrappers
       window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
     </script>
     {% endif %}
-
-
-    <!-- Start Alter -->
-    {% for link in site.aux_links %}
-    <script>console.log('{{ link }}');</script>  
-  
-
-      {% for firstOrderBrowser in link %}
-      <script>console.log('{{ firstOrderBrowser }}');</script>
-
-        {% for secondOrderBrowser in firstOrderBrowser %}
-        <script>console.log('{{ secondOrderBrowser }}');</script>
-
-          {% if forloop.last %}            
-
-            {% for thirdOrderBrowser in secondOrderBrowser %}
-              <script>console.log('TOB: {{ thirdOrderBrowser }}');</script>
-              <script>console.log('TOB: {{ thirdOrderBrowser[0] }}');</script>
-              <script>console.log('TOB: {{ thirdOrderBrowser[1] }}');</script>
-              <script>console.log('TOB: {{ thirdOrderBrowser[2] }}');</script>
-            {% endfor %}
-
-          {% endif %}
-
-        {% endfor %}
-
-      {% endfor %}
-
-    {% endfor %}
-    <!-- End Alter -->
-
   </body>
 
 </html>
