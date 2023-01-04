@@ -112,7 +112,7 @@ function appendToThirdOrderBrowserArray(string) {
 globalThis.appendToThirdOrderBrowserArray = appendToThirdOrderBrowserArray;
 
 function injectHMTLToThirdOrderBrowserDiv() {
-  toInject = "<li class=\"aux-nav-list-item\"><a href=\"" + thirdOrderBrowserArray[1] + "\"" + "class=\"site-button\"";
+  var toInject = "<li class=\"aux-nav-list-item\"><a href=\"" + thirdOrderBrowserArray[1] + "\"" + "class=\"site-button\"";
   if (thirdOrderBrowserArray[2] == true) {
     toInject += " target=\"_blank\" rel=\"noopener noreferrer\"";
   }
