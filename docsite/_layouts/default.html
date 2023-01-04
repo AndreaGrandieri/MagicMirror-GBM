@@ -146,20 +146,27 @@ layout: table_wrappers
         <!-- Start Alter -->
         <!-- Now it is able to specify the "new tab option" specifically for single link -->
         <!-- Also using: https://stackoverflow.com/questions/38295128/access-name-of-yaml-items-pointer-reference-in-liquid-template (see also: https://stackoverflow.com/questions/8206869/iterate-over-hashes-in-liquid-templates) -->
+        <!-- Description -->
+        <!-- Tester: <script>console.log('{{ link }}');</script> -->
+        <!-- Returns: {"link1"=>[item1, item2, item3]} at each iteration -->
+        <!-- Liquid code: {% for link in site.aux_links %} -->
+
+        <!-- Tester: <script>console.log('{{ firstOrderBrowser }}');</script> -->
+        <!-- Returns: link1item1item2item3 at each iteration -->
+        <!-- Liquid code: {% for firstOrderBrowser in link %} -->
+
+        <!-- Tester: <script>console.log('{{ secondOrderBrowser }}');</script> -->
+        <!-- Returns: itemN at each iteration with counting N (e.g: link1, (then) item1item2item3) -->
+        <!-- {% for secondOrderBrowser in firstOrderBrowser %} -->
+
+        <!-- Tester: <script>console.log('{{ thirdOrderBrowser }}');</script> -->
+        <!-- Returns: itemN at each iteration with counting N (e.g.: item1, (then) item2, (then) item3) -->                    
+        <!-- {% for thirdOrderBrowser in secondOrderBrowser %} -->
         {% if site.aux_links %}
         <nav aria-label="Auxiliary" class="aux-nav">
           <ul class="aux-nav-list">
-
-            <!-- Tester: <script>console.log('{{ link }}');</script> -->
-            <!-- Returns: {"link1"=>[item1, item2, item3]} at each iteration -->
             {% for link in site.aux_links %}
-
-              <!-- Tester: <script>console.log('{{ firstOrderBrowser }}');</script> -->
-              <!-- Returns: link1item1item2item3 at each iteration -->
               {% for firstOrderBrowser in link %}
-
-                <!-- Tester: <script>console.log('{{ secondOrderBrowser }}');</script> -->
-                <!-- Returns: itemN at each iteration with counting N (e.g: link1, (then) item1item2item3) -->
                 {% for secondOrderBrowser in firstOrderBrowser %}
 
                   <!-- Using thirdOrderBrowser iff secondOrderBrowser is pointing to the last iterable item: i.e: item1item2item3 -->
@@ -168,9 +175,7 @@ layout: table_wrappers
                     <script type="module">
                       flushThirdOrderBrowserArray();
                     </script>
-
-                    <!-- Tester: <script>console.log('{{ thirdOrderBrowser }}');</script> -->
-                    <!-- Returns: itemN at each iteration with counting N (e.g.: item1, (then) item2, (then) item3) -->                    
+                
                     {% for thirdOrderBrowser in secondOrderBrowser %}
                       <script type="module">
                       appendToThirdOrderBrowserArray('{{ thirdOrderBrowser }}');
