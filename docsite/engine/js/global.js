@@ -29,32 +29,37 @@ function themeModeSwitcher() {
   if (typeof (Storage) !== "undefined") {
     if (sessionStorage.theme) {
       if (sessionStorage.theme == light_name) {
-        toggleDarkMode();
+        toggleDarkMode(true);
       } else {
-        toggleLightMode();
+        toggleLightMode(true);
       }
     } else {
       sessionStorage.theme = light_name;
-      toggleDarkMode();
+      toggleDarkMode(true);
     }
   } else {
     // Continuity won't work
     if (themeModeSwitcher.theme !== "undefined") {
       if (themeModeSwitcher.theme == light_name) {
-        toggleDarkMode();
+        toggleDarkMode(true);
       } else {
-        toggleLightMode();
+        toggleLightMode(true);
       }
     } else {
       themeModeSwitcher.theme = light_name;
-      toggleDarkMode();
+      toggleDarkMode(true);
     }
   }
 }
 globalThis.themeModeSwitcher = themeModeSwitcher;
 
-function toggleDarkMode() {
-  // document.getElementById("lightdarkSwitcherButton").innerHTML = "<i class=\"fa-solid fa-sun fa-3x\"></i>";
+function toggleDarkMode(injectFlag) {
+  if (injectFlag) {
+    // Check if element of id "lightdarkSwitcherButton" exists.
+    if (document.getElementById("lightdarkSwitcherButton")) {
+      document.getElementById("lightdarkSwitcherButton").innerHTML = "<i class=\"fa-solid fa-sun fa-3x\"></i>";
+    }
+  }
 
   // Checks if the "sessionStorage" object is supported by the browser
   if (typeof (Storage) !== "undefined") {
@@ -68,8 +73,13 @@ function toggleDarkMode() {
 }
 globalThis.toggleDarkMode = toggleDarkMode;
 
-function toggleLightMode() {
-  // document.getElementById("lightdarkSwitcherButton").innerHTML = "<i class=\"fa-solid fa-moon fa-3x\"></i>";
+function toggleLightMode(injectFlag) {
+  // Check if element of id "lightdarkSwitcherButton" exists.
+  if (document.getElementById("lightdarkSwitcherButton")) {
+    if (injectFlag) {
+      document.getElementById("lightdarkSwitcherButton").innerHTML = "<i class=\"fa-solid fa-moon fa-3x\"></i>";
+    }
+  }
 
   // Checks if the "sessionStorage" object is supported by the browser
   if (typeof (Storage) !== "undefined") {
@@ -88,18 +98,18 @@ function retrieveTheme() {
   if (typeof (Storage) !== "undefined") {
     if (sessionStorage.theme) {
       if (sessionStorage.theme == light_name) {
-        toggleLightMode();
+        toggleLightMode(false);
       } else {
-        toggleDarkMode();
+        toggleDarkMode(false);
       }
     }
   } else {
     // Continuity won't work
     if (themeModeSwitcher.theme !== "undefined") {
       if (themeModeSwitcher.theme == light_name) {
-        toggleLightMode();
+        toggleLightMode(false);
       } else {
-        toggleDarkMode();
+        toggleDarkMode(false);
       }
     }
   }
