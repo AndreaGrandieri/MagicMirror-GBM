@@ -146,23 +146,44 @@ layout: table_wrappers
         <!-- Start Alter -->
         <!-- Now it is able to specify the "new tab option" specifically for single link -->
         <!-- Also using: https://stackoverflow.com/questions/38295128/access-name-of-yaml-items-pointer-reference-in-liquid-template (see also: https://stackoverflow.com/questions/8206869/iterate-over-hashes-in-liquid-templates) -->
-        <!-- Description -->
+        <!-- Also using: https://stackoverflow.com/a/64867876/10835360 for commenting in Liquid -->
+        <!-- Description: -->
         <!-- Tester: <script>console.log('{{ link }}');</script> -->
         <!-- Returns: {"link1"=>[item1, item2, item3]} at each iteration -->
-        {% comment %} {% for link in site.aux_links %} {% endcomment %}
+        <!-- Liquid code: -->
+        {% comment %}
+          {% raw %}
+            {% for link in site.aux_links %}
+          {% endraw %}
+        {% endcomment %}
 
         <!-- Tester: <script>console.log('{{ firstOrderBrowser }}');</script> -->
         <!-- Returns: link1item1item2item3 at each iteration -->
-        {% comment %} {% for firstOrderBrowser in link %} {% endcomment %}
+        <!-- Liquid code: -->
+        {% comment %}
+          {% raw %}
+            {% for firstOrderBrowser in link %}
+          {% endraw %}
+        {% endcomment %}
 
         <!-- Tester: <script>console.log('{{ secondOrderBrowser }}');</script> -->
         <!-- Returns: itemN at each iteration with counting N (e.g: link1, (then) item1item2item3) -->
-        <!-- {% for secondOrderBrowser in firstOrderBrowser %} -->
-        {% comment %} {% for secondOrderBrowser in firstOrderBrowser %} {% endcomment %}
+        <!-- Liquid code: -->
+        {% comment %}
+          {% raw %}
+            {% for secondOrderBrowser in firstOrderBrowser %}
+          {% endraw %}
+        {% endcomment %}
 
         <!-- Tester: <script>console.log('{{ thirdOrderBrowser }}');</script> -->
         <!-- Returns: itemN at each iteration with counting N (e.g.: item1, (then) item2, (then) item3) -->                    
-        {% comment %} {% for thirdOrderBrowser in secondOrderBrowser %} {% endcomment %}
+        <!-- Liquid code: -->
+        {% comment %}
+          {% raw %}
+            {% for thirdOrderBrowser in secondOrderBrowser %}
+          {% endraw %}
+        {% endcomment %}
+
         {% if site.aux_links %}
           <nav aria-label="Auxiliary" class="aux-nav">
             <ul class="aux-nav-list">
