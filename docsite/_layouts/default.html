@@ -149,52 +149,53 @@ layout: table_wrappers
         <!-- Description -->
         <!-- Tester: <script>console.log('{{ link }}');</script> -->
         <!-- Returns: {"link1"=>[item1, item2, item3]} at each iteration -->
-        <!-- Liquid code: {% for link in site.aux_links %} -->
+        {% comment %} {% for link in site.aux_links %} {% endcomment %}
 
         <!-- Tester: <script>console.log('{{ firstOrderBrowser }}');</script> -->
         <!-- Returns: link1item1item2item3 at each iteration -->
-        <!-- Liquid code: {% for firstOrderBrowser in link %} -->
+        {% comment %} {% for firstOrderBrowser in link %} {% endcomment %}
 
         <!-- Tester: <script>console.log('{{ secondOrderBrowser }}');</script> -->
         <!-- Returns: itemN at each iteration with counting N (e.g: link1, (then) item1item2item3) -->
         <!-- {% for secondOrderBrowser in firstOrderBrowser %} -->
+        {% comment %} {% for secondOrderBrowser in firstOrderBrowser %} {% endcomment %}
 
         <!-- Tester: <script>console.log('{{ thirdOrderBrowser }}');</script> -->
         <!-- Returns: itemN at each iteration with counting N (e.g.: item1, (then) item2, (then) item3) -->                    
-        <!-- {% for thirdOrderBrowser in secondOrderBrowser %} -->
+        {% comment %} {% for thirdOrderBrowser in secondOrderBrowser %} {% endcomment %}
         {% if site.aux_links %}
-        <nav aria-label="Auxiliary" class="aux-nav">
-          <ul class="aux-nav-list">
-            {% for link in site.aux_links %}
-              {% for firstOrderBrowser in link %}
-                {% for secondOrderBrowser in firstOrderBrowser %}
+          <nav aria-label="Auxiliary" class="aux-nav">
+            <ul class="aux-nav-list">
+              {% for link in site.aux_links %}
+                {% for firstOrderBrowser in link %}
+                  {% for secondOrderBrowser in firstOrderBrowser %}
 
-                  <!-- Using thirdOrderBrowser iff secondOrderBrowser is pointing to the last iterable item: i.e: item1item2item3 -->
-                  {% if forloop.last %}
+                    <!-- Using thirdOrderBrowser iff secondOrderBrowser is pointing to the last iterable item: i.e: item1item2item3 -->
+                    {% if forloop.last %}
 
-                    <script type="module">
-                      flushThirdOrderBrowserArray();
-                    </script>
-                
-                    {% for thirdOrderBrowser in secondOrderBrowser %}
                       <script type="module">
-                      appendToThirdOrderBrowserArray('{{ thirdOrderBrowser }}');
+                        flushThirdOrderBrowserArray();
                       </script>
-                    {% endfor %}
+                  
+                      {% for thirdOrderBrowser in secondOrderBrowser %}
+                        <script type="module">
+                        appendToThirdOrderBrowserArray('{{ thirdOrderBrowser }}');
+                        </script>
+                      {% endfor %}
 
-                    <div id="thirdOrderBrowserDiv"></div>
+                      <div id="thirdOrderBrowserDiv"></div>
 
-                    <script type="module">
-                      injectHMTLToThirdOrderBrowserDiv();
-                    </script>
-                  {% endif %}
+                      <script type="module">
+                        injectHMTLToThirdOrderBrowserDiv();
+                      </script>
+                    {% endif %}
+                  {% endfor %}
                 {% endfor %}
               {% endfor %}
-            {% endfor %}
-        <!-- End Alter -->
-          </ul>
-        </nav>
+            </ul>
+          </nav>
         {% endif %}
+        <!-- End Alter -->
       </div>
       <div id="main-content-wrap" class="main-content-wrap">
         {% unless page.url == "/" %}
