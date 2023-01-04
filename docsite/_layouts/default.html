@@ -267,10 +267,10 @@ layout: table_wrappers
     <!-- Start Alter -->
     {% for link in site.aux_links %}
       {% for firstOrderBrowser in link %}
+      <script>console.log('This is link: {{ firstOrderBrowser[0] }}');</script>
+      <script>console.log('Whole-block content: {{ firstOrderBrowser[1] }}');</script>
         <!-- secondOrderBrowser must only be run on firstOrderBrowser pointing: "whole-block content" -->
         {% for secondOrderBrowser in firstOrderBrowser[1] %}
-        <script>console.log('This is link: {{ firstOrderBrowser[0] }}');</script>
-        <script>console.log('Whole-block content: {{ firstOrderBrowser[1] }}');</script>
         <script>console.log('{{ secondOrderBrowser[0] }}');</script>
         <script>console.log('{{ secondOrderBrowser[1] }}');</script>
         <script>console.log('{{ secondOrderBrowser[2] }}');</script>
