@@ -171,8 +171,16 @@ layout: table_wrappers
                     <!-- Tester: <script>console.log('{{ thirdOrderBrowser }}');</script> -->
                     <!-- Returns: itemN at each iteration with counting N (e.g.: item1, (then) item2, (then) item3) -->                    
                     {% for thirdOrderBrowser in secondOrderBrowser %}
-                      {% assign dynamSingle = thirdOrderBrowser | split: '|' | first | split: '' %}
-                      {% assign dynamArr = dynamArr | concat: dynamSingle %}
+                      {% unless forloop.last %}
+                        {% assign dynamSingle = thirdOrderBrowser %}
+                        {% assign dynamArr = dynamArr | concat: dynamSingle %}
+                        {% assign dynamArr = dynamArr | concat: '|' %}
+                      {% endunless %}
+
+                      {% if forloop.last %}
+                        {% assign dynamSingle = thirdOrderBrowser %}
+                        {% assign dynamArr = dynamArr | concat: dynamSingle %}
+                      {% endif %}
                     {% endfor %}
 
                     <li class="aux-nav-list-item">
