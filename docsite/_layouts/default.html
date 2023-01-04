@@ -167,7 +167,7 @@ layout: table_wrappers
 
                     <!-- Array building in Liquid -->
                     {% assign dynamArr = "" | split: "" %}
-                    {% assign splitter = "|" %}
+                    {% assign splitter = "|" | split: "" %}
 
                     <!-- Tester: <script>console.log('{{ thirdOrderBrowser }}');</script> -->
                     <!-- Returns: itemN at each iteration with counting N (e.g.: item1, (then) item2, (then) item3) -->                    
