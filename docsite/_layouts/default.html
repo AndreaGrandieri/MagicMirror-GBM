@@ -288,6 +288,11 @@ layout: table_wrappers
     <!-- Start Alter -->
     {% for link in site.aux_links %}
     <script>console.log('{{ link }}');</script>  
+
+      {% for firstOrderBrowser in link %}
+      <script>console.log('{{ firstOrderBrowser }}');</script>
+      {% endfor %}
+
     {% endfor %}
     <!-- End Alter -->
 
