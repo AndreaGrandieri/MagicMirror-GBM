@@ -22,13 +22,21 @@
 
 /*******************************/
 
-// For some still undefined reason that's not working
-// Update: yep it works, it just needs to be tagged: "!important"
-// // .bg-purple-epic-custom01 {
-// //     background-color: #342D7E;
-// // }
+// Labels custom background colors
 
-.bg-purple-epic-custom01 {
+.label-relax-color {
+    background-color: #00635b !important;
+}
+
+.label-end-color {
+    background-color: #213e35 !important;
+}
+
+.label-missing-color {
+    background-color: #000000 !important;
+}
+
+.label-archived-color {
     background-color: #342D7E !important;
 }
 
