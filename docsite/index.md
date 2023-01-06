@@ -38,7 +38,6 @@ search_exclude: false
 
 # MagicMirror-GBM
 {: .no_toc }
-
 END
 {: .label .label-end-color }
 
