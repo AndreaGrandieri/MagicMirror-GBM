@@ -38,6 +38,8 @@ search_exclude: false
 
 # MagicMirror-GBM
 {: .no_toc }
+{: .d-inline-block }
+
 END
 {: .label .label-end-color }
 
