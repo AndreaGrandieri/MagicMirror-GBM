@@ -1,0 +1,41 @@
+<!--
+    STALE. DO NOT RUN!
+    @AndreaGrandieri
+    g.andreus02@gmail.com
+    https://github.com/AndreaGrandieri
+-->
+
+<?php
+require "../utils/utils.php";
+
+// Gestione sessione
+startNewSessionCheck();
+
+if (!test_input_valid_post_isset("submit")) {
+    setSessionVariable("statusPHP", "Evento di azione non valido. Riprova.");
+    setSessionVariable("statusPHPRedirect", null);
+    header("location: redirect.php?target=index.php&ms=300");
+    die;
+}
+
+if (!test_input_valid_post_isset("pullfrom")) {
+    setSessionVariable("statusPHP", "Rilevati valori non validi. Riprova.");
+    setSessionVariable("statusPHPRedirect", null);
+    header("location: redirect.php?target=index.php&ms=300");
+    die;
+}
+
+$pullfrom = ($_POST["pullfrom"]);
+
+// Eseguo aggiornamento
+// (aka) Eseguo il pull del branch origin/(+pullfrom)
+// nel branch checked out corrente
+exec("git pull origin $pullfrom");
+
+setSessionVariable("statusPHP", "Aggiornamento software completato.");
+setSessionVariable("statusPHPRedirect", null);
+header("location: redirect.php?target=index.php&ms=300");
+die;
+
+setSessionVariable("statusPHP", null);
+setSessionVariable("statusPHPRedirect", null);

@@ -1,0 +1,38 @@
+@import "./color_schemes/dark";
+
+// Using rules in "dominant-color-name_custom_light.scss"
+
+$link-color: x;
+$btn-primary-color: x;
+
+.fa-file-zipper {
+    color: x; 
+}
+
+.fa-file-pdf {
+    color: x;     
+}
+
+.fa-php {
+    color: x;   
+}
+
+.fa-markdown {
+    color: x; 
+}
+
+.fa-database {
+    color: x; 
+}
+
+/*******************************/
+
+// For some still undefined reason that's not working
+// Update: yep it works, it just needs to be tagged: "!important"
+// // .bg-purple-epic-custom01 {
+// //     background-color: #342D7E;
+// // }
+
+.bg-purple-epic-custom01 {
+    background-color: #342D7E !important;
+}

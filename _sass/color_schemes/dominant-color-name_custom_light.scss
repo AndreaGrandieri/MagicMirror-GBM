@@ -1,0 +1,64 @@
+@import "./color_schemes/light";
+
+// Override using the color: x
+// x can be a color defined using HEX notation (e.g.: #FFFFFF), or it can be a color variable from: https://just-the-docs.github.io/just-the-docs/docs/utilities/color/ (e.g.: $green-000)
+
+/*
+To use this file:
+
+- Set "color_scheme: dominant-color-name_custom_light" in _config.yml
+- Set:
+
+var light_name = "dominant-color-name_custom_light"
+var dark_name = "dominant-color-name_custom_dark"
+
+in the engine global.js
+*/
+
+$link-color: x;
+$btn-primary-color: x;
+
+.fa-file-zipper {
+    color: x; 
+}
+
+.fa-file-pdf {
+    color: x;     
+}
+
+.fa-php {
+    color: x;   
+}
+
+.fa-markdown {
+    color: x; 
+}
+
+.fa-database {
+    color: x; 
+}
+
+// The following variables do not need overriding
+// // $body-background-color: $white !default;
+// // $sidebar-color: $grey-lt-000 !default;
+// // $search-background-color: $white !default;
+// // $table-background-color: $white !default;
+// // $code-background-color: $grey-lt-000 !default;
+// // $feedback-color: darken($sidebar-color, 3%) !default;
+// // $body-text-color: $grey-dk-100 !default;
+// // $body-heading-color: $grey-dk-300 !default;
+// // $search-result-preview-color: $grey-dk-000 !default;
+// // $nav-child-link-color: $grey-dk-100 !default;
+// // $base-button-color: #f7f7f7 !default;
+
+/*******************************/
+
+// For some still undefined reason that's not working
+// Update: yep it works, it just needs to be tagged: "!important"
+// // .bg-purple-epic-custom01 {
+// //     background-color: #342D7E;
+// // }
+
+.bg-purple-epic-custom01 {
+    background-color: #342D7E !important;
+}
