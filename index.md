@@ -42,6 +42,10 @@ search_exclude: false
 
 END
 {: .label .label-end-color }
+{: .d-inline-block }
+
+Version: Z (pre-versioning protocol)
+{: .label .label-blue }
 
 ---
 
