@@ -25,7 +25,7 @@ Version: Z (pre-versioning protocol)
 
 ---
 
-[![one-face-GUI.gif](https://andreagrandieri.github.io/MagicMirror-GBM/assets/Overview-GUI/MagicMirror-GBM-GUI/one-face-GUI.gif)](assets/Overview-GUI/MagicMirror-GBM-GUI/one-face-GUI.gif)
+[![one-face-GUI.gif](https://andreagrandieri.github.io/MagicMirror-GBM/assets/Overview-GUI/MagicMirror-GBM-GUI/one-face-GUI.gif)](https://andreagrandieri.github.io/MagicMirror-GBM/assets/Overview-GUI/MagicMirror-GBM-GUI/one-face-GUI.gif)
 
 ---
 
