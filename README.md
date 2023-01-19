@@ -6,16 +6,6 @@ Version: Z (pre-versioning protocol)
 
 ---
 
-<!-- Table of contents -->
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  1. TOC
-</details>
-
----
-
  
 > <p class="blockquote-title-fixer-purple">tl;dr</p>
 >
