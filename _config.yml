@@ -44,7 +44,7 @@ aux_links: [
 # Specificy the baseurl for the site
 # Example: looking at: "andreagrandieri.github.io/MagicMirror-GBM" set baseurl: "MagicMirror-GBM"
 # Example: looking at: "andreagrandieri.github.io" do not specify a baseurl; "" will be the default
-baseurl: MagicMirror-ABC
+baseurl: MagicMirror-GBM
 ### RepoLink: append ###
 
 #################################################################
