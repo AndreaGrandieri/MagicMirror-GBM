@@ -325,6 +325,31 @@ layout: table_wrappers
       window.mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
     </script>
     {% endif %}
+
+    <!-- Dropdown menu for Language selection could be placed here -->
   </body>
 
+  <!-- Save the front matter data of the variable "availableLanguages" to the variable "availableLanguagesArray"; then, compile the dropdown language choicer. -->
+  <!-- FOR SOME REASON OF AUTO-RESTILYING AND INLINING DO NOT USE COMMENTS "//" INSIDE <script> BECAUSE THEY WILL MESS UP THINGS LEADING TO CONSIDERING COMMENTS ALSO CODE THAT SHOULDN'T! -->
+  <script type="module">
+    if (isDisambiguationPage()) {
+      var content = {{ page.disambiguation_lang | jsonify }};
+      var content2 = {{ page.availableLanguages | jsonify }};
+
+      assignVariable_disambiguationLang(content);
+      assignVariable_availableLanguagesArray(content2);
+      syncLanguage();
+    } else {
+      var content = Array({{ page.lang | jsonify }}).concat({{ page.availableLanguages | jsonify }});
+
+      assignVariable_availableLanguagesArray(content);
+      compileDropdownLanguageChoicer();
+      setLastUsedLanguage();
+      compileLINGUA();
+      compile_poweredbyahref();
+    }
+  </script>
+  <script type="module">
+    compile_universal404();
+  </script>
 </html>

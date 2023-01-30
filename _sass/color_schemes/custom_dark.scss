@@ -40,6 +40,10 @@
     background-color: #342D7E !important;
 }
 
+.label-function-visibility-color {
+    background-color: #505050 !important;
+}
+
 /*******************************/
 
 // Blockquote fixing
@@ -103,4 +107,24 @@
 // Fixing green
 .blockquote-title-fixer-green {
     color: $green-000 !important;
+}
+
+.hr_language_selector {
+    height: 1px;
+    padding: 0;
+    margin: 2rem 0;
+    background-color: #a9b0b0;
+    border: 0;
+}
+
+.nav-list-link-override-first {
+    // Overrides the purple color of the first link in the nav list (rule defined by the theme)
+    // Hardcoded color taken from the original theme! Should be changed if the theme one changes
+    color: #959396 !important;
+}
+
+.nav-list-expander-override-first {
+    // Overrides the purple color of the first link in the nav list (rule defined by the theme)
+    // Hardcoded color taken from the original theme! Should be changed if the theme one changes
+    color: #959396 !important;
 }
