@@ -254,31 +254,31 @@ function universal404() {
   */
 
   return new Promise(async (resolve, reject) => {
-    // Get the current page URL
-    var currentPageURL = window.location.href;
-
-    // CRITICAL to ensure point 1 of (*)
-    // If the "currentPageURL" is in the form "https://<domain>/<language>" or "http://<domain>/<language>", add a "/" at the end of the URL
-    if (currentPageURL.match(/^(https?:\/\/[^\/]+\/[^\/]+)$/)) {
-      currentPageURL = currentPageURL + "/";
-    }
-
-    // Analize the URL to determine if a language is specified
-    // URLs can be of two types:
-    // 1. https://<domain>/pages/<language>/
-    // 2. https://<domain>/<language>/
-
-    // Replace one by one the specified <language> with the languages in the dictionary "vars_languageEngine.mappingDictionaryForLanguages" (the language is the key of the dictionary).
-    /*
-    (*)
-
-    Metodo utilizzato: si interrogano tutte le possibili combinazioni di URL partendo, come base, dall'URL che ha portato alla pagina 404. A questo URL si sostituisce la lingua erroneamente specificata con tutte le lingue presenti nell'array "vars_languageEngine.mappingDictionaryForLanguages"; questo array contiene tutte le lingue utilizzate (almeno una volta in qualsiasi collocamento possibile) nel sito.
-
-    1. L'interrogazione è sicura: non si può in alcun modo ottenere un URL che punti esternamente al dominio del sito: ergo, si rimane sempre nel dominio del sito che è considerato sicuro. NON vi possono essere casi di interrogazione di URL di siti esterni e potenzialmente pericolosi (soprattutto se vengono generati URL strani con manipolazioni di stringhe!).
-
-    2. L'interrogazione non è troppo invasiva: non vi è il rischio concreto di un "autoDOS", in quanto ci si aspetta che l'array "vars_languageEngine.mappingDictionaryForLanguages" sia piuttosto contenuto in termini di elementi; inoltre, la pagina 404 non dovrebbe essere una pagina raggiunta troppe volte.
-    */
     for (var language in vars_languageEngine.mappingDictionaryForLanguages) {
+      // Get the current page URL
+      var currentPageURL = window.location.href;
+
+      // CRITICAL to ensure point 1 of (*)
+      // If the "currentPageURL" is in the form "https://<domain>/<language>" or "http://<domain>/<language>", add a "/" at the end of the URL
+      if (currentPageURL.match(/^(https?:\/\/[^\/]+\/[^\/]+)$/)) {
+        currentPageURL = currentPageURL + "/";
+      }
+
+      // Analize the URL to determine if a language is specified
+      // URLs can be of two types:
+      // 1. https://<domain>/pages/<language>/
+      // 2. https://<domain>/<language>/
+
+      // Replace one by one the specified <language> with the languages in the dictionary "vars_languageEngine.mappingDictionaryForLanguages" (the language is the key of the dictionary).
+      /*
+      (*)
+
+      Metodo utilizzato: si interrogano tutte le possibili combinazioni di URL partendo, come base, dall'URL che ha portato alla pagina 404. A questo URL si sostituisce la lingua erroneamente specificata con tutte le lingue presenti nell'array "vars_languageEngine.mappingDictionaryForLanguages"; questo array contiene tutte le lingue utilizzate (almeno una volta in qualsiasi collocamento possibile) nel sito.
+
+      1. L'interrogazione è sicura: non si può in alcun modo ottenere un URL che punti esternamente al dominio del sito: ergo, si rimane sempre nel dominio del sito che è considerato sicuro. NON vi possono essere casi di interrogazione di URL di siti esterni e potenzialmente pericolosi (soprattutto se vengono generati URL strani con manipolazioni di stringhe!).
+
+      2. L'interrogazione non è troppo invasiva: non vi è il rischio concreto di un "autoDOS", in quanto ci si aspetta che l'array "vars_languageEngine.mappingDictionaryForLanguages" sia piuttosto contenuto in termini di elementi; inoltre, la pagina 404 non dovrebbe essere una pagina raggiunta troppe volte.
+      */
       var response_out = null;
       var newURL = null;
 
