@@ -114,12 +114,12 @@ Le notifiche sono uno strumento utilizzato dai moduli per comunicare con:
 Schermata del modulo funzionante correttamente. Il modulo è configurato per la visualizzazione
 con una propria schermata (ownshow):
 
-[![working_module_ownshow](../../../assets/MMM-DHT-Sensor/working_module_ownshow.png)](../../../assets/MMM-DHT-Sensor/working_module_ownshow.png)
+[![working_module_ownshow](../../../../assets/MMM-DHT-Sensor/working_module_ownshow.png)](../../../../assets/MMM-DHT-Sensor/working_module_ownshow.png)
 
 Schermata del modulo funzionante correttamente. Il modulo è configurato per la visualizzazione
 delegando la visualizzazione ad un'altra schermata (di un altro modulo) (delegateshow):
 
-[![working_module_delegateshow](../../../assets/MMM-DHT-Sensor/working_module_delegateshow.jpg)](../../../assets/MMM-DHT-Sensor/working_module_delegateshow.jpg)
+[![working_module_delegateshow](../../../../assets/MMM-DHT-Sensor/working_module_delegateshow.jpg)](../../../../assets/MMM-DHT-Sensor/working_module_delegateshow.jpg)
 
 ---
 
@@ -139,4 +139,4 @@ __Presta Attenzione:__ i pin GPIO del Raspberry Pi possono essere riferiti
 seguendo (molti) diversi standard. La proprietà `sensorPin` del modulo utilizza
 lo standard evidenziato in giallo:
 
-[![pin_GPIO_ref](../../../assets/MMM-DHT-Sensor/pin_GPIO_ref.PNG)](../../../assets/MMM-DHT-Sensor/pin_GPIO_ref.PNG)
+[![pin_GPIO_ref](../../../../assets/MMM-DHT-Sensor/pin_GPIO_ref.PNG)](../../../../assets/MMM-DHT-Sensor/pin_GPIO_ref.PNG)

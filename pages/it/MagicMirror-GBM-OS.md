@@ -64,7 +64,7 @@ Il MagicMirror-GBM è reso funzionale dal suo sistema operativo: `MagicMirror-GB
 Puoi scrivere / flashare l'OS su una scheda SD pronta all'uso in un sistema Raspberry Pi usando
 il software `Raspberry Pi Imager` ([https://www.raspberrypi.org/software/](https://www.raspberrypi.org/software/)).
 
-[![flash-using-raspberry-pi-imager.PNG](../assets/MagicMirror-OS/flash-using-raspberry-pi-imager.PNG)](../assets/MagicMirror-OS/flash-using-raspberry-pi-imager.PNG)
+[![flash-using-raspberry-pi-imager.PNG](../../assets/MagicMirror-OS/flash-using-raspberry-pi-imager.PNG)](../../assets/MagicMirror-OS/flash-using-raspberry-pi-imager.PNG)
 
 ---
 
@@ -101,31 +101,31 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
 
     1. Next
 
-        [![1.png](../assets/MagicMirror-OS/default-rasp-guidedprime/1.png)](../assets/MagicMirror-OS/default-rasp-guidedprime/1.png)
+        [![1.png](../../assets/MagicMirror-OS/default-rasp-guidedprime/1.png)](../../assets/MagicMirror-OS/default-rasp-guidedprime/1.png)
 
     2. Imposta località
 
-        [![2.png](../assets/MagicMirror-OS/default-rasp-guidedprime/2.png)](../assets/MagicMirror-OS/default-rasp-guidedprime/2.png)
+        [![2.png](../../assets/MagicMirror-OS/default-rasp-guidedprime/2.png)](../../assets/MagicMirror-OS/default-rasp-guidedprime/2.png)
 
     3. Imposta password
 
-        [![3.png](../assets/MagicMirror-OS/default-rasp-guidedprime/3.png)](../assets/MagicMirror-OS/default-rasp-guidedprime/3.png)
+        [![3.png](../../assets/MagicMirror-OS/default-rasp-guidedprime/3.png)](../../assets/MagicMirror-OS/default-rasp-guidedprime/3.png)
 
     4. Next
 
-        [![4.png](../assets/MagicMirror-OS/default-rasp-guidedprime/4.png)](../assets/MagicMirror-OS/default-rasp-guidedprime/4.png)
+        [![4.png](../../assets/MagicMirror-OS/default-rasp-guidedprime/4.png)](../../assets/MagicMirror-OS/default-rasp-guidedprime/4.png)
 
     5. Seleziona rete WIFI / Cablata
 
-        [![5.png](../assets/MagicMirror-OS/default-rasp-guidedprime/5.png)](../assets/MagicMirror-OS/default-rasp-guidedprime/5.png)
+        [![5.png](../../assets/MagicMirror-OS/default-rasp-guidedprime/5.png)](../../assets/MagicMirror-OS/default-rasp-guidedprime/5.png)
 
     6. __NON FARE L'AGGIORNAMENTO SOFTWARE__ (se lo fai, accertati di rispettare le versioni di `nodejs` e `npm` riportate nelle `Specifiche` sopra)
 
-        [![6.png](../assets/MagicMirror-OS/default-rasp-guidedprime/6.png)](../assets/MagicMirror-OS/default-rasp-guidedprime/6.png)
+        [![6.png](../../assets/MagicMirror-OS/default-rasp-guidedprime/6.png)](../../assets/MagicMirror-OS/default-rasp-guidedprime/6.png)
 
     7. Puoi anche assegnare un nome personalizzato al dispositivo Raspberry (per essere individuato più facilmente nella rete)
 
-        [![7.png](../assets/MagicMirror-OS/default-rasp-guidedprime/7.png)](../assets/MagicMirror-OS/default-rasp-guidedprime/7.png)
+        [![7.png](../../assets/MagicMirror-OS/default-rasp-guidedprime/7.png)](../../assets/MagicMirror-OS/default-rasp-guidedprime/7.png)
 
 3. Disattivare spegnimento automatico schermo Raspberry:
 
@@ -192,7 +192,7 @@ Parte delle seguenti istruzioni sono compatibili per costruire la `MagicMirror-G
     git clone https://www.github.com/AndreaGrandieri/MagicMirror-GBM
     ```
 
-    Effettuare il checkout alla release (versione) desiderata (qui maggiori dettagli: [Release Log](ReleaseLog.md))
+    Effettuare il checkout alla release (versione) desiderata:
 
     ```shell
     cd MagicMirror-GBM/

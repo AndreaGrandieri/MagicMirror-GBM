@@ -13,7 +13,6 @@
 // To add a new language, add a new entry in the dictionary following the pattern
 // Make sure that every entry is also present in the translationDictionaryForLINGUA dictionary
 export const mappingDictionaryForLanguages = {
-    "en": "English",
     "it": "Italiano"
 }
 
@@ -21,11 +20,10 @@ export const mappingDictionaryForLanguages = {
 // To add a new language, add a new entry in the dictionary following the pattern
 // Make sure that every entry is also present in the mappingDictionaryForLanguages dictionary
 export const translationDictionaryForLINGUA = {
-    "en": "Language",
     "it": "Lingua"
 }
 
 // Set di variabili per la gestione del contenuto con id "poweredbyahref"
 export const referenceLink = "https://andreagrandieri.github.io/pages/grn-deploy-webstatic";
 export const linkToQuery = "https://raw.githubusercontent.com/AndreaGrandieri/andreagrandieri.github.io/cdn/poweredbyahref.json";
-export const defaultReferenceLink_poweredbyahref = "https://andreagrandieri.github.io/pages/en/grn-deploy-webstatic";
+export const defaultReferenceLink_poweredbyahref = "https://andreagrandieri.github.io/pages/it/grn-deploy-webstatic";

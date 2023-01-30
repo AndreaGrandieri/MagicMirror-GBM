@@ -58,6 +58,6 @@ lang: it
 
 _La versione più recente del documento è in cima alla lista:_
 
-- <i class="fa-solid fa-file-pdf fa-2x"></i> [GenericUseCaseDiagram-v3.0_MagicMirror-GBM.pdf](../../assets/UseCaseDiagrams/Generic/GenericUseCaseDiagram-v3.0_MagicMirror-GBM.pdf)
-- <i class="fa-solid fa-file-pdf fa-2x"></i> [GenericUseCaseDiagram-v2.0_MagicMirror-GBM.pdf](../../assets/UseCaseDiagrams/Generic/GenericUseCaseDiagram-v2.0_MagicMirror-GBM.pdf)
-- <i class="fa-solid fa-file-pdf fa-2x"></i> [GenericUseCaseDiagram-v1.0_MagicMirror-GBM.pdf](../../assets/UseCaseDiagrams/Generic/GenericUseCaseDiagram-v1.0_MagicMirror-GBM.pdf)
+- <i class="fa-solid fa-file-pdf fa-2x"></i> [GenericUseCaseDiagram-v3.0_MagicMirror-GBM.pdf](../../../assets/UseCaseDiagrams/Generic/GenericUseCaseDiagram-v3.0_MagicMirror-GBM.pdf)
+- <i class="fa-solid fa-file-pdf fa-2x"></i> [GenericUseCaseDiagram-v2.0_MagicMirror-GBM.pdf](../../../assets/UseCaseDiagrams/Generic/GenericUseCaseDiagram-v2.0_MagicMirror-GBM.pdf)
+- <i class="fa-solid fa-file-pdf fa-2x"></i> [GenericUseCaseDiagram-v1.0_MagicMirror-GBM.pdf](../../../assets/UseCaseDiagrams/Generic/GenericUseCaseDiagram-v1.0_MagicMirror-GBM.pdf)

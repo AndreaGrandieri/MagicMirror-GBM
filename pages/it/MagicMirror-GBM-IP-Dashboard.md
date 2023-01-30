@@ -65,7 +65,7 @@ Qui riportati e descritti:
 
 Home Page. Da qui puoi accedere le diverse funzionalità dell'interfaccia.
 
-[![index.php.PNG](../assets/Overview-GUI/ipdashboard-GUI/index.php.PNG)](../assets/Overview-GUI/ipdashboard-GUI/index.php.PNG)
+[![index.php.PNG](../../assets/Overview-GUI/ipdashboard-GUI/index.php.PNG)](../../assets/Overview-GUI/ipdashboard-GUI/index.php.PNG)
 
 ---
 
@@ -74,7 +74,7 @@ Home Page. Da qui puoi accedere le diverse funzionalità dell'interfaccia.
 Embedded editor MD. Qui puoi modificare il contenuto renderizzato e visualizzato dal modulo MMM-MD.
 Qui per maggiori informazioni: [https://github.com/AndreaGrandieri/MMM-MD](https://github.com/AndreaGrandieri/MMM-MD)
 
-[![MMM-MD-ContentEditor.php.PNG](../assets/Overview-GUI/ipdashboard-GUI/MMM-MD-ContentEditor.php.PNG)](../assets/Overview-GUI/ipdashboard-GUI/MMM-MD-ContentEditor.php.PNG)
+[![MMM-MD-ContentEditor.php.PNG](../../assets/Overview-GUI/ipdashboard-GUI/MMM-MD-ContentEditor.php.PNG)](../../assets/Overview-GUI/ipdashboard-GUI/MMM-MD-ContentEditor.php.PNG)
 
 ---
 
@@ -87,7 +87,7 @@ Da qui puoi:
 - Cambiare ordine di render grafico del modulo
 - Accedere all'embedded editor per modificare il frammento di configurazione del modulo
 
-[![moduliSelector.php.PNG](../assets/Overview-GUI/ipdashboard-GUI/moduliSelector.php.PNG)](../assets/Overview-GUI/ipdashboard-GUI/moduliSelector.php.PNG)
+[![moduliSelector.php.PNG](../../assets/Overview-GUI/ipdashboard-GUI/moduliSelector.php.PNG)](../../assets/Overview-GUI/ipdashboard-GUI/moduliSelector.php.PNG)
 
 ---
 
@@ -95,7 +95,7 @@ Da qui puoi:
 
 Embedded editor JSON. Qui puoi modificare il frammento JSON di configurazione del modulo selezionato. __E' raccomandato seguire le indicazioni riportate nei documenti dedicati [https://andreagrandieri.github.io/MagicMirror-GBM/#indice-moduli](https://andreagrandieri.github.io/MagicMirror-GBM/#indice-moduli)__
 
-[![moduloSettings.php.PNG](../assets/Overview-GUI/ipdashboard-GUI/moduloSettings.php.PNG)](../assets/Overview-GUI/ipdashboard-GUI/moduloSettings.php.PNG)
+[![moduloSettings.php.PNG](../../assets/Overview-GUI/ipdashboard-GUI/moduloSettings.php.PNG)](../../assets/Overview-GUI/ipdashboard-GUI/moduloSettings.php.PNG)
 
 ---
 
@@ -103,7 +103,7 @@ Embedded editor JSON. Qui puoi modificare il frammento JSON di configurazione de
 
 Da qui puoi modificare le impostazioni relative alla configurazione della connettività WIFI (alla rete) per il MagicMirror-GBM. _Probabilmente ti troverai qui durante la fase di prime._
 
-[![WIFIConfigurator.php.PNG](../assets/Overview-GUI/ipdashboard-GUI/WIFIConfigurator.php.PNG)](../assets/Overview-GUI/ipdashboard-GUI/WIFIConfigurator.php.PNG)
+[![WIFIConfigurator.php.PNG](../../assets/Overview-GUI/ipdashboard-GUI/WIFIConfigurator.php.PNG)](../../assets/Overview-GUI/ipdashboard-GUI/WIFIConfigurator.php.PNG)
 
 ---
 
@@ -111,7 +111,7 @@ Da qui puoi modificare le impostazioni relative alla configurazione della connet
 
 Da qui puoi modificare le impostazioni relative alla configurazione dei dispositivi di output audio per il MagicMirror-GBM.
 
-[![AudioConfigurator.php.PNG](../assets/Overview-GUI/ipdashboard-GUI/AudioConfigurator.php.PNG)](../assets/Overview-GUI/ipdashboard-GUI/AudioConfigurator.php.PNG)
+[![AudioConfigurator.php.PNG](../../assets/Overview-GUI/ipdashboard-GUI/AudioConfigurator.php.PNG)](../../assets/Overview-GUI/ipdashboard-GUI/AudioConfigurator.php.PNG)
 
 ---
 
@@ -122,7 +122,7 @@ Da qui puoi:
 
 - Accedere all'embedded editor per modificare il frammento di configurazione della globale
 
-[![globalsSelector.php.PNG](../assets/Overview-GUI/ipdashboard-GUI/globalsSelector.php.PNG)](../assets/Overview-GUI/ipdashboard-GUI/globalsSelector.php.PNG)
+[![globalsSelector.php.PNG](../../assets/Overview-GUI/ipdashboard-GUI/globalsSelector.php.PNG)](../../assets/Overview-GUI/ipdashboard-GUI/globalsSelector.php.PNG)
 
 ---
 
@@ -130,7 +130,7 @@ Da qui puoi:
 
 Embedded editor JSON. Qui puoi modificare il frammento JSON di configurazione della globale selezionata. __E' sconsigliata la modifica di queste informazioni se non strettamente necessario.__
 
-[![globalSettings.php.PNG](../assets/Overview-GUI/ipdashboard-GUI/globalSettings.php.PNG)](../assets/Overview-GUI/ipdashboard-GUI/globalSettings.php.PNG)
+[![globalSettings.php.PNG](../../assets/Overview-GUI/ipdashboard-GUI/globalSettings.php.PNG)](../../assets/Overview-GUI/ipdashboard-GUI/globalSettings.php.PNG)
 
 ---
 
@@ -138,7 +138,7 @@ Embedded editor JSON. Qui puoi modificare il frammento JSON di configurazione de
 
 Da qui puoi aggiornare il software del MagicMirror-GBM.
 
-[![aggiornamentoSoftware.php.PNG](../assets/Overview-GUI/ipdashboard-GUI/aggiornamentoSoftware.php.PNG)](../assets/Overview-GUI/ipdashboard-GUI/aggiornamentoSoftware.php.PNG)
+[![aggiornamentoSoftware.php.PNG](../../assets/Overview-GUI/ipdashboard-GUI/aggiornamentoSoftware.php.PNG)](../../assets/Overview-GUI/ipdashboard-GUI/aggiornamentoSoftware.php.PNG)
 
 ---
 
@@ -146,7 +146,7 @@ Da qui puoi aggiornare il software del MagicMirror-GBM.
 
 Riavvia il MagicMirror-GBM.
 
-[![doReboot.php.PNG](../assets/Overview-GUI/ipdashboard-GUI/doReboot.php.PNG)](../assets/Overview-GUI/ipdashboard-GUI/doReboot.php.PNG)
+[![doReboot.php.PNG](../../assets/Overview-GUI/ipdashboard-GUI/doReboot.php.PNG)](../../assets/Overview-GUI/ipdashboard-GUI/doReboot.php.PNG)
 
 ---
 
@@ -154,7 +154,7 @@ Riavvia il MagicMirror-GBM.
 
 Da qui puoi ripristinare il Database interno del MagicMirror-GBM ad uno stato stabile sicuramente funzionale e corretto.
 
-[![ripristinaDatabase.php.PNG](../assets/Overview-GUI/ipdashboard-GUI/ripristinaDatabase.php.PNG)](../assets/Overview-GUI/ipdashboard-GUI/ripristinaDatabase.php.PNG)
+[![ripristinaDatabase.php.PNG](../../assets/Overview-GUI/ipdashboard-GUI/ripristinaDatabase.php.PNG)](../../assets/Overview-GUI/ipdashboard-GUI/ripristinaDatabase.php.PNG)
 
 ---
 
@@ -162,4 +162,4 @@ Da qui puoi ripristinare il Database interno del MagicMirror-GBM ad uno stato st
 
 Compila lo stato del Database, rendendo effettive le modifiche effettuate _(con le schermate precedenti)_.
 
-[![compila.php.PNG](../assets/Overview-GUI/ipdashboard-GUI/compila.php.PNG)](../assets/Overview-GUI/ipdashboard-GUI/compila.php.PNG)
+[![compila.php.PNG](../../assets/Overview-GUI/ipdashboard-GUI/compila.php.PNG)](../../assets/Overview-GUI/ipdashboard-GUI/compila.php.PNG)

@@ -121,11 +121,11 @@ Le notifiche sono uno strumento utilizzato dai moduli per comunicare con:
 
 Schermata del dispositivo smart (e.g. Smartphone, Tablet...):
 
-[![cast_smartdevice.png](../../../assets/MMM-Screencast/cast_smartdevice.png)](../../../assets/MMM-Screencast/cast_smartdevice.png)
+[![cast_smartdevice.png](../../../../assets/MMM-Screencast/cast_smartdevice.png)](../../../../assets/MMM-Screencast/cast_smartdevice.png)
 
 Schermata del MagicMirror:
 
-[![cast_magicmirror.jpg](../../../assets/MMM-Screencast/cast_magicmirror.jpg)](../../../assets/MMM-Screencast/cast_magicmirror.jpg)
+[![cast_magicmirror.jpg](../../../../assets/MMM-Screencast/cast_magicmirror.jpg)](../../../../assets/MMM-Screencast/cast_magicmirror.jpg)
 
 ---
 

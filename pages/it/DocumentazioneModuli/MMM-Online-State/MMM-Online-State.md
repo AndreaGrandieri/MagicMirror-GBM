@@ -112,8 +112,8 @@ _Niente da segnalare._
 
 Stato della connessione: `ONLINE`:
 
-[![connection is ok](../../../assets/MMM-Online-State/connection_is_ok.PNG)](../../../assets/MMM-Online-State/connection_is_ok.PNG)
+[![connection is ok](../../../../assets/MMM-Online-State/connection_is_ok.PNG)](../../../../assets/MMM-Online-State/connection_is_ok.PNG)
 
 Stato della connessione: `OFFLINE`:
 
-[![connection is not ok](../../../assets/MMM-Online-State/connection_is_not_ok.PNG)](../../../assets/MMM-Online-State/connection_is_not_ok.PNG)
+[![connection is not ok](../../../../assets/MMM-Online-State/connection_is_not_ok.PNG)](../../../../assets/MMM-Online-State/connection_is_not_ok.PNG)

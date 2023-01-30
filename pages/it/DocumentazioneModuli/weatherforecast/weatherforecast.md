@@ -119,7 +119,7 @@ _Niente da segnalare._
 
 Schermata del modulo funzionante:
 
-[![working_module](../../../assets/weatherforecast/working_module.PNG)](../../../assets/weatherforecast/working_module.PNG)
+[![working_module](../../../../assets/weatherforecast/working_module.PNG)](../../../../assets/weatherforecast/working_module.PNG)
 
 ---
 
@@ -144,9 +144,9 @@ in quanto quest'ultima viene, appunto, identificata univocamente.
 Per ottenere il valore di `locationID`:
 
 - Visita prima di tutto: [https://openweathermap.org/](https://openweathermap.org/).
-- Utilizza <br> [![search_bar_getlocationID](../../../assets/weather/search_bar_getlocationID.PNG)](../../../assets/weather/search_bar_getlocationID.PNG) <br>
+- Utilizza <br> [![search_bar_getlocationID](../../../../assets/weather/search_bar_getlocationID.PNG)](../../../../assets/weather/search_bar_getlocationID.PNG) <br>
   per cercare la tua zona di interesse.
-- Una volta effettuata la ricerca <br> [![search_bar_used_getlocationID](../../../assets/weather/search_bar_used_getlocationID.PNG)](../../../assets/weather/search_bar_used_getlocationID.PNG) <br>
+- Una volta effettuata la ricerca <br> [![search_bar_used_getlocationID](../../../../assets/weather/search_bar_used_getlocationID.PNG)](../../../../assets/weather/search_bar_used_getlocationID.PNG) <br>
   potrai notare che l'__URL__ della pagina correntemente visualizzata contiene proprio
   il valore di `locationID`: <br>
-  [![url_gotlocationID](../../../assets/weather/url_gotlocationID.PNG)](../../../assets/weather/url_gotlocationID.PNG)
+  [![url_gotlocationID](../../../../assets/weather/url_gotlocationID.PNG)](../../../../assets/weather/url_gotlocationID.PNG)

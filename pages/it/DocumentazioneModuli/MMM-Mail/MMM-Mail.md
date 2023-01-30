@@ -102,7 +102,7 @@ Il seguente modulo permette di consultare in lettura la tua casella di posta ele
 
 Questa è la visualizzazione del modulo in situazione di funzionamento corretto:
 
-[![screenshot.PNG](../../../assets/MMM-Mail/screenshot.PNG)](../../../assets/MMM-Mail/screenshot.PNG)
+[![screenshot.PNG](../../../../assets/MMM-Mail/screenshot.PNG)](../../../../assets/MMM-Mail/screenshot.PNG)
 
 ---
 
@@ -186,15 +186,15 @@ più utilizzati:
 
 	[https://myaccount.google.com/](https://myaccount.google.com/)
 
-	[![step1](../../../assets/MMM-Mail/step1.png)](../../../assets/MMM-Mail/step1.png)
+	[![step1](../../../../assets/MMM-Mail/step1.png)](../../../../assets/MMM-Mail/step1.png)
 
 2. Recarsi nella tab `Sicurezza` e selezionare / cliccare `Attiva accesso (sconsigliato)` nella opzione `Accesso app meno sicure`:
 
-	[![step2](../../../assets/MMM-Mail/step2.png)](../../../assets/MMM-Mail/step2.png)
+	[![step2](../../../../assets/MMM-Mail/step2.png)](../../../../assets/MMM-Mail/step2.png)
 
 3. Attivare l'opzione `Consenti app meno sicure`:
 
-	[![step3](../../../assets/MMM-Mail/step3.png)](../../../assets/MMM-Mail/step3.png)
+	[![step3](../../../../assets/MMM-Mail/step3.png)](../../../../assets/MMM-Mail/step3.png)
 
 ---
 
