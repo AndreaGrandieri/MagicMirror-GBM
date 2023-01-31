@@ -267,8 +267,6 @@ function universal404() {
     // If multiple "/" are found anywhere in "currentPageURL", replace them with a single "/"
     currentPageURL = currentPageURL.replace(/\/+/g, "/");
 
-    console.log(currentPageURL);
-
     // Check the type of URL
     if (currentPageURL.indexOf("/pages/") > -1) {
       // Type 1
@@ -276,8 +274,6 @@ function universal404() {
 
       // Split the URL using "/" as the delimiter
       var urlParts = currentPageURL.split("/");
-
-      console.log(urlParts)
 
       // Check if "baseurl" is empty
       if (vars_languageEngine.baseurl == "") {
@@ -294,8 +290,6 @@ function universal404() {
       // Split the URL using "/" as the delimiter
       var urlParts = currentPageURL.split("/");
 
-      console.log(urlParts)
-
       // Check if "baseurl" is empty
       if (vars_languageEngine.baseurl == "") {
         // If "baseurl" is empty, then the URL is of type: "https:/DOMAIN/lang/POST". "lang" is guaranteed to be in the 2 position of the array.
@@ -306,8 +300,6 @@ function universal404() {
       }
     }
 
-    console.log(lang)
-
     // Check if "lang[1]" is not null or undefined
     if (lang[1]) {
       erroneus = lang[1];
@@ -315,9 +307,16 @@ function universal404() {
       for (var language in vars_languageEngine.mappingDictionaryForLanguages) {
         var response_out = null;
 
-        var newURL = window.location.href.replace("/" + lang[1] + "/", "/" + language + "/");
-
-        console.log(newURL)
+        // Note (really important note!):
+        /*
+        1. The URL must not be "the language itself" (la sigla!)
+        2. If the same pattern "/lang/" appears in the URL more than once, the first apparence will be treated as the language specification. Be sure to manage your directories well!
+        3. The folder "pages" should only appear once in the intended way. Do not use "pages" as the name of a "personal folder" you are using in your website! 
+        */
+        var newURL = window.location.href.replace(
+          "/" + lang[1] + "/",
+          "/" + language + "/"
+        );
 
         // CRITICAL to ensure point 1 of (*)
         // Check if "lang[2]" is false. This means "lang" is the ending of the URL
