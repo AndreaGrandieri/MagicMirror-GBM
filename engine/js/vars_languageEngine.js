@@ -27,3 +27,6 @@ export const translationDictionaryForLINGUA = {
 export const referenceLink = "https://andreagrandieri.github.io/pages/grn-deploy-webstatic";
 export const linkToQuery = "https://raw.githubusercontent.com/AndreaGrandieri/andreagrandieri.github.io/cdn/poweredbyahref.json";
 export const defaultReferenceLink_poweredbyahref = "https://andreagrandieri.github.io/pages/it/grn-deploy-webstatic";
+
+// baseurl. Il valore di questa variabile dovrebbe essere uguale al valore dell'opzione "baseurl" nel file _config.yml. Per baseurl non presenti, in quanto non presenti nel file _config.yml, utilizzare ""
+export const baseurl = "MagicMirror-GBM";

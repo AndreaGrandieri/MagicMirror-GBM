@@ -249,77 +249,70 @@ var erroneus = null;
 Scopo della funzione: una volta raggiunta la pagina 404 (della propria lingua se disponibile o della lingua di default), questa funzione entra in gioco presentando nella pagina 404 una tabella contenente la lista di tutte le lingue disponibili per la pagina richiesta che ha causato il raggiungimento della pagina 404. Questa tabella deve solo e solamente entrare in gioco quando la pagina 404 viene raggiunta a causa della richiesta di una pagina VALIDA ma che non esiste nella lingua richiesta.
 */
 function universal404() {
-  /*
-  Lieve imprecisione nel trattare link del tipo: "https://<domain>/pages" (o "https://<domain>/pages/") ma nulla di grave: non si riscontrano nè interrogazioni pericolose nè invasive.
-  */
-
   return new Promise(async (resolve, reject) => {
     for (var language in vars_languageEngine.mappingDictionaryForLanguages) {
       // Get the current page URL
       var currentPageURL = window.location.href;
 
-      // CRITICAL to ensure point 1 of (*)
-      // If the "currentPageURL" is in the form "https://<domain>/<language>" or "http://<domain>/<language>", add a "/" at the end of the URL
-      if (currentPageURL.match(/^(https?:\/\/[^\/]+\/[^\/]+)$/)) {
-        currentPageURL = currentPageURL + "/";
-      }
-
-      // Analize the URL to determine if a language is specified
-      // URLs can be of two types:
-      // 1. https://<domain>/pages/<language>/
-      // 2. https://<domain>/<language>/
-
-      // Replace one by one the specified <language> with the languages in the dictionary "vars_languageEngine.mappingDictionaryForLanguages" (the language is the key of the dictionary).
       /*
-      (*)
-
       Metodo utilizzato: si interrogano tutte le possibili combinazioni di URL partendo, come base, dall'URL che ha portato alla pagina 404. A questo URL si sostituisce la lingua erroneamente specificata con tutte le lingue presenti nell'array "vars_languageEngine.mappingDictionaryForLanguages"; questo array contiene tutte le lingue utilizzate (almeno una volta in qualsiasi collocamento possibile) nel sito.
 
       1. L'interrogazione è sicura: non si può in alcun modo ottenere un URL che punti esternamente al dominio del sito: ergo, si rimane sempre nel dominio del sito che è considerato sicuro. NON vi possono essere casi di interrogazione di URL di siti esterni e potenzialmente pericolosi (soprattutto se vengono generati URL strani con manipolazioni di stringhe!).
 
       2. L'interrogazione non è troppo invasiva: non vi è il rischio concreto di un "autoDOS", in quanto ci si aspetta che l'array "vars_languageEngine.mappingDictionaryForLanguages" sia piuttosto contenuto in termini di elementi; inoltre, la pagina 404 non dovrebbe essere una pagina raggiunta troppe volte.
       */
+
       var response_out = null;
-      var newURL = null;
+      var lang = null;
+
+      // Normalization step
+      // If multiple "/" are found anywhere in "currentPageURL", replace them with a single "/"
+      currentPageURL = currentPageURL.replace(/\/+/g, "/");
 
       // Check the type of URL
       if (currentPageURL.indexOf("/pages/") > -1) {
         // Type 1
-        // Substitute
+        // URL of type: "https:/DOMAIN/BASEURL/pages/lang/POST"
 
-        // From the string "currentPageURL", remove the part: "https://<domain>" (or "http://<domain>")
-        currentPageURL = currentPageURL.replace(/^https?:\/\/[^\/]+/, "");
+        // Split the URL using "/" as the delimiter
+        var urlParts = currentPageURL.split("/");
 
-        // If multiple "/" are found anywhere in "currentPageURL", replace them with a single "/"
-        currentPageURL = currentPageURL.replace(/\/+/g, "/");
-
-        // The generic interpretation of the string "currentPageURL" is: "/pages/?/?", with "?" that can be any string, THAT MAY OR MAY NOT CONTAIN "/".
-        // Save the first "?" and the second "?" in two variables.
-        var first = currentPageURL.split("/")[2];
-        // // var second = currentPageURL.split("/")[3];
-
-        // In "currentPageURL", substitute "first" with "language" and leave "second" unchanged.
-        erroneus = first;
-        newURL = currentPageURL.replace(first, language);
+        // Check if "baseurl" is empty
+        if (vars_languageEngine.baseurl == "") {
+          // If "baseurl" is empty, then the URL is of type: "https:/DOMAIN/pages/lang/POST". "lang" is guaranteed to be in the 3 position of the array.
+          lang = (3, urlParts[3], urlParts[4] != undefined);
+        } else {
+          // If "baseurl" is not empty, then the URL is of type: "https:/DOMAIN/BASEURL/pages/lang/POST". "lang" is guaranteed to be in the 4 position of the array.
+          lang = (4, urlParts[4], urlParts[5] != undefined);
+        }
       } else {
         // Type 2
-        // Substitute
+        // URL of type: "https:/DOMAIN/BASEURL/lang/POST"
 
-        // From the string "currentPageURL", remove the part: "https://<domain>" (or "http://<domain>")
-        currentPageURL = currentPageURL.replace(/^https?:\/\/[^\/]+/, "");        
+        // Split the URL using "/" as the delimiter
+        var urlParts = currentPageURL.split("/");
 
-        // If multiple "/" are found anywhere in "currentPageURL", replace them with a single "/"
-        currentPageURL = currentPageURL.replace(/\/+/g, "/");
+        // Check if "baseurl" is empty
+        if (vars_languageEngine.baseurl == "") {
+          // If "baseurl" is empty, then the URL is of type: "https:/DOMAIN/lang/POST". "lang" is guaranteed to be in the 2 position of the array.
+          lang = (2, urlParts[2], urlParts[3] != undefined);
+        } else {
+          // If "baseurl" is not empty, then the URL is of type: "https:/DOMAIN/BASEURL/lang/POST". "lang" is guaranteed to be in the 3 position of the array.
+          lang = (3, urlParts[3], urlParts[4] != undefined);
+        }
+      }
 
-        // The generic interpretation of the string "currentPageURL" is: "/?/?", with "?" that can be any string, THAT MAY OR MAY NOT CONTAIN "/".
-        // Save the first "?" and the second "?" in two variables.
+      erroneus = lang[1];
 
-        var first = currentPageURL.split("/")[1];
-        // // var second = currentPageURL.split("/")[2];
+      var newURL = window.location.href.replace(lang[1], language);
 
-        // In "currentPageURL", substitute "first" with "language" and leave "second" unchanged.
-        erroneus = first;
-        newURL = currentPageURL.replace(first, language);
+      // CRITICAL to ensure point 1 of (*)
+      // Check if "lang[2]" is false. This means "lang" is the ending of the URL
+      if (!lang[2]) {
+        // Check if "newURL" ends with "/". If not, add it
+        if (newURL[newURL.length - 1] != "/") {
+          newURL += "/";
+        }
       }
 
       // Query the new URL expecting a 200 response
@@ -350,7 +343,10 @@ async function compile_universal404() {
 
     // Now "exists_in" contains the list of languages in which the page exists. Compile the table.
     if (exists_in.length > 0) {
-      var toInject = "Supposing you requested the page in the following unavailable language: <code class='language-plaintext highlighter-rouge'>" + erroneus + "</code>, you can find the page in the following languages:<br>";
+      var toInject =
+        "Supposing you requested the page in the following unavailable language: <code class='language-plaintext highlighter-rouge'>" +
+        erroneus +
+        "</code>, you can find the page in the following languages:<br>";
 
       // Table header. These use CSS schemas from the theme
       toInject +=
@@ -375,7 +371,8 @@ async function compile_universal404() {
       toInject += "</tbody></table></div>";
 
       // Inject "toInject" into the corresponding element
-      document.getElementById("compile_universal404_target").innerHTML = toInject;
+      document.getElementById("compile_universal404_target").innerHTML =
+        toInject;
     }
 
     // Flush the array "exists_in". This way, manually recalling the function "compile_universal404" will not cause the table to be compiled again presenting duplicates.
