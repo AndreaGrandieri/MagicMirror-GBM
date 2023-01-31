@@ -306,6 +306,17 @@ function universal404() {
 
       for (var language in vars_languageEngine.mappingDictionaryForLanguages) {
         var response_out = null;
+        currentPageURL = window.location.href;
+
+
+        // CRITICAL to ensure point 1 of (*)
+        // Check if "lang[2]" is false. This means "lang" is the ending of the URL
+        if (!lang[2]) {
+          // Check if "currentPageURL" ends with "/". If not, add it
+          if (currentPageURL[currentPageURL.length - 1] != "/") {
+            currentPageURL += "/";
+          }
+        }
 
         // Note (really important note!):
         /*
@@ -313,19 +324,10 @@ function universal404() {
         2. If the same pattern "/lang/" appears in the URL more than once, the first apparence will be treated as the language specification. Be sure to manage your directories well!
         3. The folder "pages" should only appear once in the intended way. Do not use "pages" as the name of a "personal folder" you are using in your website! 
         */
-        var newURL = window.location.href.replace(
+        var newURL = currentPageURL.replace(
           "/" + lang[1] + "/",
           "/" + language + "/"
         );
-
-        // CRITICAL to ensure point 1 of (*)
-        // Check if "lang[2]" is false. This means "lang" is the ending of the URL
-        if (!lang[2]) {
-          // Check if "newURL" ends with "/". If not, add it
-          if (newURL[newURL.length - 1] != "/") {
-            newURL += "/";
-          }
-        }
 
         // Query the new URL expecting a 200 response
         await CDNQuerierEngine.queryCDNOnlyHTTPResponseCode(
