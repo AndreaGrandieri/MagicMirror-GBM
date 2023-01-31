@@ -250,61 +250,62 @@ Scopo della funzione: una volta raggiunta la pagina 404 (della propria lingua se
 */
 function universal404() {
   return new Promise(async (resolve, reject) => {
-    for (var language in vars_languageEngine.mappingDictionaryForLanguages) {
-      // Get the current page URL
-      var currentPageURL = window.location.href;
+    // Get the current page URL
+    var currentPageURL = window.location.href;
 
-      /*
-      Metodo utilizzato: si interrogano tutte le possibili combinazioni di URL partendo, come base, dall'URL che ha portato alla pagina 404. A questo URL si sostituisce la lingua erroneamente specificata con tutte le lingue presenti nell'array "vars_languageEngine.mappingDictionaryForLanguages"; questo array contiene tutte le lingue utilizzate (almeno una volta in qualsiasi collocamento possibile) nel sito.
+    /*
+    Metodo utilizzato: si interrogano tutte le possibili combinazioni di URL partendo, come base, dall'URL che ha portato alla pagina 404. A questo URL si sostituisce la lingua erroneamente specificata con tutte le lingue presenti nell'array "vars_languageEngine.mappingDictionaryForLanguages"; questo array contiene tutte le lingue utilizzate (almeno una volta in qualsiasi collocamento possibile) nel sito.
 
-      1. L'interrogazione è sicura: non si può in alcun modo ottenere un URL che punti esternamente al dominio del sito: ergo, si rimane sempre nel dominio del sito che è considerato sicuro. NON vi possono essere casi di interrogazione di URL di siti esterni e potenzialmente pericolosi (soprattutto se vengono generati URL strani con manipolazioni di stringhe!).
+    1. L'interrogazione è sicura: non si può in alcun modo ottenere un URL che punti esternamente al dominio del sito: ergo, si rimane sempre nel dominio del sito che è considerato sicuro. NON vi possono essere casi di interrogazione di URL di siti esterni e potenzialmente pericolosi (soprattutto se vengono generati URL strani con manipolazioni di stringhe!).
 
-      2. L'interrogazione non è troppo invasiva: non vi è il rischio concreto di un "autoDOS", in quanto ci si aspetta che l'array "vars_languageEngine.mappingDictionaryForLanguages" sia piuttosto contenuto in termini di elementi; inoltre, la pagina 404 non dovrebbe essere una pagina raggiunta troppe volte.
-      */
+    2. L'interrogazione non è troppo invasiva: non vi è il rischio concreto di un "autoDOS", in quanto ci si aspetta che l'array "vars_languageEngine.mappingDictionaryForLanguages" sia piuttosto contenuto in termini di elementi; inoltre, la pagina 404 non dovrebbe essere una pagina raggiunta troppe volte.
+    */
 
-      var response_out = null;
-      var lang = null;
+    var lang = null;
 
-      // Normalization step
-      // If multiple "/" are found anywhere in "currentPageURL", replace them with a single "/"
-      currentPageURL = currentPageURL.replace(/\/+/g, "/");
+    // Normalization step
+    // If multiple "/" are found anywhere in "currentPageURL", replace them with a single "/"
+    currentPageURL = currentPageURL.replace(/\/+/g, "/");
 
-      // Check the type of URL
-      if (currentPageURL.indexOf("/pages/") > -1) {
-        // Type 1
-        // URL of type: "https:/DOMAIN/BASEURL/pages/lang/POST"
+    // Check the type of URL
+    if (currentPageURL.indexOf("/pages/") > -1) {
+      // Type 1
+      // URL of type: "https:/DOMAIN/BASEURL/pages/lang/POST"
 
-        // Split the URL using "/" as the delimiter
-        var urlParts = currentPageURL.split("/");
+      // Split the URL using "/" as the delimiter
+      var urlParts = currentPageURL.split("/");
 
-        // Check if "baseurl" is empty
-        if (vars_languageEngine.baseurl == "") {
-          // If "baseurl" is empty, then the URL is of type: "https:/DOMAIN/pages/lang/POST". "lang" is guaranteed to be in the 3 position of the array.
-          lang = [3, urlParts[3], urlParts[4] != undefined];
-        } else {
-          // If "baseurl" is not empty, then the URL is of type: "https:/DOMAIN/BASEURL/pages/lang/POST". "lang" is guaranteed to be in the 4 position of the array.
-          lang = [4, urlParts[4], urlParts[5] != undefined];
-        }
+      // Check if "baseurl" is empty
+      if (vars_languageEngine.baseurl == "") {
+        // If "baseurl" is empty, then the URL is of type: "https:/DOMAIN/pages/lang/POST". "lang" is guaranteed to be in the 3 position of the array.
+        lang = [3, urlParts[3], urlParts[4] != undefined];
       } else {
-        // Type 2
-        // URL of type: "https:/DOMAIN/BASEURL/lang/POST"
-
-        // Split the URL using "/" as the delimiter
-        var urlParts = currentPageURL.split("/");
-
-        // Check if "baseurl" is empty
-        if (vars_languageEngine.baseurl == "") {
-          // If "baseurl" is empty, then the URL is of type: "https:/DOMAIN/lang/POST". "lang" is guaranteed to be in the 2 position of the array.
-          lang = [2, urlParts[2], urlParts[3] != undefined];
-        } else {
-          // If "baseurl" is not empty, then the URL is of type: "https:/DOMAIN/BASEURL/lang/POST". "lang" is guaranteed to be in the 3 position of the array.
-          lang = [3, urlParts[3], urlParts[4] != undefined];
-        }
+        // If "baseurl" is not empty, then the URL is of type: "https:/DOMAIN/BASEURL/pages/lang/POST". "lang" is guaranteed to be in the 4 position of the array.
+        lang = [4, urlParts[4], urlParts[5] != undefined];
       }
+    } else {
+      // Type 2
+      // URL of type: "https:/DOMAIN/BASEURL/lang/POST"
 
-      // Check if "lang[1]" is not null or undefined
-      if (lang[1]) {
-        erroneus = lang[1];
+      // Split the URL using "/" as the delimiter
+      var urlParts = currentPageURL.split("/");
+
+      // Check if "baseurl" is empty
+      if (vars_languageEngine.baseurl == "") {
+        // If "baseurl" is empty, then the URL is of type: "https:/DOMAIN/lang/POST". "lang" is guaranteed to be in the 2 position of the array.
+        lang = [2, urlParts[2], urlParts[3] != undefined];
+      } else {
+        // If "baseurl" is not empty, then the URL is of type: "https:/DOMAIN/BASEURL/lang/POST". "lang" is guaranteed to be in the 3 position of the array.
+        lang = [3, urlParts[3], urlParts[4] != undefined];
+      }
+    }
+
+    // Check if "lang[1]" is not null or undefined
+    if (lang[1]) {
+      erroneus = lang[1];
+
+      for (var language in vars_languageEngine.mappingDictionaryForLanguages) {
+        var response_out = null;
 
         var newURL = window.location.href.replace(lang[1], language);
 
