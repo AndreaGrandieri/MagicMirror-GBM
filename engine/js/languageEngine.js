@@ -302,33 +302,33 @@ function universal404() {
         }
       }
 
-      erroneus = lang[1];
+      // Check if "lang[1]" is not null or undefined
+      if (lang[1]) {
+        erroneus = lang[1];
 
-      var newURL = window.location.href.replace(lang[1], language);
-      console.log(newURL)
-      console.log(lang[1])
-      console.log(language)
+        var newURL = window.location.href.replace(lang[1], language);
 
-      // CRITICAL to ensure point 1 of (*)
-      // Check if "lang[2]" is false. This means "lang" is the ending of the URL
-      if (!lang[2]) {
-        // Check if "newURL" ends with "/". If not, add it
-        if (newURL[newURL.length - 1] != "/") {
-          newURL += "/";
+        // CRITICAL to ensure point 1 of (*)
+        // Check if "lang[2]" is false. This means "lang" is the ending of the URL
+        if (!lang[2]) {
+          // Check if "newURL" ends with "/". If not, add it
+          if (newURL[newURL.length - 1] != "/") {
+            newURL += "/";
+          }
         }
-      }
 
-      // Query the new URL expecting a 200 response
-      await CDNQuerierEngine.queryCDNOnlyHTTPResponseCode(
-        newURL,
-        function (response) {
-          response_out = response;
+        // Query the new URL expecting a 200 response
+        await CDNQuerierEngine.queryCDNOnlyHTTPResponseCode(
+          newURL,
+          function (response) {
+            response_out = response;
+          }
+        );
+
+        // Check the response
+        if (response_out == 200) {
+          exists_in.push([language, newURL]);
         }
-      );
-
-      // Check the response
-      if (response_out == 200) {
-        exists_in.push([language, newURL]);
       }
     }
 
