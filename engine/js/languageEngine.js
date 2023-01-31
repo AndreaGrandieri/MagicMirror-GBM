@@ -315,7 +315,7 @@ function universal404() {
       for (var language in vars_languageEngine.mappingDictionaryForLanguages) {
         var response_out = null;
 
-        var newURL = window.location.href.replace(lang[1], language);
+        var newURL = window.location.href.replace("/" + lang[1] + "/", "/" + language + "/");
 
         console.log(newURL)
 
