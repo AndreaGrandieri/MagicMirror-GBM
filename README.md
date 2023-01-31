@@ -1,14 +1,13 @@
 # MagicMirror-GBM
 
-END
 
-Version: Z (pre-versioning protocol)
+
+
 
 ---
 
  
-> <p class="blockquote-title-fixer-purple">tl;dr</p>
->
+> >
 > Piattaforma Open Source modulare per trasformare un classico specchio in un sistema digitale multifunzione ad interazione passiva, dove l'immaginazione è l'unico limite.
 
 ---
@@ -25,14 +24,14 @@ Version: Z (pre-versioning protocol)
 
 ---
 
-[![one-face-GUI.gif](https://andreagrandieri.github.io/MagicMirror-GBM/assets/Overview-GUI/MagicMirror-GBM-GUI/one-face-GUI.gif)](https://andreagrandieri.github.io/MagicMirror-GBM/assets/Overview-GUI/MagicMirror-GBM-GUI/one-face-GUI.gif)
+[![one-face-GUI.gif](https://andreagrandieri.github.io/MagicMirror-GBM../assets/Overview-GUI/MagicMirror-GBM-GUI/one-face-GUI.gif)](https://andreagrandieri.github.io/MagicMirror-GBM../assets/Overview-GUI/MagicMirror-GBM-GUI/one-face-GUI.gif)
 
 ---
 
 ## MagicMirror-GBM-OS
 
 Il MagicMirror-GBM è reso funzionale dal suo sistema operativo: `MagicMirror-GBM-OS`.
-Qui i dettagli: [MagicMirror-GBM-OS](https://andreagrandieri.github.io/MagicMirror-GBM/pages/MagicMirror-GBM-OS)
+Qui i dettagli: [MagicMirror-GBM-OS](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/MagicMirror-GBM-OS)
 
 ---
 
@@ -40,27 +39,27 @@ Qui i dettagli: [MagicMirror-GBM-OS](https://andreagrandieri.github.io/MagicMirr
 
 Di seguito l'indice dei moduli, con la relativa documentazione:
 
-- [MMM-AirQuality](https://andreagrandieri.github.io/MagicMirror-GBM/pages/DocumentazioneModuli/MMM-AirQuality/MMM-AirQuality)
-- [MMM-DHT-Sensor](https://andreagrandieri.github.io/MagicMirror-GBM/pages/DocumentazioneModuli/MMM-DHT-Sensor/MMM-DHT-Sensor)
-- [newsfeed](https://andreagrandieri.github.io/MagicMirror-GBM/pages/DocumentazioneModuli/newsfeed/newsfeed)
-- [MMM-AVStock](https://andreagrandieri.github.io/MagicMirror-GBM/pages/DocumentazioneModuli/MMM-AVStock/MMM-AVStock)
-- [clock](https://andreagrandieri.github.io/MagicMirror-GBM/pages/DocumentazioneModuli/clock/clock)
-- [weather](https://andreagrandieri.github.io/MagicMirror-GBM/pages/DocumentazioneModuli/weather/weather)
-- [weatherforecast](https://andreagrandieri.github.io/MagicMirror-GBM/pages/DocumentazioneModuli/weatherforecast/weatherforecast)
-- [calendar](https://andreagrandieri.github.io/MagicMirror-GBM/pages/DocumentazioneModuli/calendar/calendar)
-- [MMM-MD](https://andreagrandieri.github.io/MagicMirror-GBM/pages/DocumentazioneModuli/MMM-MD/MMM-MD)
-- [MMM-Screencast](https://andreagrandieri.github.io/MagicMirror-GBM/pages/DocumentazioneModuli/MMM-Screencast/MMM-Screencast)
-- [MMM-Mail](https://andreagrandieri.github.io/MagicMirror-GBM/pages/DocumentazioneModuli/MMM-Mail/MMM-Mail)
-- [MMM-Online-State](https://andreagrandieri.github.io/MagicMirror-GBM/pages/DocumentazioneModuli/MMM-Online-State/MMM-Online-State)
-- [MMM-ip](https://andreagrandieri.github.io/MagicMirror-GBM/pages/DocumentazioneModuli/MMM-ip/MMM-ip)
-- [MMM-PIR-Sensor](https://andreagrandieri.github.io/MagicMirror-GBM/pages/DocumentazioneModuli/MMM-PIR-Sensor/MMM-PIR-Sensor)
+- [MMM-AirQuality](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/DocumentazioneModuli/MMM-AirQuality/MMM-AirQuality)
+- [MMM-DHT-Sensor](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/DocumentazioneModuli/MMM-DHT-Sensor/MMM-DHT-Sensor)
+- [newsfeed](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/DocumentazioneModuli/newsfeed/newsfeed)
+- [MMM-AVStock](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/DocumentazioneModuli/MMM-AVStock/MMM-AVStock)
+- [clock](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/DocumentazioneModuli/clock/clock)
+- [weather](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/DocumentazioneModuli/weather/weather)
+- [weatherforecast](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/DocumentazioneModuli/weatherforecast/weatherforecast)
+- [calendar](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/DocumentazioneModuli/calendar/calendar)
+- [MMM-MD](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/DocumentazioneModuli/MMM-MD/MMM-MD)
+- [MMM-Screencast](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/DocumentazioneModuli/MMM-Screencast/MMM-Screencast)
+- [MMM-Mail](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/DocumentazioneModuli/MMM-Mail/MMM-Mail)
+- [MMM-Online-State](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/DocumentazioneModuli/MMM-Online-State/MMM-Online-State)
+- [MMM-ip](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/DocumentazioneModuli/MMM-ip/MMM-ip)
+- [MMM-PIR-Sensor](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/DocumentazioneModuli/MMM-PIR-Sensor/MMM-PIR-Sensor)
 
 ---
 
 ## MagicMirror-GBM IP Dashboard
 
 Il MagicMirror-GBM può essere configurato grazie alla sua interfaccia web: `MagicMirror-GBM IP Dashboard`.
-Qui i dettagli: [MagicMirror-GBM-IP-Dashboard](https://andreagrandieri.github.io/MagicMirror-GBM/pages/MagicMirror-GBM-IP-Dashboard)
+Qui i dettagli: [MagicMirror-GBM-IP-Dashboard](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/MagicMirror-GBM-IP-Dashboard)
 
 ---
 
@@ -68,7 +67,7 @@ Qui i dettagli: [MagicMirror-GBM-IP-Dashboard](https://andreagrandieri.github.io
 
 Il Documento dei Requisiti è il documento chiave per formalizzare i fabbisogni del cliente relativamente al sistema da sviluppare, in modo non ambiguo. Cliente, utenti e sviluppatori contribuiscono alla stesura del documento di specifica dei requisiti. Può essere usato come contratto tra cliente e sviluppatori.
 
-- [Archivio Documenti dei Requisiti](https://andreagrandieri.github.io/MagicMirror-GBM/pages/ArchivioDocumentiDeiRequisiti)
+- [Archivio Documenti dei Requisiti](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/ArchivioDocumentiDeiRequisiti)
 
 ---
 
@@ -77,7 +76,7 @@ Il Documento dei Requisiti è il documento chiave per formalizzare i fabbisogni 
 I Diagrammi dei Componenti UML sono usati per la modellazione degli aspetti fisici dei sistemi OO (orientati agli oggetti). Hanno lo scopo di visualizzare, specificare e documentare questi ultimi, oltre a fornire la possibilità di costruire sistemi utilizzando questi diagrammi come punto di partenza, con tecniche di reverse engineering.
 I Diagrammi dei Componenti sono essenzialmente Diagrammi delle Classi, che però pongono il focus sui moduli (HW + SW) componenti un sistema per realizzare una visione d'unico dell'implementazione statica di esso stesso.
 
-- [Archivio UML Component Diagram](https://andreagrandieri.github.io/MagicMirror-GBM/pages/ArchivioUMLComponentDiagram)
+- [Archivio UML Component Diagram](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/ArchivioUMLComponentDiagram)
 
 ---
 
@@ -85,8 +84,8 @@ I Diagrammi dei Componenti sono essenzialmente Diagrammi delle Classi, che però
 
 Un Diagramma dei Casi d'Uso (Generico e Specifico) viene utilizzato per riasummere chi (Attori) e come (Sequenze) effettua interazioni con il sistema / i sistemi in questione.
 
-- [Archivio Generic Use Case Diagram](https://andreagrandieri.github.io/MagicMirror-GBM/pages/UseCaseDiagrams/ArchivioGenericUseCaseDiagram)
-- [Archivio Specific Use Case Diagram](https://andreagrandieri.github.io/MagicMirror-GBM/pages/UseCaseDiagrams/ArchivioSpecificUseCaseDiagram)
+- [Archivio Generic Use Case Diagram](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/UseCaseDiagrams/ArchivioGenericUseCaseDiagram)
+- [Archivio Specific Use Case Diagram](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/UseCaseDiagrams/ArchivioSpecificUseCaseDiagram)
 
 ---
 
@@ -94,19 +93,19 @@ Un Diagramma dei Casi d'Uso (Generico e Specifico) viene utilizzato per riasumme
 
 Il BMC (Business Model Canvas) è un modello di gestione strategica utilizzato per sviluppare nuovi modelli di business e documentare quelli esistenti. Offre un grafico visivo con elementi che descrivono la proposta di valore, l'infrastruttura, i clienti e le finanze di un'azienda o di un prodotto, aiutando le aziende ad allineare le proprie attività evidenziando potenziali compromessi.
 
-- [Archivio BMC](https://andreagrandieri.github.io/MagicMirror-GBM/pages/ArchivioBMC)
+- [Archivio BMC](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/ArchivioBMC)
 
 ---
 
 ## Emulazione
 
-Qui i dettagli: [Emulazione](https://andreagrandieri.github.io/MagicMirror-GBM/pages/Emulazione)
+Qui i dettagli: [Emulazione](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/Emulazione)
 
 ---
 
 ## raspotify
 
-Qui i dettagli: [raspotify](https://andreagrandieri.github.io/MagicMirror-GBM/pages/raspotify)
+Qui i dettagli: [raspotify](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/raspotify)
 
 ---
 
@@ -115,10 +114,10 @@ Qui i dettagli: [raspotify](https://andreagrandieri.github.io/MagicMirror-GBM/pa
 Il Database `settings` è il punto di salvataggio e recupero di tutte le informazioni riguardanti la configurazione
 di default e personale dell'utilizzatore.
 
-- [Archivio Analisi DB settings](https://andreagrandieri.github.io/MagicMirror-GBM/pages/ProgettazioneDatabase_settings/ProgettazioneDatabase_settings)
+- [Archivio Analisi DB settings](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/ProgettazioneDatabase_settings/ProgettazioneDatabase_settings)
 
 ---
 
 ## Schema di Rete
 
-Qui i dettagli: [Schema di Rete](https://andreagrandieri.github.io/MagicMirror-GBM/pages/schemaDiRete)
+Qui i dettagli: [Schema di Rete](https://andreagrandieri.github.io/MagicMirror-GBM../pages/it/schemaDiRete)
