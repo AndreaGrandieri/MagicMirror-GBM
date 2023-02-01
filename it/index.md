@@ -92,14 +92,14 @@ lang: it
 
 ---
 
-[![one-face-GUI.gif](/assets/Overview-GUI/MagicMirror-GBM-GUI/one-face-GUI.gif)](/assets/Overview-GUI/MagicMirror-GBM-GUI/one-face-GUI.gif)
+[![one-face-GUI.gif](/MagicMirror-GBM/assets/Overview-GUI/MagicMirror-GBM-GUI/one-face-GUI.gif)](/MagicMirror-GBM/assets/Overview-GUI/MagicMirror-GBM-GUI/one-face-GUI.gif)
 
 ---
 
 ## MagicMirror-GBM-OS
 
 Il MagicMirror-GBM è reso funzionale dal suo sistema operativo: `MagicMirror-GBM-OS`.
-Qui i dettagli: [MagicMirror-GBM-OS](/pages/it/MagicMirror-GBM-OS)
+Qui i dettagli: [MagicMirror-GBM-OS](/MagicMirror-GBM/pages/it/MagicMirror-GBM-OS)
 
 ---
 
@@ -107,27 +107,27 @@ Qui i dettagli: [MagicMirror-GBM-OS](/pages/it/MagicMirror-GBM-OS)
 
 Di seguito l'indice dei moduli, con la relativa documentazione:
 
-- [MMM-AirQuality](/pages/it/DocumentazioneModuli/MMM-AirQuality/MMM-AirQuality)
-- [MMM-DHT-Sensor](/pages/it/DocumentazioneModuli/MMM-DHT-Sensor/MMM-DHT-Sensor)
-- [newsfeed](/pages/it/DocumentazioneModuli/newsfeed/newsfeed)
-- [MMM-AVStock](/pages/it/DocumentazioneModuli/MMM-AVStock/MMM-AVStock)
-- [clock](/pages/it/DocumentazioneModuli/clock/clock)
-- [weather](/pages/it/DocumentazioneModuli/weather/weather)
-- [weatherforecast](/pages/it/DocumentazioneModuli/weatherforecast/weatherforecast)
-- [calendar](/pages/it/DocumentazioneModuli/calendar/calendar)
-- [MMM-MD](/pages/it/DocumentazioneModuli/MMM-MD/MMM-MD)
-- [MMM-Screencast](/pages/it/DocumentazioneModuli/MMM-Screencast/MMM-Screencast)
-- [MMM-Mail](/pages/it/DocumentazioneModuli/MMM-Mail/MMM-Mail)
-- [MMM-Online-State](/pages/it/DocumentazioneModuli/MMM-Online-State/MMM-Online-State)
-- [MMM-ip](/pages/it/DocumentazioneModuli/MMM-ip/MMM-ip)
-- [MMM-PIR-Sensor](/pages/it/DocumentazioneModuli/MMM-PIR-Sensor/MMM-PIR-Sensor)
+- [MMM-AirQuality](/MagicMirror-GBM/pages/it/DocumentazioneModuli/MMM-AirQuality/MMM-AirQuality)
+- [MMM-DHT-Sensor](/MagicMirror-GBM/pages/it/DocumentazioneModuli/MMM-DHT-Sensor/MMM-DHT-Sensor)
+- [newsfeed](/MagicMirror-GBM/pages/it/DocumentazioneModuli/newsfeed/newsfeed)
+- [MMM-AVStock](/MagicMirror-GBM/pages/it/DocumentazioneModuli/MMM-AVStock/MMM-AVStock)
+- [clock](/MagicMirror-GBM/pages/it/DocumentazioneModuli/clock/clock)
+- [weather](/MagicMirror-GBM/pages/it/DocumentazioneModuli/weather/weather)
+- [weatherforecast](/MagicMirror-GBM/pages/it/DocumentazioneModuli/weatherforecast/weatherforecast)
+- [calendar](/MagicMirror-GBM/pages/it/DocumentazioneModuli/calendar/calendar)
+- [MMM-MD](/MagicMirror-GBM/pages/it/DocumentazioneModuli/MMM-MD/MMM-MD)
+- [MMM-Screencast](/MagicMirror-GBM/pages/it/DocumentazioneModuli/MMM-Screencast/MMM-Screencast)
+- [MMM-Mail](/MagicMirror-GBM/pages/it/DocumentazioneModuli/MMM-Mail/MMM-Mail)
+- [MMM-Online-State](/MagicMirror-GBM/pages/it/DocumentazioneModuli/MMM-Online-State/MMM-Online-State)
+- [MMM-ip](/MagicMirror-GBM/pages/it/DocumentazioneModuli/MMM-ip/MMM-ip)
+- [MMM-PIR-Sensor](/MagicMirror-GBM/pages/it/DocumentazioneModuli/MMM-PIR-Sensor/MMM-PIR-Sensor)
 
 ---
 
 ## MagicMirror-GBM IP Dashboard
 
 Il MagicMirror-GBM può essere configurato grazie alla sua interfaccia web: `MagicMirror-GBM IP Dashboard`.
-Qui i dettagli: [MagicMirror-GBM-IP-Dashboard](/pages/it/MagicMirror-GBM-IP-Dashboard)
+Qui i dettagli: [MagicMirror-GBM-IP-Dashboard](/MagicMirror-GBM/pages/it/MagicMirror-GBM-IP-Dashboard)
 
 ---
 
@@ -135,7 +135,7 @@ Qui i dettagli: [MagicMirror-GBM-IP-Dashboard](/pages/it/MagicMirror-GBM-IP-Dash
 
 Il Documento dei Requisiti è il documento chiave per formalizzare i fabbisogni del cliente relativamente al sistema da sviluppare, in modo non ambiguo. Cliente, utenti e sviluppatori contribuiscono alla stesura del documento di specifica dei requisiti. Può essere usato come contratto tra cliente e sviluppatori.
 
-- [Archivio Documenti dei Requisiti](/pages/it/ArchivioDocumentiDeiRequisiti)
+- [Archivio Documenti dei Requisiti](/MagicMirror-GBM/pages/it/ArchivioDocumentiDeiRequisiti)
 
 ---
 
@@ -144,7 +144,7 @@ Il Documento dei Requisiti è il documento chiave per formalizzare i fabbisogni 
 I Diagrammi dei Componenti UML sono usati per la modellazione degli aspetti fisici dei sistemi OO (orientati agli oggetti). Hanno lo scopo di visualizzare, specificare e documentare questi ultimi, oltre a fornire la possibilità di costruire sistemi utilizzando questi diagrammi come punto di partenza, con tecniche di reverse engineering.
 I Diagrammi dei Componenti sono essenzialmente Diagrammi delle Classi, che però pongono il focus sui moduli (HW + SW) componenti un sistema per realizzare una visione d'unico dell'implementazione statica di esso stesso.
 
-- [Archivio UML Component Diagram](/pages/it/ArchivioUMLComponentDiagram)
+- [Archivio UML Component Diagram](/MagicMirror-GBM/pages/it/ArchivioUMLComponentDiagram)
 
 ---
 
@@ -152,8 +152,8 @@ I Diagrammi dei Componenti sono essenzialmente Diagrammi delle Classi, che però
 
 Un Diagramma dei Casi d'Uso (Generico e Specifico) viene utilizzato per riasummere chi (Attori) e come (Sequenze) effettua interazioni con il sistema / i sistemi in questione.
 
-- [Archivio Generic Use Case Diagram](/pages/it/UseCaseDiagrams/ArchivioGenericUseCaseDiagram)
-- [Archivio Specific Use Case Diagram](/pages/it/UseCaseDiagrams/ArchivioSpecificUseCaseDiagram)
+- [Archivio Generic Use Case Diagram](/MagicMirror-GBM/pages/it/UseCaseDiagrams/ArchivioGenericUseCaseDiagram)
+- [Archivio Specific Use Case Diagram](/MagicMirror-GBM/pages/it/UseCaseDiagrams/ArchivioSpecificUseCaseDiagram)
 
 ---
 
@@ -161,19 +161,19 @@ Un Diagramma dei Casi d'Uso (Generico e Specifico) viene utilizzato per riasumme
 
 Il BMC (Business Model Canvas) è un modello di gestione strategica utilizzato per sviluppare nuovi modelli di business e documentare quelli esistenti. Offre un grafico visivo con elementi che descrivono la proposta di valore, l'infrastruttura, i clienti e le finanze di un'azienda o di un prodotto, aiutando le aziende ad allineare le proprie attività evidenziando potenziali compromessi.
 
-- [Archivio BMC](/pages/it/ArchivioBMC)
+- [Archivio BMC](/MagicMirror-GBM/pages/it/ArchivioBMC)
 
 ---
 
 ## Emulazione
 
-Qui i dettagli: [Emulazione](/pages/it/Emulazione)
+Qui i dettagli: [Emulazione](/MagicMirror-GBM/pages/it/Emulazione)
 
 ---
 
 ## raspotify
 
-Qui i dettagli: [raspotify](/pages/it/raspotify)
+Qui i dettagli: [raspotify](/MagicMirror-GBM/pages/it/raspotify)
 
 ---
 
@@ -182,10 +182,10 @@ Qui i dettagli: [raspotify](/pages/it/raspotify)
 Il Database `settings` è il punto di salvataggio e recupero di tutte le informazioni riguardanti la configurazione
 di default e personale dell'utilizzatore.
 
-- [Archivio Analisi DB settings](/pages/it/ProgettazioneDatabase_settings/ProgettazioneDatabase_settings)
+- [Archivio Analisi DB settings](/MagicMirror-GBM/pages/it/ProgettazioneDatabase_settings/ProgettazioneDatabase_settings)
 
 ---
 
 ## Schema di Rete
 
-Qui i dettagli: [Schema di Rete](/pages/it/schemaDiRete)
+Qui i dettagli: [Schema di Rete](/MagicMirror-GBM/pages/it/schemaDiRete)
