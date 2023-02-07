@@ -43,3 +43,7 @@ redirect_to:
 ---
 
 <!-- Bare Page -->
+
+<i class="fa-solid fa-gear fa-spin fa-2x"></i>&nbsp;&nbsp;Loading. Please standby.
+
+Still on this page? Try <a href="javascript:reloadPage();">reloading</a> it or opening a new tab.

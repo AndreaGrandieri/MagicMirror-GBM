@@ -42,6 +42,6 @@ disambiguation_lang: it
 
 <!-- Disambiguation Page -->
 
-<i class="fa-solid fa-gear fa-spin"></i> Loading.... Please standby.
+<i class="fa-solid fa-gear fa-spin fa-2x"></i>&nbsp;&nbsp;Loading. Please standby.
 
-Still on this page? Try reloading it or opening a new tab.
+Still on this page? Try <a href="javascript:reloadPage();">reloading</a> it or opening a new tab.

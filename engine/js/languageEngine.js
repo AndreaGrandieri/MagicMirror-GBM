@@ -395,3 +395,9 @@ async function compile_universal404() {
   }
 }
 globalThis.compile_universal404 = compile_universal404;
+
+// Reload the current page
+function reloadPage() {
+  window.location.reload();
+}
+globalThis.reloadPage = reloadPage;
