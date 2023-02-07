@@ -41,3 +41,7 @@ disambiguation_lang: it
 ---
 
 <!-- Disambiguation Page -->
+
+<i class="fa-solid fa-gear fa-spin"></i> Loading.... Please standby.
+
+Still on this page? Try reloading it or opening a new tab.
