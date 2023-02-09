@@ -11,6 +11,7 @@
 
 // This is a module. The globalThis export is used. The globalThis export can also be used with variables.
 
+import * as globalShared from "./globalShared.js";
 import * as SimpleMutex from "./SimpleMutex.js";
 import * as vars_CDNQuerierEngine from "./vars_CDNQuerierEngine.js";
 
@@ -20,18 +21,30 @@ export function queryCDN(url, callback) {
     // Query the CDN at the given URL. Expect the URL to point to a JSON file.
     // When the query is complete, call the callback function with the JSON
     // object as the argument.
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", url, true);
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4) {
+    try {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", url, true);
+      xhr.onreadystatechange = function () {
+        try {
+          if (xhr.readyState == 4) {
             var data = JSON.parse(xhr.responseText);
             callback(data);
 
             resolve();
             return;
+          }
+        } catch (e) {
+          // Error. Handling:
+          reject(e);
+          return;
         }
-    };
-    xhr.send();  
+      };
+      xhr.send();
+    } catch (e) {
+      // Error. Handling:
+      reject(e);
+      return;
+    }
   });
 }
 
@@ -41,17 +54,29 @@ export function queryCDNOnlyHTTPResponseCode(url, callback) {
     // Query the CDN at the given URL. Expect the URL to point to a JSON file.
     // When the query is complete, call the callback function with the JSON
     // object as the argument.
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", url, true);
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4) {
+    try {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", url, true);
+      xhr.onreadystatechange = function () {
+        try {
+          if (xhr.readyState == 4) {
             callback(xhr.status);
 
             resolve();
             return;
+          }
+        } catch (e) {
+          // Error. Handling:
+          reject(e);
+          return;
         }
-    };
-    xhr.send();  
+      };
+      xhr.send();
+    } catch (e) {
+      // Error. Handling:
+      reject(e);
+      return;
+    }
   });
 }
 
@@ -59,6 +84,7 @@ export function queryCDNOnlyHTTPResponseCode(url, callback) {
 var labels_states_map = null;
 
 // Compiles the "labels_states_map" variable
+// Exception handling: OK
 function queryCDN_map_labels_states() {
   return new Promise(async (resolve, reject) => {
     if (labels_states_map != null || labels_states_map != undefined) {
@@ -66,9 +92,13 @@ function queryCDN_map_labels_states() {
       resolve();
       return;
     }
-  
+
     // Iterate over the "glob_cdnProfile_map_labels_states" variable and work on each URL
-    for (var i = 0; i < vars_CDNQuerierEngine.glob_cdnProfile_map_labels_states.length; i++) {
+    for (
+      var i = 0;
+      i < vars_CDNQuerierEngine.glob_cdnProfile_map_labels_states.length;
+      i++
+    ) {
       var url = vars_CDNQuerierEngine.glob_cdnProfile_map_labels_states[i];
 
       // Callback
@@ -82,8 +112,15 @@ function queryCDN_map_labels_states() {
         labels_states_map = labels_states_map.concat(response);
       }
 
-      // Query the CDN
-      await queryCDN(url, callback);
+      // Query the CDN. Manage a possible exception
+      try {
+        await queryCDN(url, callback);
+      } catch (e) {
+        // Error. Handling:
+        globalShared.toggle_engine_fetching_inErrorState();
+        reject(e);
+        return;
+      }
     }
 
     resolve();
@@ -95,6 +132,7 @@ function queryCDN_map_labels_states() {
 var labels_states = null;
 
 // Compiles the "labels_states" variable
+// Exception handling: OK
 function queryCDN_labels_states() {
   return new Promise(async (resolve, reject) => {
     if (labels_states != null || labels_states != undefined) {
@@ -102,9 +140,13 @@ function queryCDN_labels_states() {
       resolve();
       return;
     }
-  
+
     // Iterate over the "glob_cdnProfile_labels_states" variable and work on each URL
-    for (var i = 0; i < vars_CDNQuerierEngine.glob_cdnProfile_labels_states.length; i++) {
+    for (
+      var i = 0;
+      i < vars_CDNQuerierEngine.glob_cdnProfile_labels_states.length;
+      i++
+    ) {
       var url = vars_CDNQuerierEngine.glob_cdnProfile_labels_states[i];
 
       // Callback
@@ -119,7 +161,14 @@ function queryCDN_labels_states() {
       }
 
       // Query the CDN
-      await queryCDN(url, callback);
+      try {
+        await queryCDN(url, callback);
+      } catch (e) {
+        // Error. Handling:
+        globalShared.toggle_engine_fetching_inErrorState();
+        reject(e);
+        return;
+      }
     }
 
     resolve();
@@ -146,7 +195,7 @@ function mapStateToHTMLContent_labels(state) {
     ]
   }
   */
-  
+
   // Retrive the "htmlContent" from the "labels_states_map" variable based on the "state" parameter
   var htmlContent = null;
   for (var i = 0; i < labels_states_map.length; i++) {
@@ -165,7 +214,12 @@ function mapStateToHTMLContent_labels(state) {
 // Given the "id" of a "<div></div>", it will inject in that "<div></div>" the corresponding label with its textual content. To be called foreach label with "<script></script>" in the HTML (aka: MD) file.
 function fill_labels_state(id) {
   // Check if the "labels_states_map" variable and the variable "labels_states" is null or undefined
-  if (labels_states_map == null || labels_states_map == undefined || labels_states == null || labels_states == undefined) {
+  if (
+    labels_states_map == null ||
+    labels_states_map == undefined ||
+    labels_states == null ||
+    labels_states == undefined
+  ) {
     // The CDN with the required informations should have alredy been queried. Thus, there's something wrong. Filling won't be performed.
     return;
   }
@@ -213,7 +267,7 @@ function fill_labels_state(id) {
 
   // The "htmlContent" is of type: "<p 'some other stuff'></p>": put the "content" inside the "<p 'some other stuff'></p>"
   htmlContent = htmlContent.replace("></p>", ">" + content + "</p>");
-    
+
   var elms = document.querySelectorAll(`[id=${id}]`);
 
   // Iterate over the elements with the given "id"
@@ -224,7 +278,7 @@ function fill_labels_state(id) {
     // If the "<div></div>" is not "filled", fill it
     if (filled == null || filled == undefined || filled == "false") {
       // Inject the "htmlContent" beforebegin the "<div></div>" element. The "<div></div>" will remain empty, but that's not a problem.
-      elms[i].insertAdjacentHTML('beforebegin', htmlContent);
+      elms[i].insertAdjacentHTML("beforebegin", htmlContent);
 
       // Tag the "<div></div>" as "filled"
       elms[i].setAttribute("filled", "true");
@@ -238,16 +292,33 @@ The mutex is needed to avoid parallel invocations of this function, that will le
 
 Note: JavaScript is single-threaded, but funtions (same and different) called with multiple <script></script> tags in HTML can be executed in parallel!!!
 */
+// Exception handling: OK
 async function selfsustainable_fill_labels_state(id) {
   // Acquire the mutex
-  await SimpleMutex.acquire(SimpleMutex.selfsustainable_fill_labels_state_mutex, 250);
+  try {
+    await SimpleMutex.acquire(
+      SimpleMutex.selfsustainable_fill_labels_state_mutex,
+      250
+    );
+  } catch (e) {
+    // Internal error not to be broadcasted.
+    globalShared.toggle_engine_SimpleMutex_inErrorState();
+    return;
+  }
 
-  // Critical section
-  await queryCDN_map_labels_states();
-  await queryCDN_labels_states();
-  fill_labels_state(id);
+  try {
+    // Critical section
+    await queryCDN_map_labels_states();
+    await queryCDN_labels_states();
+    fill_labels_state(id);
+  } catch (e) {
+    // Error. Handling:
+    globalShared.toggle_engine_fetching_inErrorState();
+    return;
+  }
 
   // Release the mutex
   SimpleMutex.release(SimpleMutex.selfsustainable_fill_labels_state_mutex);
 }
-globalThis.selfsustainable_fill_labels_state = selfsustainable_fill_labels_state;
+globalThis.selfsustainable_fill_labels_state =
+  selfsustainable_fill_labels_state;
