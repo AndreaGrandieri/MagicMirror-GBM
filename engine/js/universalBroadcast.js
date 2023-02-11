@@ -48,19 +48,19 @@ import * as vars_universalBroadcast from "./vars_universalBroadcast.js";
 }
 */
 
-var news = null;
+var newsObj = null;
 var newsSchema = null;
 
 // Query the CDN for news to be broadcasted
 async function getNewsFromCDN() {
   // Check if "news" is not null or undefined: if so, the news have already been fetched and there is no need to fetch them again
-  if (news == null || news == undefined) {
+  if (newsObj == null || newsObj == undefined) {
     try {
       // "queryCDN" uses "JSON.parse" already
       await CDNQuerierEngine.queryCDN(
         vars_universalBroadcast.news,
         function (data) {
-          news = data;
+          newsObj = data;
         }
       );
     } catch (e) {
@@ -92,10 +92,10 @@ async function getNewsSchemaFromCDN() {
 
 async function compileBroadcastPayload(i) {
   // Parse the date in "birthday". Example format: "1.Jan.2021"
-  var date = new Date(news.news[i].birthday);
+  var date = new Date(newsObj.news[i].birthday);
 
   // Add to "date" the "TTL"; the "TTL" is in # of hours
-  date.setHours(date.getHours() + news.news[i].TTL);
+  date.setHours(date.getHours() + newsObj.news[i].TTL);
 
   // Get the current date
   var currentDate = new Date();
@@ -120,8 +120,8 @@ async function compileBroadcastPayload(i) {
 
     // Check if the language of the page is in the "lang" array of the news: if so, the news SHOULD be displayed. The news should also be displayed if the "lang" array is empty
     if (
-      news.news[i].lang.length == 0 ||
-      news.news[i].lang.includes(availableLanguagesArray[0])
+      newsObj.news[i].lang.length == 0 ||
+      newsObj.news[i].lang.includes(availableLanguagesArray[0])
     ) {
       // News to be displayed
       var toInject = "";
@@ -130,7 +130,7 @@ async function compileBroadcastPayload(i) {
       for (var j = 0; j < newsSchema.callout_levels.length; j++) {
         if (
           newsSchema.callout_levels[j].callout_level ==
-          news.news[i].callout_level
+          newsObj.news[i].callout_level
         ) {
           toInject += newsSchema.callout_levels[j].content;
           break;
@@ -138,13 +138,13 @@ async function compileBroadcastPayload(i) {
       }
 
       // A title is present if "title" is not null or undefined
-      if (news.news[i].title != null && news.news[i].title != undefined) {
+      if (newsObj.news[i].title != null && newsObj.news[i].title != undefined) {
         // Append the title to "toInject", the close the "p" tag
-        toInject += news.news[i].title + "</p>";
+        toInject += newsObj.news[i].title + "</p>";
       }
 
       // Open the "p" tag and append the content to "toInject"
-      toInject += "<p>" + news.news[i].content + "</p>";
+      toInject += "<p>" + newsObj.news[i].content + "</p>";
 
       // Close "blockquote"
       toInject += "</blockquote>";
@@ -167,12 +167,12 @@ async function broadcastNews() {
 
     // Now, "news" contains all the news to be broadcasted.
     // Traverse all the news following the format above
-    for (var i = 0; i < news.news.length; i++) {
+    for (var i = 0; i < newsObj.news.length; i++) {
       // Check the "validityURL" of the news: the news should only be displayed if "validityURL" matches the current URL of the page
 
       // Check if the "validityURL" is the current URL of the page, regardless of the presence of ".html" at the end of the URL of the current page
       if (
-        news.news[i].validityURL == window.location.href.replace(".html", "")
+        newsObj.news[i].validityURL == window.location.href.replace(".html", "")
       ) {
         // Append to "toInject" the result of "compileBroadcastPayload"
         toInject += await compileBroadcastPayload(i);
@@ -181,7 +181,7 @@ async function broadcastNews() {
       }
 
       // Get "perfectMatch" from "news"
-      var perfectMatch = news.news[i].perfectMatch;
+      var perfectMatch = newsObj.news[i].perfectMatch;
 
       if (perfectMatch == false) {
         var origin =
@@ -191,7 +191,7 @@ async function broadcastNews() {
 
         // Check the "validityURL" of the news: check if the URL is the base URL of the website.
         // Check if the "validityURL" is a substring of the current URL of the page
-        if (origin == news.news[i].validityURL) {
+        if (origin == newsObj.news[i].validityURL) {
           // Append to "toInject" the result of "compileBroadcastPayload"
           toInject += await compileBroadcastPayload(i);
         }
