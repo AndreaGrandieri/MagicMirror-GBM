@@ -231,6 +231,10 @@ layout: table_wrappers
         <!-- Start Alter -->
         <div id="broadcastTarget_engine_fetching_inErrorState"></div>
         <!-- End Alter -->
+        
+        <!-- Start Alter -->
+        <div id="broadcastTarget_universalBroadcast"></div>
+        <!-- End Alter -->
 
         {% unless page.url == "/" %}
         {% if page.parent %}
@@ -354,7 +358,14 @@ layout: table_wrappers
       compile_poweredbyahref();
     }
   </script>
+
+  <!-- compile_universal404 -->
   <script type="module">
     compile_universal404();
+  </script>
+
+  <!-- Universal Broadcast Service -->
+  <script type="module">
+    broadcastNews();
   </script>
 </html>
