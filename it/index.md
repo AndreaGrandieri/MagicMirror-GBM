@@ -96,6 +96,15 @@ lang: it
 
 ---
 
+## Autori
+
+- Andrea Grandieri [https://github.com/AndreaGrandieri](https://github.com/AndreaGrandieri)
+- Mirko Barsotti [https://github.com/bmirko1505](https://github.com/bmirko1505)
+- Manuel Mazzola [https://github.com/manu2110](https://github.com/manu2110)
+- Professore Giovanni Brevario [https://github.com/giodabg](https://github.com/giodabg)
+
+---
+
 ## MagicMirror-GBM-OS
 
 Il MagicMirror-GBM è reso funzionale dal suo sistema operativo: `MagicMirror-GBM-OS`.
